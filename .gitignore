@@ -1,0 +1,5 @@
+build*/
+.vs*/
+*.sublime-workspace
+*.deb
+*.json
