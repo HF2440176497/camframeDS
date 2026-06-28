@@ -1,71 +1,71 @@
-/** @mainpage 
+/** @mainpage ¸ÅÊö
 *
-*@section ?
-*-# ã??
-*-# ?????C/C++?????
-*-# ?????????õ?????map?????
+*@section Éè¼ÆÕÜÑ§
+*-# ¼òµ¥Ò×ÓÃ£¬ÎÈ¶¨¿É¿¿
+*-# ½Ó¿ÚÏ¸»¯£¬½ßÁ¦±ÜÃâÒ»¸öº¯Êı¶à¸öÓÃÍ¾µÄ×ö·¨£¬³ä·Ö·¢»ÓC/C++×÷Îª¾²Ì¬ÓïÑÔ£¬ÔÚ±àÒëÆÚÇ¿Á¦¾À´íµÄÌØĞÔ
+*-# ËäÈ»º¯Êı½Ó¿ÚÖÚ¶à£¬µ«¸ß¶ÈÓĞĞò¡£ÈçÓĞ±ØÒª£¬¿É½«ËùÓĞÉùÃ÷Ïà½üµÄº¯Êı£¬·ÅÖÃµ½Ò»¸öÃû³ÆºÍº¯ÊıÖ¸Õë¶ÔÓ¦µÄmapÖĞ£¬ÒÔÊµÏÖ¸ü¼ÓÁé»îµÄ¶¯Ì¬µ÷ÓÃ
 *
-*@section 
-*-# @link #DVP_INFORMATION ?@endlink£???API@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink????ò??????
-*-# <a href="C:/Program Files (x86)/Do3think/BasedCam2">Basedcam2</a>??????ÿAPI?????õ
-*-# API??@link #DVP2_API_BASE @endlink¡????
-*-# ?@link #CaptureImage CaptureImage@endlink??
-*-# ??õ@link #dvpHandle dvpHandle@endlink ?
-*-# ?????chm?ø?õ
+*@section ¿ª·¢½¨Òé
+*-# ÔÚ@link #DVP_INFORMATION ¿ÉÔ¤ÁÏ@endlinkµÄÇé¿öÏÂ£¬ÇëÈ·±£ËùÓĞ±ê×¼API·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink£¨Æ©Èç£¬±ÜÃâ¶ÔºÚ°×Ïà»úµ÷ÓÃ²ÊÉ«Ïà»ú²ÅÓĞµÄÌØĞÔ£©¡£ÕâÓĞÖúÓÚÌá¸ß³ÌĞòµÄ½¡×³¶È
+*-# ÉÆÓÃ<a href="C:/Program Files (x86)/Do3think/BasedCam2">Basedcam2</a>¹Ù·½ÑİÊ¾³ÌĞòµÄ¡°¿ª·¢ÕßÄ£Ê½¡±¡£ÕâÓĞÖúÓÚ¼ÓÉî¶ÔÃ¿¸öAPI½Ó¿ÚµÄ¹¦ÄÜºÍÓ¦ÓÃµÄÀí½â
+*-# ×î»ù´¡µÄAPI½Ó¿Ú¶¼°²ÅÅÔÚ@link #DVP2_API_BASE »ù±¾¹¦ÄÜ@endlink·Ö×éÏÂ¡£ÕâÓĞÖúÓÚ¿ìËÙ°ÑÎÕÏà»úµÄºËĞÄ¹¦ÄÜ
+*-# ²Î¿¼@link #CaptureImage CaptureImage@endlinkÊ¾Àı¡£ÕâÓĞÖúÓÚ¿ìËÙÈëÃÅ
+*-# Ó¦µ±°Ñ»ñµÃµÄ@link #dvpHandle dvpHandle@endlink Öµµ±³ÉËæ»úÊı
+*-# ²»±ØÖ±½ÓÔÄ¶ÁÍ·ÎÄ¼ş£¬²Î¿¼chmÎÄµµ½«»ñµÃ¸ü¼ÓÓÑºÃµÄÌåÑé
 *
-*@section ??
+*@section ¹«Ë¾ÍøÖ·
 * http://www.do3think.com
 *
-*@section ?API
+*@section µ±Ç°API
 * @version Version 2.25.43.1307(build: Oct 26 2022 17:30:05)
 *
 *
-*@section ?¼
+*@section ÎÄµµ·¢²¼¼ÇÂ¼
 *@subsection Ver1 2016-4-1(2.5.12)
-*-# ??
+*-# ·¢²¼µÚÒ»¸ö°æ±¾
 *@subsection Ver2 2016-10-31(2.7.8)
-*-# @link #dvpGetCurveLut LUT@endlink
-*-# @link #dvpColorCorrection ??@endlink??
-*-# @link #dvpCaptureFile ????ROI???@endlink?
-*-# @link #dvpGetRotateOpposite ?/90?@endlink?
-*-# ?@link #dvpFrame ???@endlink?????
+*-# Ôö¼Ó@link #dvpGetCurveLut ÇúÏßLUT@endlink¹¦ÄÜ
+*-# Ôö¼Ó@link #dvpColorCorrection ÑÕÉ«Ğ£Õı²ÎÊı@endlinkµÄ¶ÁĞ´¹¦ÄÜ
+*-# Ôö¼Ó@link #dvpCaptureFile ÔÚÖ¸¶¨·Ö±æÂÊÄ£Ê½ºÍROIÏÂ×¥Í¼²¢±£´æÍ¼Ïñ@endlinkµÄ¹¦ÄÜ
+*-# Ôö¼Ó@link #dvpGetRotateOpposite Í¼ÏñµÄÕı/¸º90¶ÈĞı×ª@endlinkµÄ¹¦ÄÜ
+*-# À©Õ¹ÁË@link #dvpFrame Ö¡ĞÅÏ¢½á¹¹Ìå@endlink£¬Ôö¼ÓÁË·­×ª¡¢Ğı×ªµÈ±êÊ¶
 *@subsection Ver3 2016-11-29(2.8.9)
-*-# @link #dvpSetAeConfig ??@endlink
-*-# @link #dvpEventCallback ¼???@endlink
-*-# @link #dvpGetFrameBuffer ????????@endlink?
+*-# Ôö¼Ó@link #dvpSetAeConfig ×Ô¶¯ÆØ¹âÅäÖÃ@endlink¹¦ÄÜ
+*-# Ôö¼Ó@link #dvpEventCallback ÊÂ¼şÍ¨Öª»Øµ÷º¯Êı@endlink¹¦ÄÜ
+*-# Ôö¼Ó@link #dvpGetFrameBuffer Í¬Ê±²¶»ñÔ­Ê¼²É¼¯Ö¡ºÍÄ¿±êÊä³öÖ¡@endlinkµÄ¹¦ÄÜ
 *@subsection Ver4 2017-02-08(2.9.13)
-*-# @link #dvpResetDevice ??@endlink?
+*-# Ôö¼Ó@link #dvpResetDevice ¸´Î»Éè±¸@endlinkµÄ¹¦ÄÜ
 *@subsection Ver5 2017-03-22(2.10.16)
-*-# @link #dvpSetAutoDefectFixState ???@endlink?
+*-# Ôö¼Ó@link #dvpSetAutoDefectFixState Ê¹ÄÜ×Ô¶¯Ïû³ı²Êµã@endlinkµÄ¹¦ÄÜ
 *@subsection Ver6 2017-05-12(2.11.18)
-*-# @link #dvpHold ????@endlink?
-*-# @link #dvpSetHardwareIspState ?ISP?@endlink?
+*-# Ôö¼Ó@link #dvpHold ÖĞ¶Ï´«¸ĞÆ÷µÄÍ¼Ïñ²É¼¯@endlinkµÄ¹¦ÄÜ
+*-# Ôö¼Ó@link #dvpSetHardwareIspState Ïà»úÓ²¼şISPÊ¹ÄÜ@endlinkµÄ¹¦ÄÜ
 *@subsection Ver7 2017-06-16(2.12.19)
-*-# @link #dvpGetFunctionInfo ??@endlink??
-*-# @link #dvpImageFormat::FORMAT_RGB32 RGB32??@endlink?
+*-# Ôö¼Ó@link #dvpGetFunctionInfo »ñÈ¡Ïà»ú¹¦ÄÜÃèÊöĞÅÏ¢@endlinkµÄ½Ó¿Ú
+*-# Ôö¼Ó@link #dvpImageFormat::FORMAT_RGB32 RGB32Í¼Ïñ¸ñÊ½@endlinkÊä³öµÄÖ§³Ö
 *@subsection Ver8 2017-06-30(2.13.20)
-*-# @link #dvpSetConfigString ?@endlink??
+*-# Ôö¼Ó@link #dvpSetConfigString ÉèÖÃÏà»ú×Ö·û´®²ÎÊı@endlinkµÄ½Ó¿Ú
 *@subsection Ver9 2017-07-17(2.14.21)
-*-# @link #dvpStreamFormat ?@endlink?
+*-# À©³äÁË@link #dvpStreamFormat Êı¾İÁ÷¸ñÊ½@endlinkµÄ¶¨Òå
 *@subsection Ver 2017-09-15(2.15.24)
-*-# ?@link #dvpCameraInfo::UserID û@endlink@link #dvpOpenByUserId @endlink?
-*-# ?@link #dvpLoadUserSet û@endlink?
+*-# Ôö¼ÓÁË¸ù¾İ@link #dvpCameraInfo::UserID ÓÃ»§ÃüÃû@endlinkÀ´@link #dvpOpenByUserId ´ò¿ªÏà»ú@endlinkµÄ¹¦ÄÜ
+*-# Ôö¼ÓÁË¼ÓÔØ@link #dvpLoadUserSet ÓÃ»§ÉèÖÃ@endlinkµÄ¹¦ÄÜ
 *@subsection Ver10 2018-04-11(2.16.32)
-*-# û?@link #dvpProcessImage ?@endlink?
+*-# Ôö¼ÓÁËÔÚÓÃ»§Ïß³ÌÖĞ@link #dvpProcessImage ´¦ÀíÍ¼Ïñ@endlinkµÄ¹¦ÄÜ
 *@subsection Ver11 2018-08-3(2.17.33)
-*-# ?@link #dvpLine @endlink?????dvpInputIodvpOutputIo????
-*-# @link #dvpSetTriggerSource ô?@endlink??
+*-# ĞÂÔöÁËÒ»×é@link #dvpLine Ïà»úÒı½Å@endlink²Ù×÷Ïà¹ØµÄ½Ó¿Ú£¬½¨Òé±ğÔÙÊ¹ÓÃdvpInputIoºÍdvpOutputIoÏµÁĞµÄ½Ó¿Ú
+*-# Ôö¼ÓÁË@link #dvpSetTriggerSource ÉèÖÃ´¥·¢Ô´@endlinkµÄ½Ó¿Ú
 *@subsection Ver12 2019-03-12(2.18.35)
-*-# @link #dvpSetBufferQueueSize ?@endlink??
+*-# Ôö¼ÓÁË@link #dvpSetBufferQueueSize ÉèÖÃÖ¡»º´æ¸öÊı@endlinkµÄ½Ó¿Ú
 *@subsection Ver13 2019-08-6(2.19.37)
-*-# @link #dvpSetBufferConfig ?@endlink??
+*-# Ôö¼ÓÁË@link #dvpSetBufferConfig ÅäÖÃÖ¡»º´æ¶ÓÁĞ@endlinkµÄ½Ó¿Ú
 *@subsection Ver14 2019-09-3(2.20.38)
-*-# @link #dvpDebugReport ??@endlink??
+*-# Ôö¼ÓÁË@link #dvpDebugReport ±¨¸æÏà»úÔËĞĞ×´Ì¬@endlinkµÄ½Ó¿Ú
 *@subsection Ver15 2021-11-15(2.24.42)
-*-# @link #dvpSetLineRate ??@endlink??
-*-# @link #dvpSetLineTriggerConfig ?@endlink??
+*-# Ôö¼ÓÁË@link #dvpSetLineRate ÉèÖÃÏßÉ¨Ïà»úĞĞÆµ¹¦ÄÜ@endlinkµÄ½Ó¿Ú
+*-# Ôö¼ÓÁË@link #dvpSetLineTriggerConfig ÅäÖÃÏßÉ¨Ïà»ú´¥·¢¹¦ÄÜ@endlinkµÄ½Ó¿Ú
 *@subsection Ver16 2022-2-18(2.25.43)
-*-# @link #dvpPrintPictureToBuffer ????û?@endlink??
+*-# Ôö¼ÓÁË@link #dvpPrintPictureToBuffer ½«Í¼Æ¬Ñ¹Ëõ×ª»»µ½ÓÃ»§»º´æ¹¦ÄÜ@endlinkµÄ½Ó¿Ú
 */
 #ifndef __DVPCAMERA_H__
 #define __DVPCAMERA_H__
@@ -94,44 +94,44 @@
 #endif
 
 dvp2api const unsigned int dvpVersion[4];
-/** @brief ??
+/** @brief Í¼Ïñ¸ñÊ½
 *@see dvpGetFrame*/
 typedef enum dvpImageFormat
 {
-    /** @brief ?? */
+    /** @brief ºÚ°×Í¼Ïñ */
     FORMAT_MONO = 0,
 
-    /** @brief BGGR? */
+    /** @brief BGGRÍ¼Ïñ */
     FORMAT_BAYER_BG = 1,
 
-    /** @brief GBRG? */
+    /** @brief GBRGÍ¼Ïñ */
     FORMAT_BAYER_GB = 2,
 
-    /** @brief GRBG? */
+    /** @brief GRBGÍ¼Ïñ */
     FORMAT_BAYER_GR = 3,
 
-    /** @brief RGGB? */
+    /** @brief RGGBÍ¼Ïñ */
     FORMAT_BAYER_RG = 4,
 
-    /** @brief BGR?24? */
+    /** @brief BGRÈıÍ¨µÀ24±ÈÌØÍ¼Ïñ */
     FORMAT_BGR24 = 10,
 
-    /** @brief BGRA?32? */
+    /** @brief BGRAËÄÍ¨µÀ32±ÈÌØÍ¼Ïñ */
     FORMAT_BGR32 = 11,
 
-    /** @brief BGR?48? */
+    /** @brief BGRÈıÍ¨µÀ48±ÈÌØÍ¼Ïñ */
     FORMAT_BGR48 = 12,
 
-    /** @brief BGRA?64? */
+    /** @brief BGRAËÄÍ¨µÀ64±ÈÌØÍ¼Ïñ */
     FORMAT_BGR64 = 13,
 
-    /** @brief RGB?24? */
+    /** @brief RGBÈıÍ¨µÀ24±ÈÌØÍ¼Ïñ */
     FORMAT_RGB24 = 14,
 
-    /** @brief RGBA?32? */
+    /** @brief RGBAËÄÍ¨µÀ32±ÈÌØÍ¼Ïñ */
     FORMAT_RGB32 = 15,
 
-    /** @brief RGB?48? */
+    /** @brief RGBÈıÍ¨µÀ48±ÈÌØÍ¼Ïñ */
     FORMAT_RGB48 = 16,
 
     /** @brief YUV411 */
@@ -146,59 +146,59 @@ typedef enum dvpImageFormat
     /** @brief YUV420 */
     FORMAT_YUV420 = 23,
 
-    /** @brief BGR?8??? */
+    /** @brief BGRÈıÍ¨µÀ8±ÈÌØ²ğ·ÖµÄÍ¼Ïñ */
     FORMAT_B8_G8_R8 = 40,
 
-    /** @brief BGR?16??? */
+    /** @brief BGRÈıÍ¨µÀ16±ÈÌØ²ğ·ÖµÄÍ¼Ïñ */
     FORMAT_B16_G16_R16 = 44,
 
 } dvpImageFormat;
 
 
-/** @brief ?
+/** @brief Êı¾İÁ÷¸ñÊ½
 *@see dvpSetSourceFormat
 *@see dvpSetTargetFormat
-*@warning ????
-*@note?? #dvpSetSourceFormatSel  #dvpSetTargetFormatSel ???*/
+*@warning ²»Ò»¶¨ËùÓĞ¸ñÊ½¶¼Ö§³Ö
+*@noteÌØÊâÇé¿öÏÂÍÆ¼öÊ¹ÓÃ #dvpSetSourceFormatSel ºÍ #dvpSetTargetFormatSel ÏµÁĞ½Ó¿Ú*/
 typedef enum dvpStreamFormat
 {
-    /** @brief 8?? */
+    /** @brief 8Î»Í¼Ïñ */
     S_RAW8 = 0,
 
-    /** @brief 10?? */
+    /** @brief 10Î»Í¼Ïñ */
     S_RAW10 = 1,
 
-    /** @brief 12?? */
+    /** @brief 12Î»Í¼Ïñ */
     S_RAW12 = 2,
 
-    /** @brief 14?? */
+    /** @brief 14Î»Í¼Ïñ */
     S_RAW14 = 3,
 
-    /** @brief 16?? */
+    /** @brief 16Î»Í¼Ïñ */
     S_RAW16 = 4,
 
-    /** @brief BGR?24? */
+    /** @brief BGRÈıÍ¨µÀ24±ÈÌØÍ¼Ïñ */
     S_BGR24 = 10,
 
-    /** @brief BGRA?32? */
+    /** @brief BGRAËÄÍ¨µÀ32±ÈÌØÍ¼Ïñ */
     S_BGR32 = 11,
 
-    /** @brief BGRA?48? */
+    /** @brief BGRAËÄÍ¨µÀ48±ÈÌØÍ¼Ïñ */
     S_BGR48 = 12,
 
-    /** @brief BGRA?64? */
+    /** @brief BGRAËÄÍ¨µÀ64±ÈÌØÍ¼Ïñ */
     S_BGR64 = 13,
 
-    /** @brief RGB?24? */
+    /** @brief RGBÈıÍ¨µÀ24±ÈÌØÍ¼Ïñ */
     S_RGB24 = 14,
 
-    /** @brief RGBA?32? */
+    /** @brief RGBAËÄÍ¨µÀ32±ÈÌØÍ¼Ïñ */
     S_RGB32 = 15,
 
-    /** @brief RGBA?48? */
+    /** @brief RGBAËÄÍ¨µÀ48±ÈÌØÍ¼Ïñ */
     S_RGB48 = 16,
 
-    /** @brief RGBA?64? */
+    /** @brief RGBAËÄÍ¨µÀ64±ÈÌØÍ¼Ïñ */
     S_RGB64 = 17,
 
     /** @brief YUV411 */
@@ -213,271 +213,271 @@ typedef enum dvpStreamFormat
     /** @brief YUV444 */
     S_YUV420 = 23,
 
-    /** @brief 8??? */
+    /** @brief 8Î»»Ò¶ÈÍ¼Ïñ */
     S_MONO8 = 30,
 
-    /** @brief 10??? */
+    /** @brief 10Î»»Ò¶ÈÍ¼Ïñ */
     S_MONO10 = 31,
 
-    /** @brief 12??? */
+    /** @brief 12Î»»Ò¶ÈÍ¼Ïñ */
     S_MONO12 = 32,
 
-    /** @brief 14??? */
+    /** @brief 14Î»»Ò¶ÈÍ¼Ïñ */
     S_MONO14 = 33,
 
-    /** @brief 16??? */
+    /** @brief 16Î»»Ò¶ÈÍ¼Ïñ */
     S_MONO16 = 34,
 
-    /** @brief BGR?8??? */
+    /** @brief BGRÈıÍ¨µÀ8±ÈÌØ²ğ·ÖµÄÍ¼Ïñ */
     S_B8_G8_R8 = 40,
 
-    /** @brief BGR?16??? */
+    /** @brief BGRÈıÍ¨µÀ16±ÈÌØ²ğ·ÖµÄÍ¼Ïñ */
     S_B16_G16_R16 = 44,
 
 } dvpStreamFormat;
 
 
-/** @brief ??
+/** @brief Í¼ÏñÎ»¿í
 *@see dvpGetFrame*/
 typedef enum dvpBits
 {
-    /** @brief 8 */
+    /** @brief 8±ÈÌØÊı¾İ */
     BITS_8 = 0,
 
-    /** @brief 10 */
+    /** @brief 10±ÈÌØÊı¾İ */
     BITS_10 = 1,
 
-    /** @brief 12 */
+    /** @brief 12±ÈÌØÊı¾İ */
     BITS_12 = 2,
 
-    /** @brief 14 */
+    /** @brief 14±ÈÌØÊı¾İ */
     BITS_14 = 3,
 
-    /** @brief 16 */
+    /** @brief 16±ÈÌØÊı¾İ */
     BITS_16 = 4,
 
 } dvpBits;
 
 
-/** @brief ????*/
+/** @brief ×Ô¶¯ÆØ¹âÄ£Ê½*/
 typedef enum dvpAeMode
 {
-    /** @brief ??????? */
+    /** @brief ×Ô¶¯ÆØ¹â£¬×Ô¶¯ÔöÒæÍ¬Ê±¿ªÆô£¬ÆØ¹âÓÅÏÈ */
     AE_MODE_AE_AG = 0,
 
-    /** @brief ?????? */
+    /** @brief ×Ô¶¯ÆØ¹â£¬×Ô¶¯ÔöÒæÍ¬Ê±¿ªÆô£¬ÔöÒæÓÅÏÈ */
     AE_MODE_AG_AE = 1,
 
-    /** @brief ?? */
+    /** @brief ×Ô¶¯ÆØ¹â */
     AE_MODE_AE_ONLY = 2,
 
-    /** @brief ? */
+    /** @brief ×Ô¶¯ÔöÒæ */
     AE_MODE_AG_ONLY = 3,
 
 } dvpAeMode;
 
 
-/** @brief ??*/
+/** @brief ×Ô¶¯ÆØ¹â²Ù×÷*/
 typedef enum dvpAeOperation
 {
-    /** @brief ?? */
+    /** @brief ¹¦ÄÜ¹Ø±Õ */
     AE_OP_OFF = 0,
 
-    /** @brief ? */
+    /** @brief ½øĞĞÒ»´Î */
     AE_OP_ONCE = 1,
 
-    /** @brief  */
+    /** @brief Á¬Ğø²Ù×÷ */
     AE_OP_CONTINUOUS = 2,
 
 } dvpAeOperation;
 
 
-/** @brief ??*/
+/** @brief ×Ô¶¯°×Æ½ºâ²Ù×÷*/
 typedef enum dvpAwbOperation
 {
-    /** @brief ?? */
+    /** @brief ¹¦ÄÜ¹Ø±Õ */
     AWB_OP_OFF = 0,
 
-    /** @brief ? */
+    /** @brief ½øĞĞÒ»´Î */
     AWB_OP_ONCE = 1,
 
-    /** @brief  */
+    /** @brief Á¬Ğø²Ù×÷ */
     AWB_OP_CONTINUOUS = 2,
 
 } dvpAwbOperation;
 
 
-/** @brief ??*/
+/** @brief µÆ¹âÆµÉÁ*/
 typedef enum dvpAntiFlick
 {
-    /** @brief ?? */
+    /** @brief ½ûÖ¹Ïû³ıÆµÉÁ */
     ANTIFLICK_DISABLE = 0,
 
-    /** @brief 50hz? */
+    /** @brief Ïû³ı50hzÆµÉÁ */
     ANTIFLICK_50HZ = 1,
 
-    /** @brief 60hz? */
+    /** @brief Ïû³ı60hzÆµÉÁ */
     ANTIFLICK_60HZ = 2,
 
 } dvpAntiFlick;
 
 
-/** @brief */
+/** @brief ´«¸ĞÆ÷ÀàĞÍ*/
 typedef enum dvpSensorType
 {
-    /** @brief CMOS??? */
+    /** @brief CMOSÍ¼Ïñ´«¸ĞÆ÷ */
     SENSOR_TYPE_CMOS = 0,
 
-    /** @brief CCD??? */
+    /** @brief CCDÍ¼Ïñ´«¸ĞÆ÷ */
     SENSOR_TYPE_CCD = 1,
 
 } dvpSensorType;
 
 
-/** @brief */
+/** @brief ´«¸ĞÆ÷ÏñËØÀàĞÍ*/
 typedef enum dvpSensorPixel
 {
-    /** @brief ? */
+    /** @brief ºÚ°×ÏñËØ */
     SENSOR_PIXEL_MONO = 0,
 
-    /** @brief RGGB? */
+    /** @brief RGGB²ÊÉ«ÏñËØ */
     SENSOR_PIXEL_BAYER_RG = 1,
 
-    /** @brief GBRG? */
+    /** @brief GBRG²ÊÉ«ÏñËØ */
     SENSOR_PIXEL_BAYER_GB = 2,
 
-    /** @brief GRBG? */
+    /** @brief GRBG²ÊÉ«ÏñËØ */
     SENSOR_PIXEL_BAYER_GR = 3,
 
-    /** @brief BGGR? */
+    /** @brief BGGR²ÊÉ«ÏñËØ */
     SENSOR_PIXEL_BAYER_BG = 4,
 
 } dvpSensorPixel;
 
 
-/** @brief ??¼*/
+/** @brief ÊÓÆµÁ÷»Øµ÷ÊÂ¼ş*/
 typedef enum dvpStreamEvent
 {
-    /** @brief ?? */
+    /** @brief Í¼Ïñ´ïµ½ºó */
     STREAM_EVENT_ARRIVED = 0,
 
-    /** @brief ?? */
+    /** @brief Í¼ÏñĞ£Õıºó */
     STREAM_EVENT_CORRECTED = 1,
 
-    /** @brief ? */
+    /** @brief Í¼Ïñ´¦Àíºó */
     STREAM_EVENT_PROCESSED = 2,
 
-    /** @brief ????@link #dvpGetFrame dvpGetFrame@endlink ??????û 
-*@warning @link #dvpStart ?@endlink??ú
+    /** @brief Æô¶¯Ò»¸ö×¨ÃÅµÄÏß³ÌÒÔ@link #dvpGetFrame dvpGetFrame@endlink µÄ·½Ê½»ñÈ¡Í¼Ïñ£¬²¢µ÷ÓÃÆäËûÓÃ»§´¦Àí¹ı³Ì 
+*@warning ĞëÔÚ@link #dvpStart Æô¶¯ÊÓÆµÁ÷@endlinkÖ®Ç°ÉèÖÃºÃ
 *@see dvpProcessImage */
     STREAM_EVENT_FRAME_THREAD = 3,
 
 } dvpStreamEvent;
 
 
-/** @brief ?¼*/
+/** @brief ÆÕÍ¨ÊÂ¼ş*/
 typedef enum dvpEvent
 {
-    /** @brief ?? */
+    /** @brief Î´ÖªµÄ */
     EVENT_UNKNOW = 0,
 
-    /** @brief ?? */
+    /** @brief Á¬½Ó³É¹¦ */
     EVENT_CONNECTED = 1,
 
-    /** @brief ? */
+    /** @brief ¶Ï¿ªÁ¬½Ó */
     EVENT_DISCONNECTED = 2,
 
-    /** @brief ? */
+    /** @brief Êı¾İÁ÷ÒÑ¾­Æô¶¯ */
     EVENT_STREAM_STARTRD = 3,
 
-    /** @brief ??? */
+    /** @brief Êı¾İÁ÷ÒÑ¾­Í£Ö¹ */
     EVENT_STREAM_STOPPED = 4,
 
-    /** @brief ?(?) */
+    /** @brief ¶ªÖ¡(´íÎóÖ¡) */
     EVENT_FRAME_LOST = 5,
 
-    /** @brief ??? */
+    /** @brief µÈ´ıÖ¡³¬Ê± */
     EVENT_FRAME_TIMEOUT = 6,
 
-    /** @brief ?? */
+    /** @brief Ê§È¥Á¬½Ó */
     EVENT_LOST_CONNECTION = 7,
 
-    /** @brief  */
+    /** @brief ÖØĞÂÁ¬½Ó */
     EVENT_RECONNECTED = 8,
 
-    /** @brief ?? */
+    /** @brief Ö¡¿ªÊ¼´«Êä */
     EVENT_FRAME_START = 9,
 
-    /** @brief ? */
+    /** @brief Ö¡½áÊø´«Êä */
     EVENT_FRAME_END = 10,
 
 } dvpEvent;
 
 
-/** @brief ?*/
+/** @brief ´¥·¢ÊäÈëĞÅºÅÀàĞÍ*/
 typedef enum dvpTriggerInputType
 {
-    /** @brief ? */
+    /** @brief ´¥·¢ÊäÈë¹Ø±Õ */
     TRIGGER_IN_OFF = 0,
 
-    /** @brief ½? */
+    /** @brief ÏÂ½µÑØ´¥·¢ */
     TRIGGER_NEG_EDGE = 1,
 
-    /** @brief ?? */
+    /** @brief µÍµçÆ½´¥·¢ */
     TRIGGER_LOW_LEVEL = 2,
 
-    /** @brief ? */
+    /** @brief ÉÏÉıÑØ´¥·¢ */
     TRIGGER_POS_EDGE = 3,
 
-    /** @brief ?? */
+    /** @brief ¸ßµçÆ½´¥·¢ */
     TRIGGER_HIGH_LEVEL = 4,
 
 } dvpTriggerInputType;
 
 
-/** @brief Strobe?*/
+/** @brief StrobeÊä³öĞÅºÅÀàĞÍ*/
 typedef enum dvpStrobeOutputType
 {
-    /** @brief Strobe? */
+    /** @brief StrobeÊä³ö¹Ø±Õ */
     STROBE_OUT_OFF = 0,
 
-    /** @brief ?? */
+    /** @brief Êä³öµÍµçÆ½ */
     STROBE_OUT_LOW = 1,
 
-    /** @brief ?? */
+    /** @brief Êä³ö¸ßµçÆ½ */
     STROBE_OUT_HIGH = 2,
 
 } dvpStrobeOutputType;
 
 
-/** @brief Strobe??*/
+/** @brief StrobeĞÅºÅÇı¶¯·½Ê½*/
 typedef enum dvpStrobeDriver
 {
-    /** @brief ??? */
+    /** @brief Õû¸öÖ¡ÖÜÆÚ¶¼ÓĞĞ§ */
     FRAME_DURATION = 0,
 
-    /** @brief ?? */
+    /** @brief ÓÉ¶¨Ê±Æ÷Çı¶¯ */
     TIMER_LOGIC = 1,
 
-    /** @brief SENSORStrobe? */
+    /** @brief ¸úËæSENSORµÄStrobeĞÅºÅ */
     SENSOR_STROBE = 2,
 
-    /** @brief ??????CHECK */
+    /** @brief Õû¸ö´¥·¢¹ı³ÌÓĞĞ§£¬´¥·¢¹ı³Ì°üÀ¨ÁË´¥·¢ÑÓ³Ù²¿·ÖºÍCHECK²¿·Ö */
     TRIG_DURATION = 4,
 
-    /** @brief TriggerStartActive???? */
+    /** @brief TriggerStartActive£¬ÓÉ´¥·¢ĞÅºÅ±ßÑØ¼¤»î */
     TRIG_START = 5,
 
-    /** @brief TriggerEndActive???? */
+    /** @brief TriggerEndActive£¬ÓÉ´¥·¢ĞÅºÅ±ßÑØ¼¤»î */
     TRIG_END = 6,
 
-    /** @brief SENSORSTROBE??FPGA??exp_ctrl */
+    /** @brief ¸úËæSENSORµÄSTROBEĞÅºÅ£¬»òÕßFPGA²úÉúµÄÆØ¹â¿ØÖÆĞÅºÅexp_ctrl */
     EXPOSURE_DURATION = 8,
 
-    /** @brief ??? */
+    /** @brief ÆØ¹â¿ªÊ¼ */
     EXPOSURE_START = 9,
 
-    /** @brief ? */
+    /** @brief ÆØ¹â½áÊø */
     EXPOSURE_END = 10,
 
     /** @brief FrameStartActive */
@@ -486,7 +486,7 @@ typedef enum dvpStrobeDriver
     /** @brief FrameEndActive */
     FRAME_END = 14,
 
-    /** @brief ?? ???? */
+    /** @brief Ò»×éÖ¡ ´¥·¢¶àÖ¡µÄ¹ı³ÌÖ¸Ê¾ */
     BURST_FRAME_DURATION = 16,
 
     /** @brief BurstFrameStartActive */
@@ -498,656 +498,656 @@ typedef enum dvpStrobeDriver
 } dvpStrobeDriver;
 
 
-/** @brief ??
+/** @brief Êä³öÄ£Ê½
 *@deprecated*/
 typedef enum dvpOutputIoFunction
 {
-    /** @brief ? */
+    /** @brief ÆÕÍ¨Êä³ö */
     OUTPUT_FUNCTION_NORMAL = 0x0000,
 
-    /** @brief  */
+    /** @brief ÉÁ¹âµÆÊä³ö */
     OUTPUT_FUNCTION_STROBE = 0x0001,
 
 } dvpOutputIoFunction;
 
 
-/** @brief ??
+/** @brief ÊäÈëÄ£Ê½
 *@deprecated*/
 typedef enum dvpInputIoFunction
 {
-    /** @brief ? */
+    /** @brief ÆÕÍ¨ÊäÈë */
     INPUT_FUNCTION_NORMAL = 0x8001,
 
-    /** @brief  */
+    /** @brief ´¥·¢ÊäÈë */
     INPUT_FUNCTION_TRIGGER = 0x8002,
 
 } dvpInputIoFunction;
 
 
-/** @brief IO
+/** @brief Êä³öIO
 *@deprecated*/
 typedef enum dvpOutputIo
 {
-    /** @brief 1 */
+    /** @brief Êä³ö1 */
     OUTPUT_IO_1 = 0x0001,
 
-    /** @brief 2 */
+    /** @brief Êä³ö2 */
     OUTPUT_IO_2 = 0x0002,
 
-    /** @brief 3 */
+    /** @brief Êä³ö3 */
     OUTPUT_IO_3 = 0x0003,
 
-    /** @brief 4 */
+    /** @brief Êä³ö4 */
     OUTPUT_IO_4 = 0x0004,
 
-    /** @brief 5 */
+    /** @brief Êä³ö5 */
     OUTPUT_IO_5 = 0x0005,
 
-    /** @brief 6 */
+    /** @brief Êä³ö6 */
     OUTPUT_IO_6 = 0x0006,
 
-    /** @brief 7 */
+    /** @brief Êä³ö7 */
     OUTPUT_IO_7 = 0x0007,
 
-    /** @brief 8 */
+    /** @brief Êä³ö8 */
     OUTPUT_IO_8 = 0x0008,
 
-    /** @brief 9 */
+    /** @brief Êä³ö9 */
     OUTPUT_IO_9 = 0x0009,
 
-    /** @brief 10 */
+    /** @brief Êä³ö10 */
     OUTPUT_IO_10 = 0x000a,
 
-    /** @brief 11 */
+    /** @brief Êä³ö11 */
     OUTPUT_IO_11 = 0x000b,
 
-    /** @brief 12 */
+    /** @brief Êä³ö12 */
     OUTPUT_IO_12 = 0x000c,
 
-    /** @brief 13 */
+    /** @brief Êä³ö13 */
     OUTPUT_IO_13 = 0x000d,
 
-    /** @brief 14 */
+    /** @brief Êä³ö14 */
     OUTPUT_IO_14 = 0x000e,
 
-    /** @brief 15 */
+    /** @brief Êä³ö15 */
     OUTPUT_IO_15 = 0x000f,
 
-    /** @brief 16 */
+    /** @brief Êä³ö16 */
     OUTPUT_IO_16 = 0x0010,
 
 } dvpOutputIo;
 
 
-/** @brief IO
+/** @brief ÊäÈëIO
 *@deprecated*/
 typedef enum dvpInputIo
 {
-    /** @brief 1 */
+    /** @brief ÊäÈë1 */
     INPUT_IO_1 = 0x8001,
 
-    /** @brief 2 */
+    /** @brief ÊäÈë2 */
     INPUT_IO_2 = 0x8002,
 
-    /** @brief 3 */
+    /** @brief ÊäÈë3 */
     INPUT_IO_3 = 0x8003,
 
-    /** @brief 4 */
+    /** @brief ÊäÈë4 */
     INPUT_IO_4 = 0x8004,
 
-    /** @brief 5 */
+    /** @brief ÊäÈë5 */
     INPUT_IO_5 = 0x8005,
 
-    /** @brief 6 */
+    /** @brief ÊäÈë6 */
     INPUT_IO_6 = 0x8006,
 
-    /** @brief 7 */
+    /** @brief ÊäÈë7 */
     INPUT_IO_7 = 0x8007,
 
-    /** @brief 8 */
+    /** @brief ÊäÈë8 */
     INPUT_IO_8 = 0x8008,
 
 } dvpInputIo;
 
 
-/** @brief ?*/
+/** @brief Éè±¸Òı½Å*/
 typedef enum dvpLine
 {
-    /** @brief 1 */
+    /** @brief Òı½Å1 */
     LINE_1 = 0x10001,
 
-    /** @brief 2 */
+    /** @brief Òı½Å2 */
     LINE_2 = 0x10002,
 
-    /** @brief 3 */
+    /** @brief Òı½Å3 */
     LINE_3 = 0x10003,
 
-    /** @brief 4 */
+    /** @brief Òı½Å4 */
     LINE_4 = 0x10004,
 
-    /** @brief 5 */
+    /** @brief Òı½Å5 */
     LINE_5 = 0x10005,
 
-    /** @brief 6 */
+    /** @brief Òı½Å6 */
     LINE_6 = 0x10006,
 
-    /** @brief 7 */
+    /** @brief Òı½Å7 */
     LINE_7 = 0x10007,
 
-    /** @brief 8 */
+    /** @brief Òı½Å8 */
     LINE_8 = 0x10008,
 
-    /** @brief 9 */
+    /** @brief Òı½Å9 */
     LINE_9 = 0x10009,
 
-    /** @brief 10 */
+    /** @brief Òı½Å10 */
     LINE_10 = 0x1000a,
 
-    /** @brief 11 */
+    /** @brief Òı½Å11 */
     LINE_11 = 0x1000b,
 
-    /** @brief 12 */
+    /** @brief Òı½Å12 */
     LINE_12 = 0x1000c,
 
-    /** @brief 13 */
+    /** @brief Òı½Å13 */
     LINE_13 = 0x1000d,
 
-    /** @brief 14 */
+    /** @brief Òı½Å14 */
     LINE_14 = 0x1000e,
 
-    /** @brief 15 */
+    /** @brief Òı½Å15 */
     LINE_15 = 0x1000f,
 
-    /** @brief 16 */
+    /** @brief Òı½Å16 */
     LINE_16 = 0x10010,
 
 } dvpLine;
 
 
-/** @brief ??*/
+/** @brief Òı½ÅÄ£Ê½*/
 typedef enum dvpLineMode
 {
-    /** @brief ? */
+    /** @brief ÊäÈëĞÅºÅÒı½Å */
     LINE_MODE_INPUT = 0,
 
-    /** @brief ? */
+    /** @brief Êä³öĞÅºÅÒı½Å */
     LINE_MODE_OUTPUT = 1,
 
 } dvpLineMode;
 
 
-/** @brief ??*/
+/** @brief Òı½ÅÊä³öĞÅºÅÔ´*/
 typedef enum dvpLineSource
 {
-    /** @brief û?? */
+    /** @brief ÓÃ»§¿ØÖÆµçÆ½ */
     OUTPUT_SOURCE_NORMAL = 0,
 
-    /** @brief ? */
+    /** @brief ÉÁ¹âµÆĞÅºÅ */
     OUTPUT_SOURCE_STROBE = 1,
 
-    /** @brief PWM? */
+    /** @brief PWMĞÅºÅ */
     OUTPUT_SOURCE_PWM = 2,
 
-    /** @brief PULSE? */
+    /** @brief PULSEĞÅºÅ */
     OUTPUT_SOURCE_PULSE = 0x10,
 
 } dvpLineSource;
 
 
-/** @brief ???*/
+/** @brief Òı½Å´¥·¢Ä£Ê½*/
 typedef enum dvpTriggerLineMode
 {
-    /** @brief ? */
+    /** @brief ÆÕÍ¨ */
     TRIGGER_LINE_MODE_NORMAL = 0,
 
-    /** @brief ??? */
+    /** @brief ÆØ¹âÊ±¼äÓÉÂö³å¿í¶È¾ö¶¨ */
     TRIGGER_LINE_MODE_BULB = 1,
 
 } dvpTriggerLineMode;
 
 
-/** @brief ?*/
+/** @brief ´¥·¢Ô´*/
 typedef enum dvpTriggerSource
 {
-    /** @brief @link #dvpTriggerFire @endlink */
+    /** @brief @link #dvpTriggerFire Èí¼ş@endlink´¥·¢ */
     TRIGGER_SOURCE_SOFTWARE = 0,
 
-    /** @brief @link #dvpLine::LINE_1 1@endlink */
+    /** @brief @link #dvpLine::LINE_1 Òı½Å1@endlink´¥·¢ */
     TRIGGER_SOURCE_LINE1 = 1,
 
-    /** @brief @link #dvpLine::LINE_2 2@endlink */
+    /** @brief @link #dvpLine::LINE_2 Òı½Å2@endlink´¥·¢ */
     TRIGGER_SOURCE_LINE2 = 2,
 
-    /** @brief @link #dvpLine::LINE_3 3@endlink */
+    /** @brief @link #dvpLine::LINE_3 Òı½Å3@endlink´¥·¢ */
     TRIGGER_SOURCE_LINE3 = 3,
 
-    /** @brief @link #dvpLine::LINE_4 4@endlink */
+    /** @brief @link #dvpLine::LINE_4 Òı½Å4@endlink´¥·¢ */
     TRIGGER_SOURCE_LINE4 = 4,
 
-    /** @brief @link #dvpLine::LINE_5 5@endlink */
+    /** @brief @link #dvpLine::LINE_5 Òı½Å5@endlink´¥·¢ */
     TRIGGER_SOURCE_LINE5 = 5,
 
-    /** @brief @link #dvpLine::LINE_6 6@endlink */
+    /** @brief @link #dvpLine::LINE_6 Òı½Å6@endlink´¥·¢ */
     TRIGGER_SOURCE_LINE6 = 6,
 
-    /** @brief @link #dvpLine::LINE_7 7@endlink */
+    /** @brief @link #dvpLine::LINE_7 Òı½Å7@endlink´¥·¢ */
     TRIGGER_SOURCE_LINE7 = 7,
 
-    /** @brief @link #dvpLine::LINE_8 8@endlink */
+    /** @brief @link #dvpLine::LINE_8 Òı½Å8@endlink´¥·¢ */
     TRIGGER_SOURCE_LINE8 = 8,
 
 } dvpTriggerSource;
 
 
-/** @brief ????*/
+/** @brief µÚÒ»¸öÏñËØ¶ÔÓ¦µÄÎ»ÖÃ*/
 typedef enum dvpFirstPosition
 {
-    /** @brief ? */
+    /** @brief ×óÉÏ½Ç */
     UP_LEFT = 0,
 
-    /** @brief ? */
+    /** @brief ÓÒÉÏ½Ç */
     UP_RIGHT = 1,
 
-    /** @brief ½ */
+    /** @brief ×óÏÂ½Ç */
     BOTTOM_LEFT = 2,
 
-    /** @brief ½ */
+    /** @brief ÓÒÏÂ½Ç */
     BOTTOM_RIGHT = 3,
 
 } dvpFirstPosition;
 
 
-/** @brief ???
-*@note ?""??@code dvpOpen(0, dvpOpenMode(OPEN_NORMAL | OPEN_DEBUG), &handle) @endcode*/
+/** @brief Éè±¸´ò¿ªÄ£Ê½
+*@note Ö§³Ö"»ò"ÔËËã£¬±ÈÈç£º@code dvpOpen(0, dvpOpenMode(OPEN_NORMAL | OPEN_DEBUG), &handle) @endcode*/
 typedef enum dvpOpenMode
 {
-    /** @brief ? */
+    /** @brief ÀëÏß´ò¿ª */
     OPEN_OFFLINE = 0,
 
-    /** @brief ?? */
+    /** @brief ´ò¿ªÊµ¼ÊÉè±¸ */
     OPEN_NORMAL = 1<<0,
 
-    /** @brief ?????????? */
+    /** @brief ÒÔµ÷ÊÔ·½Ê½´ò¿ªÉè±¸£»¶ÔÓÚÇ§Õ×ÍøÏà»ú£¬¿ÉÒÔ±ÜÃâµ¥²½µ÷ÊÔ»ò¶ÏµãÒıÆğµÄĞÄÌø°ü³¬Ê± */
     OPEN_DEBUG = 1<<3,
 
-    /** @brief ?????ı??? */
+    /** @brief Í¼Ïñ²É¼¯ºÍ´¦ÀíÏß³ÌÊ¹ÓÃ½Ï¸ßµÄÓÅÏÈ¼¶ */
     HIGH_PRIORITY = 1<<4,
 
-    /** @brief ?IP */
+    /** @brief ÅäÖÃ×Ô¶¯IP */
     OPEN_AUTOIP = 1<<5,
 
 } dvpOpenMode;
 
 
-/** @brief ???@see dvpGetStreamState*/
+/** @brief ÊÓÆµÁ÷×´Ì¬@see dvpGetStreamState*/
 typedef enum dvpStreamState
 {
-    /** @brief ??@see dvpStop */
+    /** @brief ÒÑÍ£Ö¹@see dvpStop */
     STATE_STOPED = 0,
 
-    /** @brief @see dvpStart */
+    /** @brief ÒÑÆô¶¯@see dvpStart */
     STATE_STARTED = 2,
 
 } dvpStreamState;
 
 
-/** @brief ?*/
+/** @brief ÇúÏßÄâºÏ·ç¸ñ*/
 typedef enum dvpCurveStyle
 {
-    /** @brief ? */
+    /** @brief Ö±ÏßÄâºÏ */
     CURVE_STYLE_LINE = 0,
 
-    /** @brief ? */
+    /** @brief Æ½»¬ÄâºÏ */
     CURVE_STYLE_WAVE = 1,
 
 } dvpCurveStyle;
 
 
-/** @brief û
-*@note ???*/
+/** @brief ÓÃ»§ÉèÖÃ
+*@note Í¨³£´æ´¢ÔÚÏà»ú´æ´¢Æ÷ÉÏ*/
 typedef enum dvpUserSet
 {
-    /** @brief ??
-*@note ????? */
+    /** @brief Ä¬ÈÏÖ»¶ÁÉèÖÃ
+*@note Ö»ÄÜ¶ÁÈ¡£¬½ûÖ¹Ğ´Èë */
     USER_SET_DEFAULT = 0,
 
-    /** @brief û1 */
+    /** @brief ÓÃ»§ÉèÖÃ1 */
     USER_SET_1 = 1,
 
-    /** @brief û2 */
+    /** @brief ÓÃ»§ÉèÖÃ2 */
     USER_SET_2 = 2,
 
 } dvpUserSet;
 
 
-/** @brief ??*/
+/** @brief »º´æÄ£Ê½*/
 typedef enum dvpBufferMode
 {
-    /** @brief ?? */
+    /** @brief ×îĞÂÖ¡Êä³ö£¬¾ÉÖ¡½«±»¸²¸Ç */
     BUFFER_MODE_NEWEST = 0,
 
-    /** @brief ?? */
+    /** @brief ÏÈ½øÏÈ³ö¶ÓÁĞ */
     BUFFER_MODE_FIFO = 1,
 
 } dvpBufferMode;
 
 
-/** @brief ?*/
+/** @brief Éè±¸ÀàĞÍ*/
 typedef enum dvpDeviceType
 {
-    /** @brief ?? */
+    /** @brief Î´ÖªÀàĞÍ */
     DEVICE_TYPE_UNKNOWN = 0,
 
-    /** @brief USB2.0?? */
+    /** @brief USB2.0½Ó¿ÚµÄÏà»ú */
     DEVICE_TYPE_USB2_CAMERA = 10,
 
-    /** @brief USB3.0?? */
+    /** @brief USB3.0½Ó¿ÚµÄÏà»ú */
     DEVICE_TYPE_USB3_CAMERA = 20,
 
-    /** @brief ??? */
+    /** @brief Ç§Õ×Íø½Ó¿ÚµÄÏà»ú */
     DEVICE_TYPE_GLAN_CAMERA = 30,
 
-    /** @brief ?? */
+    /** @brief ÍòÕ×Íø½Ó¿ÚµÄÏà»ú */
     DEVICE_TYPE_XGIGE_CAMERA = 40,
 
-    /** @brief ? */
+    /** @brief ÍòÕ×Íø²É¼¯¿¨ */
     DEVICE_TYPE_XGIGE_GRABBER = 100,
 
 } dvpDeviceType;
 
 
-/** @brief ???*/
+/** @brief µ÷ÊÔĞÅÏ¢±¨¸æ£¬¹¦ÄÜÄ£¿é·ÖÀà*/
 typedef enum dvpReportPart
 {
-    /** @brief ???? */
+    /** @brief Ä¬ÈÏ»òÎ´×ö¹¦ÄÜ·ÖÀà */
     PART_DEFAULT = 0x00,
 
-    /** @brief ?? */
+    /** @brief Í¨Ñ¶Ïà¹Ø */
     PART_LINK = 0x10,
 
-    /** @brief  */
+    /** @brief ¿ØÖÆÏà¹Ø */
     PART_CONTROL = 0x20,
 
-    /** @brief ? */
+    /** @brief Êı¾İÁ÷»ò²É¼¯Ïà¹Ø */
     PART_STREAM = 0x30,
 
-    /** @brief  */
+    /** @brief ´¥·¢¹¦ÄÜÏà¹Ø */
     PART_TRIG = 0x40,
 
-    /** @brief GPIO */
+    /** @brief GPIO¹¦ÄÜÏà¹Ø */
     PART_GPIO = 0x50,
 
-    /** @brief ?? */
+    /** @brief Í¼ÏñĞ§¹ûÏà¹Ø */
     PART_IMAGE = 0x60,
 
 } dvpReportPart;
 
 
-/** @brief ??*/
+/** @brief µ÷ÊÔĞÅÏ¢±¨¸æµÄ¼¶±ğ*/
 typedef enum dvpReportLevel
 {
-    /** @brief ?? */
+    /** @brief ĞÅÏ¢»òÌáÊ¾ */
     LEVEL_INFO = 0x10,
 
-    /** @brief  */
+    /** @brief ÎÊÌâ»ò¹ÊÕÏ */
     LEVEL_PROBLEM = 0x40,
 
 } dvpReportLevel;
 
 
-/** @brief ??????
-*@note DVP_STATUS_OK?
-*@note DVP_STATUS_OK??
-*@warning ?DVP_STATUS_OK?*/
+/** @brief ËùÓĞ±ê×¼½Ó¿ÚµÄ×´Ì¬Âë
+*@note µÈÓÚDVP_STATUS_OK±íÊ¾Õı³£
+*@note ´óÓÚDVP_STATUS_OKÍ¨³£±íÊ¾¾¯¸æ
+*@warning Ğ¡ÓÚDVP_STATUS_OKÔò±íÊ¾´íÎó*/
 typedef enum dvpStatus
 {
-    /** @brief ????? */
+    /** @brief ²Ù×÷ºöÂÔµôÁË£¬²»ĞëÒªÈÎºÎ¶¯×÷ */
     DVP_STATUS_IGNORED = 7,
 
-    /** @brief ??? */
+    /** @brief ĞèÒªÆäËûÊı¾İºÍ²Ù×÷ */
     DVP_STATUS_NEED_OTHER = 6,
 
-    /** @brief ?????? */
+    /** @brief »¹Ğë½øĞĞÏÂÒ»½×¶Î£¬Ö»Íê³ÉÁË²¿·Ö¶¯×÷ */
     DVP_STATUS_NEXT_STAGE = 5,
 
-    /** @brief æ??? */
+    /** @brief ÕıÃ¦£¬´Ë´Î²Ù×÷²»ÄÜ½øĞĞ */
     DVP_STATUS_BUSY = 4,
 
-    /** @brief ???? */
+    /** @brief ĞèÒªµÈ´ı£¬¿ÉÒÔÔÙ´Î³¢ÊÔ */
     DVP_STATUS_WAIT = 3,
 
-    /** @brief ??? */
+    /** @brief ÕıÔÚ½øĞĞ£¬ÒÑ¾­±»²Ù×÷¹ı */
     DVP_STATUS_IN_PROCESS = 2,
 
-    /** @brief ? */
+    /** @brief ²Ù×÷³É¹¦ */
     DVP_STATUS_OK = 1,
 
-    /** @brief ? */
+    /** @brief ²Ù×÷Ê§°Ü */
     DVP_STATUS_FAILED = 0,
 
-    /** @brief ?? */
+    /** @brief Î´Öª´íÎó */
     DVP_STATUS_UNKNOW = -1,
 
-    /** @brief ??ù */
+    /** @brief ²»Ö§³Ö¸Ã¹¦ÄÜ */
     DVP_STATUS_NOT_SUPPORTED = -2,
 
-    /** @brief ?? */
+    /** @brief ³õÊ¼»¯Î´Íê³É */
     DVP_STATUS_NOT_INITIALIZED = -3,
 
-    /** @brief ? */
+    /** @brief ²ÎÊıÎŞĞ§ */
     DVP_STATUS_PARAMETER_INVALID = -4,
 
-    /** @brief ? */
+    /** @brief ²ÎÊıÔ½½ç */
     DVP_STATUS_PARAMETER_OUT_OF_BOUND = -5,
 
-    /** @brief ? */
+    /** @brief ÌØĞÔÎ´´ò¿ª */
     DVP_STATUS_UNENABLED = -6,
 
-    /** @brief ??? */
+    /** @brief Î´Á¬½Óµ½Éè±¸ */
     DVP_STATUS_UNCONNECTED = -7,
 
-    /** @brief ? */
+    /** @brief ¹¦ÄÜÎŞĞ§ */
     DVP_STATUS_NOT_VALID = -8,
 
-    /** @brief ?û */
+    /** @brief Éè±¸Ã»´ò¿ª */
     DVP_STATUS_UNPLAY = -9,
 
-    /** @brief ? */
+    /** @brief Î´Æô¶¯ */
     DVP_STATUS_NOT_STARTED = -10,
 
-    /** @brief ??? */
+    /** @brief Î´Í£Ö¹ */
     DVP_STATUS_NOT_STOPPED = -11,
 
-    /** @brief ?? */
+    /** @brief Î´×¼±¸ºÃ */
     DVP_STATUS_NOT_READY = -12,
 
-    /** @brief ????? */
+    /** @brief ÎŞĞ§¾ä±ú£¨¿Õ¾ä±ú»òÒ°¾ä±ú£©£¬Í¨³£ÊÇÏà»úÎ´´ò¿ªËùÖÂ */
     DVP_STATUS_INVALID_HANDLE = -13,
 
-    /** @brief  */
+    /** @brief ´íÎóµÄÃèÊö */
     DVP_STATUS_DESCR_FAULT = -20,
 
-    /** @brief  */
+    /** @brief ´íÎóµÄÃû³Æ */
     DVP_STATUS_NAME_FAULT = -21,
 
-    /** @brief ?? */
+    /** @brief ´íÎóµÄ¸³Öµ */
     DVP_STATUS_VALUE_FAULT = -22,
 
-    /** @brief  */
+    /** @brief ±»ÏŞÖÆ */
     DVP_STATUS_LIMITED = -28,
 
-    /** @brief ? */
+    /** @brief ¹¦ÄÜÎŞĞ§ */
     DVP_STATUS_FUNCTION_INVALID = -29,
 
-    /** @brief ????? */
+    /** @brief ÔÚ×Ô¶¯½øĞĞÖĞ£¬ÊÖ¶¯·½Ê½ÎŞĞ§ */
     DVP_STATUS_IN_AUTO = -30,
 
-    /** @brief ? */
+    /** @brief ²Ù×÷±»¾Ü¾ø */
     DVP_STATUS_DENIED = -31,
 
-    /** @brief ???? */
+    /** @brief Æ«ÒÆ»òµØÖ·Î´¶ÔÆë */
     DVP_STATUS_BAD_ALIGNMENT = -40,
 
-    /** @brief ?? */
+    /** @brief µØÖ·ÎŞĞ§ */
     DVP_STATUS_ADDRESS_INVALID = -41,
 
-    /** @brief ??? */
+    /** @brief Êı¾İ¿é´óĞ¡ÎŞĞ§ */
     DVP_STATUS_SIZE_INVALID = -42,
 
-    /** @brief  */
+    /** @brief Êı¾İÁ¿¹ıÔØ */
     DVP_STATUS_OVER_LOAD = -43,
 
-    /** @brief  */
+    /** @brief Êı¾İÁ¿²»¹» */
     DVP_STATUS_UNDER_LOAD = -44,
 
-    /** @brief ??? */
+    /** @brief ¼ì²é£¬Ğ£ÑéÊ§°Ü */
     DVP_STATUS_CHECKED_FAILED = -50,
 
-    /** @brief  */
+    /** @brief ²»¿ÉÓÃ */
     DVP_STATUS_UNUSABLE = -51,
 
-    /** @brief ?ID?? */
+    /** @brief ÒµÎñIDÎŞĞ§»ò²»Æ¥Åä */
     DVP_STATUS_BID_INVALID = -52,
 
-    /** @brief ?ò */
+    /** @brief Ê¹ÓÃ²»µ± */
     DVP_STATUS_IMPROPER = -53,
 
-    /** @brief ?? */
+    /** @brief Ö»¶Á£¬²»¿ÉĞ´ */
     DVP_STATUS_READ_ONLY = -54,
 
-    /** @brief ? */
+    /** @brief ²»ÄÜÊ¶±ğµÄÊı¾İ */
     DVP_STATUS_UNRECOGNIZED_DATA = -55,
 
-    /** @brief ? */
+    /** @brief ³¬Ê±´íÎó */
     DVP_STATUS_TIME_OUT = -1000,
 
-    /** @brief ?IO */
+    /** @brief Ó²¼şIO´íÎó */
     DVP_STATUS_IO_ERROR = -1001,
 
-    /** @brief ?? */
+    /** @brief Í¨Ñ¶´íÎó */
     DVP_STATUS_COMM_ERROR = -1002,
 
-    /** @brief ? */
+    /** @brief ×ÜÏß´íÎó */
     DVP_STATUS_BUS_ERROR = -1003,
 
-    /** @brief ? */
+    /** @brief ¸ñÊ½´íÎó */
     DVP_STATUS_FORMAT_INVALID = -1004,
 
-    /** @brief ? */
+    /** @brief ÄÚÈİÎŞĞ§ */
     DVP_STATUS_CONTENT_INVALID = -1005,
 
-    /** @brief I2C? */
+    /** @brief I2C×ÜÏß´íÎó */
     DVP_STATUS_I2C_FAULT = -1010,
 
-    /** @brief I2C??? */
+    /** @brief I2CµÈ´ıÓ¦´ğ³¬Ê± */
     DVP_STATUS_I2C_ACK_TIMEOUT = -1011,
 
-    /** @brief I2C???SCL???? */
+    /** @brief I2CµÈ´ı×ÜÏß¶¯×÷³¬Ê±£¬ÀıÈçSCL±»Íâ²¿Æ÷¼şÀ­ÎªµÍµçÆ½ */
     DVP_STATUS_I2C_BUS_TIMEOUT = -1012,
 
-    /** @brief SPI? */
+    /** @brief SPI×ÜÏß´íÎó */
     DVP_STATUS_SPI_FAULT = -1020,
 
-    /** @brief UART? */
+    /** @brief UART×ÜÏß´íÎó */
     DVP_STATUS_UART_FAULT = -1030,
 
-    /** @brief GPIO? */
+    /** @brief GPIO×ÜÏß´íÎó */
     DVP_STATUS_GPIO_FAULT = -1040,
 
-    /** @brief USB? */
+    /** @brief USB×ÜÏß´íÎó */
     DVP_STATUS_USB_FAULT = -1050,
 
-    /** @brief PCI? */
+    /** @brief PCI×ÜÏß´íÎó */
     DVP_STATUS_PCI_FAULT = -1060,
 
-    /** @brief  */
+    /** @brief ÎïÀí²ã´íÎó */
     DVP_STATUS_PHY_FAULT = -1070,
 
-    /** @brief · */
+    /** @brief Á´Â·²ã´íÎó */
     DVP_STATUS_LINK_FAULT = -1080,
 
-    /** @brief  */
+    /** @brief ´«Êä²ã´íÎó */
     DVP_STATUS_TRANS_FAULT = -1090,
 
-    /** @brief û?? */
+    /** @brief Ã»ÓĞ·¢ÏÖÉè±¸ */
     DVP_STATUS_NO_DEVICE_FOUND = -1100,
 
-    /** @brief ???? */
+    /** @brief Î´ÕÒµ½Âß¼­Éè±¸ */
     DVP_STATUS_NO_LOGIC_DEVICE_FOUND = -1101,
 
-    /** @brief ?? */
+    /** @brief Éè±¸ÒÑ¾­´ò¿ª */
     DVP_STATUS_DEVICE_IS_OPENED = -1102,
 
-    /** @brief ??? */
+    /** @brief Éè±¸ÒÑ¾­¹Ø±Õ */
     DVP_STATUS_DEVICE_IS_CLOSED = -1103,
 
-    /** @brief ??? */
+    /** @brief Éè±¸ÒÑ¾­¶Ï¿ªÁ¬½Ó */
     DVP_STATUS_DEVICE_IS_DISCONNECTED = -1104,
 
-    /** @brief ?? */
+    /** @brief Éè±¸ÒÑ¾­±»ÆäËûÖ÷»ú´ò¿ª */
     DVP_STATUS_DEVICE_IS_OPENED_BY_ANOTHER = -1105,
 
-    /** @brief ?? */
+    /** @brief Éè±¸ÒÑ¾­±»Æô¶¯ */
     DVP_STATUS_DEVICE_IS_STARTED = -1106,
 
-    /** @brief ?????? */
+    /** @brief Éè±¸ÒÑ¾­±»Í£Ö¹Éè±¸ÒÑ¾­±»ÆäËûÖ÷»ú´ò¿ª */
     DVP_STATUS_DEVICE_IS_STOPPED = -1107,
 
-    /** @brief û???? */
+    /** @brief Ã»ÓĞ×ã¹»ÏµÍ³ÄÚ´æ */
     DVP_STATUS_INSUFFICIENT_MEMORY = -1200,
 
-    /** @brief ???? */
+    /** @brief ´æ´¢Æ÷¶ÁĞ´³öÏÖÎóÂë»òÎŞ·¨Õı³£¶ÁĞ´ */
     DVP_STATUS_MEMORY_FAULT = -1201,
 
-    /** @brief ?? */
+    /** @brief Ğ´±£»¤£¬²»¿ÉĞ´ */
     DVP_STATUS_WRITE_PROTECTED = -1202,
 
-    /** @brief ?? */
+    /** @brief ´´½¨ÎÄ¼şÊ§°Ü */
     DVP_STATUS_FILE_CREATE_FAILED = -1300,
 
-    /** @brief ??? */
+    /** @brief ÎÄ¼ş¸ñÊ½ÎŞĞ§ */
     DVP_STATUS_FILE_INVALID = -1301,
 
-    /** @brief ??? */
+    /** @brief ¶ÁÈ¡ÎÄ¼şÊ§°Ü */
     DVP_STATUS_FILE_READ_FAILED = -1302,
 
-    /** @brief ??? */
+    /** @brief Ğ´ÈëÎÄ¼şÊ§°Ü */
     DVP_STATUS_FILE_WRITE_FAILED = -1303,
 
-    /** @brief ?? */
+    /** @brief ´ò¿ªÎÄ¼şÊ§°Ü */
     DVP_STATUS_FILE_OPEN_FAILED = -1304,
 
-    /** @brief ???? */
+    /** @brief ¶ÁÈ¡Êı¾İ½Ï¼ìÊ§°Ü */
     DVP_STATUS_FILE_CHECKSUM_FAILED = -1305,
 
-    /** @brief ??????? */
+    /** @brief Êı¾İ²É¼¯Ê§°Ü£¬Ö¸¶¨µÄÊ±¼äÄÚÎ´»ñµÃÊı¾İ */
     DVP_STATUS_GRAB_FAILED = -1600,
 
-    /** @brief ?? */
+    /** @brief Êı¾İ¶ªÊ§£¬²»ÍêÕû */
     DVP_STATUS_LOST_DATA = -1601,
 
-    /** @brief ??? */
+    /** @brief Î´½ÓÊÕµ½Ö¡½áÊø·û */
     DVP_STATUS_EOF_ERROR = -1602,
 
-    /** @brief ??? */
+    /** @brief Êı¾İ²É¼¯¹¦ÄÜÒÑ¾­´ò¿ª */
     DVP_STATUS_GRAB_IS_OPENED = -1603,
 
-    /** @brief ???? */
+    /** @brief Êı¾İ²É¼¯¹¦ÄÜÒÑ¾­¹Ø±Õ */
     DVP_STATUS_GRAB_IS_CLOSED = -1604,
 
-    /** @brief ??? */
+    /** @brief Êı¾İ²É¼¯ÒÑ¾­Æô¶¯ */
     DVP_STATUS_GRAB_IS_STARTED = -1605,
 
-    /** @brief ????? */
+    /** @brief Êı¾İ²É¼¯ÒÑ¾­Í£Ö¹ */
     DVP_STATUS_GRAB_IS_STOPPED = -1606,
 
-    /** @brief ?? */
+    /** @brief Êı¾İ²É¼¯ÕıÔÚÖØÆô */
     DVP_STATUS_GRAB_IS_RESTARTING = -1607,
 
-    /** @brief õROI? */
+    /** @brief ÉèÖÃµÄROI²ÎÊıÎŞĞ§ */
     DVP_STATUS_ROI_PARAM_INVALID = -1610,
 
-    /** @brief ROI?? */
+    /** @brief ROI¹¦ÄÜ²»Ö§³Ö */
     DVP_STATUS_ROI_NOT_SUPPORTED = -1611,
 
 } dvpStatus;
@@ -1157,777 +1157,777 @@ typedef enum dvpStatus
 
 #include <stdint.h>
 
-/** @brief 8?? */
+/** @brief 8Î»ÎŞ·ûºÅÕûÊı */
 typedef uint8_t dvpByte;
 
-/** @brief 32?? */
+/** @brief 32Î»ÓĞ·ûºÅÕûÊı */
 typedef int32_t dvpInt32;
 
-/** @brief 32?? */
+/** @brief 32Î»ÎŞ·ûºÅÕûÊı */
 typedef uint32_t dvpUint32;
 
-/** @brief 64?? */
+/** @brief 64Î»ÓĞ·ûºÅÕûÊı */
 typedef int64_t dvpInt64;
 
-/** @brief 64?? */
+/** @brief 64Î»ÎŞ·ûºÅÕûÊı */
 typedef uint64_t dvpUint64;
 
 #else
-/** @brief 8?? */
+/** @brief 8Î»ÎŞ·ûºÅÕûÊı */
 typedef BYTE dvpByte;
 
-/** @brief 32?? */
+/** @brief 32Î»ÓĞ·ûºÅÕûÊı */
 typedef INT32 dvpInt32;
 
-/** @brief 32?? */
+/** @brief 32Î»ÎŞ·ûºÅÕûÊı */
 typedef UINT32 dvpUint32;
 
-/** @brief 64?? */
+/** @brief 64Î»ÓĞ·ûºÅÕûÊı */
 typedef INT64 dvpInt64;
 
-/** @brief 64?? */
+/** @brief 64Î»ÎŞ·ûºÅÕûÊı */
 typedef UINT64 dvpUint64;
 
 #endif // _WIN32
-/** @brief 128??? */
+/** @brief 128×Ö½Ú±£Áô¿Õ¼ä */
 typedef dvpUint32 dvpReserved[32];
 
-/** @brief 64??? */
+/** @brief 64×Ö½Ú³¤µÄ×Ö·û´® */
 typedef char dvpString64[64];
 
-/** @brief 128??? */
+/** @brief 128×Ö½Ú³¤µÄ×Ö·û´® */
 typedef char dvpString128[128];
 
-/** @brief 32??? */
+/** @brief 32×Ö½Ú³¤µÄ²¼¶ûÊı×é */
 typedef bool dvpBool32[32];
 
-/** @brief 43??? */
+/** @brief 4ĞĞ3ÁĞ¼òµ¥¾ØÕó */
 typedef float dvpMatrix[4][3];
 
-/** @brief 3??? */
+/** @brief 3Ôª¼òµ¥¸¡µãÊı×é */
 typedef float dvpFloat3c[3];
 
-/** @brief 3? */
+/** @brief 3Ôª¼òµ¥ÕûĞÍÊı×é */
 typedef dvpUint32 dvpSize3c[3];
 
-/** @brief 
+/** @brief Ïà»ú¾ä±ú
 *@see dvpOpen
 *@see dvpOpenByName */
 typedef dvpUint32 dvpHandle;
 
-/** @brief ?
+/** @brief ÊÓÆµ±àÂëÆ÷¾ä±ú
 *@see dvpStartVideoRecord */
 typedef dvpUint32 dvpRecordHandle;
 
-/** @brief ?? */
+/** @brief ×Ö·û´®Ö¸Õë */
 typedef const char* dvpStr;
 
-/** @brief ? */
+/** @brief ÑÕÉ«¾ØÕó */
 typedef struct dvpColorMatrix
 {
-    /** @brief  */
+    /** @brief ¾ØÕó */
     dvpMatrix matrix;
 
-    /** @brief ? */
+    /** @brief ±£Áô×Ö½Ú */
     dvpReserved reserved;
 } dvpColorMatrix;
 
 
-/** @brief ??? */
+/** @brief ÑÕÉ«Ğ£ÕıĞÅÏ¢ */
 typedef struct dvpColorCorrection
 {
-    /** @brief BGR??? */
+    /** @brief BGRÈıÉ«Ğ£ÕıÏµÊı */
     dvpFloat3c bgr;
 
-    /** @brief ? */
+    /** @brief ±£Áô×Ö½Ú */
     dvpReserved reserved;
 } dvpColorCorrection;
 
 
-/** @brief ? */
+/** @brief ¶şÎ¬¸¡µãÊı×ø±ê */
 typedef struct dvpPoint2f
 {
-    /** @brief  */
+    /** @brief ºá×ø±ê */
     float X;
 
-    /** @brief  */
+    /** @brief ×İ×ø±ê */
     float Y;
 
 } dvpPoint2f;
 
 
-/** @brief BGR?256ê */
+/** @brief BGRÈıÉ«256¸öÃªµã */
 typedef struct dvpPoint2f dvpPoint3c[3][256];
 
-/** @brief BGR */
+/** @brief BGRÇúÏßÊı×é */
 typedef struct dvpCurveArray
 {
-    /** @brief BGR? */
+    /** @brief BGRÇúÏßÊı×é¿Õ¼ä */
     dvpPoint3c point;
 
-    /** @brief BGR??3 */
+    /** @brief BGRÓĞĞ§Í¨µÀÊı£¬×î¶à3¸ö */
     dvpUint32 rows;
 
-    /** @brief BGR??ÿ?256 */
+    /** @brief BGRÈıÍ¨µÀµÄÓĞĞ§µãÊı£¬Ã¿Í¨µÀ×î¶à256¸ö */
     dvpSize3c cols;
 
 } dvpCurveArray;
 
 
-/** @brief ?LUT
-*@warning ?????? new dvpCurveLut() ???? */
+/** @brief ÓÉÇúÏß¶¨ÒåµÄLUT
+*@warning ´Ë½á¹¹Ìå×Ö½ÚÊı½Ï¶à£¬ÈİÒ×Ôì³ÉÕ»Òç³ö£¬½¨ÒéÓÃ new dvpCurveLut() µÄ·½Ê½ÔÚ¶ÑÉÏ¹¹Ôì */
 typedef struct dvpCurveLut
 {
-    /** @brief ??? */
+    /** @brief Ê¹ÄÜ×´Ì¬ */
     bool enable;
 
-    /** @brief ? */
+    /** @brief ÇúÏß·ç¸ñ */
     dvpCurveStyle style;
 
-    /** @brief ê?ê??LUT */
+    /** @brief ÃªµãÊı×é£¬ÓÉÉÙÊı¼¸¸öÃªµã¿ÉÒÔÈ·¶¨Ò»¸öÍêÕûµÄLUT */
     dvpCurveArray array;
 
-    /** @brief ? */
+    /** @brief ±£Áô×Ö½Ú */
     dvpReserved reserved;
 } dvpCurveLut;
 
 
-/** @brief ? 
+/** @brief Ïà»úĞÅÏ¢ 
 *@see dvpGetCameraInfo
 *@see dvpEnum */
 typedef struct dvpCameraInfo
 {
-    /** @brief ? */
+    /** @brief Éè¼Æ³§ÉÌ */
     dvpString64 Vendor;
 
-    /** @brief  */
+    /** @brief Éú²ú³§ÉÌ */
     dvpString64 Manufacturer;
 
-    /** @brief ? */
+    /** @brief ĞÍºÅ */
     dvpString64 Model;
 
-    /** @brief ? */
+    /** @brief ÏµÁĞ */
     dvpString64 Family;
 
-    /** @brief  */
+    /** @brief Á¬½ÓÃû */
     dvpString64 LinkName;
 
-    /** @brief  */
+    /** @brief ´«¸ĞÆ÷ÃèÊö */
     dvpString64 SensorInfo;
 
-    /** @brief ?? */
+    /** @brief Ó²¼ş°æ±¾ */
     dvpString64 HardwareVersion;
 
-    /** @brief ?? */
+    /** @brief ¹Ì¼ş°æ±¾ */
     dvpString64 FirmwareVersion;
 
-    /** @brief ?? */
+    /** @brief ÄÚºËÇı¶¯°æ±¾ */
     dvpString64 KernelVersion;
 
-    /** @brief ?? */
+    /** @brief Éè±¸Çı¶¯°æ±¾ */
     dvpString64 DscamVersion;
 
-    /** @brief ?? */
+    /** @brief ÓÑºÃÉè±¸Ãû³Æ */
     dvpString64 FriendlyName;
 
-    /** @brief ? */
+    /** @brief ½Ó¿ÚÃèÊö */
     dvpString64 PortInfo;
 
-    /** @brief ?
-*@note ?? */
+    /** @brief ĞòÁĞºÅ
+*@note Ò»°ã¿ÉÒÔ¸ü¸Ä */
     dvpString64 SerialNumber;
 
-    /** @brief  */
+    /** @brief Ïà»úÃèÊö */
     dvpString128 CameraInfo;
 
-    /** @brief û */
+    /** @brief ÓÃ»§ÃüÃû */
     dvpString128 UserID;
 
-    /** @brief ??? */
+    /** @brief Ô­Ê¼ĞòÁĞºÅ */
     dvpString64 OriginalSerialNumber;
 
-    /** @brief ? */
+    /** @brief ±£Áô×Ö½Ú */
     dvpString64 reserved;
 } dvpCameraInfo;
 
 
-/** @brief  */
+/** @brief ÇøÓòÃèÊö */
 typedef struct dvpRegionDescr
 {
-    /** @brief ? */
+    /** @brief ×îĞ¡¿í¶È */
     dvpInt32 iMinW;
 
-    /** @brief ?? */
+    /** @brief ×îĞ¡¸ß¶È */
     dvpInt32 iMinH;
 
-    /** @brief  */
+    /** @brief ×î´ó¿í¶È */
     dvpInt32 iMaxW;
 
-    /** @brief ? */
+    /** @brief ×î´ó¸ß¶È */
     dvpInt32 iMaxH;
 
-    /** @brief ? */
+    /** @brief ¿í¶È²½³¤ */
     dvpInt32 iStepW;
 
-    /** @brief ?? */
+    /** @brief ¸ß¶È²½³¤ */
     dvpInt32 iStepH;
 
-    /** @brief ? */
+    /** @brief ±£Áô×Ö½Ú */
     dvpReserved reserved;
 } dvpRegionDescr;
 
 
-/** @brief ?????
+/** @brief ÆğÊ¼ÓÚ×óÉÏ½ÇµÄ¸ĞĞËÈ¤µÄÇøÓò
 *@see dvpGetRoi
 *@see dvpGetAwbRoi
 *@see dvpGetAeRoi
-*@warning ???????? */
+*@warning Êı¾İ³ÉÔ±Í¨³£ÎªÅ¼Êı£¬ÏêÇéĞë²Î¿¼Éè±¸ÊÖ²á */
 typedef struct dvpRegion
 {
-    /** @brief ?? */
+    /** @brief ºáÏòÆğÊ¼Î»ÖÃ */
     dvpInt32 X;
 
-    /** @brief ?? */
+    /** @brief ×İÏòÆğÊ¼Î»ÖÃ */
     dvpInt32 Y;
 
-    /** @brief ?0 */
+    /** @brief ¿í¶È£¨´óÓÚ0£© */
     dvpInt32 W;
 
-    /** @brief ??0 */
+    /** @brief ¸ß¶È£¨´óÓÚ0£© */
     dvpInt32 H;
 
-    /** @brief ? */
+    /** @brief ±£Áô×Ö½Ú */
     dvpReserved reserved;
 } dvpRegion;
 
 
-/** @brief ??
+/** @brief Ö¡ĞÅÏ¢
 *@see dvpGetFrame */
 typedef struct dvpFrame
 {
-    /** @brief ? */
+    /** @brief ¸ñÊ½ */
     enum dvpImageFormat format;
 
-    /** @brief ? */
+    /** @brief Î»¿í */
     enum dvpBits bits;
 
-    /** @brief ? */
+    /** @brief ×Ö½ÚÊı */
     dvpUint32 uBytes;
 
-    /** @brief  */
+    /** @brief ¿í¶È */
     dvpInt32 iWidth;
 
-    /** @brief ? */
+    /** @brief ¸ß¶È */
     dvpInt32 iHeight;
 
-    /** @brief ? */
+    /** @brief Ö¡±àºÅ */
     dvpUint64 uFrameID;
 
-    /** @brief ? */
+    /** @brief Ê±¼ä´Á */
     dvpUint64 uTimestamp;
 
-    /** @brief ???????
+    /** @brief ÆØ¹âÊ±¼ä£¨µ¥Î»ÎªÎ¢Ãë£©
 *@see dvpGetExposure */
     double fExposure;
 
-    /** @brief ?
+    /** @brief Ä£ÄâÔöÒæ
 *@see dvpGetAnalogGain */
     float fAGain;
 
-    /** @brief ???
+    /** @brief µÚÒ»¸öÏñËØµãµÄÎ»ÖÃ
 *@see dvpGetFirstPosition */
     enum dvpFirstPosition position;
 
-    /** @brief ????
+    /** @brief ÊÇ·ñË®Æ½·­×ª
 *@see dvpGetFlipHorizontalState */
     bool bFlipHorizontalState;
 
-    /** @brief ???
+    /** @brief ÊÇ·ñ´¹Ö±·­×ª
 *@see dvpGetFlipVerticalState */
     bool bFlipVerticalState;
 
-    /** @brief ??90
+    /** @brief ÊÇ·ñĞı×ª90¶È
 *@see dvpGetRotateState */
     bool bRotateState;
 
-    /** @brief ???
+    /** @brief ÊÇ·ñÄæÊ±ÕëĞı×ª
 *@see dvpGetRotateOpposite */
     bool bRotateOpposite;
 
-    /** @brief ??? */
+    /** @brief ÄÚ²¿±êÖ¾Î» */
     dvpUint32 internalFlags;
 
-    /** @brief ?? */
+    /** @brief ÄÚ²¿ĞÅÏ¢ */
     dvpUint32 internalValue;
 
-    /** @brief ÿ??????ID
+    /** @brief Ã¿´Î´¥·¢Ëù¶ÔÓ¦µÄÒ»Ö¡»ò¶àÖ¡µÄ´¥·¢ID
 *@see dvpGetFramesPerTrigger */
     dvpUint64 uTriggerId;
 
-    /** @brief û????? */
+    /** @brief ÓÃ»§¶¨ÖÆµÄÊı¾İ£¬ÎªÊıÖµ»òÖ¸Õë */
     dvpUint64 userValue;
 
-    /** @brief ? */
+    /** @brief ±£Áô×Ö½Ú */
     dvpUint32 reserved[24];
 } dvpFrame;
 
 
-/** @brief ???
+/** @brief Ö¡ĞÅÏ¢ÓëÍ¼ÏñÊı¾İ
 *@see dvpGetFrameBuffer */
 typedef struct dvpFrameBuffer
 {
-    /** @brief ?? */
+    /** @brief Ö¡ĞÅÏ¢ */
     struct dvpFrame frame;
 
-    /** @brief ???
-*@warning ?? */
+    /** @brief Í¼ÏñÊı¾İÊ×µØÖ·
+*@warning ÇĞÎğÊÖ¶¯ÊÍ·Å */
     dvpPtr(dvpByte) pBuffer;
 
 } dvpFrameBuffer;
 
 
-/** @brief ?
+/** @brief Í¨ÓÃÊı¾İ
 *@see dvpEventCallback */
 typedef struct dvpVariant
 {
-    /** @brief ?? */
+    /** @brief Êı¾İÊ×µØÖ· */
     dvpPtr(dvpByte) pData;
 
-    /** @brief ? */
+    /** @brief Êı¾İ×Ö½ÚÊı */
     dvpUint32 uSize;
 
-    /** @brief  */
+    /** @brief Êı¾İÀàĞÍÃû³Æ */
     dvpString64 name;
 
 } dvpVariant;
 
 
-/** @brief  */
+/** @brief ÕûĞÍÊı¾İÃèÊö */
 typedef struct dvpIntDescr
 {
-    /** @brief  */
+    /** @brief ²½³¤ */
     dvpInt32 iStep;
 
-    /** @brief ?? */
+    /** @brief ×îĞ¡Öµ */
     dvpInt32 iMin;
 
-    /** @brief ? */
+    /** @brief ×î´óÖµ */
     dvpInt32 iMax;
 
-    /** @brief ?? */
+    /** @brief Ä¬ÈÏÖµ */
     dvpInt32 iDefault;
 
-    /** @brief ? */
+    /** @brief ±£Áô×Ö½Ú */
     dvpReserved reserved;
 } dvpIntDescr;
 
 
-/** @brief ? */
+/** @brief ÎŞ·ûºÅÕûĞÍÊı¾İÃèÊö */
 typedef struct dvpUintDescr
 {
-    /** @brief  */
+    /** @brief ²½³¤ */
     dvpUint32 uStep;
 
-    /** @brief ?? */
+    /** @brief ×îĞ¡Öµ */
     dvpUint32 uMin;
 
-    /** @brief ? */
+    /** @brief ×î´óÖµ */
     dvpUint32 uMax;
 
-    /** @brief ?? */
+    /** @brief Ä¬ÈÏÖµ */
     dvpUint32 uDefault;
 
-    /** @brief ? */
+    /** @brief ±£Áô×Ö½Ú */
     dvpReserved reserved;
 } dvpUintDescr;
 
 
-/** @brief  */
+/** @brief ¸¡µãĞÍÊı¾İÃèÊö */
 typedef struct dvpFloatDescr
 {
-    /** @brief  */
+    /** @brief ²½³¤ */
     float fStep;
 
-    /** @brief ?? */
+    /** @brief ×îĞ¡Öµ */
     float fMin;
 
-    /** @brief ? */
+    /** @brief ×î´óÖµ */
     float fMax;
 
-    /** @brief ?? */
+    /** @brief Ä¬ÈÏÖµ */
     float fDefault;
 
-    /** @brief ? */
+    /** @brief ±£Áô×Ö½Ú */
     dvpReserved reserved;
 } dvpFloatDescr;
 
 
-/** @brief ? */
+/** @brief Ë«¾«¶ÈĞÍÊı¾İÃèÊö */
 typedef struct dvpDoubleDescr
 {
-    /** @brief  */
+    /** @brief ²½³¤ */
     double fStep;
 
-    /** @brief ?? */
+    /** @brief ×îĞ¡Öµ */
     double fMin;
 
-    /** @brief ? */
+    /** @brief ×î´óÖµ */
     double fMax;
 
-    /** @brief ?? */
+    /** @brief Ä¬ÈÏÖµ */
     double fDefault;
 
-    /** @brief ? */
+    /** @brief ±£Áô×Ö½Ú */
     dvpReserved reserved;
 } dvpDoubleDescr;
 
 
-/** @brief 64?? */
+/** @brief 64Î»ÎŞ·ûºÅÕûĞÍÊı¾İÃèÊö */
 typedef struct dvpUint64Descr
 {
-    /** @brief  */
+    /** @brief ²½³¤ */
     dvpUint64 uStep;
 
-    /** @brief ?? */
+    /** @brief ×îĞ¡Öµ */
     dvpUint64 uMin;
 
-    /** @brief ? */
+    /** @brief ×î´óÖµ */
     dvpUint64 uMax;
 
-    /** @brief ?? */
+    /** @brief Ä¬ÈÏÖµ */
     dvpUint64 uDefault;
 
-    /** @brief ? */
+    /** @brief ±£Áô×Ö½Ú */
     dvpReserved reserved;
 } dvpUint64Descr;
 
 
-/** @brief ? */
+/** @brief Ñ¡ÔñÏîÃèÊö */
 typedef struct dvpSelectionDescr
 {
-    /** @brief ? */
+    /** @brief Ä¬ÈÏË÷Òı */
     dvpUint32 uDefault;
 
-    /** @brief  */
+    /** @brief Ë÷Òı¸öÊı */
     dvpUint32 uCount;
 
-    /** @brief ????? */
+    /** @brief ÊÇ·ñÓ¦Í£Ö¹ÊÓÆµÁ÷ */
     bool bNeedStop;
 
-    /** @brief ? */
+    /** @brief ±£Áô×Ö½Ú */
     dvpReserved reserved;
 } dvpSelectionDescr;
 
 
-/** @brief ? */
+/** @brief Ñ¡ÔñÏî */
 typedef struct dvpSelection
 {
-    /** @brief ? */
+    /** @brief ×Ö·û´®ÃèÊö */
     dvpString64 string;
 
-    /** @brief  */
+    /** @brief Ë÷Òı */
     dvpInt32 iIndex;
 
-    /** @brief ? */
+    /** @brief ±£Áô×Ö½Ú */
     dvpReserved reserved;
 } dvpSelection;
 
 
-/** @brief ???
+/** @brief ·Ö±æÂÊÄ£Ê½
 *@see dvpGetTriggerModeSelDetail */
 typedef struct dvpResolutionMode
 {
-    /** @brief ???? */
+    /** @brief ·Ö±æÂÊÄ£Ê½Ñ¡ÔñÏî */
     struct dvpSelection selection;
 
-    /** @brief  */
+    /** @brief ÇøÓò */
     struct dvpRegionDescr region;
 
-    /** @brief ? */
+    /** @brief ±£Áô×Ö½Ú */
     dvpReserved reserved;
 } dvpResolutionMode;
 
 
-/** @brief Roi
+/** @brief ¿ìËÙRoi
 *@see dvpGetQuickRoiSelDetail */
 typedef struct dvpQuickRoi
 {
-    /** @brief ? */
+    /** @brief Ñ¡ÔñÏî */
     struct dvpSelection selection;
 
-    /** @brief ? */
+    /** @brief ¸ĞĞËÈ¤µÄÇøÓò */
     struct dvpRegion roi;
 
-    /** @brief ??? */
+    /** @brief ·Ö±æÂÊÄ£Ê½ */
     struct dvpResolutionMode mode;
 
-    /** @brief ? */
+    /** @brief ±£Áô×Ö½Ú */
     dvpReserved reserved;
 } dvpQuickRoi;
 
 
-/** @brief ?? */
+/** @brief Í¼Ïñ¸ñÊ½ */
 typedef struct dvpFormatSelection
 {
-    /** @brief ???? */
+    /** @brief ·Ö±æÂÊÄ£Ê½Ñ¡ÔñÏî */
     struct dvpSelection selection;
 
-    /** @brief ?ö */
+    /** @brief ¶ÔÓ¦µÄÃ¶¾ÙÀàĞÍ */
     enum dvpStreamFormat format;
 
-    /** @brief ? */
+    /** @brief ±£Áô×Ö½Ú */
     dvpReserved reserved;
 } dvpFormatSelection;
 
 
-/** @brief ?
+/** @brief Ö¡¼ÆÊı
 *@see dvpGetFrameCount */
 typedef struct dvpFrameCount
 {
-    /** @brief ?????? */
+    /** @brief ½ÓÊÕÖ¡Êı£¬Ò»°ãÎª´«Êäµ½µçÄÔµÄÖ¡ */
     dvpUint32 uFrameCount;
 
-    /** @brief ??? */
+    /** @brief ¶ªÊ§Ö¡Êı£¬À´²»¼°¶ÁÈ¡µÄ */
     dvpUint32 uFrameDrop;
 
-    /** @brief ???? */
+    /** @brief ·ÅÆúµÄ£¬²É¼¯ºó±»¶ªµôµÄ */
     dvpUint32 uFrameIgnore;
 
-    /** @brief ? */
+    /** @brief ´íÎóÖ¡¼ÆÊı */
     dvpUint32 uFrameError;
 
-    /** @brief ??? */
+    /** @brief ±»²É¼¯µ½µÄÕıÈ·Ö¡ */
     dvpUint32 uFrameOK;
 
-    /** @brief ? / ?? */
+    /** @brief ±»Ìá½» / Êä³öµÄÓĞĞ§Ö¡ */
     dvpUint32 uFrameOut;
 
-    /** @brief ?? */
+    /** @brief ÖØ´«Ö¡ */
     dvpUint32 uFrameResend;
 
-    /** @brief ?? */
+    /** @brief Í¼Ïñ´¦ÀíÖ¡×ÜÊı */
     dvpUint32 uFrameProc;
 
-    /** @brief ?? */
+    /** @brief ²É¼¯Ö¡ÂÊ */
     float fFrameRate;
 
-    /** @brief ?? */
+    /** @brief Í¼Ïñ´¦ÀíÖ¡ÂÊ */
     float fProcRate;
 
-    /** @brief ? */
+    /** @brief ±£Áô×Ö½Ú */
     dvpReserved reserved;
 } dvpFrameCount;
 
 
-/** @brief ûIO?
+/** @brief ÓÃ»§IOĞÅÏ¢
 *@see dvpGetUserIoInfo */
 typedef struct dvpUserIoInfo
 {
-    /** @brief õIO */
+    /** @brief ¿ÉÓÃµÄÊäÈëIO */
     dvpBool32 inputValid;
 
-    /** @brief õIO */
+    /** @brief ¿ÉÓÃµÄÊä³öIO */
     dvpBool32 outputValid;
 
-    /** @brief ? */
+    /** @brief ±£Áô×Ö½Ú */
     dvpReserved reserved;
 } dvpUserIoInfo;
 
 
-/** @brief ûIO?
+/** @brief ÓÃ»§IOĞÅÏ¢
 *@see dvpGetLineInfo */
 typedef struct dvpLineInfo
 {
-    /** @brief õIO */
+    /** @brief ¿ÉÓÃµÄIO */
     dvpBool32 valid;
 
-    /** @brief ?IO */
+    /** @brief Ë«ÏòµÄIO */
     dvpBool32 bidir;
 
-    /** @brief ??? */
+    /** @brief ÊÇ·ñÖ§³Ö·´ÏòÆ÷ */
     dvpBool32 inverter;
 
-    /** @brief ??? */
+    /** @brief ÊÇ·ñÖ§³ÖÈí¼şÉèÖÃÊä³öµçÆ½ */
     dvpBool32 user;
 
-    /** @brief ??strobe? */
+    /** @brief ÊÇ·ñÖ§³ÖstrobeĞÅºÅ */
     dvpBool32 strobe;
 
-    /** @brief ??pwm? */
+    /** @brief ÊÇ·ñÖ§³ÖpwmĞÅºÅ */
     dvpBool32 pwm;
 
-    /** @brief ??timer? */
+    /** @brief ÊÇ·ñÖ§³ÖtimerĞÅºÅ */
     dvpBool32 timer;
 
-    /** @brief ??uart? */
+    /** @brief ÊÇ·ñÖ§³ÖuartĞÅºÅ */
     dvpBool32 uart;
 
-    /** @brief ??pulse? */
+    /** @brief ÊÇ·ñÖ§³ÖpulseĞÅºÅ */
     dvpBool32 pulse;
 
-    /** @brief ? */
+    /** @brief ±£Áô×Ö½Ú */
     dvpUint32 reserved[24];
 } dvpLineInfo;
 
 
-/** @brief ??
+/** @brief ×Ô¶¯ÆØ¹âÅäÖÃ
 *@see dvpGetAeConfig */
 typedef struct dvpAeConfig
 {
-    /** @brief ????????? */
+    /** @brief ×îĞ¡×Ô¶¯ÆØ¹âÊ±¼ä£¨µ¥Î»ÎªÎ¢Ãë£© */
     double fExposureMin;
 
-    /** @brief ???????? */
+    /** @brief ×î´ó×Ô¶¯ÆØ¹âÊ±¼ä£¨µ¥Î»ÎªÎ¢Ãë£© */
     double fExposureMax;
 
-    /** @brief ?1 */
+    /** @brief ±£ÁôÖµ1 */
     double reserved1;
 
-    /** @brief ??? */
+    /** @brief ×îĞ¡×Ô¶¯ÔöÒæÖµ */
     float fGainMin;
 
-    /** @brief ?? */
+    /** @brief ×î´ó×Ô¶¯ÔöÒæÖµ */
     float fGainMax;
 
-    /** @brief ?2 */
+    /** @brief ±£ÁôÖµ2 */
     float reserved2;
 
-    /** @brief ? */
+    /** @brief ±£Áô×Ö½Ú */
     dvpReserved reserved;
 } dvpAeConfig;
 
 
-/** @brief Sensor(???)?
+/** @brief Sensor(Í¼Ïñ´«¸ĞÆ÷)ĞÅÏ¢
 *@see dvpGetSensorInfo */
 typedef struct dvpSensorInfo
 {
-    /** @brief ? */
+    /** @brief ×Ö·û´®ÃèÊö */
     dvpString64 descr;
 
-    /** @brief  */
+    /** @brief ´«¸ĞÆ÷ÀàĞÍ */
     enum dvpSensorType sensor;
 
-    /** @brief ?? */
+    /** @brief Ô­Ê¼ÏñËØÀàĞÍ */
     enum dvpSensorPixel pixel;
 
-    /** @brief  */
+    /** @brief ÇøÓò */
     struct dvpRegionDescr region;
 
-    /** @brief ? */
+    /** @brief ±£Áô×Ö½Ú */
     dvpReserved reserved;
 } dvpSensorInfo;
 
 
-/** @brief ?
+/** @brief Ïà»ú¹¦ÄÜÃèÊöĞÅÏ¢
 *@see dvpGetFunctionInfo */
 typedef struct dvpFunctionInfo
 {
-    /** @brief ??? */
+    /** @brief ÊÇ·ñÖ§³Ö´¥·¢¹¦ÄÜ */
     bool bTrigger;
 
-    /** @brief ???ISP */
+    /** @brief ÊÇ·ñÖ§³ÖÓ²¼şISP¹¦ÄÜ */
     bool bHardwareIsp;
 
-    /** @brief ??UserSet */
+    /** @brief ÊÇ·ñÖ§³ÖUserSet¹¦ÄÜ */
     bool bUserSet;
 
-    /** @brief ????? */
+    /** @brief ÊÇ·ñÖ§³ÖË®Æ½·­×ª¹¦ÄÜ */
     bool bHflip;
 
-    /** @brief ????? */
+    /** @brief ÊÇ·ñÖ§³Ö´¹Ö±·­×ª¹¦ÄÜ */
     bool bVflip;
 
-    /** @brief ???? */
+    /** @brief ÊÇ·ñÖ§³Ö¸ºÆ¬¹¦ÄÜ */
     bool bInverse;
 
-    /** @brief ???gige?@link #dvpLine @endlink */
+    /** @brief ÊÇ·ñÖ§³Ö·ûºÏgige±ê×¼µÄ@link #dvpLine Ïà»úÒı½Å@endlink¹¦ÄÜ */
     bool bLine;
 
-    /** @brief ??
+    /** @brief ÊÇ·ñÖ§³ÖÖÆÀäÆ÷
 *@see dvpGetCoolerState */
     bool bCooler;
 
-    /** @brief ??¶?? */
+    /** @brief ÊÇ·ñÖ§³ÖÎÂ¶È¼Æ¹¦ÄÜ */
     bool bTemperature;
 
-    /** @brief  */
+    /** @brief ±£Áô */
     bool bReserved3;
 
-    /** @brief ? */
+    /** @brief ±£Áô×Ö½Ú */
     dvpUint32 reserved[30];
 } dvpFunctionInfo;
 
 
-/** @brief ?¶
+/** @brief Éè±¸ÎÂ¶È
 *@see dvpGetTemperatureInfo */
 typedef struct dvpTemperatureInfo
 {
-    /** @brief ?¶ */
+    /** @brief Éè±¸µÄÎÂ¶È */
     float fDevice;
 
-    /** @brief ¶ */
+    /** @brief ´«¸ĞÆ÷µÄÎÂ¶È */
     float fSensor;
 
-    /** @brief ??1¶ */
+    /** @brief Ğ¾Æ¬1µÄÎÂ¶È */
     float fChip1;
 
-    /** @brief ??2¶ */
+    /** @brief Ğ¾Æ¬2µÄÎÂ¶È */
     float fChip2;
 
-    /** @brief ? */
+    /** @brief ±£Áô×Ö½Ú */
     dvpReserved reserved;
 } dvpTemperatureInfo;
 
 
-/** @brief ?
+/** @brief Ö¡»º´æÅäÖÃ
 *@see dvpGetBufferConfig */
 typedef struct dvpBufferConfig
 {
-    /** @brief ??? */
+    /** @brief »º´æ¹¤×÷Ä£Ê½ */
     enum dvpBufferMode mode;
 
-    /** @brief ??
+    /** @brief »º´æ¶ÓÁĞ´óĞ¡
 *@see dvpGetBufferQueueSizeDescr
-*@warning ???????? */
+*@warning ¿ÉÄÜ»áÏûºÄÒ»¶¨µÄÄÚ´æ¿Õ¼ä£¬Çë¸ù¾İÏµÍ³¿ÉÓÃÄÚ´æ×ÃÇéÉèÖÃ */
     dvpUint32 uQueueSize;
 
-    /** @brief ??²?
-* @note true ?? false ???? */
+    /** @brief »º´æ¶ÓÁĞÂúÊ±£¬ÊÇ·ñ¶ªÆúĞÂ²úÉúµÄÖ¡
+* @note true Îª¶ªÆúĞÂÖ¡£¬ false Îª¸²¸Çµô¶ÓÁĞÖĞ×îÀÏµÄÖ¡ */
     bool bDropNew;
 
-    /** @brief ??
-*@note?????????sensor???? */
+    /** @brief ½ô´Õ»º´æµÄÄÚ´æÉêÇë
+*@noteÊÇ·ñ¸ù¾İµ±Ç°·Ö±æÂÊ´óĞ¡£¬ÏñËØÎ»¿íÀ´ÉêÇëÄÚ´æ£¬¶ø²»ÊÇÓÃsensor×î´ó·Ö±æÂÊ£¬×î¸ßÎ»¿íÇé¿öÏÂÀ´ÉêÇëÄÚ´æ */
     bool bLite;
 
-    /** @brief ? */
+    /** @brief ±£Áô×Ö½Ú */
     dvpReserved reserved;
 } dvpBufferConfig;
 
 
-/** @brief ?
+/** @brief ĞĞ´¥·¢ÅäÖÃ
 *@see dvpGetLineTriggerConfig
-* @note???? */
+* @noteÒ»°ãÖ»¶ÔÏßÉ¨Ïà»úÓĞĞ§ */
 typedef struct dvpLineTriggerConfig
 {
-    /** @brief ?? */
+    /** @brief Ô¤·ÖÆµ */
     dvpUint32 uPreDiv;
 
-    /** @brief ? */
+    /** @brief ±¶Æµ */
     dvpUint32 uMult;
 
-    /** @brief ? */
+    /** @brief ·ÖÆµ */
     dvpUint32 uDiv;
 
-    /** @brief ? */
+    /** @brief ±£Áô×Ö½Ú */
     dvpReserved reserved;
 } dvpLineTriggerConfig;
 
 
 /**
-*@brief ??
-*@param[in] handle 
-*@param[out] pCameraInfo ?
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡Ïà»úĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pCameraInfo Ïà»úĞÅÏ¢
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_INFORMATION
 *@see dvpGetDeviceType
 */
@@ -1935,30 +1935,30 @@ dvp2api dvpStatus dvpGetCameraInfo(dvpHandle handle, dvpCameraInfo *pCameraInfo)
 
 
 /**
-*@brief ??
-*@param[in] handle 
-*@param[out] pSensorInfo ?
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡´«¸ĞÆ÷ĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pSensorInfo ´«¸ĞÆ÷ĞÅÏ¢
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_INFORMATION
 */
 dvp2api dvpStatus dvpGetSensorInfo(dvpHandle handle, dvpSensorInfo *pSensorInfo);
 
 
 /**
-*@brief ??
-*@param[in] handle 
-*@param[out] pFrameCount ?
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡Ö¡¼ÆÊı
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pFrameCount Ö¡¼ÆÊı
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_INFORMATION
 */
 dvp2api dvpStatus dvpGetFrameCount(dvpHandle handle, dvpFrameCount *pFrameCount);
 
 
 /**
-*@brief ?ûIO??
-*@param[in] handle 
-*@param[out] pUserIoInfo ûIO??
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡ÓÃ»§IOÓĞĞ§±êÖ¾
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pUserIoInfo ÓÃ»§IOÓĞĞ§±êÖ¾
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_INFORMATION
 *@deprecated
 */
@@ -1966,41 +1966,41 @@ dvp2api dvpStatus dvpGetUserIoInfo(dvpHandle handle, dvpUserIoInfo *pUserIoInfo)
 
 
 /**
-*@brief ??
-*@param[in] handle 
-*@param[out] pLineInfo ?
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡Òı½ÅÃèÊö±êÖ¾
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pLineInfo Òı½ÅÃèÊö±êÖ¾
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_LINE
 */
 dvp2api dvpStatus dvpGetLineInfo(dvpHandle handle, dvpLineInfo *pLineInfo);
 
 
 /**
-*@brief ?????
-*@param[in] handle 
-*@param[out] pFirstPosition ????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡µÚÒ»¸öÏñËØ¶ÔÓ¦µÄÎ»ÖÃ
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pFirstPosition µÚÒ»¸öÏñËØ¶ÔÓ¦µÄÎ»ÖÃ
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_INFORMATION
 */
 dvp2api dvpStatus dvpGetFirstPosition(dvpHandle handle, dvpFirstPosition *pFirstPosition);
 
 
 /**
-*@brief ??
-*@param[in] handle 
-*@param[out] pFunctionInfo ?
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡¹¦ÄÜĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pFunctionInfo ¹¦ÄÜĞÅÏ¢
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_INFORMATION
-*@note ??API??????ò???????
+*@note Çë¸ù¾İ¹¦ÄÜÃèÊöÀ´µ÷ÓÃÏàÓ¦µÄAPI¡£Æ©Èç£¬²»Òª¶ÔºÚ°×Ïà»úÊ¹ÓÃ²ÊÉ«Ïà»ú²ÅÓĞµÄÌØĞÔ£¬ÒÔÃâ²úÉú²»±ØÒªµÄ´íÎó×´Ì¬Âë
 */
 dvp2api dvpStatus dvpGetFunctionInfo(dvpHandle handle, dvpFunctionInfo *pFunctionInfo);
 
 
 /**
-*@brief ??
-*@param[in] handle 
-*@param[out] pDeviceType ?
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡Éè±¸ÀàĞÍ
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pDeviceType Éè±¸ÀàĞÍ
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_INFORMATION
 *@see dvpGetCameraInfo
 */
@@ -2008,10 +2008,10 @@ dvp2api dvpStatus dvpGetDeviceType(dvpHandle handle, dvpDeviceType *pDeviceType)
 
 
 /**
-*@brief ??¶?
-*@param[in] handle 
-*@param[out] pTemperatureInfo ?¶?
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡Éè±¸ÎÂ¶ÈĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pTemperatureInfo Éè±¸ÎÂ¶ÈĞÅÏ¢
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_INFORMATION
 *@see dvpGetCoolerState
 */
@@ -2019,109 +2019,109 @@ dvp2api dvpStatus dvpGetTemperatureInfo(dvpHandle handle, dvpTemperatureInfo *pT
 
 
 /**
-*@brief ?
-*@param[in] handle 
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ·¢ËÍÈí¼ş´¥·¢ĞÅºÅ
+*@param[in] handle Ïà»ú¾ä±ú
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_TRIGGER
-*@note @link #dvpSetTriggerSource @endlink@link #dvpTriggerSource::TRIGGER_SOURCE_SOFTWARE ?@endlink
+*@note ĞëÏÈ@link #dvpSetTriggerSource ÉèÖÃ@endlinkºÃ@link #dvpTriggerSource::TRIGGER_SOURCE_SOFTWARE Èí¼ş´¥·¢Ô´@endlink
 */
 dvp2api dvpStatus dvpTriggerFire(dvpHandle handle);
 
 
 /**
-*@brief ???
-*@param[in] handle 
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ´´½¨²ÊµãĞ£ÕıĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_CORRECTION
 *@see dvpSetDefectFixState
 *@see dvpSetAutoDefectFixState
-*@note Sensor??????
-*@note ??????
+*@note ÊĞÃæÉÏËùÓĞSensor¶¼Ò»¶¨³Ì¶È´æÔÚ×ÅÁÁ¶È¹Ì¶¨µÄËÀµã»ò²Êµã
+*@note ÓÉÓÚÕâĞ©ĞÅÏ¢´æ´¢ÔÚµçÄÔÉÏ£¬ËùÒÔ²»»á¸úËæÏà»ú
 */
 dvp2api dvpStatus dvpCreateDefectFixInfo(dvpHandle handle);
 
 
 /**
-*@brief ???
-*@param[in] handle 
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ´´½¨Æ½³¡Ğ£ÕıĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_CORRECTION
-*@note û????´??
-*@note ??????
+*@note ÓÉÓÃ»§ÔÚÌØ¶¨µÄ³¡¾°ºÍ¾µÍ·ÏÂ´´½¨Æ½³¡ĞÅÏ¢
+*@note ÓÉÓÚÕâĞ©ĞÅÏ¢´æ´¢ÔÚµçÄÔÉÏ£¬ËùÒÔ²»»á¸úËæÏà»ú
 */
 dvp2api dvpStatus dvpCreateFlatFieldInfo(dvpHandle handle);
 
 
 /**
-*@brief ??
-*@param[in] handle 
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ¸´Î»Éè±¸
+*@param[in] handle Ïà»ú¾ä±ú
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP2_API_BASE
-*@note ????????
+*@note ²Ù×÷³É¹¦ºó×Ô¶¯»Ö¸´µ½¸´Î»Ç°µÄÉè±¸×´Ì¬
 */
 dvp2api dvpStatus dvpResetDevice(dvpHandle handle);
 
 
 /**
-*@brief /??
-*@param[in] handle 
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ¿ìËÙÖØÆô/»Ö¸´ÊÓÆµÁ÷
+*@param[in] handle Ïà»ú¾ä±ú
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP2_API_BASE
 *@see dvpHold
-*??@link #dvpHold ?@endlink?
+*²Ù×÷Ö®Ç°±ØĞë@link #dvpHold ÔİÍ£@endlinkÊÓÆµÁ÷
 */
 dvp2api dvpStatus dvpRestart(dvpHandle handle);
 
 
 /**
-*@brief ??
-*@param[in] handle 
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ¿ìËÙÔİÍ£ÊÓÆµÁ÷
+*@param[in] handle Ïà»ú¾ä±ú
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP2_API_BASE
 *@see dvpRestart
 *@see dvpIsHold
-*@note ??????ö?@link #dvpStart ????@endlink?@link #dvpRestart ?????@endlink??
+*@note ÔÚÆô¶¯ÊÓÆµÁ÷Ö®Ç°¾Í¿ÉÒÔÖ´ĞĞ¸Ã¶¯×÷£¬µ±ÊÓÆµÁ÷@link #dvpStart Æô¶¯£¨Ïàµ±ÓÚ´ò¿ª×ÜË®Õ¢£©@endlinkºó£¬ÔÙÖ´ĞĞ@link #dvpRestart »Ö¸´£¨Ïàµ±ÓÚ´ò¿ªË®ÁúÍ·£©@endlinkÊÓÆµÁ÷£¬¾ÍÄÜÁ¢¼´Êä³öÍ¼ÏñÊı¾İ
 */
 dvp2api dvpStatus dvpHold(dvpHandle handle);
 
 
 /**
-*@brief ???
-*@param[in] handle 
-*@param[out] pGamma ??
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡Ù¤ÂêµÄÖµ
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pGamma Ù¤ÂêµÄÖµ
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ENHANCE
 *@see dvpGetColorSolutionSel
 *@see dvpSetGammaState
 *@see dvpGetGammaState
 *@see dvpGetGammaDescr
 *@see dvpSetGamma
-*@note ?????
+*@note ¿ÉÊ¹Í¼ÏñÁÁ¶È·ûºÏÈËÑÛµÄÕı³£ÊÓ¾õ
 */
 dvp2api dvpStatus dvpGetGamma(dvpHandle handle, dvpInt32 *pGamma);
 
 
 /**
-*@brief ??
-*@param[in] handle 
-*@param[in] Gamma ??
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃÙ¤ÂêµÄÖµ
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] Gamma Ù¤ÂêµÄÖµ
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ENHANCE
 *@see dvpGetColorSolutionSel
 *@see dvpSetGammaState
 *@see dvpGetGammaState
 *@see dvpGetGammaDescr
 *@see dvpGetGamma
-*@note ?????
+*@note ¿ÉÊ¹Í¼ÏñÁÁ¶È·ûºÏÈËÑÛµÄÕı³£ÊÓ¾õ
 */
 dvp2api dvpStatus dvpSetGamma(dvpHandle handle, dvpInt32 Gamma);
 
 
 /**
-*@brief ???
-*@param[in] handle 
-*@param[out] pGammaDescr ??
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡Ù¤ÂêµÄÃèÊöĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pGammaDescr Ù¤ÂêµÄÃèÊöĞÅÏ¢
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ENHANCE
 *@see dvpGetColorSolutionSel
 *@see dvpSetGammaState
@@ -2133,10 +2133,10 @@ dvp2api dvpStatus dvpGetGammaDescr(dvpHandle handle, dvpIntDescr *pGammaDescr);
 
 
 /**
-*@brief ???????
-*@param[in] handle 
-*@param[out] pGammaState ??????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡Ù¤Âê¹¦ÄÜµÄÊ¹ÄÜ×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pGammaState Ù¤Âê¹¦ÄÜµÄÊ¹ÄÜ×´Ì¬
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ENHANCE
 *@see dvpGetColorSolutionSel
 *@see dvpSetGamma
@@ -2148,10 +2148,10 @@ dvp2api dvpStatus dvpGetGammaState(dvpHandle handle, bool *pGammaState);
 
 
 /**
-*@brief ??????
-*@param[in] handle 
-*@param[in] GammaState ??????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃÙ¤Âê¹¦ÄÜµÄÊ¹ÄÜ×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] GammaState Ù¤Âê¹¦ÄÜµÄÊ¹ÄÜ×´Ì¬
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ENHANCE
 *@see dvpGetColorSolutionSel
 *@see dvpSetGamma
@@ -2163,42 +2163,42 @@ dvp2api dvpStatus dvpSetGammaState(dvpHandle handle, bool GammaState);
 
 
 /**
-*@brief ?????
-*@param[in] handle 
-*@param[out] pContrast ????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡¶Ô±È¶ÈµÄÖµ
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pContrast ¶Ô±È¶ÈµÄÖµ
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ENHANCE
 *@see dvpGetBlackLevel
 *@see dvpSetContrastState
 *@see dvpGetContrastState
 *@see dvpGetContrastDescr
 *@see dvpSetContrast
-*@note ??
+*@note µ÷½ÚÍ¨Í¸ĞÔ
 */
 dvp2api dvpStatus dvpGetContrast(dvpHandle handle, dvpInt32 *pContrast);
 
 
 /**
-*@brief ö????
-*@param[in] handle 
-*@param[in] Contrast ????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃ¶Ô±È¶ÈµÄÖµ
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] Contrast ¶Ô±È¶ÈµÄÖµ
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ENHANCE
 *@see dvpGetBlackLevel
 *@see dvpSetContrastState
 *@see dvpGetContrastState
 *@see dvpGetContrastDescr
 *@see dvpGetContrast
-*@note ??
+*@note µ÷½ÚÍ¨Í¸ĞÔ
 */
 dvp2api dvpStatus dvpSetContrast(dvpHandle handle, dvpInt32 Contrast);
 
 
 /**
-*@brief ?????
-*@param[in] handle 
-*@param[out] pContrastDescr ????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡¶Ô±È¶ÈµÄÃèÊöĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pContrastDescr ¶Ô±È¶ÈµÄÃèÊöĞÅÏ¢
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ENHANCE
 *@see dvpGetBlackLevel
 *@see dvpSetContrastState
@@ -2210,10 +2210,10 @@ dvp2api dvpStatus dvpGetContrastDescr(dvpHandle handle, dvpIntDescr *pContrastDe
 
 
 /**
-*@brief ????????
-*@param[in] handle 
-*@param[out] pContrastState ???????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡¶Ô±È¶È¹¦ÄÜµÄÊ¹ÄÜ×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pContrastState ¶Ô±È¶È¹¦ÄÜµÄÊ¹ÄÜ×´Ì¬
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ENHANCE
 *@see dvpGetBlackLevel
 *@see dvpSetContrast
@@ -2225,10 +2225,10 @@ dvp2api dvpStatus dvpGetContrastState(dvpHandle handle, bool *pContrastState);
 
 
 /**
-*@brief ö???????
-*@param[in] handle 
-*@param[in] ContrastState ???????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃ¶Ô±È¶È¹¦ÄÜµÄÊ¹ÄÜ×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] ContrastState ¶Ô±È¶È¹¦ÄÜµÄÊ¹ÄÜ×´Ì¬
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ENHANCE
 *@see dvpGetBlackLevel
 *@see dvpSetContrast
@@ -2240,10 +2240,10 @@ dvp2api dvpStatus dvpSetContrastState(dvpHandle handle, bool ContrastState);
 
 
 /**
-*@brief ??Roi()
-*@param[in] handle 
-*@param[out] pRoi ?Roi()
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡Í¼ÏñRoi(Ïà¶ÔÓÚÕû¸ö´«¸ĞÆ÷ÇøÓò)
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pRoi Í¼ÏñRoi(Ïà¶ÔÓÚÕû¸ö´«¸ĞÆ÷ÇøÓò)
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_SIZE
 *@see dvpGetResolutionModeSel
 *@see dvpGetQuickRoiSel
@@ -2256,10 +2256,10 @@ dvp2api dvpStatus dvpGetRoi(dvpHandle handle, dvpRegion *pRoi);
 
 
 /**
-*@brief ?Roi()
-*@param[in] handle 
-*@param[in] Roi ?Roi()
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃÍ¼ÏñRoi(Ïà¶ÔÓÚÕû¸ö´«¸ĞÆ÷ÇøÓò)
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] Roi Í¼ÏñRoi(Ïà¶ÔÓÚÕû¸ö´«¸ĞÆ÷ÇøÓò)
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_SIZE
 *@see dvpGetResolutionModeSel
 *@see dvpGetQuickRoiSel
@@ -2272,10 +2272,10 @@ dvp2api dvpStatus dvpSetRoi(dvpHandle handle, dvpRegion Roi);
 
 
 /**
-*@brief ??Roi()?
-*@param[in] handle 
-*@param[out] pRoiDescr ?Roi()?
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡Í¼ÏñRoi(Ïà¶ÔÓÚÕû¸ö´«¸ĞÆ÷ÇøÓò)µÄÃèÊöĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pRoiDescr Í¼ÏñRoi(Ïà¶ÔÓÚÕû¸ö´«¸ĞÆ÷ÇøÓò)µÄÃèÊöĞÅÏ¢
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_SIZE
 *@see dvpGetResolutionModeSel
 *@see dvpGetQuickRoiSel
@@ -2288,10 +2288,10 @@ dvp2api dvpStatus dvpGetRoiDescr(dvpHandle handle, dvpRegionDescr *pRoiDescr);
 
 
 /**
-*@brief ??Roi()????
-*@param[in] handle 
-*@param[out] pRoiState ?Roi()????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡Í¼ÏñRoi(Ïà¶ÔÓÚÕû¸ö´«¸ĞÆ÷ÇøÓò)¹¦ÄÜµÄÊ¹ÄÜ×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pRoiState Í¼ÏñRoi(Ïà¶ÔÓÚÕû¸ö´«¸ĞÆ÷ÇøÓò)¹¦ÄÜµÄÊ¹ÄÜ×´Ì¬
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_SIZE
 *@see dvpGetResolutionModeSel
 *@see dvpGetQuickRoiSel
@@ -2304,10 +2304,10 @@ dvp2api dvpStatus dvpGetRoiState(dvpHandle handle, bool *pRoiState);
 
 
 /**
-*@brief ?Roi()????
-*@param[in] handle 
-*@param[in] RoiState ?Roi()????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃÍ¼ÏñRoi(Ïà¶ÔÓÚÕû¸ö´«¸ĞÆ÷ÇøÓò)¹¦ÄÜµÄÊ¹ÄÜ×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] RoiState Í¼ÏñRoi(Ïà¶ÔÓÚÕû¸ö´«¸ĞÆ÷ÇøÓò)¹¦ÄÜµÄÊ¹ÄÜ×´Ì¬
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_SIZE
 *@see dvpGetResolutionModeSel
 *@see dvpGetQuickRoiSel
@@ -2320,40 +2320,40 @@ dvp2api dvpStatus dvpSetRoiState(dvpHandle handle, bool RoiState);
 
 
 /**
-*@brief ??µ???K
-*@param[in] handle 
-*@param[out] pColorTemperature ?µ???K
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡É«ÎÂµÄÖµ£¨µ¥Î»ÎªK£©
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pColorTemperature É«ÎÂµÄÖµ£¨µ¥Î»ÎªK£©
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_COLOR
 *@see dvpSetColorTemperatureState
 *@see dvpGetColorTemperatureState
 *@see dvpGetColorTemperatureDescr
 *@see dvpSetColorTemperature
-*@note ??
+*@note µ÷½ÚÀäÅ¯É«µ÷
 */
 dvp2api dvpStatus dvpGetColorTemperature(dvpHandle handle, dvpInt32 *pColorTemperature);
 
 
 /**
-*@brief ?µ???K
-*@param[in] handle 
-*@param[in] ColorTemperature ?µ???K
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃÉ«ÎÂµÄÖµ£¨µ¥Î»ÎªK£©
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] ColorTemperature É«ÎÂµÄÖµ£¨µ¥Î»ÎªK£©
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_COLOR
 *@see dvpSetColorTemperatureState
 *@see dvpGetColorTemperatureState
 *@see dvpGetColorTemperatureDescr
 *@see dvpGetColorTemperature
-*@note ??
+*@note µ÷½ÚÀäÅ¯É«µ÷
 */
 dvp2api dvpStatus dvpSetColorTemperature(dvpHandle handle, dvpInt32 ColorTemperature);
 
 
 /**
-*@brief ??µ?
-*@param[in] handle 
-*@param[out] pColorTemperatureDescr ?µ?
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡É«ÎÂµÄÃèÊöĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pColorTemperatureDescr É«ÎÂµÄÃèÊöĞÅÏ¢
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_COLOR
 *@see dvpSetColorTemperatureState
 *@see dvpGetColorTemperatureState
@@ -2364,10 +2364,10 @@ dvp2api dvpStatus dvpGetColorTemperatureDescr(dvpHandle handle, dvpIntDescr *pCo
 
 
 /**
-*@brief ??¹????
-*@param[in] handle 
-*@param[out] pColorTemperatureState ?¹????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡É«ÎÂ¹¦ÄÜµÄÊ¹ÄÜ×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pColorTemperatureState É«ÎÂ¹¦ÄÜµÄÊ¹ÄÜ×´Ì¬
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_COLOR
 *@see dvpSetColorTemperature
 *@see dvpGetColorTemperature
@@ -2378,10 +2378,10 @@ dvp2api dvpStatus dvpGetColorTemperatureState(dvpHandle handle, bool *pColorTemp
 
 
 /**
-*@brief ?¹????
-*@param[in] handle 
-*@param[in] ColorTemperatureState ?¹????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃÉ«ÎÂ¹¦ÄÜµÄÊ¹ÄÜ×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] ColorTemperatureState É«ÎÂ¹¦ÄÜµÄÊ¹ÄÜ×´Ì¬
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_COLOR
 *@see dvpSetColorTemperature
 *@see dvpGetColorTemperature
@@ -2392,42 +2392,42 @@ dvp2api dvpStatus dvpSetColorTemperatureState(dvpHandle handle, bool ColorTemper
 
 
 /**
-*@brief ???
-*@param[in] handle 
-*@param[out] pSharpness ??
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡Èñ¶ÈµÄÖµ
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pSharpness Èñ¶ÈµÄÖµ
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ENHANCE
 *@see dvpGetNoiseReduct2d
 *@see dvpSetSharpnessState
 *@see dvpGetSharpnessState
 *@see dvpGetSharpnessDescr
 *@see dvpSetSharpness
-*@note 
+*@note µ÷½ÚÇåÎú¶È
 */
 dvp2api dvpStatus dvpGetSharpness(dvpHandle handle, dvpInt32 *pSharpness);
 
 
 /**
-*@brief ??
-*@param[in] handle 
-*@param[in] Sharpness ??
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃÈñ¶ÈµÄÖµ
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] Sharpness Èñ¶ÈµÄÖµ
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ENHANCE
 *@see dvpGetNoiseReduct2d
 *@see dvpSetSharpnessState
 *@see dvpGetSharpnessState
 *@see dvpGetSharpnessDescr
 *@see dvpGetSharpness
-*@note 
+*@note µ÷½ÚÇåÎú¶È
 */
 dvp2api dvpStatus dvpSetSharpness(dvpHandle handle, dvpInt32 Sharpness);
 
 
 /**
-*@brief ???
-*@param[in] handle 
-*@param[out] pSharpnessDescr ??
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡Èñ¶ÈµÄÃèÊöĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pSharpnessDescr Èñ¶ÈµÄÃèÊöĞÅÏ¢
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ENHANCE
 *@see dvpGetNoiseReduct2d
 *@see dvpSetSharpnessState
@@ -2439,10 +2439,10 @@ dvp2api dvpStatus dvpGetSharpnessDescr(dvpHandle handle, dvpIntDescr *pSharpness
 
 
 /**
-*@brief ??????
-*@param[in] handle 
-*@param[out] pSharpnessState ?????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡Èñ¶È¹¦ÄÜµÄÊ¹ÄÜ×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pSharpnessState Èñ¶È¹¦ÄÜµÄÊ¹ÄÜ×´Ì¬
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ENHANCE
 *@see dvpGetNoiseReduct2d
 *@see dvpSetSharpness
@@ -2454,10 +2454,10 @@ dvp2api dvpStatus dvpGetSharpnessState(dvpHandle handle, bool *pSharpnessState);
 
 
 /**
-*@brief ?????
-*@param[in] handle 
-*@param[in] SharpnessState ?????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃÈñ¶È¹¦ÄÜµÄÊ¹ÄÜ×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] SharpnessState Èñ¶È¹¦ÄÜµÄÊ¹ÄÜ×´Ì¬
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ENHANCE
 *@see dvpGetNoiseReduct2d
 *@see dvpSetSharpness
@@ -2469,40 +2469,40 @@ dvp2api dvpStatus dvpSetSharpnessState(dvpHandle handle, bool SharpnessState);
 
 
 /**
-*@brief ????
-*@param[in] handle 
-*@param[out] pSaturation ???
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡±¥ºÍ¶ÈµÄÖµ
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pSaturation ±¥ºÍ¶ÈµÄÖµ
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_COLOR
 *@see dvpSetSaturationState
 *@see dvpGetSaturationState
 *@see dvpGetSaturationDescr
 *@see dvpSetSaturation
-*@note 
+*@note µ÷½ÚÑŞÀö¶È
 */
 dvp2api dvpStatus dvpGetSaturation(dvpHandle handle, dvpInt32 *pSaturation);
 
 
 /**
-*@brief ñ???
-*@param[in] handle 
-*@param[in] Saturation ???
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃ±¥ºÍ¶ÈµÄÖµ
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] Saturation ±¥ºÍ¶ÈµÄÖµ
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_COLOR
 *@see dvpSetSaturationState
 *@see dvpGetSaturationState
 *@see dvpGetSaturationDescr
 *@see dvpGetSaturation
-*@note 
+*@note µ÷½ÚÑŞÀö¶È
 */
 dvp2api dvpStatus dvpSetSaturation(dvpHandle handle, dvpInt32 Saturation);
 
 
 /**
-*@brief ????
-*@param[in] handle 
-*@param[out] pSaturationDescr ???
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡±¥ºÍ¶ÈµÄÃèÊöĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pSaturationDescr ±¥ºÍ¶ÈµÄÃèÊöĞÅÏ¢
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_COLOR
 *@see dvpSetSaturationState
 *@see dvpGetSaturationState
@@ -2513,10 +2513,10 @@ dvp2api dvpStatus dvpGetSaturationDescr(dvpHandle handle, dvpIntDescr *pSaturati
 
 
 /**
-*@brief ???????
-*@param[in] handle 
-*@param[out] pSaturationState ??????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡±¥ºÍ¶È¹¦ÄÜµÄÊ¹ÄÜ×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pSaturationState ±¥ºÍ¶È¹¦ÄÜµÄÊ¹ÄÜ×´Ì¬
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_COLOR
 *@see dvpSetSaturation
 *@see dvpGetSaturation
@@ -2527,10 +2527,10 @@ dvp2api dvpStatus dvpGetSaturationState(dvpHandle handle, bool *pSaturationState
 
 
 /**
-*@brief ñ??????
-*@param[in] handle 
-*@param[in] SaturationState ??????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃ±¥ºÍ¶È¹¦ÄÜµÄÊ¹ÄÜ×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] SaturationState ±¥ºÍ¶È¹¦ÄÜµÄÊ¹ÄÜ×´Ì¬
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_COLOR
 *@see dvpSetSaturation
 *@see dvpGetSaturation
@@ -2541,10 +2541,10 @@ dvp2api dvpStatus dvpSetSaturationState(dvpHandle handle, bool SaturationState);
 
 
 /**
-*@brief ?2D?
-*@param[in] handle 
-*@param[out] pNoiseReduct2d 2D?
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡2D½µÔëµÄÖµ
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pNoiseReduct2d 2D½µÔëµÄÖµ
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ENHANCE
 *@see dvpGetSharpness
 *@see dvpGetNoiseReduct3d
@@ -2552,16 +2552,16 @@ dvp2api dvpStatus dvpSetSaturationState(dvpHandle handle, bool SaturationState);
 *@see dvpGetNoiseReduct2dState
 *@see dvpGetNoiseReduct2dDescr
 *@see dvpSetNoiseReduct2d
-*@note ???
+*@note ¶ÔÍ¼Ïñ½øĞĞÆ½»¬´¦Àí£¬µ«»áÓ°ÏìÈñ¶È
 */
 dvp2api dvpStatus dvpGetNoiseReduct2d(dvpHandle handle, dvpInt32 *pNoiseReduct2d);
 
 
 /**
-*@brief 2D?
-*@param[in] handle 
-*@param[in] NoiseReduct2d 2D?
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃ2D½µÔëµÄÖµ
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] NoiseReduct2d 2D½µÔëµÄÖµ
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ENHANCE
 *@see dvpGetSharpness
 *@see dvpGetNoiseReduct3d
@@ -2569,16 +2569,16 @@ dvp2api dvpStatus dvpGetNoiseReduct2d(dvpHandle handle, dvpInt32 *pNoiseReduct2d
 *@see dvpGetNoiseReduct2dState
 *@see dvpGetNoiseReduct2dDescr
 *@see dvpGetNoiseReduct2d
-*@note ???
+*@note ¶ÔÍ¼Ïñ½øĞĞÆ½»¬´¦Àí£¬µ«»áÓ°ÏìÈñ¶È
 */
 dvp2api dvpStatus dvpSetNoiseReduct2d(dvpHandle handle, dvpInt32 NoiseReduct2d);
 
 
 /**
-*@brief ?2D?
-*@param[in] handle 
-*@param[out] pNoiseReduct2dDescr 2D?
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡2D½µÔëµÄÃèÊöĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pNoiseReduct2dDescr 2D½µÔëµÄÃèÊöĞÅÏ¢
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ENHANCE
 *@see dvpGetSharpness
 *@see dvpGetNoiseReduct3d
@@ -2591,10 +2591,10 @@ dvp2api dvpStatus dvpGetNoiseReduct2dDescr(dvpHandle handle, dvpIntDescr *pNoise
 
 
 /**
-*@brief ?2D?????
-*@param[in] handle 
-*@param[out] pNoiseReduct2dState 2D?????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡2D½µÔë¹¦ÄÜµÄÊ¹ÄÜ×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pNoiseReduct2dState 2D½µÔë¹¦ÄÜµÄÊ¹ÄÜ×´Ì¬
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ENHANCE
 *@see dvpGetSharpness
 *@see dvpGetNoiseReduct3d
@@ -2607,10 +2607,10 @@ dvp2api dvpStatus dvpGetNoiseReduct2dState(dvpHandle handle, bool *pNoiseReduct2
 
 
 /**
-*@brief 2D?????
-*@param[in] handle 
-*@param[in] NoiseReduct2dState 2D?????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃ2D½µÔë¹¦ÄÜµÄÊ¹ÄÜ×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] NoiseReduct2dState 2D½µÔë¹¦ÄÜµÄÊ¹ÄÜ×´Ì¬
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ENHANCE
 *@see dvpGetSharpness
 *@see dvpGetNoiseReduct3d
@@ -2623,42 +2623,42 @@ dvp2api dvpStatus dvpSetNoiseReduct2dState(dvpHandle handle, bool NoiseReduct2dS
 
 
 /**
-*@brief ?3D?
-*@param[in] handle 
-*@param[out] pNoiseReduct3d 3D?
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡3D½µÔëµÄÖµ
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pNoiseReduct3d 3D½µÔëµÄÖµ
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ENHANCE
 *@see dvpGetNoiseReduct2d
 *@see dvpSetNoiseReduct3dState
 *@see dvpGetNoiseReduct3dState
 *@see dvpGetNoiseReduct3dDescr
 *@see dvpSetNoiseReduct3d
-*@note ??ã?
+*@note ½µÔëĞ§¹û½ÏºÃ£¬µ«»á²úÉúÍÏÓ°
 */
 dvp2api dvpStatus dvpGetNoiseReduct3d(dvpHandle handle, dvpInt32 *pNoiseReduct3d);
 
 
 /**
-*@brief 3D?
-*@param[in] handle 
-*@param[in] NoiseReduct3d 3D?
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃ3D½µÔëµÄÖµ
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] NoiseReduct3d 3D½µÔëµÄÖµ
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ENHANCE
 *@see dvpGetNoiseReduct2d
 *@see dvpSetNoiseReduct3dState
 *@see dvpGetNoiseReduct3dState
 *@see dvpGetNoiseReduct3dDescr
 *@see dvpGetNoiseReduct3d
-*@note ??ã?
+*@note ½µÔëĞ§¹û½ÏºÃ£¬µ«»á²úÉúÍÏÓ°
 */
 dvp2api dvpStatus dvpSetNoiseReduct3d(dvpHandle handle, dvpInt32 NoiseReduct3d);
 
 
 /**
-*@brief ?3D?
-*@param[in] handle 
-*@param[out] pNoiseReduct3dDescr 3D?
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡3D½µÔëµÄÃèÊöĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pNoiseReduct3dDescr 3D½µÔëµÄÃèÊöĞÅÏ¢
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ENHANCE
 *@see dvpGetNoiseReduct2d
 *@see dvpSetNoiseReduct3dState
@@ -2670,10 +2670,10 @@ dvp2api dvpStatus dvpGetNoiseReduct3dDescr(dvpHandle handle, dvpIntDescr *pNoise
 
 
 /**
-*@brief ?3D?????
-*@param[in] handle 
-*@param[out] pNoiseReduct3dState 3D?????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡3D½µÔë¹¦ÄÜµÄÊ¹ÄÜ×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pNoiseReduct3dState 3D½µÔë¹¦ÄÜµÄÊ¹ÄÜ×´Ì¬
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ENHANCE
 *@see dvpGetNoiseReduct2d
 *@see dvpSetNoiseReduct3d
@@ -2685,10 +2685,10 @@ dvp2api dvpStatus dvpGetNoiseReduct3dState(dvpHandle handle, bool *pNoiseReduct3
 
 
 /**
-*@brief 3D?????
-*@param[in] handle 
-*@param[in] NoiseReduct3dState 3D?????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃ3D½µÔë¹¦ÄÜµÄÊ¹ÄÜ×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] NoiseReduct3dState 3D½µÔë¹¦ÄÜµÄÊ¹ÄÜ×´Ì¬
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ENHANCE
 *@see dvpGetNoiseReduct2d
 *@see dvpSetNoiseReduct3d
@@ -2700,42 +2700,42 @@ dvp2api dvpStatus dvpSetNoiseReduct3dState(dvpHandle handle, bool NoiseReduct3dS
 
 
 /**
-*@brief ???
-*@param[in] handle 
-*@param[out] pBlackLevel ??
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡ºÚ³¡µÄÖµ
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pBlackLevel ºÚ³¡µÄÖµ
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ENHANCE
 *@see dvpGetContrast
 *@see dvpSetBlackLevelState
 *@see dvpGetBlackLevelState
 *@see dvpGetBlackLevelDescr
 *@see dvpSetBlackLevel
-*@note ?????õ???
+*@note ½áºÏ¶Ô±È¶È¿ÉÒÔ¸üºÃµÄµ÷½ÚÍ¨Í¸ĞÔ
 */
 dvp2api dvpStatus dvpGetBlackLevel(dvpHandle handle, float *pBlackLevel);
 
 
 /**
-*@brief ú??
-*@param[in] handle 
-*@param[in] BlackLevel ??
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃºÚ³¡µÄÖµ
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] BlackLevel ºÚ³¡µÄÖµ
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ENHANCE
 *@see dvpGetContrast
 *@see dvpSetBlackLevelState
 *@see dvpGetBlackLevelState
 *@see dvpGetBlackLevelDescr
 *@see dvpGetBlackLevel
-*@note ?????õ???
+*@note ½áºÏ¶Ô±È¶È¿ÉÒÔ¸üºÃµÄµ÷½ÚÍ¨Í¸ĞÔ
 */
 dvp2api dvpStatus dvpSetBlackLevel(dvpHandle handle, float BlackLevel);
 
 
 /**
-*@brief ???
-*@param[in] handle 
-*@param[out] pBlackLevelDescr ??
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡ºÚ³¡µÄÃèÊöĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pBlackLevelDescr ºÚ³¡µÄÃèÊöĞÅÏ¢
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ENHANCE
 *@see dvpGetContrast
 *@see dvpSetBlackLevelState
@@ -2747,10 +2747,10 @@ dvp2api dvpStatus dvpGetBlackLevelDescr(dvpHandle handle, dvpFloatDescr *pBlackL
 
 
 /**
-*@brief ??????
-*@param[in] handle 
-*@param[out] pBlackLevelState ?????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡ºÚ³¡¹¦ÄÜµÄÊ¹ÄÜ×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pBlackLevelState ºÚ³¡¹¦ÄÜµÄÊ¹ÄÜ×´Ì¬
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ENHANCE
 *@see dvpGetContrast
 *@see dvpSetBlackLevel
@@ -2762,10 +2762,10 @@ dvp2api dvpStatus dvpGetBlackLevelState(dvpHandle handle, bool *pBlackLevelState
 
 
 /**
-*@brief ú?????
-*@param[in] handle 
-*@param[in] BlackLevelState ?????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃºÚ³¡¹¦ÄÜµÄÊ¹ÄÜ×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] BlackLevelState ºÚ³¡¹¦ÄÜµÄÊ¹ÄÜ×´Ì¬
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ENHANCE
 *@see dvpGetContrast
 *@see dvpSetBlackLevel
@@ -2777,10 +2777,10 @@ dvp2api dvpStatus dvpSetBlackLevelState(dvpHandle handle, bool BlackLevelState);
 
 
 /**
-*@brief ???????
-*@param[in] handle 
-*@param[out] pSoftTriggerLoop ??????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡Ñ­»·´¥·¢µÄÖÜÆÚÖµ£¨µ¥Î»ÎªÎ¢Ãë£©
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pSoftTriggerLoop Ñ­»·´¥·¢µÄÖÜÆÚÖµ£¨µ¥Î»ÎªÎ¢Ãë£©
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_TRIGGER
 *@see dvpSetSoftTriggerLoopState
 *@see dvpGetSoftTriggerLoopState
@@ -2791,10 +2791,10 @@ dvp2api dvpStatus dvpGetSoftTriggerLoop(dvpHandle handle, double *pSoftTriggerLo
 
 
 /**
-*@brief ??????
-*@param[in] handle 
-*@param[in] SoftTriggerLoop ??????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃÑ­»·´¥·¢µÄÖÜÆÚÖµ£¨µ¥Î»ÎªÎ¢Ãë£©
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] SoftTriggerLoop Ñ­»·´¥·¢µÄÖÜÆÚÖµ£¨µ¥Î»ÎªÎ¢Ãë£©
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_TRIGGER
 *@see dvpSetSoftTriggerLoopState
 *@see dvpGetSoftTriggerLoopState
@@ -2805,10 +2805,10 @@ dvp2api dvpStatus dvpSetSoftTriggerLoop(dvpHandle handle, double SoftTriggerLoop
 
 
 /**
-*@brief ???
-*@param[in] handle 
-*@param[out] pSoftTriggerLoopDescr ??
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡Ñ­»·´¥·¢µÄÃèÊöĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pSoftTriggerLoopDescr Ñ­»·´¥·¢µÄÃèÊöĞÅÏ¢
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_TRIGGER
 *@see dvpSetSoftTriggerLoopState
 *@see dvpGetSoftTriggerLoopState
@@ -2819,10 +2819,10 @@ dvp2api dvpStatus dvpGetSoftTriggerLoopDescr(dvpHandle handle, dvpDoubleDescr *p
 
 
 /**
-*@brief ??????
-*@param[in] handle 
-*@param[out] pSoftTriggerLoopState ?????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡Ñ­»·´¥·¢¹¦ÄÜµÄÊ¹ÄÜ×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pSoftTriggerLoopState Ñ­»·´¥·¢¹¦ÄÜµÄÊ¹ÄÜ×´Ì¬
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_TRIGGER
 *@see dvpSetSoftTriggerLoop
 *@see dvpGetSoftTriggerLoop
@@ -2833,10 +2833,10 @@ dvp2api dvpStatus dvpGetSoftTriggerLoopState(dvpHandle handle, bool *pSoftTrigge
 
 
 /**
-*@brief ?????
-*@param[in] handle 
-*@param[in] SoftTriggerLoopState ?????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃÑ­»·´¥·¢¹¦ÄÜµÄÊ¹ÄÜ×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] SoftTriggerLoopState Ñ­»·´¥·¢¹¦ÄÜµÄÊ¹ÄÜ×´Ì¬
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_TRIGGER
 *@see dvpSetSoftTriggerLoop
 *@see dvpGetSoftTriggerLoop
@@ -2847,40 +2847,40 @@ dvp2api dvpStatus dvpSetSoftTriggerLoopState(dvpHandle handle, bool SoftTriggerL
 
 
 /**
-*@brief ????
-*@param[in] handle 
-*@param[out] pMultiFrames ???
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡¶àÖ¡²É¼¯µÄÖ¡Êı
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pMultiFrames ¶àÖ¡²É¼¯µÄÖ¡Êı
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ADVANCED
 *@see dvpSetMultiFramesState
 *@see dvpGetMultiFramesState
 *@see dvpGetMultiFramesDescr
 *@see dvpSetMultiFrames
-*@note ???1?????
+*@note ¶àÖ¡²É¼¯Îª1Ê±£¬Ïàµ±ÓÚµ¥Ö¡²É¼¯
 */
 dvp2api dvpStatus dvpGetMultiFrames(dvpHandle handle, dvpUint64 *pMultiFrames);
 
 
 /**
-*@brief ö???
-*@param[in] handle 
-*@param[in] MultiFrames ???
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃ¶àÖ¡²É¼¯µÄÖ¡Êı
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] MultiFrames ¶àÖ¡²É¼¯µÄÖ¡Êı
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ADVANCED
 *@see dvpSetMultiFramesState
 *@see dvpGetMultiFramesState
 *@see dvpGetMultiFramesDescr
 *@see dvpGetMultiFrames
-*@note ???1?????
+*@note ¶àÖ¡²É¼¯Îª1Ê±£¬Ïàµ±ÓÚµ¥Ö¡²É¼¯
 */
 dvp2api dvpStatus dvpSetMultiFrames(dvpHandle handle, dvpUint64 MultiFrames);
 
 
 /**
-*@brief ????
-*@param[in] handle 
-*@param[out] pMultiFramesDescr ???
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡¶àÖ¡²É¼¯µÄÃèÊöĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pMultiFramesDescr ¶àÖ¡²É¼¯µÄÃèÊöĞÅÏ¢
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ADVANCED
 *@see dvpSetMultiFramesState
 *@see dvpGetMultiFramesState
@@ -2891,10 +2891,10 @@ dvp2api dvpStatus dvpGetMultiFramesDescr(dvpHandle handle, dvpUint64Descr *pMult
 
 
 /**
-*@brief ???????
-*@param[in] handle 
-*@param[out] pMultiFramesState ??????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡¶àÖ¡²É¼¯¹¦ÄÜµÄÊ¹ÄÜ×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pMultiFramesState ¶àÖ¡²É¼¯¹¦ÄÜµÄÊ¹ÄÜ×´Ì¬
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ADVANCED
 *@see dvpSetMultiFrames
 *@see dvpGetMultiFrames
@@ -2905,10 +2905,10 @@ dvp2api dvpStatus dvpGetMultiFramesState(dvpHandle handle, bool *pMultiFramesSta
 
 
 /**
-*@brief ö??????
-*@param[in] handle 
-*@param[in] MultiFramesState ??????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃ¶àÖ¡²É¼¯¹¦ÄÜµÄÊ¹ÄÜ×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] MultiFramesState ¶àÖ¡²É¼¯¹¦ÄÜµÄÊ¹ÄÜ×´Ì¬
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ADVANCED
 *@see dvpSetMultiFrames
 *@see dvpGetMultiFrames
@@ -2919,36 +2919,36 @@ dvp2api dvpStatus dvpSetMultiFramesState(dvpHandle handle, bool MultiFramesState
 
 
 /**
-*@brief ???????
-*@param[in] handle 
-*@param[out] pStreamPackInterval ??????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡Êı¾İ´«Êä°ü¼ä¸ôµÄÖµ£¨µ¥Î»ÎªÎ¢Ãë£©
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pStreamPackInterval Êı¾İ´«Êä°ü¼ä¸ôµÄÖµ£¨µ¥Î»ÎªÎ¢Ãë£©
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_PERFORMANCE
 *@see dvpGetStreamPackIntervalDescr
 *@see dvpSetStreamPackInterval
-*@note ??
+*@note ¼ä¸ôÉè´ó¿ÉÒÔ½ÚÊ¡ÍøÂç´ø¿í
 */
 dvp2api dvpStatus dvpGetStreamPackInterval(dvpHandle handle, dvpInt32 *pStreamPackInterval);
 
 
 /**
-*@brief ??????
-*@param[in] handle 
-*@param[in] StreamPackInterval ??????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃÊı¾İ´«Êä°ü¼ä¸ôµÄÖµ£¨µ¥Î»ÎªÎ¢Ãë£©
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] StreamPackInterval Êı¾İ´«Êä°ü¼ä¸ôµÄÖµ£¨µ¥Î»ÎªÎ¢Ãë£©
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_PERFORMANCE
 *@see dvpGetStreamPackIntervalDescr
 *@see dvpGetStreamPackInterval
-*@note ??
+*@note ¼ä¸ôÉè´ó¿ÉÒÔ½ÚÊ¡ÍøÂç´ø¿í
 */
 dvp2api dvpStatus dvpSetStreamPackInterval(dvpHandle handle, dvpInt32 StreamPackInterval);
 
 
 /**
-*@brief ???
-*@param[in] handle 
-*@param[out] pStreamPackIntervalDescr ??
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡Êı¾İ´«Êä°ü¼ä¸ôµÄÃèÊöĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pStreamPackIntervalDescr Êı¾İ´«Êä°ü¼ä¸ôµÄÃèÊöĞÅÏ¢
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_PERFORMANCE
 *@see dvpSetStreamPackInterval
 *@see dvpGetStreamPackInterval
@@ -2957,38 +2957,38 @@ dvp2api dvpStatus dvpGetStreamPackIntervalDescr(dvpHandle handle, dvpIntDescr *p
 
 
 /**
-*@brief ???????
-*@param[in] handle 
-*@param[out] pStreamPackSize ??????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡Êı¾İ´«Êä°ü³¤µÄÖµ£¨µ¥Î»Îª×Ö½Ú£©
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pStreamPackSize Êı¾İ´«Êä°ü³¤µÄÖµ£¨µ¥Î»Îª×Ö½Ú£©
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_PERFORMANCE
 *@see dvpGetStreamPackSizeDescr
 *@see dvpSetStreamPackSize
-*@note ?????
-*@note ?@link #dvpGetPixelRateSel ?@endlink
+*@note Èç¹ûµçÄÔÓ²¼şÖ§³Ö£¬¿ÉÌá¸ßÊı¾İ´«ÊäĞ§ÂÊ
+*@note ½¨ÒéÊ¹ÓÃ@link #dvpGetPixelRateSel µäĞÍ´«Êä°ü³¤@endlink
 */
 dvp2api dvpStatus dvpGetStreamPackSize(dvpHandle handle, dvpInt32 *pStreamPackSize);
 
 
 /**
-*@brief ??????
-*@param[in] handle 
-*@param[in] StreamPackSize ??????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃÊı¾İ´«Êä°ü³¤µÄÖµ£¨µ¥Î»Îª×Ö½Ú£©
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] StreamPackSize Êı¾İ´«Êä°ü³¤µÄÖµ£¨µ¥Î»Îª×Ö½Ú£©
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_PERFORMANCE
 *@see dvpGetStreamPackSizeDescr
 *@see dvpGetStreamPackSize
-*@note ?????
-*@note ?@link #dvpGetPixelRateSel ?@endlink
+*@note Èç¹ûµçÄÔÓ²¼şÖ§³Ö£¬¿ÉÌá¸ßÊı¾İ´«ÊäĞ§ÂÊ
+*@note ½¨ÒéÊ¹ÓÃ@link #dvpGetPixelRateSel µäĞÍ´«Êä°ü³¤@endlink
 */
 dvp2api dvpStatus dvpSetStreamPackSize(dvpHandle handle, dvpInt32 StreamPackSize);
 
 
 /**
-*@brief ???
-*@param[in] handle 
-*@param[out] pStreamPackSizeDescr ??
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡Êı¾İ´«Êä°ü³¤µÄÃèÊöĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pStreamPackSizeDescr Êı¾İ´«Êä°ü³¤µÄÃèÊöĞÅÏ¢
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_PERFORMANCE
 *@see dvpSetStreamPackSize
 *@see dvpGetStreamPackSize
@@ -2997,38 +2997,38 @@ dvp2api dvpStatus dvpGetStreamPackSizeDescr(dvpHandle handle, dvpIntDescr *pStre
 
 
 /**
-*@brief ??????
-*@param[in] handle 
-*@param[out] pAeTarget ?????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡×Ô¶¯ÆØ¹âÄ¿±êÁÁ¶ÈµÄÖµ
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pAeTarget ×Ô¶¯ÆØ¹âÄ¿±êÁÁ¶ÈµÄÖµ
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_EXPOSURE
 *@see dvpGetAeOperation
 *@see dvpGetAeTargetDescr
 *@see dvpSetAeTarget
-*@note ????@link #dvpGetExposure ??@endlink@link #dvpGetAnalogGain ?@endlink??
+*@note ×Ô¶¯ÆØ¹âËã·¨Í¨¹ıµ÷½Ú@link #dvpGetExposure ÆØ¹âÊ±¼ä@endlinkºÍ@link #dvpGetAnalogGain Ä£ÄâÔöÒæ@endlinkËùÒª´ïµ½µÄ×îÖÕÁÁ¶È
 */
 dvp2api dvpStatus dvpGetAeTarget(dvpHandle handle, dvpInt32 *pAeTarget);
 
 
 /**
-*@brief ?????
-*@param[in] handle 
-*@param[in] AeTarget ?????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃ×Ô¶¯ÆØ¹âÄ¿±êÁÁ¶ÈµÄÖµ
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] AeTarget ×Ô¶¯ÆØ¹âÄ¿±êÁÁ¶ÈµÄÖµ
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_EXPOSURE
 *@see dvpGetAeOperation
 *@see dvpGetAeTargetDescr
 *@see dvpGetAeTarget
-*@note ????@link #dvpGetExposure ??@endlink@link #dvpGetAnalogGain ?@endlink??
+*@note ×Ô¶¯ÆØ¹âËã·¨Í¨¹ıµ÷½Ú@link #dvpGetExposure ÆØ¹âÊ±¼ä@endlinkºÍ@link #dvpGetAnalogGain Ä£ÄâÔöÒæ@endlinkËùÒª´ïµ½µÄ×îÖÕÁÁ¶È
 */
 dvp2api dvpStatus dvpSetAeTarget(dvpHandle handle, dvpInt32 AeTarget);
 
 
 /**
-*@brief ??????
-*@param[in] handle 
-*@param[out] pAeTargetDescr ?????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡×Ô¶¯ÆØ¹âÄ¿±êÁÁ¶ÈµÄÃèÊöĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pAeTargetDescr ×Ô¶¯ÆØ¹âÄ¿±êÁÁ¶ÈµÄÃèÊöĞÅÏ¢
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_EXPOSURE
 *@see dvpGetAeOperation
 *@see dvpSetAeTarget
@@ -3038,38 +3038,38 @@ dvp2api dvpStatus dvpGetAeTargetDescr(dvpHandle handle, dvpIntDescr *pAeTargetDe
 
 
 /**
-*@brief ???
-*@param[in] handle 
-*@param[out] pAnalogGain ??
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡Ä£ÄâÔöÒæµÄÖµ
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pAnalogGain Ä£ÄâÔöÒæµÄÖµ
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_EXPOSURE
 *@see dvpGetExposure
 *@see dvpGetAnalogGainDescr
 *@see dvpSetAnalogGain
-*@note ?·???????
+*@note Ä£ÄâµçÂ·¼¶±ğÉÏµÄÔöÒæµ÷½Ú¡£ÔöÒæÔ½´ó£¬¿ÉÄÜµ¼ÖÂÔëÉùÔ½´ó
 */
 dvp2api dvpStatus dvpGetAnalogGain(dvpHandle handle, float *pAnalogGain);
 
 
 /**
-*@brief ??
-*@param[in] handle 
-*@param[in] AnalogGain ??
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃÄ£ÄâÔöÒæµÄÖµ
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] AnalogGain Ä£ÄâÔöÒæµÄÖµ
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_EXPOSURE
 *@see dvpGetExposure
 *@see dvpGetAnalogGainDescr
 *@see dvpGetAnalogGain
-*@note ?·???????
+*@note Ä£ÄâµçÂ·¼¶±ğÉÏµÄÔöÒæµ÷½Ú¡£ÔöÒæÔ½´ó£¬¿ÉÄÜµ¼ÖÂÔëÉùÔ½´ó
 */
 dvp2api dvpStatus dvpSetAnalogGain(dvpHandle handle, float AnalogGain);
 
 
 /**
-*@brief ???
-*@param[in] handle 
-*@param[out] pAnalogGainDescr ??
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡Ä£ÄâÔöÒæµÄÃèÊöĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pAnalogGainDescr Ä£ÄâÔöÒæµÄÃèÊöĞÅÏ¢
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_EXPOSURE
 *@see dvpGetExposure
 *@see dvpSetAnalogGain
@@ -3079,38 +3079,38 @@ dvp2api dvpStatus dvpGetAnalogGainDescr(dvpHandle handle, dvpFloatDescr *pAnalog
 
 
 /**
-*@brief ????????
-*@param[in] handle 
-*@param[out] pExposure ???????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡ÆØ¹âÊ±¼äµÄÖµ£¨µ¥Î»ÎªÎ¢Ãë£©
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pExposure ÆØ¹âÊ±¼äµÄÖµ£¨µ¥Î»ÎªÎ¢Ãë£©
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_EXPOSURE
 *@see dvpGetAnalogGain
 *@see dvpGetExposureDescr
 *@see dvpSetExposure
-*@note ??????
+*@note ÆØ¹âÊ±¼äÔ½³¤£¬¿ÉÄÜµ¼ÖÂÖ¡ÂÊÔ½µÍ
 */
 dvp2api dvpStatus dvpGetExposure(dvpHandle handle, double *pExposure);
 
 
 /**
-*@brief ???????
-*@param[in] handle 
-*@param[in] Exposure ???????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃÆØ¹âÊ±¼äµÄÖµ£¨µ¥Î»ÎªÎ¢Ãë£©
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] Exposure ÆØ¹âÊ±¼äµÄÖµ£¨µ¥Î»ÎªÎ¢Ãë£©
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_EXPOSURE
 *@see dvpGetAnalogGain
 *@see dvpGetExposureDescr
 *@see dvpGetExposure
-*@note ??????
+*@note ÆØ¹âÊ±¼äÔ½³¤£¬¿ÉÄÜµ¼ÖÂÖ¡ÂÊÔ½µÍ
 */
 dvp2api dvpStatus dvpSetExposure(dvpHandle handle, double Exposure);
 
 
 /**
-*@brief ????
-*@param[in] handle 
-*@param[out] pExposureDescr ???
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡ÆØ¹âÊ±¼äµÄÃèÊöĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pExposureDescr ÆØ¹âÊ±¼äµÄÃèÊöĞÅÏ¢
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_EXPOSURE
 *@see dvpGetAnalogGain
 *@see dvpSetExposure
@@ -3120,36 +3120,36 @@ dvp2api dvpStatus dvpGetExposureDescr(dvpHandle handle, dvpDoubleDescr *pExposur
 
 
 /**
-*@brief ?????????
-*@param[in] handle 
-*@param[out] pTriggerJitterFilter ????????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡Íâ²¿´¥·¢ĞÅºÅÏû¶¶Ê±¼äµÄÖµ£¨µ¥Î»ÎªÎ¢Ãë£©
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pTriggerJitterFilter Íâ²¿´¥·¢ĞÅºÅÏû¶¶Ê±¼äµÄÖµ£¨µ¥Î»ÎªÎ¢Ãë£©
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_TRIGGER
 *@see dvpGetTriggerJitterFilterDescr
 *@see dvpSetTriggerJitterFilter
-*@note ???????????????????
+*@note Íâ²¿µçĞÅºÅ´¥·¢µÄË²¼ä¿ÉÄÜ´æÔÚÒ»¶¨µÄµçÑ¹²¨¶¯£¬ËùÒÔĞèÒªÉè¶¨Ò»¸öÇ¡µ±µÄÏû¶¶Ê±¼ä£¬ÒÔÈ·±£ĞÅºÅ´ïµ½ÎÈ¶¨
 */
 dvp2api dvpStatus dvpGetTriggerJitterFilter(dvpHandle handle, double *pTriggerJitterFilter);
 
 
 /**
-*@brief ????????
-*@param[in] handle 
-*@param[in] TriggerJitterFilter ????????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃÍâ²¿´¥·¢ĞÅºÅÏû¶¶Ê±¼äµÄÖµ£¨µ¥Î»ÎªÎ¢Ãë£©
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] TriggerJitterFilter Íâ²¿´¥·¢ĞÅºÅÏû¶¶Ê±¼äµÄÖµ£¨µ¥Î»ÎªÎ¢Ãë£©
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_TRIGGER
 *@see dvpGetTriggerJitterFilterDescr
 *@see dvpGetTriggerJitterFilter
-*@note ???????????????????
+*@note Íâ²¿µçĞÅºÅ´¥·¢µÄË²¼ä¿ÉÄÜ´æÔÚÒ»¶¨µÄµçÑ¹²¨¶¯£¬ËùÒÔĞèÒªÉè¶¨Ò»¸öÇ¡µ±µÄÏû¶¶Ê±¼ä£¬ÒÔÈ·±£ĞÅºÅ´ïµ½ÎÈ¶¨
 */
 dvp2api dvpStatus dvpSetTriggerJitterFilter(dvpHandle handle, double TriggerJitterFilter);
 
 
 /**
-*@brief ?????
-*@param[in] handle 
-*@param[out] pTriggerJitterFilterDescr ????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡Íâ²¿´¥·¢ĞÅºÅÏû¶¶Ê±¼äµÄÃèÊöĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pTriggerJitterFilterDescr Íâ²¿´¥·¢ĞÅºÅÏû¶¶Ê±¼äµÄÃèÊöĞÅÏ¢
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_TRIGGER
 *@see dvpSetTriggerJitterFilter
 *@see dvpGetTriggerJitterFilter
@@ -3158,36 +3158,36 @@ dvp2api dvpStatus dvpGetTriggerJitterFilterDescr(dvpHandle handle, dvpDoubleDesc
 
 
 /**
-*@brief ???????
-*@param[in] handle 
-*@param[out] pTriggerDelay ??????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡´¥·¢ÑÓÊ±µÄÖµ£¨µ¥Î»ÎªÎ¢Ãë£©
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pTriggerDelay ´¥·¢ÑÓÊ±µÄÖµ£¨µ¥Î»ÎªÎ¢Ãë£©
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_TRIGGER
 *@see dvpGetTriggerDelayDescr
 *@see dvpSetTriggerDelay
-*@note ????????
+*@note ÊÕµ½Ò»¸öÓĞĞ§µÄ´¥·¢ĞÅºÅºó£¬ÑÓÊ±ÏìÓ¦
 */
 dvp2api dvpStatus dvpGetTriggerDelay(dvpHandle handle, double *pTriggerDelay);
 
 
 /**
-*@brief ô??????
-*@param[in] handle 
-*@param[in] TriggerDelay ??????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃ´¥·¢ÑÓÊ±µÄÖµ£¨µ¥Î»ÎªÎ¢Ãë£©
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] TriggerDelay ´¥·¢ÑÓÊ±µÄÖµ£¨µ¥Î»ÎªÎ¢Ãë£©
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_TRIGGER
 *@see dvpGetTriggerDelayDescr
 *@see dvpGetTriggerDelay
-*@note ????????
+*@note ÊÕµ½Ò»¸öÓĞĞ§µÄ´¥·¢ĞÅºÅºó£¬ÑÓÊ±ÏìÓ¦
 */
 dvp2api dvpStatus dvpSetTriggerDelay(dvpHandle handle, double TriggerDelay);
 
 
 /**
-*@brief ???
-*@param[in] handle 
-*@param[out] pTriggerDelayDescr ??
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡´¥·¢ÑÓÊ±µÄÃèÊöĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pTriggerDelayDescr ´¥·¢ÑÓÊ±µÄÃèÊöĞÅÏ¢
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_TRIGGER
 *@see dvpSetTriggerDelay
 *@see dvpGetTriggerDelay
@@ -3196,36 +3196,36 @@ dvp2api dvpStatus dvpGetTriggerDelayDescr(dvpHandle handle, dvpDoubleDescr *pTri
 
 
 /**
-*@brief ?Strobe????????
-*@param[in] handle 
-*@param[out] pStrobeDelay Strobe????????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡StrobeĞÅºÅµÄÑÓÊ±µÄÖµ£¨µ¥Î»ÎªÎ¢Ãë£©
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pStrobeDelay StrobeĞÅºÅµÄÑÓÊ±µÄÖµ£¨µ¥Î»ÎªÎ¢Ãë£©
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_TRIGGER
 *@see dvpGetStrobeDelayDescr
 *@see dvpSetStrobeDelay
-*@note ??
+*@note ÉÁ¹âµÆÑÓÊ±ÏìÓ¦
 */
 dvp2api dvpStatus dvpGetStrobeDelay(dvpHandle handle, double *pStrobeDelay);
 
 
 /**
-*@brief Strobe????????
-*@param[in] handle 
-*@param[in] StrobeDelay Strobe????????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃStrobeĞÅºÅµÄÑÓÊ±µÄÖµ£¨µ¥Î»ÎªÎ¢Ãë£©
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] StrobeDelay StrobeĞÅºÅµÄÑÓÊ±µÄÖµ£¨µ¥Î»ÎªÎ¢Ãë£©
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_TRIGGER
 *@see dvpGetStrobeDelayDescr
 *@see dvpGetStrobeDelay
-*@note ??
+*@note ÉÁ¹âµÆÑÓÊ±ÏìÓ¦
 */
 dvp2api dvpStatus dvpSetStrobeDelay(dvpHandle handle, double StrobeDelay);
 
 
 /**
-*@brief ?Strobe????
-*@param[in] handle 
-*@param[out] pStrobeDelayDescr Strobe????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡StrobeĞÅºÅµÄÑÓÊ±µÄÃèÊöĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pStrobeDelayDescr StrobeĞÅºÅµÄÑÓÊ±µÄÃèÊöĞÅÏ¢
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_TRIGGER
 *@see dvpSetStrobeDelay
 *@see dvpGetStrobeDelay
@@ -3234,36 +3234,36 @@ dvp2api dvpStatus dvpGetStrobeDelayDescr(dvpHandle handle, dvpDoubleDescr *pStro
 
 
 /**
-*@brief ?Strobe?????????
-*@param[in] handle 
-*@param[out] pStrobeDuration Strobe?????????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡StrobeĞÅºÅµÄ³ÖĞøÊ±¼äµÄÖµ£¨µ¥Î»ÎªÎ¢Ãë£©
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pStrobeDuration StrobeĞÅºÅµÄ³ÖĞøÊ±¼äµÄÖµ£¨µ¥Î»ÎªÎ¢Ãë£©
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_TRIGGER
 *@see dvpGetStrobeDurationDescr
 *@see dvpSetStrobeDuration
-*@note ?
+*@note ÉÁ¹âµÆ×÷ÓÃÊ±¼ä
 */
 dvp2api dvpStatus dvpGetStrobeDuration(dvpHandle handle, double *pStrobeDuration);
 
 
 /**
-*@brief Strobe?????????
-*@param[in] handle 
-*@param[in] StrobeDuration Strobe?????????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃStrobeĞÅºÅµÄ³ÖĞøÊ±¼äµÄÖµ£¨µ¥Î»ÎªÎ¢Ãë£©
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] StrobeDuration StrobeĞÅºÅµÄ³ÖĞøÊ±¼äµÄÖµ£¨µ¥Î»ÎªÎ¢Ãë£©
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_TRIGGER
 *@see dvpGetStrobeDurationDescr
 *@see dvpGetStrobeDuration
-*@note ?
+*@note ÉÁ¹âµÆ×÷ÓÃÊ±¼ä
 */
 dvp2api dvpStatus dvpSetStrobeDuration(dvpHandle handle, double StrobeDuration);
 
 
 /**
-*@brief ?Strobe?????
-*@param[in] handle 
-*@param[out] pStrobeDurationDescr Strobe?????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡StrobeĞÅºÅµÄ³ÖĞøÊ±¼äµÄÃèÊöĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pStrobeDurationDescr StrobeĞÅºÅµÄ³ÖĞøÊ±¼äµÄÃèÊöĞÅÏ¢
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_TRIGGER
 *@see dvpSetStrobeDuration
 *@see dvpGetStrobeDuration
@@ -3272,36 +3272,36 @@ dvp2api dvpStatus dvpGetStrobeDurationDescr(dvpHandle handle, dvpDoubleDescr *pS
 
 
 /**
-*@brief ???
-*@param[in] handle 
-*@param[out] pFramesPerTrigger ??
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡µ¥´Î´¥·¢µÄÊä³öÖ¡Êı
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pFramesPerTrigger µ¥´Î´¥·¢µÄÊä³öÖ¡Êı
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_TRIGGER
 *@see dvpGetFramesPerTriggerDescr
 *@see dvpSetFramesPerTrigger
-*@note ????
+*@note ÓÃÒ»¸ö´¥·¢ĞÅºÅÀ´Êä³ö¶àÖ¡Í¼Ïñ
 */
 dvp2api dvpStatus dvpGetFramesPerTrigger(dvpHandle handle, dvpInt32 *pFramesPerTrigger);
 
 
 /**
-*@brief õ??
-*@param[in] handle 
-*@param[in] FramesPerTrigger ??
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃµ¥´Î´¥·¢µÄÊä³öÖ¡Êı
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] FramesPerTrigger µ¥´Î´¥·¢µÄÊä³öÖ¡Êı
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_TRIGGER
 *@see dvpGetFramesPerTriggerDescr
 *@see dvpGetFramesPerTrigger
-*@note ????
+*@note ÓÃÒ»¸ö´¥·¢ĞÅºÅÀ´Êä³ö¶àÖ¡Í¼Ïñ
 */
 dvp2api dvpStatus dvpSetFramesPerTrigger(dvpHandle handle, dvpInt32 FramesPerTrigger);
 
 
 /**
-*@brief ????
-*@param[in] handle 
-*@param[out] pFramesPerTriggerDescr ???
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡µ¥´Î´¥·¢µÄÊä³öÖ¡ÊıµÄÃèÊöĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pFramesPerTriggerDescr µ¥´Î´¥·¢µÄÊä³öÖ¡ÊıµÄÃèÊöĞÅÏ¢
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_TRIGGER
 *@see dvpSetFramesPerTrigger
 *@see dvpGetFramesPerTrigger
@@ -3310,10 +3310,10 @@ dvp2api dvpStatus dvpGetFramesPerTriggerDescr(dvpHandle handle, dvpIntDescr *pFr
 
 
 /**
-*@brief ?????????
-*@param[in] handle 
-*@param[out] pTimerValue ????????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡Ïà»úÖĞµÄ¼ÆÊ±Æ÷µÄÖµ£¨µ¥Î»ÎªÎ¢Ãë£©
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pTimerValue Ïà»úÖĞµÄ¼ÆÊ±Æ÷µÄÖµ£¨µ¥Î»ÎªÎ¢Ãë£©
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ADVANCED
 *@see dvpGetTimerValueDescr
 *@see dvpSetTimerValue
@@ -3322,10 +3322,10 @@ dvp2api dvpStatus dvpGetTimerValue(dvpHandle handle, double *pTimerValue);
 
 
 /**
-*@brief ????????
-*@param[in] handle 
-*@param[in] TimerValue ????????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃÏà»úÖĞµÄ¼ÆÊ±Æ÷µÄÖµ£¨µ¥Î»ÎªÎ¢Ãë£©
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] TimerValue Ïà»úÖĞµÄ¼ÆÊ±Æ÷µÄÖµ£¨µ¥Î»ÎªÎ¢Ãë£©
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ADVANCED
 *@see dvpGetTimerValueDescr
 *@see dvpGetTimerValue
@@ -3334,10 +3334,10 @@ dvp2api dvpStatus dvpSetTimerValue(dvpHandle handle, double TimerValue);
 
 
 /**
-*@brief ?????
-*@param[in] handle 
-*@param[out] pTimerValueDescr ????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡Ïà»úÖĞµÄ¼ÆÊ±Æ÷µÄÃèÊöĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pTimerValueDescr Ïà»úÖĞµÄ¼ÆÊ±Æ÷µÄÃèÊöĞÅÏ¢
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ADVANCED
 *@see dvpSetTimerValue
 *@see dvpGetTimerValue
@@ -3346,40 +3346,40 @@ dvp2api dvpStatus dvpGetTimerValueDescr(dvpHandle handle, dvpDoubleDescr *pTimer
 
 
 /**
-*@brief ???
-*@param[in] handle 
-*@param[out] pBufferQueueSize ??
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡»º´æ¶ÓÁĞ´óĞ¡
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pBufferQueueSize »º´æ¶ÓÁĞ´óĞ¡
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ADVANCED
 *@see dvpGetBufferQueueSizeDescr
 *@see dvpSetBufferQueueSize
 *@see dvpGetBufferConfig
-*@warning ????????
-*@warning ?@link #dvpStart ?@endlink?ú
+*@warning ¿ÉÄÜ»áÏûºÄÒ»¶¨µÄÄÚ´æ¿Õ¼ä£¬Çë¸ù¾İÏµÍ³¿ÉÓÃÄÚ´æ×ÃÇéÉèÖÃ
+*@warning ´Ë²Ù×÷½¨ÒéÔÚ@link #dvpStart Æô¶¯ÊÓÆµÁ÷@endlinkÇ°ÉèÖÃºÃ
 */
 dvp2api dvpStatus dvpGetBufferQueueSize(dvpHandle handle, dvpInt32 *pBufferQueueSize);
 
 
 /**
-*@brief û??
-*@param[in] handle 
-*@param[in] BufferQueueSize ??
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃ»º´æ¶ÓÁĞ´óĞ¡
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] BufferQueueSize »º´æ¶ÓÁĞ´óĞ¡
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ADVANCED
 *@see dvpGetBufferQueueSizeDescr
 *@see dvpGetBufferQueueSize
 *@see dvpGetBufferConfig
-*@warning ????????
-*@warning ?@link #dvpStart ?@endlink?ú
+*@warning ¿ÉÄÜ»áÏûºÄÒ»¶¨µÄÄÚ´æ¿Õ¼ä£¬Çë¸ù¾İÏµÍ³¿ÉÓÃÄÚ´æ×ÃÇéÉèÖÃ
+*@warning ´Ë²Ù×÷½¨ÒéÔÚ@link #dvpStart Æô¶¯ÊÓÆµÁ÷@endlinkÇ°ÉèÖÃºÃ
 */
 dvp2api dvpStatus dvpSetBufferQueueSize(dvpHandle handle, dvpInt32 BufferQueueSize);
 
 
 /**
-*@brief ????
-*@param[in] handle 
-*@param[out] pBufferQueueSizeDescr ???
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡»º´æ¶ÓÁĞ´óĞ¡µÄÃèÊöĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pBufferQueueSizeDescr »º´æ¶ÓÁĞ´óĞ¡µÄÃèÊöĞÅÏ¢
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ADVANCED
 *@see dvpSetBufferQueueSize
 *@see dvpGetBufferQueueSize
@@ -3388,10 +3388,10 @@ dvp2api dvpStatus dvpGetBufferQueueSizeDescr(dvpHandle handle, dvpIntDescr *pBuf
 
 
 /**
-*@brief ??
-*@param[in] handle 
-*@param[out] pLineRate ?
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡ÏßÕóÏà»úĞĞÆµ
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pLineRate ÏßÕóÏà»úĞĞÆµ
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 * @ingroup DVP_LINESCAN
 *@see dvpGetLineRateDescr
 *@see dvpSetLineRate
@@ -3400,10 +3400,10 @@ dvp2api dvpStatus dvpGetLineRate(dvpHandle handle, double *pLineRate);
 
 
 /**
-*@brief ?
-*@param[in] handle 
-*@param[in] LineRate ?
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃÏßÕóÏà»úĞĞÆµ
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] LineRate ÏßÕóÏà»úĞĞÆµ
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 * @ingroup DVP_LINESCAN
 *@see dvpGetLineRateDescr
 *@see dvpGetLineRate
@@ -3412,10 +3412,10 @@ dvp2api dvpStatus dvpSetLineRate(dvpHandle handle, double LineRate);
 
 
 /**
-*@brief ???
-*@param[in] handle 
-*@param[out] pLineRateDescr ??
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡ÏßÕóÏà»úĞĞÆµµÄÃèÊöĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pLineRateDescr ÏßÕóÏà»úĞĞÆµµÄÃèÊöĞÅÏ¢
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 * @ingroup DVP_LINESCAN
 *@see dvpSetLineRate
 *@see dvpGetLineRate
@@ -3424,10 +3424,10 @@ dvp2api dvpStatus dvpGetLineRateDescr(dvpHandle handle, dvpDoubleDescr *pLineRat
 
 
 /**
-*@brief ???
-*@param[in] handle 
-*@param[out] pTriggerSource ??
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡Ïà»úµÄ´¥·¢Ô´
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pTriggerSource Ïà»úµÄ´¥·¢Ô´
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_TRIGGER
 *@see dvpSetTriggerSource
 */
@@ -3435,10 +3435,10 @@ dvp2api dvpStatus dvpGetTriggerSource(dvpHandle handle, dvpTriggerSource *pTrigg
 
 
 /**
-*@brief ??
-*@param[in] handle 
-*@param[in] TriggerSource ??
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃÏà»úµÄ´¥·¢Ô´
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] TriggerSource Ïà»úµÄ´¥·¢Ô´
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_TRIGGER
 *@see dvpGetTriggerSource
 */
@@ -3446,58 +3446,58 @@ dvp2api dvpStatus dvpSetTriggerSource(dvpHandle handle, dvpTriggerSource Trigger
 
 
 /**
-*@brief ?LUT
-*@param[in] handle 
-*@param[out] pCurveLut LUT
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡LUTÇúÏß
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pCurveLut LUTÇúÏß
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ENHANCE
 *@see dvpSetCurveLut
-*@note ê???
+*@note ¸ù¾İÉÙÁ¿µÄÃªµãÀ´È·¶¨Ò»ÌõÁ¬ĞøµÄÓ³ÉäÇúÏß
 */
 dvp2api dvpStatus dvpGetCurveLut(dvpHandle handle, dvpCurveLut *pCurveLut);
 
 
 /**
-*@brief LUT
-*@param[in] handle 
-*@param[in] CurveLut LUT
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃLUTÇúÏß
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] CurveLut LUTÇúÏß
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ENHANCE
 *@see dvpGetCurveLut
-*@note ê???
+*@note ¸ù¾İÉÙÁ¿µÄÃªµãÀ´È·¶¨Ò»ÌõÁ¬ĞøµÄÓ³ÉäÇúÏß
 */
 dvp2api dvpStatus dvpSetCurveLut(dvpHandle handle, dvpCurveLut CurveLut);
 
 
 /**
-*@brief ???
-*@param[in] handle 
-*@param[out] pColorCorrection ??
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡ÑÕÉ«Ğ£ÕıÊı¾İ
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pColorCorrection ÑÕÉ«Ğ£ÕıÊı¾İ
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_CORRECTION
 *@see dvpSetColorCorrection
-*@note ??????????µ??
+*@note ÑÕÉ«Ğ£ÕıÊı¾İÒ»ÖÂÊÇÈ·±£²ÊÉ«Ïà»úµÄÉ«²Ê»¹Ô­Ğ§¹ûÒ»ÖÂµÄ±ØÒªÌõ¼ş
 */
 dvp2api dvpStatus dvpGetColorCorrection(dvpHandle handle, dvpColorCorrection *pColorCorrection);
 
 
 /**
-*@brief ??
-*@param[in] handle 
-*@param[in] ColorCorrection ??
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃÑÕÉ«Ğ£ÕıÊı¾İ
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] ColorCorrection ÑÕÉ«Ğ£ÕıÊı¾İ
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_CORRECTION
 *@see dvpGetColorCorrection
-*@note ??????????µ??
+*@note ÑÕÉ«Ğ£ÕıÊı¾İÒ»ÖÂÊÇÈ·±£²ÊÉ«Ïà»úµÄÉ«²Ê»¹Ô­Ğ§¹ûÒ»ÖÂµÄ±ØÒªÌõ¼ş
 */
 dvp2api dvpStatus dvpSetColorCorrection(dvpHandle handle, dvpColorCorrection ColorCorrection);
 
 
 /**
-*@brief ????
-*@param[in] handle 
-*@param[out] pStreamState ???
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡ÊÓÆµÁ÷×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pStreamState ÊÓÆµÁ÷×´Ì¬
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ADVANCED
 *@see dvpStart
 *@see dvpStop
@@ -3507,10 +3507,10 @@ dvp2api dvpStatus dvpGetStreamState(dvpHandle handle, dvpStreamState *pStreamSta
 
 
 /**
-*@brief ???
-*@param[in] handle 
-*@param[in] StreamState ???
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃÊÓÆµÁ÷×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] StreamState ÊÓÆµÁ÷×´Ì¬
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ADVANCED
 *@see dvpStart
 *@see dvpStop
@@ -3520,110 +3520,110 @@ dvp2api dvpStatus dvpSetStreamState(dvpHandle handle, dvpStreamState StreamState
 
 
 /**
-*@brief ??ISP???
-*@param[in] handle 
-*@param[out] pHardwareIspState ?ISP???
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡Ïà»úÄÚÖÃÓ²¼şISPµÄÊ¹ÄÜ×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pHardwareIspState Ïà»úÄÚÖÃÓ²¼şISPµÄÊ¹ÄÜ×´Ì¬
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_PERFORMANCE
 *@see dvpGetFunctionInfo
 *@see dvpSetHardwareIspState
-*@note ?ISP????
+*@note Ó²¼şISPÄÜ¹»½ÚÊ¡µçÄÔµÄĞÔÄÜ¿ªÏú
 */
 dvp2api dvpStatus dvpGetHardwareIspState(dvpHandle handle, bool *pHardwareIspState);
 
 
 /**
-*@brief ?ISP???
-*@param[in] handle 
-*@param[in] HardwareIspState ?ISP???
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃÏà»úÄÚÖÃÓ²¼şISPµÄÊ¹ÄÜ×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] HardwareIspState Ïà»úÄÚÖÃÓ²¼şISPµÄÊ¹ÄÜ×´Ì¬
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_PERFORMANCE
 *@see dvpGetFunctionInfo
 *@see dvpGetHardwareIspState
-*@note ?ISP????
+*@note Ó²¼şISPÄÜ¹»½ÚÊ¡µçÄÔµÄĞÔÄÜ¿ªÏú
 */
 dvp2api dvpStatus dvpSetHardwareIspState(dvpHandle handle, bool HardwareIspState);
 
 
 /**
-*@brief ??????
-*@param[in] handle 
-*@param[out] pTriggerState ?????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡´¥·¢Ä£Ê½µÄÊ¹ÄÜ×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pTriggerState ´¥·¢Ä£Ê½µÄÊ¹ÄÜ×´Ì¬
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_TRIGGER
 *@see dvpGetFunctionInfo
 *@see dvpSetTriggerState
-*@note ???????
+*@note ÔÚ´¥·¢³öÍ¼ºÍÁ¬Ğø³öÍ¼Ä£Ê½Ö®¼äÇĞ»»
 */
 dvp2api dvpStatus dvpGetTriggerState(dvpHandle handle, bool *pTriggerState);
 
 
 /**
-*@brief ô?????
-*@param[in] handle 
-*@param[in] TriggerState ?????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃ´¥·¢Ä£Ê½µÄÊ¹ÄÜ×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] TriggerState ´¥·¢Ä£Ê½µÄÊ¹ÄÜ×´Ì¬
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_TRIGGER
 *@see dvpGetFunctionInfo
 *@see dvpGetTriggerState
-*@note ???????
+*@note ÔÚ´¥·¢³öÍ¼ºÍÁ¬Ğø³öÍ¼Ä£Ê½Ö®¼äÇĞ»»
 */
 dvp2api dvpStatus dvpSetTriggerState(dvpHandle handle, bool TriggerState);
 
 
 /**
-*@brief ??????
-*@param[in] handle 
-*@param[out] pMonoState ?????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡È¥É«µÄÊ¹ÄÜ×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pMonoState È¥É«µÄÊ¹ÄÜ×´Ì¬
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ENHANCE
 *@see dvpSetMonoState
-*@note ?????YUV???Y
+*@note Í¨³£ÊÇ¶Ô²ÊÉ«Í¼Ïñ½øĞĞYUV±ä»»²¢ÌáÈ¡ÁÁ¶È£¨Y£©·ÖÁ¿
 */
 dvp2api dvpStatus dvpGetMonoState(dvpHandle handle, bool *pMonoState);
 
 
 /**
-*@brief ?????
-*@param[in] handle 
-*@param[in] MonoState ?????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃÈ¥É«µÄÊ¹ÄÜ×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] MonoState È¥É«µÄÊ¹ÄÜ×´Ì¬
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ENHANCE
 *@see dvpGetMonoState
-*@note ?????YUV???Y
+*@note Í¨³£ÊÇ¶Ô²ÊÉ«Í¼Ïñ½øĞĞYUV±ä»»²¢ÌáÈ¡ÁÁ¶È£¨Y£©·ÖÁ¿
 */
 dvp2api dvpStatus dvpSetMonoState(dvpHandle handle, bool MonoState);
 
 
 /**
-*@brief ?????
-*@param[in] handle 
-*@param[out] pInverseState ????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡¸ºÆ¬µÄÊ¹ÄÜ×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pInverseState ¸ºÆ¬µÄÊ¹ÄÜ×´Ì¬
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ENHANCE
 *@see dvpSetInverseState
-*@note ?????
+*@note ÊµÏÖÀàËÆÏà»úµ×Æ¬µÄ·´É«Ğ§¹û
 */
 dvp2api dvpStatus dvpGetInverseState(dvpHandle handle, bool *pInverseState);
 
 
 /**
-*@brief ø????
-*@param[in] handle 
-*@param[in] InverseState ????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃ¸ºÆ¬µÄÊ¹ÄÜ×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] InverseState ¸ºÆ¬µÄÊ¹ÄÜ×´Ì¬
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ENHANCE
 *@see dvpGetInverseState
-*@note ?????
+*@note ÊµÏÖÀàËÆÏà»úµ×Æ¬µÄ·´É«Ğ§¹û
 */
 dvp2api dvpStatus dvpSetInverseState(dvpHandle handle, bool InverseState);
 
 
 /**
-*@brief ?????
-*@param[in] handle 
-*@param[out] pFlipHorizontalState ????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡ºáÏò·­×ªµÄÊ¹ÄÜ×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pFlipHorizontalState ºáÏò·­×ªµÄÊ¹ÄÜ×´Ì¬
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ENHANCE
 *@see dvpGetFlipVerticalState
 *@see dvpGetRotateOpposite
@@ -3633,10 +3633,10 @@ dvp2api dvpStatus dvpGetFlipHorizontalState(dvpHandle handle, bool *pFlipHorizon
 
 
 /**
-*@brief ú????
-*@param[in] handle 
-*@param[in] FlipHorizontalState ????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃºáÏò·­×ªµÄÊ¹ÄÜ×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] FlipHorizontalState ºáÏò·­×ªµÄÊ¹ÄÜ×´Ì¬
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ENHANCE
 *@see dvpGetFlipVerticalState
 *@see dvpGetRotateOpposite
@@ -3646,10 +3646,10 @@ dvp2api dvpStatus dvpSetFlipHorizontalState(dvpHandle handle, bool FlipHorizonta
 
 
 /**
-*@brief ?????
-*@param[in] handle 
-*@param[out] pFlipVerticalState ????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡×İÏò·­×ªµÄÊ¹ÄÜ×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pFlipVerticalState ×İÏò·­×ªµÄÊ¹ÄÜ×´Ì¬
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ENHANCE
 *@see dvpGetFlipHorizontalState
 *@see dvpGetRotateOpposite
@@ -3659,10 +3659,10 @@ dvp2api dvpStatus dvpGetFlipVerticalState(dvpHandle handle, bool *pFlipVerticalS
 
 
 /**
-*@brief ????
-*@param[in] handle 
-*@param[in] FlipVerticalState ????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃ×İÏò·­×ªµÄÊ¹ÄÜ×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] FlipVerticalState ×İÏò·­×ªµÄÊ¹ÄÜ×´Ì¬
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ENHANCE
 *@see dvpGetFlipHorizontalState
 *@see dvpGetRotateOpposite
@@ -3672,36 +3672,36 @@ dvp2api dvpStatus dvpSetFlipVerticalState(dvpHandle handle, bool FlipVerticalSta
 
 
 /**
-*@brief ?????
-*@param[in] handle 
-*@param[out] pFlatFieldState ????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡Æ½³¡µÄÊ¹ÄÜ×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pFlatFieldState Æ½³¡µÄÊ¹ÄÜ×´Ì¬
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_CORRECTION 
 *@see dvpCreateFlatFieldInfo
 *@see dvpSetFlatFieldState
-*@note ???????
+*@note Í¨³£ÓÃÓÚ²¹³¥¾µÍ·Ëù´øÀ´µÄ¡°°µ½Ç¡±Ğ§Ó¦
 */
 dvp2api dvpStatus dvpGetFlatFieldState(dvpHandle handle, bool *pFlatFieldState);
 
 
 /**
-*@brief ????
-*@param[in] handle 
-*@param[in] FlatFieldState ????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃÆ½³¡µÄÊ¹ÄÜ×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] FlatFieldState Æ½³¡µÄÊ¹ÄÜ×´Ì¬
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_CORRECTION 
 *@see dvpCreateFlatFieldInfo
 *@see dvpGetFlatFieldState
-*@note ???????
+*@note Í¨³£ÓÃÓÚ²¹³¥¾µÍ·Ëù´øÀ´µÄ¡°°µ½Ç¡±Ğ§Ó¦
 */
 dvp2api dvpStatus dvpSetFlatFieldState(dvpHandle handle, bool FlatFieldState);
 
 
 /**
-*@brief ?????
-*@param[in] handle 
-*@param[out] pDefectFixState ????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡Ïû³ı²ÊµãµÄÊ¹ÄÜ×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pDefectFixState Ïû³ı²ÊµãµÄÊ¹ÄÜ×´Ì¬
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_CORRECTION
 *@see dvpCreateDefectFixInfo
 *@see dvpSetAutoDefectFixState
@@ -3711,10 +3711,10 @@ dvp2api dvpStatus dvpGetDefectFixState(dvpHandle handle, bool *pDefectFixState);
 
 
 /**
-*@brief ????
-*@param[in] handle 
-*@param[in] DefectFixState ????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃÏû³ı²ÊµãµÄÊ¹ÄÜ×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] DefectFixState Ïû³ı²ÊµãµÄÊ¹ÄÜ×´Ì¬
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_CORRECTION
 *@see dvpCreateDefectFixInfo
 *@see dvpSetAutoDefectFixState
@@ -3724,38 +3724,38 @@ dvp2api dvpStatus dvpSetDefectFixState(dvpHandle handle, bool DefectFixState);
 
 
 /**
-*@brief ??????
-*@param[in] handle 
-*@param[out] pAutoDefectFixState ?????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡×Ô¶¯Ïû³ı²ÊµãµÄÊ¹ÄÜ×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pAutoDefectFixState ×Ô¶¯Ïû³ı²ÊµãµÄÊ¹ÄÜ×´Ì¬
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_CORRECTION
 *@see dvpCreateDefectFixInfo
 *@see dvpSetDefectFixState
 *@see dvpSetAutoDefectFixState
-*@note true ??false ??
+*@note true Îª×Ô¶¯£¬false ÎªÊÖ¶¯
 */
 dvp2api dvpStatus dvpGetAutoDefectFixState(dvpHandle handle, bool *pAutoDefectFixState);
 
 
 /**
-*@brief ?????
-*@param[in] handle 
-*@param[in] AutoDefectFixState ?????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃ×Ô¶¯Ïû³ı²ÊµãµÄÊ¹ÄÜ×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] AutoDefectFixState ×Ô¶¯Ïû³ı²ÊµãµÄÊ¹ÄÜ×´Ì¬
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_CORRECTION
 *@see dvpCreateDefectFixInfo
 *@see dvpSetDefectFixState
 *@see dvpGetAutoDefectFixState
-*@note true ??false ??
+*@note true Îª×Ô¶¯£¬false ÎªÊÖ¶¯
 */
 dvp2api dvpStatus dvpSetAutoDefectFixState(dvpHandle handle, bool AutoDefectFixState);
 
 
 /**
-*@brief ??????
-*@param[in] handle 
-*@param[out] pRotateState ?????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡Í¼ÏñĞı×ªÊ¹ÄÜ×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pRotateState Í¼ÏñĞı×ªÊ¹ÄÜ×´Ì¬
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ENHANCE
 *@see dvpGetRotateOpposite
 *@see dvpSetRotateState
@@ -3764,10 +3764,10 @@ dvp2api dvpStatus dvpGetRotateState(dvpHandle handle, bool *pRotateState);
 
 
 /**
-*@brief ?????
-*@param[in] handle 
-*@param[in] RotateState ?????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃÍ¼ÏñĞı×ªÊ¹ÄÜ×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] RotateState Í¼ÏñĞı×ªÊ¹ÄÜ×´Ì¬
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ENHANCE
 *@see dvpGetRotateOpposite
 *@see dvpGetRotateState
@@ -3776,226 +3776,226 @@ dvp2api dvpStatus dvpSetRotateState(dvpHandle handle, bool RotateState);
 
 
 /**
-*@brief ?????
+*@brief »ñÈ¡Í¼ÏñĞı×ª·½ÏòµÄ±êÖ¾
 *@see dvpGetRotateState
-*@param[in] handle 
-*@param[out] pRotateOpposite ????
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pRotateOpposite Í¼ÏñĞı×ª·½ÏòµÄ±êÖ¾
 *@see dvpGetRotateState
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ENHANCE
 *@see dvpSetRotateOpposite
-*@note ???true??false90
+*@note Ë³Ê±Õë£¨true£©»òÄæÊ±Õë£¨false£©90¶È
 */
 dvp2api dvpStatus dvpGetRotateOpposite(dvpHandle handle, bool *pRotateOpposite);
 
 
 /**
-*@brief ????
+*@brief ÉèÖÃÍ¼ÏñĞı×ª·½ÏòµÄ±êÖ¾
 *@see dvpGetRotateState
-*@param[in] handle 
-*@param[in] RotateOpposite ????
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] RotateOpposite Í¼ÏñĞı×ª·½ÏòµÄ±êÖ¾
 *@see dvpGetRotateState
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ENHANCE
 *@see dvpGetRotateOpposite
-*@note ???true??false90
+*@note Ë³Ê±Õë£¨true£©»òÄæÊ±Õë£¨false£©90¶È
 */
 dvp2api dvpStatus dvpSetRotateOpposite(dvpHandle handle, bool RotateOpposite);
 
 
 /**
-*@brief ????
-*@param[in] handle 
-*@param[out] pCoolerState ???
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡ÖÆÀäÆ÷µÄÊ¹ÄÜ×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pCoolerState ÖÆÀäÆ÷µÄÊ¹ÄÜ×´Ì¬
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ADVANCED
 *@see dvpGetTemperatureInfo
 *@see dvpSetCoolerState
-*@note ????
+*@note Ò»°ãÊÇÖ¸É¢ÈÈ·çÉÈ
 */
 dvp2api dvpStatus dvpGetCoolerState(dvpHandle handle, bool *pCoolerState);
 
 
 /**
-*@brief ???
-*@param[in] handle 
-*@param[in] CoolerState ???
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃÖÆÀäÆ÷µÄÊ¹ÄÜ×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] CoolerState ÖÆÀäÆ÷µÄÊ¹ÄÜ×´Ì¬
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ADVANCED
 *@see dvpGetTemperatureInfo
 *@see dvpGetCoolerState
-*@note ????
+*@note Ò»°ãÊÇÖ¸É¢ÈÈ·çÉÈ
 */
 dvp2api dvpStatus dvpSetCoolerState(dvpHandle handle, bool CoolerState);
 
 
 /**
-*@brief ?????
-*@param[in] handle 
-*@param[out] pAeRoi ????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡×Ô¶¯ÆØ¹âÍ³¼ÆÇøÓò£¨Ïà¶ÔÓÚÕû¸ö¿É¼ûÇøÓò£©
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pAeRoi ×Ô¶¯ÆØ¹âÍ³¼ÆÇøÓò£¨Ïà¶ÔÓÚÕû¸ö¿É¼ûÇøÓò£©
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_EXPOSURE
 *@see dvpSetAeOperation
 *@see dvpSetAeRoi
-*@note ????
+*@note ×Ô¶¯ÆØ¹âËã·¨µÄÁÁ¶ÈÍ³¼ÆÇøÓò
 */
 dvp2api dvpStatus dvpGetAeRoi(dvpHandle handle, dvpRegion *pAeRoi);
 
 
 /**
-*@brief ????
-*@param[in] handle 
-*@param[in] AeRoi ????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃ×Ô¶¯ÆØ¹âÍ³¼ÆÇøÓò£¨Ïà¶ÔÓÚÕû¸ö¿É¼ûÇøÓò£©
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] AeRoi ×Ô¶¯ÆØ¹âÍ³¼ÆÇøÓò£¨Ïà¶ÔÓÚÕû¸ö¿É¼ûÇøÓò£©
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_EXPOSURE
 *@see dvpSetAeOperation
 *@see dvpGetAeRoi
-*@note ????
+*@note ×Ô¶¯ÆØ¹âËã·¨µÄÁÁ¶ÈÍ³¼ÆÇøÓò
 */
 dvp2api dvpStatus dvpSetAeRoi(dvpHandle handle, dvpRegion AeRoi);
 
 
 /**
-*@brief ?????
-*@param[in] handle 
-*@param[out] pAwbRoi ????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡×Ô¶¯°×Æ½ºâÍ³¼ÆÇøÓò£¨Ïà¶ÔÓÚÕû¸ö¿É¼ûÇøÓò£©
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pAwbRoi ×Ô¶¯°×Æ½ºâÍ³¼ÆÇøÓò£¨Ïà¶ÔÓÚÕû¸ö¿É¼ûÇøÓò£©
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_COLOR
 *@see dvpSetAwbOperation
 *@see dvpSetAwbRoi
-*@note ?????
+*@note ×Ô¶¯°×Æ½ºâËã·¨µÄÑÕÉ«Í³¼ÆÇøÓò
 */
 dvp2api dvpStatus dvpGetAwbRoi(dvpHandle handle, dvpRegion *pAwbRoi);
 
 
 /**
-*@brief ????
-*@param[in] handle 
-*@param[in] AwbRoi ????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃ×Ô¶¯°×Æ½ºâÍ³¼ÆÇøÓò£¨Ïà¶ÔÓÚÕû¸ö¿É¼ûÇøÓò£©
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] AwbRoi ×Ô¶¯°×Æ½ºâÍ³¼ÆÇøÓò£¨Ïà¶ÔÓÚÕû¸ö¿É¼ûÇøÓò£©
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_COLOR
 *@see dvpSetAwbOperation
 *@see dvpGetAwbRoi
-*@note ?????
+*@note ×Ô¶¯°×Æ½ºâËã·¨µÄÑÕÉ«Í³¼ÆÇøÓò
 */
 dvp2api dvpStatus dvpSetAwbRoi(dvpHandle handle, dvpRegion AwbRoi);
 
 
 /**
-*@brief ?????
-*@param[in] handle 
-*@param[out] pAeMode ????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡×Ô¶¯ÆØ¹âÄ£Ê½
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pAeMode ×Ô¶¯ÆØ¹âÄ£Ê½
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_EXPOSURE
 *@see dvpGetAwbRoi
 *@see dvpGetAwbOperation
 *@see dvpSetAeMode
-*@note ????
+*@note ×Ô¶¯ÆØ¹âËã·¨µÄ»ù´¡²ßÂÔ
 */
 dvp2api dvpStatus dvpGetAeMode(dvpHandle handle, dvpAeMode *pAeMode);
 
 
 /**
-*@brief ????
-*@param[in] handle 
-*@param[in] AeMode ????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃ×Ô¶¯ÆØ¹âÄ£Ê½
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] AeMode ×Ô¶¯ÆØ¹âÄ£Ê½
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_EXPOSURE
 *@see dvpGetAwbRoi
 *@see dvpGetAwbOperation
 *@see dvpGetAeMode
-*@note ????
+*@note ×Ô¶¯ÆØ¹âËã·¨µÄ»ù´¡²ßÂÔ
 */
 dvp2api dvpStatus dvpSetAeMode(dvpHandle handle, dvpAeMode AeMode);
 
 
 /**
-*@brief ????
-*@param[in] handle 
-*@param[out] pAntiFlick ???
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡¿¹ÆµÉÁ×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pAntiFlick ¿¹ÆµÉÁ×´Ì¬
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_EXPOSURE
 *@see dvpGetAeRoi
 *@see dvpGetAeOperation
 *@see dvpSetAntiFlick
-*@note ??????
+*@note ¹ıÂËÒ»Ğ©µçµÆÓÉÓÚ½»Á÷ÆµÉÁËùÔì³ÉµÄÌõÎÆ¸ÉÈÅ
 */
 dvp2api dvpStatus dvpGetAntiFlick(dvpHandle handle, dvpAntiFlick *pAntiFlick);
 
 
 /**
-*@brief ÿ???
-*@param[in] handle 
-*@param[in] AntiFlick ???
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃ¿¹ÆµÉÁ×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] AntiFlick ¿¹ÆµÉÁ×´Ì¬
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_EXPOSURE
 *@see dvpGetAeRoi
 *@see dvpGetAeOperation
 *@see dvpGetAntiFlick
-*@note ??????
+*@note ¹ıÂËÒ»Ğ©µçµÆÓÉÓÚ½»Á÷ÆµÉÁËùÔì³ÉµÄÌõÎÆ¸ÉÈÅ
 */
 dvp2api dvpStatus dvpSetAntiFlick(dvpHandle handle, dvpAntiFlick AntiFlick);
 
 
 /**
-*@brief ?????
-*@param[in] handle 
-*@param[out] pAeOperation ????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡×Ô¶¯ÆØ¹âµÄ²Ù×÷·½Ê½
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pAeOperation ×Ô¶¯ÆØ¹âµÄ²Ù×÷·½Ê½
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_EXPOSURE
 *@see dvpGetAeConfig
 *@see dvpGetAeTarget
 *@see dvpGetAeMode
 *@see dvpSetAeOperation
-*@note ??????
+*@note ×Ô¶¯»òÊÖ¶¯ÆØ¹âÄ£Ê½ÇĞ»»
 */
 dvp2api dvpStatus dvpGetAeOperation(dvpHandle handle, dvpAeOperation *pAeOperation);
 
 
 /**
-*@brief ????
-*@param[in] handle 
-*@param[in] AeOperation ????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃ×Ô¶¯ÆØ¹âµÄ²Ù×÷·½Ê½
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] AeOperation ×Ô¶¯ÆØ¹âµÄ²Ù×÷·½Ê½
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_EXPOSURE
 *@see dvpGetAeConfig
 *@see dvpGetAeTarget
 *@see dvpGetAeMode
 *@see dvpGetAeOperation
-*@note ??????
+*@note ×Ô¶¯»òÊÖ¶¯ÆØ¹âÄ£Ê½ÇĞ»»
 */
 dvp2api dvpStatus dvpSetAeOperation(dvpHandle handle, dvpAeOperation AeOperation);
 
 
 /**
-*@brief ?????
-*@param[in] handle 
-*@param[out] pAwbOperation ????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡×Ô¶¯°×Æ½ºâµÄ²Ù×÷·½Ê½
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pAwbOperation ×Ô¶¯°×Æ½ºâµÄ²Ù×÷·½Ê½
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_COLOR
 *@see dvpSetAwbOperation
-*@note ???@link #dvpSetRgbGain RGB@endlink?1.0@link dvpSetColorTemperatureState ??@endlink?õ??
+*@note ÔÚÖ´ĞĞ°×Æ½ºâ²Ù×÷ºó£¬Ğë×ÔĞĞ@link #dvpSetRgbGain ÉèÖÃRGBÔöÒæ@endlinkÎª1.0£¬²¢ÇÒ@link dvpSetColorTemperatureState ½ûÓÃÉ«ÎÂĞ§¹û@endlink²ÅÄÜµÃµ½´¿ÕıµÄ°×Æ½ºâ
 */
 dvp2api dvpStatus dvpGetAwbOperation(dvpHandle handle, dvpAwbOperation *pAwbOperation);
 
 
 /**
-*@brief ????
-*@param[in] handle 
-*@param[in] AwbOperation ????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃ×Ô¶¯°×Æ½ºâµÄ²Ù×÷·½Ê½
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] AwbOperation ×Ô¶¯°×Æ½ºâµÄ²Ù×÷·½Ê½
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_COLOR
 *@see dvpGetAwbOperation
-*@note ???@link #dvpSetRgbGain RGB@endlink?1.0@link dvpSetColorTemperatureState ??@endlink?õ??
+*@note ÔÚÖ´ĞĞ°×Æ½ºâ²Ù×÷ºó£¬Ğë×ÔĞĞ@link #dvpSetRgbGain ÉèÖÃRGBÔöÒæ@endlinkÎª1.0£¬²¢ÇÒ@link dvpSetColorTemperatureState ½ûÓÃÉ«ÎÂĞ§¹û@endlink²ÅÄÜµÃµ½´¿ÕıµÄ°×Æ½ºâ
 */
 dvp2api dvpStatus dvpSetAwbOperation(dvpHandle handle, dvpAwbOperation AwbOperation);
 
 
 /**
-*@brief ?Strobe???
-*@param[in] handle 
-*@param[out] pStrobeDriver Strobe???
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡Strobe£¨ÉÁ¹âµÆ£©ĞÅºÅÇı¶¯·½Ê½
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pStrobeDriver Strobe£¨ÉÁ¹âµÆ£©ĞÅºÅÇı¶¯·½Ê½
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_TRIGGER
 *@see dvpGetStrobeOutputType
 *@see dvpSetStrobeDriver
@@ -4004,10 +4004,10 @@ dvp2api dvpStatus dvpGetStrobeDriver(dvpHandle handle, dvpStrobeDriver *pStrobeD
 
 
 /**
-*@brief Strobe???
-*@param[in] handle 
-*@param[in] StrobeDriver Strobe???
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃStrobe£¨ÉÁ¹âµÆ£©ĞÅºÅÇı¶¯·½Ê½
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] StrobeDriver Strobe£¨ÉÁ¹âµÆ£©ĞÅºÅÇı¶¯·½Ê½
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_TRIGGER
 *@see dvpGetStrobeOutputType
 *@see dvpGetStrobeDriver
@@ -4016,10 +4016,10 @@ dvp2api dvpStatus dvpSetStrobeDriver(dvpHandle handle, dvpStrobeDriver StrobeDri
 
 
 /**
-*@brief ?Strobe??
-*@param[in] handle 
-*@param[out] pStrobeOutputType Strobe??
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡Strobe£¨ÉÁ¹âµÆ£©ĞÅºÅÀàĞÍ
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pStrobeOutputType Strobe£¨ÉÁ¹âµÆ£©ĞÅºÅÀàĞÍ
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_TRIGGER
 *@see dvpGetStrobeDriver
 *@see dvpSetStrobeOutputType
@@ -4028,10 +4028,10 @@ dvp2api dvpStatus dvpGetStrobeOutputType(dvpHandle handle, dvpStrobeOutputType *
 
 
 /**
-*@brief Strobe??
-*@param[in] handle 
-*@param[in] StrobeOutputType Strobe??
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃStrobe£¨ÉÁ¹âµÆ£©ĞÅºÅÀàĞÍ
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] StrobeOutputType Strobe£¨ÉÁ¹âµÆ£©ĞÅºÅÀàĞÍ
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_TRIGGER
 *@see dvpGetStrobeDriver
 *@see dvpGetStrobeOutputType
@@ -4040,10 +4040,10 @@ dvp2api dvpStatus dvpSetStrobeOutputType(dvpHandle handle, dvpStrobeOutputType S
 
 
 /**
-*@brief ??
-*@param[in] handle 
-*@param[out] pTriggerInputType ?
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡´¥·¢ÊäÈëĞÅºÅÀàĞÍ
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pTriggerInputType ´¥·¢ÊäÈëĞÅºÅÀàĞÍ
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_TRIGGER
 *@see dvpGetTriggerLineMode
 *@see dvpSetTriggerInputType
@@ -4052,10 +4052,10 @@ dvp2api dvpStatus dvpGetTriggerInputType(dvpHandle handle, dvpTriggerInputType *
 
 
 /**
-*@brief ô?
-*@param[in] handle 
-*@param[in] TriggerInputType ?
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃ´¥·¢ÊäÈëĞÅºÅÀàĞÍ
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] TriggerInputType ´¥·¢ÊäÈëĞÅºÅÀàĞÍ
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_TRIGGER
 *@see dvpGetTriggerLineMode
 *@see dvpGetTriggerInputType
@@ -4064,69 +4064,69 @@ dvp2api dvpStatus dvpSetTriggerInputType(dvpHandle handle, dvpTriggerInputType T
 
 
 /**
-*@brief ????
-*@param[in] handle 
-*@param[out] pSourceFormat ???
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡Ô´Í¼Ïñ¸ñÊ½
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pSourceFormat Ô´Í¼Ïñ¸ñÊ½
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_FORMAT
 *@see dvpSetSourceFormatSel
 *@see dvpSetSourceFormat
-*@note ????
+*@note Í¨³£ÊÇ¾­¹ıÈí¼ş´¦ÀíµÄ×îÖÕÍ¼Ïñ¸ñÊ½
 */
 dvp2api dvpStatus dvpGetSourceFormat(dvpHandle handle, dvpStreamFormat *pSourceFormat);
 
 
 /**
-*@brief ???
-*@param[in] handle 
-*@param[in] SourceFormat ???
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃÔ´Í¼Ïñ¸ñÊ½
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] SourceFormat Ô´Í¼Ïñ¸ñÊ½
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_FORMAT
 *@see dvpSetSourceFormatSel
 *@see dvpGetSourceFormat
-*@note ????
+*@note Í¨³£ÊÇ¾­¹ıÈí¼ş´¦ÀíµÄ×îÖÕÍ¼Ïñ¸ñÊ½
 */
 dvp2api dvpStatus dvpSetSourceFormat(dvpHandle handle, dvpStreamFormat SourceFormat);
 
 
 /**
-*@brief ????
-*@param[in] handle 
-*@param[out] pTargetFormat ???
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡Ä¿±êÍ¼Ïñ¸ñÊ½
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pTargetFormat Ä¿±êÍ¼Ïñ¸ñÊ½
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_FORMAT
 *@see dvpSetTargetFormatSel
 *@see dvpSetTargetFormat
-*@note ??????
+*@note Í¨³£ÊÇ´ÓÏà»úÖ±½ÓÊä³öµÄÔ­Ê¼¸ñÊ½
 */
 dvp2api dvpStatus dvpGetTargetFormat(dvpHandle handle, dvpStreamFormat *pTargetFormat);
 
 
 /**
-*@brief ???
-*@param[in] handle 
-*@param[in] TargetFormat ???
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃÄ¿±êÍ¼Ïñ¸ñÊ½
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] TargetFormat Ä¿±êÍ¼Ïñ¸ñÊ½
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_FORMAT
 *@see dvpSetTargetFormatSel
 *@see dvpGetTargetFormat
-*@note ??????
+*@note Í¨³£ÊÇ´ÓÏà»úÖ±½ÓÊä³öµÄÔ­Ê¼¸ñÊ½
 */
 dvp2api dvpStatus dvpSetTargetFormat(dvpHandle handle, dvpStreamFormat TargetFormat);
 
 
 /**
-*@brief ?û?
-*@param[in] handle 
-*@param[out] pUserColorMatrix û?
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡ÓÃ»§ÑÕÉ«¾ØÕó
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pUserColorMatrix ÓÃ»§ÑÕÉ«¾ØÕó
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_COLOR
 *@see dvpSetUserColorMatrix
-*@note MAT[0][0] + MAT[1][0] + MAT[2][0]  1.0
-*@note MAT[0][1] + MAT[1][1] + MAT[2][1]  1.0
-*@note MAT[0][2] + MAT[1][2] + MAT[2][2]  1.0
-*@note ? [B0.G0.R0]
-*@note ? [B1.G1.R1]
+*@note MAT[0][0] + MAT[1][0] + MAT[2][0] ºãµÈÓÚ 1.0
+*@note MAT[0][1] + MAT[1][1] + MAT[2][1] ºãµÈÓÚ 1.0
+*@note MAT[0][2] + MAT[1][2] + MAT[2][2] ºãµÈÓÚ 1.0
+*@note ÊäÈëÑÕÉ« [B0.G0.R0]
+*@note Êä³öÑÕÉ« [B1.G1.R1]
 *@note B1 = B0*MAT[0][0] + G0*MAT[1][0] + R0*MAT[2][0] + MAT[3][0]
 *@note G1 = B0*MAT[0][1] + G0*MAT[1][1] + R0*MAT[2][1] + MAT[3][1]
 *@note R1 = B0*MAT[0][2] + G0*MAT[1][2] + R0*MAT[2][2] + MAT[3][2]
@@ -4135,17 +4135,17 @@ dvp2api dvpStatus dvpGetUserColorMatrix(dvpHandle handle, dvpColorMatrix *pUserC
 
 
 /**
-*@brief û?
-*@param[in] handle 
-*@param[in] UserColorMatrix û?
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃÓÃ»§ÑÕÉ«¾ØÕó
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] UserColorMatrix ÓÃ»§ÑÕÉ«¾ØÕó
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_COLOR
 *@see dvpGetUserColorMatrix
-*@note MAT[0][0] + MAT[1][0] + MAT[2][0]  1.0
-*@note MAT[0][1] + MAT[1][1] + MAT[2][1]  1.0
-*@note MAT[0][2] + MAT[1][2] + MAT[2][2]  1.0
-*@note ? [B0.G0.R0]
-*@note ? [B1.G1.R1]
+*@note MAT[0][0] + MAT[1][0] + MAT[2][0] ºãµÈÓÚ 1.0
+*@note MAT[0][1] + MAT[1][1] + MAT[2][1] ºãµÈÓÚ 1.0
+*@note MAT[0][2] + MAT[1][2] + MAT[2][2] ºãµÈÓÚ 1.0
+*@note ÊäÈëÑÕÉ« [B0.G0.R0]
+*@note Êä³öÑÕÉ« [B1.G1.R1]
 *@note B1 = B0*MAT[0][0] + G0*MAT[1][0] + R0*MAT[2][0] + MAT[3][0]
 *@note G1 = B0*MAT[0][1] + G0*MAT[1][1] + R0*MAT[2][1] + MAT[3][1]
 *@note R1 = B0*MAT[0][2] + G0*MAT[1][2] + R0*MAT[2][2] + MAT[3][2]
@@ -4154,141 +4154,141 @@ dvp2api dvpStatus dvpSetUserColorMatrix(dvpHandle handle, dvpColorMatrix UserCol
 
 
 /**
-*@brief ????? ???
-*@param[in] handle 
-*@param[out] pLinkTimeout ???? ???
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡Á¬½Ó³¬Ê±Ê±¼äµÄÖµ £¨µ¥Î»ÎªºÁÃë£©
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pLinkTimeout Á¬½Ó³¬Ê±Ê±¼äµÄÖµ £¨µ¥Î»ÎªºÁÃë£©
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ADVANCED
 *@see dvpSetLinkTimeout
-*@note ??
+*@note Èç¹ûÊÇÍøÂçÏà»ú£¬Ôò¶ÔÓ¦ÓÚĞÄÌø°ü³¬Ê±
 */
 dvp2api dvpStatus dvpGetLinkTimeout(dvpHandle handle, dvpUint32 *pLinkTimeout);
 
 
 /**
-*@brief ???? ???
-*@param[in] handle 
-*@param[in] LinkTimeout ???? ???
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃÁ¬½Ó³¬Ê±Ê±¼äµÄÖµ £¨µ¥Î»ÎªºÁÃë£©
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] LinkTimeout Á¬½Ó³¬Ê±Ê±¼äµÄÖµ £¨µ¥Î»ÎªºÁÃë£©
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ADVANCED
 *@see dvpGetLinkTimeout
-*@note ??
+*@note Èç¹ûÊÇÍøÂçÏà»ú£¬Ôò¶ÔÓ¦ÓÚĞÄÌø°ü³¬Ê±
 */
 dvp2api dvpStatus dvpSetLinkTimeout(dvpHandle handle, dvpUint32 LinkTimeout);
 
 
 /**
-*@brief ????
-*@param[in] handle 
-*@param[out] pAeConfig ???
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡×Ô¶¯ÆØ¹âÅäÖÃĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pAeConfig ×Ô¶¯ÆØ¹âÅäÖÃĞÅÏ¢
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_EXPOSURE
 *@see dvpGetAeOperation
 *@see dvpGetAeTarget
 *@see dvpSetAeConfig
-*@note ???????û
+*@note ×Ô¶¯ÆØ¹âËã·¨µÄ¸ß¼¶²ßÂÔ£¬Í¨³£²»½¨ÒéÓÃ»§¸ü¸Ä
 */
 dvp2api dvpStatus dvpGetAeConfig(dvpHandle handle, dvpAeConfig *pAeConfig);
 
 
 /**
-*@brief ???
-*@param[in] handle 
-*@param[in] AeConfig ???
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃ×Ô¶¯ÆØ¹âÅäÖÃĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] AeConfig ×Ô¶¯ÆØ¹âÅäÖÃĞÅÏ¢
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_EXPOSURE
 *@see dvpGetAeOperation
 *@see dvpGetAeTarget
 *@see dvpGetAeConfig
-*@note ???????û
+*@note ×Ô¶¯ÆØ¹âËã·¨µÄ¸ß¼¶²ßÂÔ£¬Í¨³£²»½¨ÒéÓÃ»§¸ü¸Ä
 */
 dvp2api dvpStatus dvpSetAeConfig(dvpHandle handle, dvpAeConfig AeConfig);
 
 
 /**
-*@brief ?
-*@param[in] handle 
-*@param[out] pBufferConfig 
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡»º´æÅäÖÃ
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pBufferConfig »º´æÅäÖÃ
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ADVANCED
 *@see dvpSetBufferConfig
-*@note ?????ó
-*@warning ?@link #dvpStart ?@endlink?ú
+*@note ¸ü¸ÄÖ¡»º´æ²ßÂÔ£¬ÒÔÊÊÓ¦ÌØ¶¨µÄÓ¦ÓÃ³¡¾°
+*@warning ´Ë²Ù×÷½¨ÒéÔÚ@link #dvpStart Æô¶¯ÊÓÆµÁ÷@endlinkÇ°ÉèÖÃºÃ
 */
 dvp2api dvpStatus dvpGetBufferConfig(dvpHandle handle, dvpBufferConfig *pBufferConfig);
 
 
 /**
-*@brief û
-*@param[in] handle 
-*@param[in] BufferConfig 
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃ»º´æÅäÖÃ
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] BufferConfig »º´æÅäÖÃ
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ADVANCED
 *@see dvpGetBufferConfig
-*@note ?????ó
-*@warning ?@link #dvpStart ?@endlink?ú
+*@note ¸ü¸ÄÖ¡»º´æ²ßÂÔ£¬ÒÔÊÊÓ¦ÌØ¶¨µÄÓ¦ÓÃ³¡¾°
+*@warning ´Ë²Ù×÷½¨ÒéÔÚ@link #dvpStart Æô¶¯ÊÓÆµÁ÷@endlinkÇ°ÉèÖÃºÃ
 */
 dvp2api dvpStatus dvpSetBufferConfig(dvpHandle handle, dvpBufferConfig BufferConfig);
 
 
 /**
-*@brief ??
-*@param[in] handle 
-*@param[out] pLineTriggerConfig ?
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡ÏßÉ¨Ïà»ú´¥·¢ÅäÖÃ
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pLineTriggerConfig ÏßÉ¨Ïà»ú´¥·¢ÅäÖÃ
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 * @ingroup DVP_LINESCAN
 *@see dvpSetLineTriggerConfig
-* @note ?
-* @warning ?@link #dvpStart ?@endlink?ú
+* @note ÅäÖÃÏßÉ¨Ïà»ú´¥·¢¹¦ÄÜ
+* @warning ´Ë²Ù×÷½¨ÒéÔÚ@link #dvpStart Æô¶¯ÊÓÆµÁ÷@endlinkÇ°ÉèÖÃºÃ
 */
 dvp2api dvpStatus dvpGetLineTriggerConfig(dvpHandle handle, dvpLineTriggerConfig *pLineTriggerConfig);
 
 
 /**
-*@brief ?
-*@param[in] handle 
-*@param[in] LineTriggerConfig ?
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃÏßÉ¨Ïà»ú´¥·¢ÅäÖÃ
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] LineTriggerConfig ÏßÉ¨Ïà»ú´¥·¢ÅäÖÃ
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 * @ingroup DVP_LINESCAN
 *@see dvpGetLineTriggerConfig
-* @note ?
-* @warning ?@link #dvpStart ?@endlink?ú
+* @note ÅäÖÃÏßÉ¨Ïà»ú´¥·¢¹¦ÄÜ
+* @warning ´Ë²Ù×÷½¨ÒéÔÚ@link #dvpStart Æô¶¯ÊÓÆµÁ÷@endlinkÇ°ÉèÖÃºÃ
 */
 dvp2api dvpStatus dvpSetLineTriggerConfig(dvpHandle handle, dvpLineTriggerConfig LineTriggerConfig);
 
 
 /**
-*@brief ??û
-*@param[in] handle 
-*@param[out] pUserSet ?û
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡µ±Ç°ÓÃ»§ÉèÖÃ
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pUserSet µ±Ç°ÓÃ»§ÉèÖÃ
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP2_API_CONFIG
 *@see dvpGetFunctionInfo
 *@see dvpSetUserSet
-*@note ??ã???
+*@note ¼´ÉÏµç³õÊ¼ÉèÖÃ£¬½öÏŞÓÚ´æÔÚ²ÎÊı´æ´¢Æ÷µÄÏà»ú
 */
 dvp2api dvpStatus dvpGetUserSet(dvpHandle handle, dvpUserSet *pUserSet);
 
 
 /**
-*@brief õ?û
-*@param[in] handle 
-*@param[in] UserSet ?û
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃµ±Ç°ÓÃ»§ÉèÖÃ
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] UserSet µ±Ç°ÓÃ»§ÉèÖÃ
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP2_API_CONFIG
 *@see dvpGetFunctionInfo
 *@see dvpGetUserSet
-*@note ??ã???
+*@note ¼´ÉÏµç³õÊ¼ÉèÖÃ£¬½öÏŞÓÚ´æÔÚ²ÎÊı´æ´¢Æ÷µÄÏà»ú
 */
 dvp2api dvpStatus dvpSetUserSet(dvpHandle handle, dvpUserSet UserSet);
 
 
 /**
-*@brief ?IO????
-*@param[in] handle 
-*@param[in] inputIo IO
-*@param[out] pInputIoLevel IO????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡ÊäÈëIOµÄµçÆ½×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] inputIo ÊäÈëIO
+*@param[out] pInputIoLevel ÊäÈëIOµÄµçÆ½×´Ì¬
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@deprecated
 *@ingroup DVP_LINE
 */
@@ -4296,11 +4296,11 @@ dvp2api dvpStatus dvpGetInputIoLevel(dvpHandle handle, dvpInputIo inputIo, bool 
 
 
 /**
-*@brief ?@link dvpLineMode::LINE_MODE_OUTPUT @endlink ??
-*@param[in] handle 
-*@param[in] line 
-*@param[out] pLineLevel @link dvpLineMode::LINE_MODE_OUTPUT @endlink ??
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡@link dvpLineMode::LINE_MODE_OUTPUT Êä³öÒı½Å@endlink µÄµçÆ½
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] line Òı½Å
+*@param[out] pLineLevel @link dvpLineMode::LINE_MODE_OUTPUT Êä³öÒı½Å@endlink µÄµçÆ½
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_LINE
 *@see dvpSetLineLevel
 */
@@ -4308,11 +4308,11 @@ dvp2api dvpStatus dvpGetLineLevel(dvpHandle handle, dvpLine line, bool *pLineLev
 
 
 /**
-*@brief @link dvpLineMode::LINE_MODE_OUTPUT @endlink ??
-*@param[in] handle 
-*@param[in] line 
-*@param[in] LineLevel @link dvpLineMode::LINE_MODE_OUTPUT @endlink ??
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃ@link dvpLineMode::LINE_MODE_OUTPUT Êä³öÒı½Å@endlink µÄµçÆ½
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] line Òı½Å
+*@param[in] LineLevel @link dvpLineMode::LINE_MODE_OUTPUT Êä³öÒı½Å@endlink µÄµçÆ½
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_LINE
 *@see dvpGetLineLevel
 */
@@ -4320,11 +4320,11 @@ dvp2api dvpStatus dvpSetLineLevel(dvpHandle handle, dvpLine line, bool LineLevel
 
 
 /**
-*@brief ????
-*@param[in] handle 
-*@param[in] line 
-*@param[out] pLineInverter ???
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡Òı½ÅµçÆ½·´ÏòÊ¹ÄÜ
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] line Òı½Å
+*@param[out] pLineInverter Òı½ÅµçÆ½·´ÏòÊ¹ÄÜ
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_LINE
 *@see dvpSetLineInverter
 */
@@ -4332,11 +4332,11 @@ dvp2api dvpStatus dvpGetLineInverter(dvpHandle handle, dvpLine line, bool *pLine
 
 
 /**
-*@brief ???
-*@param[in] handle 
-*@param[in] line 
-*@param[in] LineInverter ???
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃÒı½ÅµçÆ½·´ÏòÊ¹ÄÜ
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] line Òı½Å
+*@param[in] LineInverter Òı½ÅµçÆ½·´ÏòÊ¹ÄÜ
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_LINE
 *@see dvpGetLineInverter
 */
@@ -4344,11 +4344,11 @@ dvp2api dvpStatus dvpSetLineInverter(dvpHandle handle, dvpLine line, bool LineIn
 
 
 /**
-*@brief ??I/O??
-*@param[in] handle 
-*@param[in] line 
-*@param[out] pLineMode ?I/O??
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡Òı½ÅµÄI/OÄ£Ê½
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] line Òı½Å
+*@param[out] pLineMode Òı½ÅµÄI/OÄ£Ê½
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_LINE
 *@see dvpSetLineMode
 */
@@ -4356,11 +4356,11 @@ dvp2api dvpStatus dvpGetLineMode(dvpHandle handle, dvpLine line, dvpLineMode *pL
 
 
 /**
-*@brief ?I/O??
-*@param[in] handle 
-*@param[in] line 
-*@param[in] LineMode ?I/O??
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃÒı½ÅµÄI/OÄ£Ê½
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] line Òı½Å
+*@param[in] LineMode Òı½ÅµÄI/OÄ£Ê½
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_LINE
 *@see dvpGetLineMode
 */
@@ -4368,11 +4368,11 @@ dvp2api dvpStatus dvpSetLineMode(dvpHandle handle, dvpLine line, dvpLineMode Lin
 
 
 /**
-*@brief ????
-*@param[in] handle 
-*@param[in] line 
-*@param[out] pLineSource ???
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡Òı½ÅµÄÊä³öĞÅºÅÔ´
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] line Òı½Å
+*@param[out] pLineSource Òı½ÅµÄÊä³öĞÅºÅÔ´
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_LINE
 *@see dvpSetLineSource
 */
@@ -4380,11 +4380,11 @@ dvp2api dvpStatus dvpGetLineSource(dvpHandle handle, dvpLine line, dvpLineSource
 
 
 /**
-*@brief ???
-*@param[in] handle 
-*@param[in] line 
-*@param[in] LineSource ???
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃÒı½ÅµÄÊä³öĞÅºÅÔ´
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] line Òı½Å
+*@param[in] LineSource Òı½ÅµÄÊä³öĞÅºÅÔ´
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_LINE
 *@see dvpGetLineSource
 */
@@ -4392,22 +4392,22 @@ dvp2api dvpStatus dvpSetLineSource(dvpHandle handle, dvpLine line, dvpLineSource
 
 
 /**
-*@brief ???????
-*@param[in] handle 
-*@param[in] line 
-*@param[out] pLineStatus ??????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡Òı½ÅµçÆ½×´Ì¬µÄ»Ø¶Á
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] line Òı½Å
+*@param[out] pLineStatus Òı½ÅµçÆ½×´Ì¬µÄ»Ø¶Á
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_LINE
 */
 dvp2api dvpStatus dvpGetLineStatus(dvpHandle handle, dvpLine line, bool *pLineStatus);
 
 
 /**
-*@brief ?IO????
-*@param[in] handle 
-*@param[in] outputIo IO
-*@param[out] pOutputIoLevel IO????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡Êä³öIOµÄµçÆ½×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] outputIo Êä³öIO
+*@param[out] pOutputIoLevel Êä³öIOµÄµçÆ½×´Ì¬
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@deprecated
 *@ingroup DVP_LINE
 *@see dvpSetOutputIoLevel
@@ -4416,11 +4416,11 @@ dvp2api dvpStatus dvpGetOutputIoLevel(dvpHandle handle, dvpOutputIo outputIo, bo
 
 
 /**
-*@brief IO????
-*@param[in] handle 
-*@param[in] outputIo IO
-*@param[in] OutputIoLevel IO????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃÊä³öIOµÄµçÆ½×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] outputIo Êä³öIO
+*@param[in] OutputIoLevel Êä³öIOµÄµçÆ½×´Ì¬
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@deprecated
 *@ingroup DVP_LINE
 *@see dvpGetOutputIoLevel
@@ -4429,11 +4429,11 @@ dvp2api dvpStatus dvpSetOutputIoLevel(dvpHandle handle, dvpOutputIo outputIo, bo
 
 
 /**
-*@brief ?IO?
-*@param[in] handle 
-*@param[in] outputIo IO
-*@param[out] pOutputIoFunction IO?
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡Êä³öIOµÄ¹¦ÄÜÅäÖÃ
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] outputIo Êä³öIO
+*@param[out] pOutputIoFunction Êä³öIOµÄ¹¦ÄÜÅäÖÃ
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@deprecated
 *@ingroup DVP_LINE
 *@see dvpSetOutputIoFunction
@@ -4442,11 +4442,11 @@ dvp2api dvpStatus dvpGetOutputIoFunction(dvpHandle handle, dvpOutputIo outputIo,
 
 
 /**
-*@brief IO?
-*@param[in] handle 
-*@param[in] outputIo IO
-*@param[in] OutputIoFunction IO?
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃÊä³öIOµÄ¹¦ÄÜÅäÖÃ
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] outputIo Êä³öIO
+*@param[in] OutputIoFunction Êä³öIOµÄ¹¦ÄÜÅäÖÃ
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@deprecated
 *@ingroup DVP_LINE
 *@see dvpGetOutputIoFunction
@@ -4455,11 +4455,11 @@ dvp2api dvpStatus dvpSetOutputIoFunction(dvpHandle handle, dvpOutputIo outputIo,
 
 
 /**
-*@brief ?IO?
-*@param[in] handle 
-*@param[in] inputIo IO
-*@param[out] pInputIoFunction IO?
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡ÊäÈëIOµÄ¹¦ÄÜÅäÖÃ
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] inputIo ÊäÈëIO
+*@param[out] pInputIoFunction ÊäÈëIOµÄ¹¦ÄÜÅäÖÃ
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@deprecated
 *@ingroup DVP_LINE
 *@see dvpSetInputIoFunction
@@ -4468,11 +4468,11 @@ dvp2api dvpStatus dvpGetInputIoFunction(dvpHandle handle, dvpInputIo inputIo, dv
 
 
 /**
-*@brief IO?
-*@param[in] handle 
-*@param[in] inputIo IO
-*@param[in] InputIoFunction IO?
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃÊäÈëIOµÄ¹¦ÄÜÅäÖÃ
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] inputIo ÊäÈëIO
+*@param[in] InputIoFunction ÊäÈëIOµÄ¹¦ÄÜÅäÖÃ
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@deprecated
 *@ingroup DVP_LINE
 *@see dvpGetInputIoFunction
@@ -4481,12 +4481,12 @@ dvp2api dvpStatus dvpSetInputIoFunction(dvpHandle handle, dvpInputIo inputIo, dv
 
 
 /**
-*@brief ????
-*@param[in] handle 
-*@param[out] pStreamFlowCtrlSel ???
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡µ±Ç°Á÷¿ØÖÆ·½°¸Ñ¡ÏîµÄË÷Òı
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pStreamFlowCtrlSel µ±Ç°Á÷¿ØÖÆ·½°¸Ñ¡ÏîµÄË÷Òı
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ADVANCED
-*@note ?
+*@note Ò»°ãÓÃÓÚÍøÂçÏà»ú
 *@see dvpGetStreamFlowCtrlSelDescr
 *@see dvpGetStreamFlowCtrlSelDetail
 *@see dvpSetStreamFlowCtrlSel
@@ -4495,12 +4495,12 @@ dvp2api dvpStatus dvpGetStreamFlowCtrlSel(dvpHandle handle, dvpUint32 *pStreamFl
 
 
 /**
-*@brief õ???
-*@param[in] handle 
-*@param[in] StreamFlowCtrlSel ???
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃµ±Ç°Á÷¿ØÖÆ·½°¸Ñ¡ÏîµÄË÷Òı
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] StreamFlowCtrlSel µ±Ç°Á÷¿ØÖÆ·½°¸Ñ¡ÏîµÄË÷Òı
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ADVANCED
-*@note ?
+*@note Ò»°ãÓÃÓÚÍøÂçÏà»ú
 *@see dvpGetStreamFlowCtrlSelDescr
 *@see dvpGetStreamFlowCtrlSelDetail
 *@see dvpGetStreamFlowCtrlSel
@@ -4509,12 +4509,12 @@ dvp2api dvpStatus dvpSetStreamFlowCtrlSel(dvpHandle handle, dvpUint32 StreamFlow
 
 
 /**
-*@brief ????
-*@param[in] handle 
-*@param[out] pStreamFlowCtrlSelDescr ???
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡Á÷¿ØÖÆ·½°¸Ñ¡ÏîË÷ÒıµÄÃèÊöĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pStreamFlowCtrlSelDescr Á÷¿ØÖÆ·½°¸Ñ¡ÏîË÷ÒıµÄÃèÊöĞÅÏ¢
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ADVANCED
-*@note ?
+*@note Ò»°ãÓÃÓÚÍøÂçÏà»ú
 *@see dvpGetStreamFlowCtrlSel
 *@see dvpGetStreamFlowCtrlSelDetail
 */
@@ -4522,13 +4522,13 @@ dvp2api dvpStatus dvpGetStreamFlowCtrlSelDescr(dvpHandle handle, dvpSelectionDes
 
 
 /**
-*@brief ???????
-*@param[in] handle 
-*@param[in] StreamFlowCtrlSel ?
-*@param[out] pStreamFlowCtrlSelDetail ??????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡µ±Ç°Á÷¿ØÖÆ·½°¸Ñ¡ÏîË÷Òı¶ÔÓ¦µÄ¾ßÌåĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] StreamFlowCtrlSel Á÷¿ØÖÆ·½°¸µÄË÷Òı
+*@param[out] pStreamFlowCtrlSelDetail µ±Ç°Á÷¿ØÖÆ·½°¸Ñ¡ÏîË÷Òı¶ÔÓ¦µÄ¾ßÌåĞÅÏ¢
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_ADVANCED
-*@note ?
+*@note Ò»°ãÓÃÓÚÍøÂçÏà»ú
 *@see dvpGetStreamFlowCtrlSel
 *@see dvpGetStreamFlowCtrlSelDescr
 */
@@ -4536,13 +4536,13 @@ dvp2api dvpStatus dvpGetStreamFlowCtrlSelDetail(dvpHandle handle, dvpUint32 Stre
 
 
 /**
-*@brief ?????
-*@param[in] handle 
-*@param[out] pColorSolutionSel ????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡µ±Ç°É«²Ê·½°¸Ñ¡ÏîµÄË÷Òı
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pColorSolutionSel µ±Ç°É«²Ê·½°¸Ñ¡ÏîµÄË÷Òı
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_COLOR
 *@see dvpGetGamma
-*@note ?????????
+*@note µ÷½ÚÉ«²Ê»¹Ô­Ğ§¹û£¬Ê¹µÃÉ«²Ê·ûºÏÈËÑÛµÄÕı³£ÊÓ¾õ
 *@see dvpGetColorSolutionSelDescr
 *@see dvpGetColorSolutionSelDetail
 *@see dvpSetColorSolutionSel
@@ -4551,13 +4551,13 @@ dvp2api dvpStatus dvpGetColorSolutionSel(dvpHandle handle, dvpUint32 *pColorSolu
 
 
 /**
-*@brief õ????
-*@param[in] handle 
-*@param[in] ColorSolutionSel ????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃµ±Ç°É«²Ê·½°¸Ñ¡ÏîµÄË÷Òı
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] ColorSolutionSel µ±Ç°É«²Ê·½°¸Ñ¡ÏîµÄË÷Òı
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_COLOR
 *@see dvpGetGamma
-*@note ?????????
+*@note µ÷½ÚÉ«²Ê»¹Ô­Ğ§¹û£¬Ê¹µÃÉ«²Ê·ûºÏÈËÑÛµÄÕı³£ÊÓ¾õ
 *@see dvpGetColorSolutionSelDescr
 *@see dvpGetColorSolutionSelDetail
 *@see dvpGetColorSolutionSel
@@ -4566,13 +4566,13 @@ dvp2api dvpStatus dvpSetColorSolutionSel(dvpHandle handle, dvpUint32 ColorSoluti
 
 
 /**
-*@brief ?????
-*@param[in] handle 
-*@param[out] pColorSolutionSelDescr ????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡É«²Ê·½°¸Ñ¡ÏîË÷ÒıµÄÃèÊöĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pColorSolutionSelDescr É«²Ê·½°¸Ñ¡ÏîË÷ÒıµÄÃèÊöĞÅÏ¢
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_COLOR
 *@see dvpGetGamma
-*@note ?????????
+*@note µ÷½ÚÉ«²Ê»¹Ô­Ğ§¹û£¬Ê¹µÃÉ«²Ê·ûºÏÈËÑÛµÄÕı³£ÊÓ¾õ
 *@see dvpGetColorSolutionSel
 *@see dvpGetColorSolutionSelDetail
 */
@@ -4580,14 +4580,14 @@ dvp2api dvpStatus dvpGetColorSolutionSelDescr(dvpHandle handle, dvpSelectionDesc
 
 
 /**
-*@brief ????????
-*@param[in] handle 
-*@param[in] ColorSolutionSel ??
-*@param[out] pColorSolutionSelDetail ???????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡µ±Ç°É«²Ê·½°¸Ñ¡ÏîË÷Òı¶ÔÓ¦µÄ¾ßÌåĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] ColorSolutionSel É«²Ê·½°¸µÄË÷Òı
+*@param[out] pColorSolutionSelDetail µ±Ç°É«²Ê·½°¸Ñ¡ÏîË÷Òı¶ÔÓ¦µÄ¾ßÌåĞÅÏ¢
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_COLOR
 *@see dvpGetGamma
-*@note ?????????
+*@note µ÷½ÚÉ«²Ê»¹Ô­Ğ§¹û£¬Ê¹µÃÉ«²Ê·ûºÏÈËÑÛµÄÕı³£ÊÓ¾õ
 *@see dvpGetColorSolutionSel
 *@see dvpGetColorSolutionSelDescr
 */
@@ -4595,12 +4595,12 @@ dvp2api dvpStatus dvpGetColorSolutionSelDetail(dvpHandle handle, dvpUint32 Color
 
 
 /**
-*@brief ??Bayer?RGB??
-*@param[in] handle 
-*@param[out] pBayerDecodeSel ?Bayer?RGB??
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡µ±Ç°Bayer×ªRGB½âÂëËã·¨Ñ¡ÏîµÄË÷Òı
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pBayerDecodeSel µ±Ç°Bayer×ªRGB½âÂëËã·¨Ñ¡ÏîµÄË÷Òı
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_COLOR
-*@note ????????
+*@note Ó°Ïì²ÊÉ«Í¼ÏñµÄÏ¸½ÚºÍ±ßÔµĞ§¹û
 *@see dvpGetBayerDecodeSelDescr
 *@see dvpGetBayerDecodeSelDetail
 *@see dvpSetBayerDecodeSel
@@ -4609,12 +4609,12 @@ dvp2api dvpStatus dvpGetBayerDecodeSel(dvpHandle handle, dvpUint32 *pBayerDecode
 
 
 /**
-*@brief õ?Bayer?RGB??
-*@param[in] handle 
-*@param[in] BayerDecodeSel ?Bayer?RGB??
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃµ±Ç°Bayer×ªRGB½âÂëËã·¨Ñ¡ÏîµÄË÷Òı
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] BayerDecodeSel µ±Ç°Bayer×ªRGB½âÂëËã·¨Ñ¡ÏîµÄË÷Òı
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_COLOR
-*@note ????????
+*@note Ó°Ïì²ÊÉ«Í¼ÏñµÄÏ¸½ÚºÍ±ßÔµĞ§¹û
 *@see dvpGetBayerDecodeSelDescr
 *@see dvpGetBayerDecodeSelDetail
 *@see dvpGetBayerDecodeSel
@@ -4623,12 +4623,12 @@ dvp2api dvpStatus dvpSetBayerDecodeSel(dvpHandle handle, dvpUint32 BayerDecodeSe
 
 
 /**
-*@brief ?Bayer?RGB???
-*@param[in] handle 
-*@param[out] pBayerDecodeSelDescr Bayer?RGB???
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡Bayer×ªRGB½âÂëËã·¨Ñ¡ÏîË÷ÒıµÄÃèÊöĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pBayerDecodeSelDescr Bayer×ªRGB½âÂëËã·¨Ñ¡ÏîË÷ÒıµÄÃèÊöĞÅÏ¢
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_COLOR
-*@note ????????
+*@note Ó°Ïì²ÊÉ«Í¼ÏñµÄÏ¸½ÚºÍ±ßÔµĞ§¹û
 *@see dvpGetBayerDecodeSel
 *@see dvpGetBayerDecodeSelDetail
 */
@@ -4636,13 +4636,13 @@ dvp2api dvpStatus dvpGetBayerDecodeSelDescr(dvpHandle handle, dvpSelectionDescr 
 
 
 /**
-*@brief ??Bayer?RGB?????
-*@param[in] handle 
-*@param[in] BayerDecodeSel Bayer?RGB?
-*@param[out] pBayerDecodeSelDetail ?Bayer?RGB?????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡µ±Ç°Bayer×ªRGB½âÂëËã·¨Ñ¡ÏîË÷Òı¶ÔÓ¦µÄ¾ßÌåĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] BayerDecodeSel Bayer×ªRGB½âÂëËã·¨µÄË÷Òı
+*@param[out] pBayerDecodeSelDetail µ±Ç°Bayer×ªRGB½âÂëËã·¨Ñ¡ÏîË÷Òı¶ÔÓ¦µÄ¾ßÌåĞÅÏ¢
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_COLOR
-*@note ????????
+*@note Ó°Ïì²ÊÉ«Í¼ÏñµÄÏ¸½ÚºÍ±ßÔµĞ§¹û
 *@see dvpGetBayerDecodeSel
 *@see dvpGetBayerDecodeSelDescr
 */
@@ -4650,12 +4650,12 @@ dvp2api dvpStatus dvpGetBayerDecodeSelDetail(dvpHandle handle, dvpUint32 BayerDe
 
 
 /**
-*@brief ???????
-*@param[in] handle 
-*@param[out] pSourceFormatSel ??????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡µ±Ç°Ô­Ê¼Í¼Ïñ¸ñÊ½Ñ¡ÏîµÄË÷Òı
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pSourceFormatSel µ±Ç°Ô­Ê¼Í¼Ïñ¸ñÊ½Ñ¡ÏîµÄË÷Òı
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_FORMAT
-*@note ?@link dvpStreamFormat @endlink?
+*@note ºÍÊ¹ÓÃ@link dvpStreamFormat @endlinkµÈ¼Û
 *@see dvpGetSourceFormatSelDescr
 *@see dvpGetSourceFormatSelDetail
 *@see dvpSetSourceFormatSel
@@ -4664,12 +4664,12 @@ dvp2api dvpStatus dvpGetSourceFormatSel(dvpHandle handle, dvpUint32 *pSourceForm
 
 
 /**
-*@brief õ??????
-*@param[in] handle 
-*@param[in] SourceFormatSel ??????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃµ±Ç°Ô­Ê¼Í¼Ïñ¸ñÊ½Ñ¡ÏîµÄË÷Òı
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] SourceFormatSel µ±Ç°Ô­Ê¼Í¼Ïñ¸ñÊ½Ñ¡ÏîµÄË÷Òı
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_FORMAT
-*@note ?@link dvpStreamFormat @endlink?
+*@note ºÍÊ¹ÓÃ@link dvpStreamFormat @endlinkµÈ¼Û
 *@see dvpGetSourceFormatSelDescr
 *@see dvpGetSourceFormatSelDetail
 *@see dvpGetSourceFormatSel
@@ -4678,12 +4678,12 @@ dvp2api dvpStatus dvpSetSourceFormatSel(dvpHandle handle, dvpUint32 SourceFormat
 
 
 /**
-*@brief ???????
-*@param[in] handle 
-*@param[out] pSourceFormatSelDescr ??????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡Ô­Ê¼Í¼Ïñ¸ñÊ½Ñ¡ÏîË÷ÒıµÄÃèÊöĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pSourceFormatSelDescr Ô­Ê¼Í¼Ïñ¸ñÊ½Ñ¡ÏîË÷ÒıµÄÃèÊöĞÅÏ¢
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_FORMAT
-*@note ?@link dvpStreamFormat @endlink?
+*@note ºÍÊ¹ÓÃ@link dvpStreamFormat @endlinkµÈ¼Û
 *@see dvpGetSourceFormatSel
 *@see dvpGetSourceFormatSelDetail
 */
@@ -4691,13 +4691,13 @@ dvp2api dvpStatus dvpGetSourceFormatSelDescr(dvpHandle handle, dvpSelectionDescr
 
 
 /**
-*@brief ??????????
-*@param[in] handle 
-*@param[in] SourceFormatSel ????
-*@param[out] pSourceFormatSelDetail ?????????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡µ±Ç°Ô­Ê¼Í¼Ïñ¸ñÊ½Ñ¡ÏîË÷Òı¶ÔÓ¦µÄ¾ßÌåĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] SourceFormatSel Ô­Ê¼Í¼Ïñ¸ñÊ½µÄË÷Òı
+*@param[out] pSourceFormatSelDetail µ±Ç°Ô­Ê¼Í¼Ïñ¸ñÊ½Ñ¡ÏîË÷Òı¶ÔÓ¦µÄ¾ßÌåĞÅÏ¢
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_FORMAT
-*@note ?@link dvpStreamFormat @endlink?
+*@note ºÍÊ¹ÓÃ@link dvpStreamFormat @endlinkµÈ¼Û
 *@see dvpGetSourceFormatSel
 *@see dvpGetSourceFormatSelDescr
 */
@@ -4705,12 +4705,12 @@ dvp2api dvpStatus dvpGetSourceFormatSelDetail(dvpHandle handle, dvpUint32 Source
 
 
 /**
-*@brief ?????
-*@param[in] handle 
-*@param[out] pTargetFormatSel ????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡µ±Ç°Êä³öÍ¼Ïñ¸ñÊ½Ñ¡ÏîµÄË÷Òı
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pTargetFormatSel µ±Ç°Êä³öÍ¼Ïñ¸ñÊ½Ñ¡ÏîµÄË÷Òı
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_FORMAT
-*@note ?@link dvpStreamFormat @endlink?
+*@note ºÍÊ¹ÓÃ@link dvpStreamFormat @endlinkµÈ¼Û
 *@see dvpGetTargetFormatSelDescr
 *@see dvpGetTargetFormatSelDetail
 *@see dvpSetTargetFormatSel
@@ -4719,12 +4719,12 @@ dvp2api dvpStatus dvpGetTargetFormatSel(dvpHandle handle, dvpUint32 *pTargetForm
 
 
 /**
-*@brief õ????
-*@param[in] handle 
-*@param[in] TargetFormatSel ????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃµ±Ç°Êä³öÍ¼Ïñ¸ñÊ½Ñ¡ÏîµÄË÷Òı
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] TargetFormatSel µ±Ç°Êä³öÍ¼Ïñ¸ñÊ½Ñ¡ÏîµÄË÷Òı
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_FORMAT
-*@note ?@link dvpStreamFormat @endlink?
+*@note ºÍÊ¹ÓÃ@link dvpStreamFormat @endlinkµÈ¼Û
 *@see dvpGetTargetFormatSelDescr
 *@see dvpGetTargetFormatSelDetail
 *@see dvpGetTargetFormatSel
@@ -4733,12 +4733,12 @@ dvp2api dvpStatus dvpSetTargetFormatSel(dvpHandle handle, dvpUint32 TargetFormat
 
 
 /**
-*@brief ?????
-*@param[in] handle 
-*@param[out] pTargetFormatSelDescr ????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡Êä³öÍ¼Ïñ¸ñÊ½Ñ¡ÏîË÷ÒıµÄÃèÊöĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pTargetFormatSelDescr Êä³öÍ¼Ïñ¸ñÊ½Ñ¡ÏîË÷ÒıµÄÃèÊöĞÅÏ¢
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_FORMAT
-*@note ?@link dvpStreamFormat @endlink?
+*@note ºÍÊ¹ÓÃ@link dvpStreamFormat @endlinkµÈ¼Û
 *@see dvpGetTargetFormatSel
 *@see dvpGetTargetFormatSelDetail
 */
@@ -4746,13 +4746,13 @@ dvp2api dvpStatus dvpGetTargetFormatSelDescr(dvpHandle handle, dvpSelectionDescr
 
 
 /**
-*@brief ????????
-*@param[in] handle 
-*@param[in] TargetFormatSel ??
-*@param[out] pTargetFormatSelDetail ???????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡µ±Ç°Êä³öÍ¼Ïñ¸ñÊ½Ñ¡ÏîË÷Òı¶ÔÓ¦µÄ¾ßÌåĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] TargetFormatSel Êä³öÍ¼Ïñ¸ñÊ½µÄË÷Òı
+*@param[out] pTargetFormatSelDetail µ±Ç°Êä³öÍ¼Ïñ¸ñÊ½Ñ¡ÏîË÷Òı¶ÔÓ¦µÄ¾ßÌåĞÅÏ¢
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_FORMAT
-*@note ?@link dvpStreamFormat @endlink?
+*@note ºÍÊ¹ÓÃ@link dvpStreamFormat @endlinkµÈ¼Û
 *@see dvpGetTargetFormatSel
 *@see dvpGetTargetFormatSelDescr
 */
@@ -4760,12 +4760,12 @@ dvp2api dvpStatus dvpGetTargetFormatSelDetail(dvpHandle handle, dvpUint32 Target
 
 
 /**
-*@brief ??????
-*@param[in] handle 
-*@param[out] pResolutionModeSel ?????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡µ±Ç°·Ö±æÂÊÄ£Ê½Ñ¡ÏîµÄË÷Òı
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pResolutionModeSel µ±Ç°·Ö±æÂÊÄ£Ê½Ñ¡ÏîµÄË÷Òı
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_SIZE
-*@note sum?bin????
+*@note °üÀ¨sum£¨ÏàÁÚÇóºÍ£©£¬bin£¨ÏàÁÚ³éÑù£©µÈÄ£Ê½£¬¾ö¶¨ÁËÏà»úµÄ×î´ó·Ö±æÂÊ
 *@see dvpGetQuickRoiSel
 *@see dvpGetRoi
 *@see dvpGetResolutionModeSelDescr
@@ -4776,12 +4776,12 @@ dvp2api dvpStatus dvpGetResolutionModeSel(dvpHandle handle, dvpUint32 *pResoluti
 
 
 /**
-*@brief õ?????
-*@param[in] handle 
-*@param[in] ResolutionModeSel ?????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃµ±Ç°·Ö±æÂÊÄ£Ê½Ñ¡ÏîµÄË÷Òı
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] ResolutionModeSel µ±Ç°·Ö±æÂÊÄ£Ê½Ñ¡ÏîµÄË÷Òı
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_SIZE
-*@note sum?bin????
+*@note °üÀ¨sum£¨ÏàÁÚÇóºÍ£©£¬bin£¨ÏàÁÚ³éÑù£©µÈÄ£Ê½£¬¾ö¶¨ÁËÏà»úµÄ×î´ó·Ö±æÂÊ
 *@see dvpGetQuickRoiSel
 *@see dvpGetRoi
 *@see dvpGetResolutionModeSelDescr
@@ -4792,12 +4792,12 @@ dvp2api dvpStatus dvpSetResolutionModeSel(dvpHandle handle, dvpUint32 Resolution
 
 
 /**
-*@brief ??????
-*@param[in] handle 
-*@param[out] pResolutionModeSelDescr ?????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡·Ö±æÂÊÄ£Ê½Ñ¡ÏîË÷ÒıµÄÃèÊöĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pResolutionModeSelDescr ·Ö±æÂÊÄ£Ê½Ñ¡ÏîË÷ÒıµÄÃèÊöĞÅÏ¢
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_SIZE
-*@note sum?bin????
+*@note °üÀ¨sum£¨ÏàÁÚÇóºÍ£©£¬bin£¨ÏàÁÚ³éÑù£©µÈÄ£Ê½£¬¾ö¶¨ÁËÏà»úµÄ×î´ó·Ö±æÂÊ
 *@see dvpGetQuickRoiSel
 *@see dvpGetRoi
 *@see dvpGetResolutionModeSel
@@ -4807,13 +4807,13 @@ dvp2api dvpStatus dvpGetResolutionModeSelDescr(dvpHandle handle, dvpSelectionDes
 
 
 /**
-*@brief ?????????
-*@param[in] handle 
-*@param[in] ResolutionModeSel ???
-*@param[out] pResolutionModeSelDetail ????????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡µ±Ç°·Ö±æÂÊÄ£Ê½Ñ¡ÏîË÷Òı¶ÔÓ¦µÄ¾ßÌåĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] ResolutionModeSel ·Ö±æÂÊÄ£Ê½µÄË÷Òı
+*@param[out] pResolutionModeSelDetail µ±Ç°·Ö±æÂÊÄ£Ê½Ñ¡ÏîË÷Òı¶ÔÓ¦µÄ¾ßÌåĞÅÏ¢
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_SIZE
-*@note sum?bin????
+*@note °üÀ¨sum£¨ÏàÁÚÇóºÍ£©£¬bin£¨ÏàÁÚ³éÑù£©µÈÄ£Ê½£¬¾ö¶¨ÁËÏà»úµÄ×î´ó·Ö±æÂÊ
 *@see dvpGetQuickRoiSel
 *@see dvpGetRoi
 *@see dvpGetResolutionModeSel
@@ -4823,12 +4823,12 @@ dvp2api dvpStatus dvpGetResolutionModeSelDetail(dvpHandle handle, dvpUint32 Reso
 
 
 /**
-*@brief ??????
-*@param[in] handle 
-*@param[out] pAeSchemeSel ?????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡µ±Ç°×Ô¶¯ÆØ¹â·½°¸Ñ¡ÏîµÄË÷Òı
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pAeSchemeSel µ±Ç°×Ô¶¯ÆØ¹â·½°¸Ñ¡ÏîµÄË÷Òı
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_EXPOSURE
-*@note ??????
+*@note Ó¦ÓÃÓÚÌØ¶¨µÄ¹âÔ´ºÍ³¡¾°¡£±ÈÈçÏÔÎ¢¾µ
 *@see dvpGetAeSchemeSelDescr
 *@see dvpGetAeSchemeSelDetail
 *@see dvpSetAeSchemeSel
@@ -4837,12 +4837,12 @@ dvp2api dvpStatus dvpGetAeSchemeSel(dvpHandle handle, dvpUint32 *pAeSchemeSel);
 
 
 /**
-*@brief õ?????
-*@param[in] handle 
-*@param[in] AeSchemeSel ?????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃµ±Ç°×Ô¶¯ÆØ¹â·½°¸Ñ¡ÏîµÄË÷Òı
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] AeSchemeSel µ±Ç°×Ô¶¯ÆØ¹â·½°¸Ñ¡ÏîµÄË÷Òı
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_EXPOSURE
-*@note ??????
+*@note Ó¦ÓÃÓÚÌØ¶¨µÄ¹âÔ´ºÍ³¡¾°¡£±ÈÈçÏÔÎ¢¾µ
 *@see dvpGetAeSchemeSelDescr
 *@see dvpGetAeSchemeSelDetail
 *@see dvpGetAeSchemeSel
@@ -4851,12 +4851,12 @@ dvp2api dvpStatus dvpSetAeSchemeSel(dvpHandle handle, dvpUint32 AeSchemeSel);
 
 
 /**
-*@brief ??????
-*@param[in] handle 
-*@param[out] pAeSchemeSelDescr ?????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡×Ô¶¯ÆØ¹â·½°¸Ñ¡ÏîË÷ÒıµÄÃèÊöĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pAeSchemeSelDescr ×Ô¶¯ÆØ¹â·½°¸Ñ¡ÏîË÷ÒıµÄÃèÊöĞÅÏ¢
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_EXPOSURE
-*@note ??????
+*@note Ó¦ÓÃÓÚÌØ¶¨µÄ¹âÔ´ºÍ³¡¾°¡£±ÈÈçÏÔÎ¢¾µ
 *@see dvpGetAeSchemeSel
 *@see dvpGetAeSchemeSelDetail
 */
@@ -4864,13 +4864,13 @@ dvp2api dvpStatus dvpGetAeSchemeSelDescr(dvpHandle handle, dvpSelectionDescr *pA
 
 
 /**
-*@brief ?????????
-*@param[in] handle 
-*@param[in] AeSchemeSel ???
-*@param[out] pAeSchemeSelDetail ????????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡µ±Ç°×Ô¶¯ÆØ¹â·½°¸Ñ¡ÏîË÷Òı¶ÔÓ¦µÄ¾ßÌåĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] AeSchemeSel ×Ô¶¯ÆØ¹â·½°¸µÄË÷Òı
+*@param[out] pAeSchemeSelDetail µ±Ç°×Ô¶¯ÆØ¹â·½°¸Ñ¡ÏîË÷Òı¶ÔÓ¦µÄ¾ßÌåĞÅÏ¢
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_EXPOSURE
-*@note ??????
+*@note Ó¦ÓÃÓÚÌØ¶¨µÄ¹âÔ´ºÍ³¡¾°¡£±ÈÈçÏÔÎ¢¾µ
 *@see dvpGetAeSchemeSel
 *@see dvpGetAeSchemeSelDescr
 */
@@ -4878,14 +4878,14 @@ dvp2api dvpStatus dvpGetAeSchemeSelDetail(dvpHandle handle, dvpUint32 AeSchemeSe
 
 
 /**
-*@brief ??Roi?
-*@param[in] handle 
-*@param[out] pQuickRoiSel ?Roi?
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡µ±Ç°¿ìËÙRoiÑ¡ÏîµÄË÷Òı
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pQuickRoiSel µ±Ç°¿ìËÙRoiÑ¡ÏîµÄË÷Òı
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_SIZE
 *@see dvpGetResolutionModeSel
 *@see dvpGetRoi
-*@note ????ROI
+*@note Ïàµ±ÓÚÒ»ÖÖµäĞÍµÄROI
 *@see dvpGetQuickRoiSelDescr
 *@see dvpGetQuickRoiSelDetail
 *@see dvpSetQuickRoiSel
@@ -4894,14 +4894,14 @@ dvp2api dvpStatus dvpGetQuickRoiSel(dvpHandle handle, dvpUint32 *pQuickRoiSel);
 
 
 /**
-*@brief õ?Roi?
-*@param[in] handle 
-*@param[in] QuickRoiSel ?Roi?
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃµ±Ç°¿ìËÙRoiÑ¡ÏîµÄË÷Òı
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] QuickRoiSel µ±Ç°¿ìËÙRoiÑ¡ÏîµÄË÷Òı
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_SIZE
 *@see dvpGetResolutionModeSel
 *@see dvpGetRoi
-*@note ????ROI
+*@note Ïàµ±ÓÚÒ»ÖÖµäĞÍµÄROI
 *@see dvpGetQuickRoiSelDescr
 *@see dvpGetQuickRoiSelDetail
 *@see dvpGetQuickRoiSel
@@ -4910,14 +4910,14 @@ dvp2api dvpStatus dvpSetQuickRoiSel(dvpHandle handle, dvpUint32 QuickRoiSel);
 
 
 /**
-*@brief ?Roi??
-*@param[in] handle 
-*@param[out] pQuickRoiSelDescr Roi??
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡¿ìËÙRoiÑ¡ÏîË÷ÒıµÄÃèÊöĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pQuickRoiSelDescr ¿ìËÙRoiÑ¡ÏîË÷ÒıµÄÃèÊöĞÅÏ¢
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_SIZE
 *@see dvpGetResolutionModeSel
 *@see dvpGetRoi
-*@note ????ROI
+*@note Ïàµ±ÓÚÒ»ÖÖµäĞÍµÄROI
 *@see dvpGetQuickRoiSel
 *@see dvpGetQuickRoiSelDetail
 */
@@ -4925,15 +4925,15 @@ dvp2api dvpStatus dvpGetQuickRoiSelDescr(dvpHandle handle, dvpSelectionDescr *pQ
 
 
 /**
-*@brief ??Roi????
-*@param[in] handle 
-*@param[in] QuickRoiSel Roi
-*@param[out] pQuickRoiSelDetail ?Roi????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡µ±Ç°¿ìËÙRoiÑ¡ÏîË÷Òı¶ÔÓ¦µÄ¾ßÌåĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] QuickRoiSel ¿ìËÙRoiµÄË÷Òı
+*@param[out] pQuickRoiSelDetail µ±Ç°¿ìËÙRoiÑ¡ÏîË÷Òı¶ÔÓ¦µÄ¾ßÌåĞÅÏ¢
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_SIZE
 *@see dvpGetResolutionModeSel
 *@see dvpGetRoi
-*@note ????ROI
+*@note Ïàµ±ÓÚÒ»ÖÖµäĞÍµÄROI
 *@see dvpGetQuickRoiSel
 *@see dvpGetQuickRoiSelDescr
 */
@@ -4941,12 +4941,12 @@ dvp2api dvpStatus dvpGetQuickRoiSelDetail(dvpHandle handle, dvpUint32 QuickRoiSe
 
 
 /**
-*@brief ?????
-*@param[in] handle 
-*@param[out] pPixelRateSel ????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡µ±Ç°ÏñËØ²É¼¯ËÙÂÊÑ¡ÏîµÄË÷Òı
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pPixelRateSel µ±Ç°ÏñËØ²É¼¯ËÙÂÊÑ¡ÏîµÄË÷Òı
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_PERFORMANCE
-*@note ??USB2???????
+*@note Í¨³£µÍËÙµÄUSB2µÄ½Ó¿ÚÖ»ÄÜÆ¥ÅäµÍËÙµÄÏñËØ²É¼¯
 *@see dvpGetPixelRateSelDescr
 *@see dvpGetPixelRateSelDetail
 *@see dvpSetPixelRateSel
@@ -4955,12 +4955,12 @@ dvp2api dvpStatus dvpGetPixelRateSel(dvpHandle handle, dvpUint32 *pPixelRateSel)
 
 
 /**
-*@brief õ????
-*@param[in] handle 
-*@param[in] PixelRateSel ????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃµ±Ç°ÏñËØ²É¼¯ËÙÂÊÑ¡ÏîµÄË÷Òı
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] PixelRateSel µ±Ç°ÏñËØ²É¼¯ËÙÂÊÑ¡ÏîµÄË÷Òı
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_PERFORMANCE
-*@note ??USB2???????
+*@note Í¨³£µÍËÙµÄUSB2µÄ½Ó¿ÚÖ»ÄÜÆ¥ÅäµÍËÙµÄÏñËØ²É¼¯
 *@see dvpGetPixelRateSelDescr
 *@see dvpGetPixelRateSelDetail
 *@see dvpGetPixelRateSel
@@ -4969,12 +4969,12 @@ dvp2api dvpStatus dvpSetPixelRateSel(dvpHandle handle, dvpUint32 PixelRateSel);
 
 
 /**
-*@brief ?????
-*@param[in] handle 
-*@param[out] pPixelRateSelDescr ????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡ÏñËØ²É¼¯ËÙÂÊÑ¡ÏîË÷ÒıµÄÃèÊöĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pPixelRateSelDescr ÏñËØ²É¼¯ËÙÂÊÑ¡ÏîË÷ÒıµÄÃèÊöĞÅÏ¢
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_PERFORMANCE
-*@note ??USB2???????
+*@note Í¨³£µÍËÙµÄUSB2µÄ½Ó¿ÚÖ»ÄÜÆ¥ÅäµÍËÙµÄÏñËØ²É¼¯
 *@see dvpGetPixelRateSel
 *@see dvpGetPixelRateSelDetail
 */
@@ -4982,13 +4982,13 @@ dvp2api dvpStatus dvpGetPixelRateSelDescr(dvpHandle handle, dvpSelectionDescr *p
 
 
 /**
-*@brief ????????
-*@param[in] handle 
-*@param[in] PixelRateSel ???
-*@param[out] pPixelRateSelDetail ???????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡µ±Ç°ÏñËØ²É¼¯ËÙÂÊÑ¡ÏîË÷Òı¶ÔÓ¦µÄ¾ßÌåĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] PixelRateSel ÏñËØ²É¼¯ËÙÂÊµÄË÷Òı
+*@param[out] pPixelRateSelDetail µ±Ç°ÏñËØ²É¼¯ËÙÂÊÑ¡ÏîË÷Òı¶ÔÓ¦µÄ¾ßÌåĞÅÏ¢
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_PERFORMANCE
-*@note ??USB2???????
+*@note Í¨³£µÍËÙµÄUSB2µÄ½Ó¿ÚÖ»ÄÜÆ¥ÅäµÍËÙµÄÏñËØ²É¼¯
 *@see dvpGetPixelRateSel
 *@see dvpGetPixelRateSelDescr
 */
@@ -4996,12 +4996,12 @@ dvp2api dvpStatus dvpGetPixelRateSelDetail(dvpHandle handle, dvpUint32 PixelRate
 
 
 /**
-*@brief ?????
-*@param[in] handle 
-*@param[out] pPacketSizeSel ????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡µ±Ç°µäĞÍµÄÊı¾İ´«Êä°ü³¤Ñ¡ÏîµÄË÷Òı
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pPacketSizeSel µ±Ç°µäĞÍµÄÊı¾İ´«Êä°ü³¤Ñ¡ÏîµÄË÷Òı
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_PERFORMANCE
-*@note ???@link #dvpGetStreamPackSize ??@endlink
+*@note ÈçÓĞ±ØÒª¿ÉÊ¹ÓÃ@link #dvpGetStreamPackSize ·ÇµäĞÍ´«Êä°ü³¤@endlink
 *@see dvpGetPacketSizeSelDescr
 *@see dvpGetPacketSizeSelDetail
 *@see dvpSetPacketSizeSel
@@ -5010,12 +5010,12 @@ dvp2api dvpStatus dvpGetPacketSizeSel(dvpHandle handle, dvpUint32 *pPacketSizeSe
 
 
 /**
-*@brief õ????
-*@param[in] handle 
-*@param[in] PacketSizeSel ????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃµ±Ç°µäĞÍµÄÊı¾İ´«Êä°ü³¤Ñ¡ÏîµÄË÷Òı
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] PacketSizeSel µ±Ç°µäĞÍµÄÊı¾İ´«Êä°ü³¤Ñ¡ÏîµÄË÷Òı
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_PERFORMANCE
-*@note ???@link #dvpGetStreamPackSize ??@endlink
+*@note ÈçÓĞ±ØÒª¿ÉÊ¹ÓÃ@link #dvpGetStreamPackSize ·ÇµäĞÍ´«Êä°ü³¤@endlink
 *@see dvpGetPacketSizeSelDescr
 *@see dvpGetPacketSizeSelDetail
 *@see dvpGetPacketSizeSel
@@ -5024,12 +5024,12 @@ dvp2api dvpStatus dvpSetPacketSizeSel(dvpHandle handle, dvpUint32 PacketSizeSel)
 
 
 /**
-*@brief ?????
-*@param[in] handle 
-*@param[out] pPacketSizeSelDescr ????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡µäĞÍµÄÊı¾İ´«Êä°ü³¤Ñ¡ÏîË÷ÒıµÄÃèÊöĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pPacketSizeSelDescr µäĞÍµÄÊı¾İ´«Êä°ü³¤Ñ¡ÏîË÷ÒıµÄÃèÊöĞÅÏ¢
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_PERFORMANCE
-*@note ???@link #dvpGetStreamPackSize ??@endlink
+*@note ÈçÓĞ±ØÒª¿ÉÊ¹ÓÃ@link #dvpGetStreamPackSize ·ÇµäĞÍ´«Êä°ü³¤@endlink
 *@see dvpGetPacketSizeSel
 *@see dvpGetPacketSizeSelDetail
 */
@@ -5037,13 +5037,13 @@ dvp2api dvpStatus dvpGetPacketSizeSelDescr(dvpHandle handle, dvpSelectionDescr *
 
 
 /**
-*@brief ????????
-*@param[in] handle 
-*@param[in] PacketSizeSel ??
-*@param[out] pPacketSizeSelDetail ???????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡µ±Ç°µäĞÍµÄÊı¾İ´«Êä°ü³¤Ñ¡ÏîË÷Òı¶ÔÓ¦µÄ¾ßÌåĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] PacketSizeSel µäĞÍµÄÊı¾İ´«Êä°ü³¤µÄË÷Òı
+*@param[out] pPacketSizeSelDetail µ±Ç°µäĞÍµÄÊı¾İ´«Êä°ü³¤Ñ¡ÏîË÷Òı¶ÔÓ¦µÄ¾ßÌåĞÅÏ¢
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_PERFORMANCE
-*@note ???@link #dvpGetStreamPackSize ??@endlink
+*@note ÈçÓĞ±ØÒª¿ÉÊ¹ÓÃ@link #dvpGetStreamPackSize ·ÇµäĞÍ´«Êä°ü³¤@endlink
 *@see dvpGetPacketSizeSel
 *@see dvpGetPacketSizeSelDescr
 */
@@ -5051,12 +5051,12 @@ dvp2api dvpStatus dvpGetPacketSizeSelDetail(dvpHandle handle, dvpUint32 PacketSi
 
 
 /**
-*@brief ????
-*@param[in] handle 
-*@param[out] pAccelerateSel ???
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡µ±Ç°Ó²¼ş¼ÓËÙÆ÷Ñ¡ÏîµÄË÷Òı
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pAccelerateSel µ±Ç°Ó²¼ş¼ÓËÙÆ÷Ñ¡ÏîµÄË÷Òı
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_PERFORMANCE
-*@note ????GPU?
+*@note Èç¹ûµçÄÔÓ²¼şÖ§³Ö£¬Ôò¿É·¢»ÓGPUµÄÍ¼Ïñ´¦ÀíÄÜÁ¦
 *@see dvpGetAccelerateSelDescr
 *@see dvpGetAccelerateSelDetail
 *@see dvpSetAccelerateSel
@@ -5065,12 +5065,12 @@ dvp2api dvpStatus dvpGetAccelerateSel(dvpHandle handle, dvpUint32 *pAccelerateSe
 
 
 /**
-*@brief õ???
-*@param[in] handle 
-*@param[in] AccelerateSel ???
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief ÉèÖÃµ±Ç°Ó²¼ş¼ÓËÙÆ÷Ñ¡ÏîµÄË÷Òı
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] AccelerateSel µ±Ç°Ó²¼ş¼ÓËÙÆ÷Ñ¡ÏîµÄË÷Òı
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_PERFORMANCE
-*@note ????GPU?
+*@note Èç¹ûµçÄÔÓ²¼şÖ§³Ö£¬Ôò¿É·¢»ÓGPUµÄÍ¼Ïñ´¦ÀíÄÜÁ¦
 *@see dvpGetAccelerateSelDescr
 *@see dvpGetAccelerateSelDetail
 *@see dvpGetAccelerateSel
@@ -5079,12 +5079,12 @@ dvp2api dvpStatus dvpSetAccelerateSel(dvpHandle handle, dvpUint32 AccelerateSel)
 
 
 /**
-*@brief ????
-*@param[in] handle 
-*@param[out] pAccelerateSelDescr ???
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡Ó²¼ş¼ÓËÙÆ÷Ñ¡ÏîË÷ÒıµÄÃèÊöĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pAccelerateSelDescr Ó²¼ş¼ÓËÙÆ÷Ñ¡ÏîË÷ÒıµÄÃèÊöĞÅÏ¢
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_PERFORMANCE
-*@note ????GPU?
+*@note Èç¹ûµçÄÔÓ²¼şÖ§³Ö£¬Ôò¿É·¢»ÓGPUµÄÍ¼Ïñ´¦ÀíÄÜÁ¦
 *@see dvpGetAccelerateSel
 *@see dvpGetAccelerateSelDetail
 */
@@ -5092,13 +5092,13 @@ dvp2api dvpStatus dvpGetAccelerateSelDescr(dvpHandle handle, dvpSelectionDescr *
 
 
 /**
-*@brief ???????
-*@param[in] handle 
-*@param[in] AccelerateSel ?
-*@param[out] pAccelerateSelDetail ??????
-*@return ??£?@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
+*@brief »ñÈ¡µ±Ç°Ó²¼ş¼ÓËÙÆ÷Ñ¡ÏîË÷Òı¶ÔÓ¦µÄ¾ßÌåĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] AccelerateSel Ó²¼ş¼ÓËÙÆ÷µÄË÷Òı
+*@param[out] pAccelerateSelDetail µ±Ç°Ó²¼ş¼ÓËÙÆ÷Ñ¡ÏîË÷Òı¶ÔÓ¦µÄ¾ßÌåĞÅÏ¢
+*@return ¿ÉÔ¤ÁÏµÄÇé¿öÏÂ£¬ÇëÈ·±£·µ»Ø@link #dvpStatus::DVP_STATUS_OK DVP_STATUS_OK@endlink
 *@ingroup DVP_PERFORMANCE
-*@note ????GPU?
+*@note Èç¹ûµçÄÔÓ²¼şÖ§³Ö£¬Ôò¿É·¢»ÓGPUµÄÍ¼Ïñ´¦ÀíÄÜÁ¦
 *@see dvpGetAccelerateSel
 *@see dvpGetAccelerateSelDescr
 */
@@ -5106,26 +5106,26 @@ dvp2api dvpStatus dvpGetAccelerateSelDetail(dvpHandle handle, dvpUint32 Accelera
 
 
 /**
-*@brief ú,,?
-*@param[in] handle 
-*@param[in] rGain ?
-*@param[in] gGain ?
-*@param[in] bGain ?
+*@brief ÉèÖÃºì,ÂÌ,À¶ÈıÉ«µÄÊı×ÖÔöÒæ
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] rGain ºìÉ«Êı×ÖÔöÒæ
+*@param[in] gGain ÂÌÉ«Êı×ÖÔöÒæ
+*@param[in] bGain À¶É«Êı×ÖÔöÒæ
 *@ingroup DVP_COLOR
 *@see dvpGetRgbGain
 *@see dvpSetRgbGainState
 *@see dvpGetRgbGainState
-*@note ?@link #dvpSetAwbOperation ?@endlink??????
+*@note ´ËÔöÒæ¸½¼ÓÔÚ@link #dvpSetAwbOperation °×Æ½ºâ@endlinkµÄĞ§¹ûÖ®ÉÏ£¬µ«Á½Õß±Ë´Ë¶ÀÁ¢
 */
 dvp2api dvpStatus dvpSetRgbGain(dvpHandle handle, float rGain, float gGain, float bGain);
 
 
 /**
-*@brief ?,,?
-*@param[in] handle 
-*@param[out] prGain ?
-*@param[out] pgGain ?
-*@param[out] pbGain ?
+*@brief »ñÈ¡ºì,ÂÌ,À¶ÈıÉ«µÄÊı×ÖÔöÒæ
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] prGain ºìÉ«Êı×ÖÔöÒæ
+*@param[out] pgGain ÂÌÉ«Êı×ÖÔöÒæ
+*@param[out] pbGain À¶É«Êı×ÖÔöÒæ
 *@ingroup DVP_COLOR
 *@see dvpSetRgbGain
 *@see dvpSetRgbGainState
@@ -5135,9 +5135,9 @@ dvp2api dvpStatus dvpGetRgbGain(dvpHandle handle, float *prGain, float *pgGain, 
 
 
 /**
-*@brief ú,,??????
-*@param[in] handle 
-*@param[in] state ,,??????
+*@brief ÉèÖÃºì,ÂÌ,À¶ÈıÉ«µÄÊı×ÖÔöÒæ¹¦ÄÜµÄÊ¹ÄÜ×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] state ºì,ÂÌ,À¶ÈıÉ«µÄÊı×ÖÔöÒæ¹¦ÄÜµÄÊ¹ÄÜ×´Ì¬
 *@ingroup DVP_COLOR
 *@see dvpSetRgbGain
 *@see dvpGetRgbGain
@@ -5147,9 +5147,9 @@ dvp2api dvpStatus dvpSetRgbGainState(dvpHandle handle, bool state);
 
 
 /**
-*@brief ?,,??????
-*@param[in] handle 
-*@param[out] pState ,,??????
+*@brief »ñÈ¡ºì,ÂÌ,À¶ÈıÉ«µÄÊı×ÖÔöÒæ¹¦ÄÜµÄÊ¹ÄÜ×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pState ºì,ÂÌ,À¶ÈıÉ«µÄÊı×ÖÔöÒæ¹¦ÄÜµÄÊ¹ÄÜ×´Ì¬
 *@ingroup DVP_COLOR
 *@see dvpSetRgbGain
 *@see dvpGetRgbGain
@@ -5159,24 +5159,24 @@ dvp2api dvpStatus dvpGetRgbGainState(dvpHandle handle, bool *pState);
 
 
 
-/** @defgroup DVP2_API_BASE 
+/** @defgroup DVP2_API_BASE »ù±¾¹¦ÄÜ
 *@{
 */
 /**
-*@brief ???
-*@param[out] pCount 
+*@brief Ë¢ĞÂÒÑÁ¬½ÓµÄÏà»úÁĞ±í£¬²¢»ñµÃÏà»úµÄÊıÁ¿
+*@param[out] pCount Ïà»ú×ÜÊı
 *@see dvpEnum
 *@see dvpOpen
 *@see dvpOpenByName
-*@note ?@link #dvpEnum ö@endlink@link #dvpOpen @endlink???????
+*@note Ó¦¸ÃÔÚ@link #dvpEnum Ã¶¾Ù@endlink»ò@link #dvpOpen ´ò¿ª@endlinkÏà»úÇ°Ö´ĞĞ£¨²¢ÇÒÍ¬ÔÚÒ»¸öÏß³Ì£©
 */
 dvp2api dvpStatus dvpRefresh(dvpUint32 *pCount);
 
 
 /**
-*@brief ö?
-*@param[in] index 
-*@param[out] pCameraInfo ?
+*@brief ¸ù¾İË÷ÒıÃ¶¾ÙÏà»úĞÅÏ¢
+*@param[in] index Ïà»úË÷Òı
+*@param[out] pCameraInfo Ïà»úĞÅÏ¢
 *@see dvpGetCameraInfo
 *@code
 dvpUint32 count = 0;
@@ -5190,105 +5190,105 @@ for (dvpUint32 i = 0; i < count; i++)
     }
 }
 *@endcode
-*@note ?@link #dvpRefresh ?@endlink??????
-*@warning ?@link #dvpHandle @endlink????
+*@note Ó¦¸ÃÔÚ@link #dvpRefresh Ë¢ĞÂ@endlinkÏà»úºóÖ´ĞĞ£¨²¢ÇÒÍ¬ÔÚÒ»¸öÏß³Ì£©
+*@warning Ë÷ÒıºÅºÍ@link #dvpHandle Ïà»ú¾ä±ú@endlinkÊÇ½ØÈ»²»Í¬µÄÁ½¸ö¸ÅÄî£¬ÇĞÎğ»ìÏı
 */
 dvp2api dvpStatus dvpEnum(dvpUint32 index, dvpCameraInfo *pCameraInfo);
 
 
 /**
-*@brief @link #dvpCameraInfo::FriendlyName ?@endlink
-*@param[in] friendlyName ?
-*@note ???
-*@param[in] mode ???
-*@param[out] pHandle 
+*@brief ¸ù¾İ@link #dvpCameraInfo::FriendlyName ÓÑºÃÃû³Æ@endlinkÀ´´ò¿ªÏà»ú
+*@param[in] friendlyName ÓÑºÃÃû³Æ
+*@note ÓÉÔ­³§¹Ì»¯£¬Ô­ÔòÉÏÓÀ²»ÖØÃû
+*@param[in] mode ´ò¿ª·½Ê½
+*@param[out] pHandle Ïà»ú¾ä±ú
 *@see dvpEnum
 *@see dvpOpen
 *@see dvpOpenByUserId
 *@see dvpGetCameraInfo
-*@note ??@link #dvpRefresh ?@endlink
-*@warning @link #dvpStreamCallback ?@endlink?ô?
+*@note ´Ë²Ù×÷»á×Ô¶¯@link #dvpRefresh Ë¢ĞÂ@endlinkÏà»ú×ÜÊı
+*@warning ÇĞÎğÔÚ@link #dvpStreamCallback »Øµ÷º¯Êı@endlinkÖĞÊ¹ÓÃ´Ë¹¦ÄÜ
 */
 dvp2api dvpStatus dvpOpenByName(dvpStr friendlyName, dvpOpenMode mode, dvpHandle *pHandle);
 
 
 /**
-*@brief @link #dvpCameraInfo::UserID (User Defined Name) û@endlink
-*@param[in] UserId û
-*@note ûã??
-*@param[in] mode ???
-*@param[out] pHandle 
+*@brief ¸ù¾İ@link #dvpCameraInfo::UserID (User Defined Name) ÓÃ»§ÃüÃû@endlinkÀ´´ò¿ªÏà»ú
+*@param[in] UserId ÓÃ»§ÃüÃû
+*@note ÓÉÓÃ»§×ÔĞĞÉèÖÃ£¬Çë¾¡Á¿±ÜÃâÖØ¸´
+*@param[in] mode ´ò¿ª·½Ê½
+*@param[out] pHandle Ïà»ú¾ä±ú
 *@see dvpSetUserId
 *@see dvpEnum
 *@see dvpOpen
 *@see dvpOpenByName
 *@see dvpGetCameraInfo
-*@note ??@link #dvpRefresh ?@endlink
-*@warning @link #dvpStreamCallback ?@endlink?ô?
+*@note ´Ë²Ù×÷»á×Ô¶¯@link #dvpRefresh Ë¢ĞÂ@endlinkÏà»ú×ÜÊı
+*@warning ÇĞÎğÔÚ@link #dvpStreamCallback »Øµ÷º¯Êı@endlinkÖĞÊ¹ÓÃ´Ë¹¦ÄÜ
 */
 dvp2api dvpStatus dvpOpenByUserId(dvpStr UserId, dvpOpenMode mode, dvpHandle *pHandle);
 
 
 /**
-*@brief ö?
-*@param[in] index 
-*@param[in] mode ???
-*@param[out] pHandle 
+*@brief ¸ù¾İÃ¶¾ÙµÄË÷ÒıÀ´´ò¿ªÏà»ú
+*@param[in] index Ïà»úË÷Òı
+*@param[in] mode ´ò¿ª·½Ê½
+*@param[out] pHandle Ïà»ú¾ä±ú
 *@see dvpRefresh
 *@see dvpEnum
 *@see dvpOpenByName
 *@see dvpGetCameraInfo
-*@note ?@link #dvpRefresh ?@endlink??????
-*@warning @link #dvpStreamCallback ?@endlink?ô?
+*@note Ó¦¸ÃÔÚ@link #dvpRefresh Ë¢ĞÂ@endlinkÏà»úºóÖ´ĞĞ£¨²¢ÇÒÍ¬ÔÚÒ»¸öÏß³Ì£©
+*@warning ÇĞÎğÔÚ@link #dvpStreamCallback »Øµ÷º¯Êı@endlinkÖĞÊ¹ÓÃ´Ë¹¦ÄÜ
 */
 dvp2api dvpStatus dvpOpen(dvpUint32 index, dvpOpenMode mode, dvpHandle *pHandle);
 
 
 /**
-*@brief ??
-*@param[in] handle 
-*@param[out] pIsValid ???
-*@note @link #dvpOpen @endlink??@link #dvpClose ?@endlink???
+*@brief ¼ì²éÏà»ú¾ä±úÊÇ·ñÓĞĞ§
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pIsValid ÓĞĞ§×´Ì¬
+*@note @link #dvpOpen ´ò¿ª@endlink³É¹¦Ôò¾ä±úÓĞĞ§£¬@link #dvpClose ¹Ø±Õ@endlink³É¹¦Ôò¾ä±úÊ§Ğ§
 */
 dvp2api dvpStatus dvpIsValid(dvpHandle handle, bool *pIsValid);
 
 
 /**
-*@brief ?
-*@param[in] handle 
-*@param[out] pIsOnline ??
-*@note ?@link #dvpRegisterEventCallback ?¼?@endlink????
+*@brief ¼ì²éÏà»úÊÇ·ñÁª»ú
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pIsOnline Áª»ú×´Ì¬
+*@note ½¨ÒéÊ¹ÓÃ@link #dvpRegisterEventCallback ×¢²áÊÂ¼ş»Øµ÷º¯Êı@endlinkµÄ·½Ê½À´¼àÌıÕâÒ»×´¿ö
 */
 dvp2api dvpStatus dvpIsOnline(dvpHandle handle, bool *pIsOnline);
 
 
 /**
-*@brief ???
-*@param[in] handle 
+*@brief Æô¶¯ÊÓÆµÁ÷£¬·ÖÅä±ØÒªµÄ×ÊÔ´
+*@param[in] handle Ïà»ú¾ä±ú
 *@see dvpOpen
 *@see dvpHold
 *@see dvpStop
-*@note ??????????@link #dvpRestart dvpRestart@endlink???@link #dvpHold dvpHold@endlink
+*@note ÎªÖØÁ¿¼¶²Ù×÷£¬¿ÉÄÜ»áÏûºÄ½Ï³¤µÄÊ±¼ä£¬ÈôÒªÊµÏÖ¿ìËÙÖØÆô£¬¿ÉÖ´ĞĞ@link #dvpRestart dvpRestart@endlink£¬Ç°ÌáÊÇÒÑ¾­Ö´ĞĞÁË@link #dvpHold dvpHold@endlink
 */
 dvp2api dvpStatus dvpStart(dvpHandle handle);
 
 
 /**
-*@brief ??????
-*@param[in] handle 
+*@brief Í£Ö¹ÊÓÆµÁ÷£¬ÊÍ·ÅÏàÓ¦µÄ×ÊÔ´
+*@param[in] handle Ïà»ú¾ä±ú
 *@see dvpStart
 *@see dvpClose
 *@see dvpHold
-*@note ???????????@link #dvpHold dvpHold@endlink
-*@warning ???ô?????
+*@note ÎªÖØÁ¿¼¶²Ù×÷£¬¿ÉÄÜ»áÏûºÄ½Ï³¤µÄÊ±¼ä£¬ÈôÒªÊµÏÖ¿ìËÙÔİÍ££¬¿ÉÖ´ĞĞ@link #dvpHold dvpHold@endlink
+*@warning ÇĞÎğÔÚ»Øµ÷º¯ÊıÖĞµ÷ÓÃ´Ë½Ó¿Ú£¬·ñÔò»áµ¼ÖÂÏß³ÌËÀËø
 */
 dvp2api dvpStatus dvpStop(dvpHandle handle);
 
 
 /**
-*@brief ??????
-*@param[in] handle 
-*@param[out] pIsHold ???
+*@brief ²éÑ¯ÊÓÆµÁ÷ÊÇ·ñ´¦ÓÚÔİÍ£×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pIsHold ÔİÍ£×´Ì¬
 *@see dvpHold
 *@see dvpRestart
 */
@@ -5296,204 +5296,204 @@ dvp2api dvpStatus dvpIsHold(dvpHandle handle, bool *pIsHold);
 
 
 /**
-*@brief ????
-*@param[in] handle 
-*@param[out] pFrame ??
-*@param[out] pBuffer ????? @warning ??
-*@param[in] timeout ????
+*@brief »ñÈ¡Ò»Ö¡Í¼Ïñ
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pFrame Ö¡ĞÅÏ¢
+*@param[out] pBuffer Í¼ÏñÊı¾İµÄÄÚ´æÊ×µØÖ· @warning ÇĞÎğÊÖ¶¯ÊÍ·Å
+*@param[in] timeout ³¬Ê±Ê±¼ä£¨ºÁÃë£©
 *@see dvpGetFrameBuffer
 *@see dvpStreamCallback
-*@note @link #dvpStart @endlink??ô?
-*@warning ?õ?????ñ???????????????
+*@note ĞëÏÈ@link #dvpStart ²¥·Å@endlinkÊÓÆµÁ÷£¬²ÅÄÜÊ¹ÓÃ´Ë¹¦ÄÜ
+*@warning ÓÉ±¾º¯Êı»ñµÃµÄÍ¼ÏñÊı¾İ»º´æ£¬ÔÚÏÂÒ»´Îµ÷ÓÃ±¾º¯ÊıÊ±£¬½«±äµÃÎŞĞ§£¬Òò´Ë£¬ÔÚ¶àÏß³ÌÍ¬Ê±»ñµÃÍ¼ÏñµÄÓ¦ÓÃÖĞ£¬ĞèÒª×öºÃÏß³ÌÍ¬²½»òÁÙ½ç¶Î±£»¤
 */
 dvp2api dvpStatus dvpGetFrame(dvpHandle handle, dvpFrame *pFrame, void **pBuffer, dvpUint32 timeout);
 
 
 /**
-*@brief ?????ID???????
-*@param[in] handle 
-*@param[out] pRaw ????
-*@param[out] pOut ??
-*@param[in] timeout ????
+*@brief Í¬Ê±»ñÈ¡Ê±¼ä´ÁºÍÖ¡IDÏàÍ¬µÄÔ­Ê¼²É¼¯Ö¡ºÍÄ¿±êÊä³öÖ¡
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[out] pRaw Ô­Ê¼²É¼¯Ö¡
+*@param[out] pOut Ä¿±êÊä³öÖ¡
+*@param[in] timeout ³¬Ê±Ê±¼ä£¨ºÁÃë£©
 *@see dvpGetFrame
-*@note @link #dvpStart @endlink??ô?
-*@warning ?õ?????ñ???????????????
+*@note ĞëÏÈ@link #dvpStart ²¥·Å@endlinkÊÓÆµÁ÷£¬²ÅÄÜÊ¹ÓÃ´Ë¹¦ÄÜ
+*@warning ÓÉ±¾º¯Êı»ñµÃµÄÍ¼ÏñÊı¾İ»º´æ£¬ÔÚÏÂÒ»´Îµ÷ÓÃ±¾º¯ÊıÊ±£¬½«±äµÃÎŞĞ§£¬Òò´Ë£¬ÔÚ¶àÏß³ÌÍ¬Ê±»ñµÃÍ¼ÏñµÄÓ¦ÓÃÖĞ£¬ĞèÒª×öºÃÏß³ÌÍ¬²½»òÁÙ½ç¶Î±£»¤
 */
 dvp2api dvpStatus dvpGetFrameBuffer(dvpHandle handle, dvpFrameBuffer *pRaw, dvpFrameBuffer *pOut, dvpUint32 timeout);
 
 
 /**
-*@brief û?????ISPõ??
-*@param[in] handle 
-*@param[in] pSourceFrame ???
-*@note ?@link #dvpGetFrame dvpGetFrame@endlink  
-*@param[in] pSourceBuffer ???????
-*@note ?@link #dvpGetFrame dvpGetFrame@endlink 
-*@param[out] pTargetFrame ???
-*@param[out] pTargetBuffer ???
-*@note û?
-*@param[in] targetBufferSize ??
-*@note ???
-*@param[in] targetFormat ???
+*@brief ÔÚÓÃ»§Ïß³ÌÖĞ¶ÔÔ´Í¼Ïñ½øĞĞ£¨ISP£©´¦Àí£¬µÃµ½Ä¿±êÍ¼Ïñ
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] pSourceFrame Ô´Ö¡ĞÅÏ¢
+*@note Í¨³£ÓÉ@link #dvpGetFrame dvpGetFrame@endlink ËùµÃ 
+*@param[in] pSourceBuffer Ô´Ö¡Í¼ÏñÊı¾İµÄÄÚ´æÊ×µØÖ·
+*@note Í¨³£ÓÉ@link #dvpGetFrame dvpGetFrame@endlink ËùµÃ
+*@param[out] pTargetFrame Ä¿±êÖ¡ĞÅÏ¢
+*@param[out] pTargetBuffer ÄÚ´æÊ×µØÖ·
+*@note ĞëÓÉÓÃ»§×ÔĞĞÉêÇëºÍÊÍ·Å
+*@param[in] targetBufferSize ÄÚ´æ×Ö½ÚÊı
+*@note Ğë´óÓÚ»òµÈÓÚÄ¿±êÍ¼ÏñµÄÊı¾İÁ¿
+*@param[in] targetFormat Ä¿±êÍ¼Ïñ¸ñÊ½
 *@see dvpGetFrame
-*@note @link #dvpStart @endlink??ô?
-*@warning @link #dvpStreamCallback ??@endlink?ô?????@link #dvpStreamEvent::STREAM_EVENT_FRAME_THREAD STREAM_EVENT_FRAME_THREAD@endlink¼
+*@note ĞëÏÈ@link #dvpStart ²¥·Å@endlinkÊÓÆµÁ÷£¬²ÅÄÜÊ¹ÓÃ´Ë¹¦ÄÜ
+*@warning Èç¹ûÔÚ@link #dvpStreamCallback ÊÓÆµÁ÷»Øµ÷º¯Êı@endlinkÖĞÊ¹ÓÃ´Ë¹¦ÄÜ£¬ÔòÖ»ÄÜ×¢²áÎª@link #dvpStreamEvent::STREAM_EVENT_FRAME_THREAD STREAM_EVENT_FRAME_THREAD@endlinkÊÂ¼şÀàĞÍ
 */
 dvp2api dvpStatus dvpProcessImage(dvpHandle handle, const dvpFrame *pSourceFrame, const void *pSourceBuffer, dvpFrame *pTargetFrame, void *pTargetBuffer, dvpUint32 targetBufferSize, dvpStreamFormat targetFormat);
 
 
 /**
-*@brief ????
-*@param[in] handle 
-*@param[in] part ???
-*@param[in] level ??
-*@param[in] bForce ???¼????¼
-*@param[in] text ???????
-*@param[in] param ???0
-*@warning ?
-*@note û???øı?????????¼??
+*@brief ±¨¸æµ±Ç°Ïà»ú×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] part µ÷ÊÔĞÅÏ¢±¨¸æµÄ¹¦ÄÜ·ÖÀà
+*@param[in] level µ÷ÊÔĞÅÏ¢±¨¸æµÄ¼¶±ğ
+*@param[in] bForce ÊÇ·ñÇ¿ÖÆ¼ÇÂ¼µ½ÎÄ¼ş£¬²»¹ÜÊÇ·ñ¿ªÆôÈÕÖ¾ÎÄ¼ş¼ÇÂ¼
+*@param[in] text µ÷ÊÔ±¨¸æÏà¹ØµÄÎÄ±¾ÄÚÈİ£¬½«²åÈëµ½ÈÕÖ¾ÎÄ¼ş
+*@param[in] param ¸½¼Ó²ÎÊı£¬Ò»°ãÇé¿öÏÂÇë´«0
+*@warning ¾¡Á¿±ÜÃâÆµ·±µ÷ÓÃ
+*@note µ±ÓÃ»§ÔÚ·¢ÏÖÒì³£Ê±£¬¿ÉÁ¢¼´µ÷ÓÃ¸Ã½Ó¿Ú£¬ÒÔ×¥È¡µ±Ç°µÄÉè±¸×´Ì¬ĞÅÏ¢£¬²¢¼ÇÂ¼µ½ÈÕÖ¾ÎÄ¼şÖĞ
 */
 dvp2api dvpStatus dvpDebugReport(dvpHandle handle, dvpReportPart part, dvpReportLevel level, bool bForce, dvpStr text, dvpUint32 param);
 
 
 /**
-*@brief ???
-*@param[in] handle 
+*@brief ¹Ø±ÕÏà»ú£¬²¢½øÈë´ı»ú×´Ì¬
+*@param[in] handle Ïà»ú¾ä±ú
 *@see dvpStop
 *@see dvpIsValid
-*@warning @link #dvpStreamCallback ?@endlink?ô?
-*@warning ??á?????õ???
+*@warning ÇĞÎğÔÚ@link #dvpStreamCallback »Øµ÷º¯Êı@endlinkÖĞÊ¹ÓÃ´Ë¹¦ÄÜ
+*@warning ¹Ø±ÕÏà»úºó£¬Ïà»ú¾ä±ú½«²»ÔÙ¿ÉÓÃ¡£µ«ÊÇÔÙ´Î´ò¿ªÏà»úÊ±£¬ÓÖ¿ÉÄÜ»áµÃµ½ÏàÍ¬µÄ¾ä±úÖµ
 */
 dvp2api dvpStatus dvpClose(dvpHandle handle);
 
 
 
-/** @defgroup DVP2_API_CALLBACK ?
-*@warning ?????@link #dvpStop ???@endlink??????????
+/** @defgroup DVP2_API_CALLBACK »Øµ÷º¯Êı
+*@warning ÇĞÎğÔÚ»Øµ÷º¯ÊıÖĞµ÷ÓÃÈÎºÎĞèÒª@link #dvpStop Í£Ö¹ÊÓÆµÁ÷@endlinkµÄº¯Êı¡£Ä³Ğ©º¯Êı»áÒşĞÔµØ×Ô¶¯Í£Ö¹ÊÓÆµÁ÷£¬Í¬ÑùÓ¦µ±±ÜÃâ
 *@{
 */
-/** @brief ??
-*@param[in] handle 
-*@param[in] event ¼
-*@param[in] pContext û?
-*@param[in] pFrame ??
-*@param[in] pBuffer ?
+/** @brief ÊÓÆµÁ÷»Øµ÷º¯Êı
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] event ÊÂ¼şÀàĞÍ
+*@param[in] pContext ÓÃ»§Ö¸Õë
+*@param[in] pFrame Ö¡ĞÅÏ¢
+*@param[in] pBuffer Í¼ÏñÊı¾İ
 *@see dvpRegisterStreamCallback
 *@see dvpUnregisterStreamCallback
-*@note ???@link #dvpProcessImage @endlink@link #dvpDrawPicture ?@endlink@link #dvpSavePicture ?@endlink?
-*@warning ???@link #dvpOpen @endlink@link #dvpClose ?@endlink@link #dvpStart @endlink@link #dvpStop ??@endlink?@link #dvpGetFrame ???@endlink  */
+*@note ¿ÉÒÔÔÚ»Øµ÷º¯ÊıÖĞ£¬@link #dvpProcessImage ´¦Àí@endlink£¬@link #dvpDrawPicture ÏÔÊ¾@endlinkÓë@link #dvpSavePicture ´æ´¢@endlinkÍ¼Ïñ
+*@warning ÇĞÎğÔÚ»Øµ÷º¯ÊıÖĞ£¬@link #dvpOpen ´ò¿ª@endlink£¬@link #dvpClose ¹Ø±Õ@endlink£¬@link #dvpStart ²¥·Å@endlink£¬@link #dvpStop Í£Ö¹@endlinkÏà»ú£¬ÒÔ¼°@link #dvpGetFrame ×¥È¡Í¼Ïñ@endlink  */
 typedef dvpInt32(*dvpStreamCallback)(dvpHandle handle, dvpStreamEvent event, void *pContext, dvpFrame *pFrame, void *pBuffer);
 
 /**
-*@brief ???
-*@param[in] handle 
-*@param[in] proc ???
-*@param[in] event ?¼
-*@param[in] pContext ?û?
+*@brief ×¢²áÊÓÆµÁ÷»Øµ÷º¯Êı
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] proc »Øµ÷º¯ÊıµÄº¯ÊıÖ¸Õë
+*@param[in] event »Øµ÷º¯ÊıµÄÊÂ¼şÀàĞÍ
+*@param[in] pContext »Øµ÷º¯ÊıµÄÓÃ»§Ö¸Õë
 *@see dvpUnregisterStreamCallback
 */
 dvp2api dvpStatus dvpRegisterStreamCallback(dvpHandle handle, dvpStreamCallback proc, dvpStreamEvent event, void *pContext);
 
 
 /**
-*@brief ???
-*@param[in] handle 
-*@param[in] proc ???
-*@param[in] event ?¼
-*@param[in] pContext ?û?
-*@note @link #dvpRegisterStreamCallback ??@endlink?õ??²????
+*@brief ×¢ÏúÊÓÆµÁ÷»Øµ÷º¯Êı
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] proc »Øµ÷º¯ÊıµÄº¯ÊıÖ¸Õë
+*@param[in] event »Øµ÷º¯ÊıµÄÊÂ¼şÀàĞÍ
+*@param[in] pContext »Øµ÷º¯ÊıµÄÓÃ»§Ö¸Õë
+*@note ĞëÓë@link #dvpRegisterStreamCallback ×¢²á»Øµ÷º¯Êı@endlinkËùÊ¹ÓÃµÄ²ÎÊıÒ»ÖÂ²ÅÄÜ×¢Ïú¶ÔÓ¦µÄ»Øµ÷º¯Êı
 */
 dvp2api dvpStatus dvpUnregisterStreamCallback(dvpHandle handle, dvpStreamCallback proc, dvpStreamEvent event, void *pContext);
 
 
-/** @brief ¼???
-*@param[in] handle 
-*@param[in] event ¼
-*@param[in] pContext û?
-*@param[in] param ¼
-*@param[in] pVariant ¼
+/** @brief ÊÂ¼şÍ¨Öª»Øµ÷º¯Êı
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] event ÊÂ¼şÀàĞÍ
+*@param[in] pContext ÓÃ»§Ö¸Õë
+*@param[in] param ÇáÁ¿¼¶ÊÂ¼ş¸½¼ÓÊı¾İ
+*@param[in] pVariant ÖØÁ¿¼¶ÊÂ¼ş¸½¼ÓÊı¾İ
 *@see dvpRegisterEventCallback */
 typedef dvpInt32(*dvpEventCallback)(dvpHandle handle, dvpEvent event, void *pContext, dvpInt32 param, struct dvpVariant *pVariant);
 
 /**
-*@brief ?¼????
-*@param[in] handle 
-*@param[in] proc ???
-*@param[in] event ?¼
-*@param[in] pContext ?û?
+*@brief ×¢²áÊÂ¼şÍ¨ÖªµÄ»Øµ÷º¯Êı
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] proc »Øµ÷º¯ÊıµÄº¯ÊıÖ¸Õë
+*@param[in] event »Øµ÷º¯ÊıµÄÊÂ¼şÀàĞÍ
+*@param[in] pContext »Øµ÷º¯ÊıµÄÓÃ»§Ö¸Õë
 *@see dvpUnregisterEventCallback
 */
 dvp2api dvpStatus dvpRegisterEventCallback(dvpHandle handle, dvpEventCallback proc, dvpEvent event, void *pContext);
 
 
 /**
-*@brief ?¼????
-*@param[in] handle 
-*@param[in] proc ???
-*@param[in] event ?¼
-*@param[in] pContext ?û?
-*@note @link #dvpRegisterEventCallback ??@endlink?õ??²????
+*@brief ×¢ÏúÊÂ¼şÍ¨ÖªµÄ»Øµ÷º¯Êı
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] proc »Øµ÷º¯ÊıµÄº¯ÊıÖ¸Õë
+*@param[in] event »Øµ÷º¯ÊıµÄÊÂ¼şÀàĞÍ
+*@param[in] pContext »Øµ÷º¯ÊıµÄÓÃ»§Ö¸Õë
+*@note ĞëÓë@link #dvpRegisterEventCallback ×¢²á»Øµ÷º¯Êı@endlinkËùÊ¹ÓÃµÄ²ÎÊıÒ»ÖÂ²ÅÄÜ×¢Ïú¶ÔÓ¦µÄ»Øµ÷º¯Êı
 */
 dvp2api dvpStatus dvpUnregisterEventCallback(dvpHandle handle, dvpEventCallback proc, dvpEvent event, void *pContext);
 
 
 /** @} end of DVP2_API_CALLBACK */
 
-/** @defgroup DVP2_API_CONFIG ?
+/** @defgroup DVP2_API_CONFIG ´æµµ¶Áµµ
 *@{
 */
 /**
-*@brief ?
-*@param[in] handle 
+*@brief ¼ÓÔØÄ¬ÈÏÉèÖÃ
+*@param[in] handle Ïà»ú¾ä±ú
 *@see dvpLoadConfig
 *@see dvpSaveConfig
-*@warning ???ã??@link #dvpSaveConfig ??@endlink?
+*@warning »á¸²¸Çµ±Ç°ÉèÖÃ£¬ÈçÓĞ±ØÒª£¬ÇëÊÂÏÈ@link #dvpSaveConfig ±¸·İµ±Ç°ÉèÖÃ@endlinkµ½ÅäÖÃÎÄ¼ş
 */
 dvp2api dvpStatus dvpLoadDefault(dvpHandle handle);
 
 
 /**
-*@brief ??
-*@param[in] handle 
-*@param[in] path ?·???·????·?
+*@brief ´ÓÅäÖÃÎÄ¼şÖĞ¼ÓÔØÉèÖÃ
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] path ÅäÖÃÎÄ¼şµÄÂ·¾¶£¯ÎÄ¼şÃû£¨×Ô¶¯Ñ¡ÔñÂ·¾¶£©£¯¿ÕÖ¸Õë£¨×Ô¶¯Ñ¡ÔñÂ·¾¶ºÍÎÄ¼şÃû£©
 *@see dvpLoadDefault
 *@see dvpSaveConfig
-*@note ?·??<a href="C:/ProgramData/DO3THINK/DVP2">C:/ProgramData/DO3THINK/DVP2</a>
-*@warning ???ã??@link #dvpSaveConfig ??@endlink?
+*@note ´æµµÂ·¾¶Í¨³£Î»ÓÚ<a href="C:/ProgramData/DO3THINK/DVP2">C:/ProgramData/DO3THINK/DVP2</a>
+*@warning »á¸²¸Çµ±Ç°ÉèÖÃ£¬ÈçÓĞ±ØÒª£¬ÇëÊÂÏÈ@link #dvpSaveConfig ±¸·İµ±Ç°ÉèÖÃ@endlinkµ½ÅäÖÃÎÄ¼ş
 */
 dvp2api dvpStatus dvpLoadConfig(dvpHandle handle, dvpStr path);
 
 
 /**
-*@brief ?ñ??
-*@param[in] handle 
-*@param[in] path ?·???·????·?
+*@brief µ±Ç°ÉèÖÃ±£´æµ½ÅäÖÃÎÄ¼ş
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] path ÅäÖÃÎÄ¼şµÄÂ·¾¶£¯ÎÄ¼şÃû£¨×Ô¶¯Ñ¡ÔñÂ·¾¶£©£¯¿ÕÖ¸Õë£¨×Ô¶¯Ñ¡ÔñÂ·¾¶ºÍÎÄ¼şÃû£©
 *@see dvpLoadDefault
 *@see dvpLoadConfig
-*@note ?·??<a href="C:/ProgramData/DO3THINK/DVP2">C:/ProgramData/DO3THINK/DVP2</a>
-*@warning ????????
+*@note ´æµµÂ·¾¶Í¨³£Î»ÓÚ<a href="C:/ProgramData/DO3THINK/DVP2">C:/ProgramData/DO3THINK/DVP2</a>
+*@warning ĞëÈ·±£µ±Ç°½ø³ÌÓµÓĞ¶Ô´ËÎÄ¼şµÄĞ´ÈëÈ¨ÏŞ
 */
 dvp2api dvpStatus dvpSaveConfig(dvpHandle handle, dvpStr path);
 
 
 /**
-*@brief ûõ?
-*@param[in] handle 
-*@param[in] UserSet ?û
+*@brief ±£´æÓÃ»§ÉèÖÃµ½Ïà»ú´æ´¢Æ÷
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] UserSet Ä¿±êÓÃ»§ÉèÖÃ
 *@see dvpLoadUserSet
 *@see dvpGetUserSet
-*@warning ??@link #dvpUserSet::USER_SET_DEFAULT ?û@endlink
+*@warning ²»¿É±£´æÎª@link #dvpUserSet::USER_SET_DEFAULT Ä¬ÈÏÓÃ»§ÉèÖÃ@endlink
 */
 dvp2api dvpStatus dvpSaveUserSet(dvpHandle handle, dvpUserSet UserSet);
 
 
 /**
-*@brief ?û
-*@param[in] handle 
-*@param[in] UserSet ?û
+*@brief ´ÓÏà»ú´æ´¢Æ÷¼ÓÔØÓÃ»§ÉèÖÃ
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] UserSet Ä¿±êÓÃ»§ÉèÖÃ
 *@see dvpSaveUserSet
 *@see dvpGetUserSet
-*@note ?@link #dvpUserSet::USER_SET_DEFAULT ?û@endlink
+*@note ¿ÉÒÔ´Ó@link #dvpUserSet::USER_SET_DEFAULT Ä¬ÈÏÓÃ»§ÉèÖÃ@endlink¼ÓÔØ
 */
 dvp2api dvpStatus dvpLoadUserSet(dvpHandle handle, dvpUserSet UserSet);
 
@@ -5501,15 +5501,15 @@ dvp2api dvpStatus dvpLoadUserSet(dvpHandle handle, dvpUserSet UserSet);
 /** @} end of DVP2_API_CONFIG */
 /** @} end of DVP2_API_BASE */
 
-/** @defgroup DVP2_API_EXTEND ?ù
+/** @defgroup DVP2_API_EXTEND ÊµÓÃ¹¦ÄÜ
 *@{
 */
 /**
-*@brief ?????
-*@param[in] pFrame ??
-*@param[in] pBuffer ???????????RAW, RGB24
-*@param[in] file ?·????????????bmp, jpeg, jpg, png, tiff, tif, gif, dat(?)
-*@param[in] quality ???jpeg?????[1,100]
+*@brief ½«Í¼Ïñ±£´æµ½ÎÄ¼ş
+*@param[in] pFrame Ö¡ĞÅÏ¢
+*@param[in] pBuffer Í¼ÏñÊı¾İµÄÄÚ´æÊ×µØÖ·£¨Ä¿Ç°Ö§³ÖµÄÊı¾İ¸ñÊ½°üÀ¨£ºRAW, RGB24£©
+*@param[in] file ÎÄ¼şÃû»òÍêÕûÂ·¾¶£¨Í¼ÏñÎÄ¼şµÄ¸ñÊ½ÓÉÎÄ¼şµÄÀ©Õ¹ÃûÀ´¾ö¶¨£¬Ä¿Ç°Ö§³ÖµÄÍ¼Ïñ¸ñÊ½°üÀ¨£ºbmp, jpeg, jpg, png, tiff, tif, gif, dat(´¿Í¼ÏñÊı¾İ)£©
+*@param[in] quality Í¼ÏñÆ·ÖÊ£¬½ö¶Ôjpeg¸ñÊ½ÓĞĞ§£¬²¢ÇÒÈ¡Öµ·¶Î§ÊÇ[1,100]
 *@see dvpGetFrame
 *@see dvpStreamCallback
 */
@@ -5517,27 +5517,27 @@ dvp2api dvpStatus dvpSavePicture(const dvpFrame *pFrame, const void *pBuffer, dv
 
 
 /**
-*@brief ?????
-*@param[in] handle 
-*@param[in] ResoulutionModeSel ???@link #dvpGetResolutionModeSel @endlink
-*@param[in] roi @link #dvpGetRoi ROI@endlink???NULL???????µ
-*@param[in] timeout @link #dvpGetFrame ?@endlink??
-*@param[in] filePath ?·????????????bmp, jpeg, jpg, png, tiff, tif, gif, dat(?)
-*@param[in] quality ???jpeg?????[1,100]
+*@brief ¸ù¾İÖ¸¶¨·Ö±æÂÊ×¥È¡²¢±£´æÍ¼Ïñ
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] ResoulutionModeSel ·Ö±æÂÊÄ£Ê½@link #dvpGetResolutionModeSel Ë÷Òı@endlink
+*@param[in] roi @link #dvpGetRoi ROI@endlinkÖ¸Õë£¬Èç¹ûÎªNULLÖ¸Õë£¬ÔòÊÇ´Ë·Ö±æÂÊÄ£Ê½ÏÂµÄ×î´ó¿í¸ß
+*@param[in] timeout @link #dvpGetFrame ²É¼¯@endlink³¬Ê±Ê±¼ä
+*@param[in] filePath ÎÄ¼şÃû»òÍêÕûÂ·¾¶£¨Í¼ÏñÎÄ¼şµÄ¸ñÊ½ÓÉÎÄ¼şµÄÀ©Õ¹ÃûÀ´¾ö¶¨£¬Ä¿Ç°Ö§³ÖµÄÍ¼Ïñ¸ñÊ½°üÀ¨£ºbmp, jpeg, jpg, png, tiff, tif, gif, dat(´¿Í¼ÏñÊı¾İ)£©
+*@param[in] quality Í¼ÏñÆ·ÖÊ£¬½ö¶Ôjpeg¸ñÊ½ÓĞĞ§£¬²¢ÇÒÈ¡Öµ·¶Î§ÊÇ[1,100]
 *@see dvpSavePicture
 */
 dvp2api dvpStatus dvpCaptureFile(dvpHandle handle, dvpUint32 ResoulutionModeSel, dvpRegion *roi, dvpUint32 timeout, dvpStr filePath, dvpInt32 quality);
 
 
 /**
-*@brief ???û
-*@param[in] pFrame ??
-*@param[in] pSrcBuffer ???????????RAW, RGB24
-*@param[in] format ??????jpg png*.jpg*.png??????bmp, jpeg, jpg, png, tiff, tif, gif, dat(?)
-*@param[in] quality ???jpeg?????[1,100]
-*@param[out] pDstBuffer û??
-*@param[in] uByteSize ?û????
-*@param[out] pValidByteSize û??????
+*@brief ½«Í¼ÏñÑ¹Ëõ×ª»»µ½ÓÃ»§»º´æ
+*@param[in] pFrame Ö¡ĞÅÏ¢
+*@param[in] pSrcBuffer Í¼ÏñÊı¾İµÄÄÚ´æÊ×µØÖ·£¨Ä¿Ç°Ö§³ÖµÄÊı¾İ¸ñÊ½°üÀ¨£ºRAW, RGB24£©
+*@param[in] format ±íÊ¾Í¼Ïñ¸ñÊ½µÄ×Ö·û´®£¨ĞÎÊ½Îª¡°jpg¡±¡¢ ¡°png¡±£¬»ò¡°*.jpg¡±¡¢¡°*.png¡±£¬Ä¿Ç°Ö§³ÖµÄÍ¼Ïñ¸ñÊ½°üÀ¨£ºbmp, jpeg, jpg, png, tiff, tif, gif, dat(´¿Í¼ÏñÊı¾İ)£©
+*@param[in] quality Í¼ÏñÆ·ÖÊ£¬½ö¶Ôjpeg¸ñÊ½ÓĞĞ§£¬²¢ÇÒÈ¡Öµ·¶Î§ÊÇ[1,100]
+*@param[out] pDstBuffer Êä³öµ½ÓÃ»§Í¼ÏñÖ¸ÕëµÄÊı¾İ
+*@param[in] uByteSize ËùÖ¸¶¨ÓÃ»§Í¼Ïñ»º´æµÄ×Ö½ÚÊı
+*@param[out] pValidByteSize Êä³öµ½ÓÃ»§Í¼Ïñ»º´æµÄÊµ¼ÊÓĞĞ§×Ö½ÚÊı
 *@see dvpSavePicture
 *@see dvpPrintPictureToBuffer
 */
@@ -5546,57 +5546,57 @@ dvp2api dvpStatus dvpPrintPictureToBuffer(const dvpFrame *pFrame, const void *pS
 
 #ifdef _WIN32
 /**
-*@brief ???
-*@param[in] pFrame ??
-*@param[in] pBuffer ???????????@link #dvpImageFormat::FORMAT_MONO MONO@endlink@link #dvpImageFormat::FORMAT_BAYER_BG BAYER@endlink @link #dvpImageFormat::FORMAT_BGR24 BGR24@endlink 
-*@param[in] hWnd ????
-*@param[in] sRect ??????
-*@param[in] dRect ?????
-*@note @link #dvpStreamCallback ??@endlink?ô?
+*@brief ÔÚ´°¿ÚÉÏÏÔÊ¾Í¼Ïñ
+*@param[in] pFrame Ö¡ĞÅÏ¢
+*@param[in] pBuffer Í¼ÏñÊı¾İµÄÄÚ´æÊ×µØÖ·£¨Ä¿Ç°Ö§³ÖµÄÊı¾İ¸ñÊ½°üÀ¨£º@link #dvpImageFormat::FORMAT_MONO MONO@endlink£¬@link #dvpImageFormat::FORMAT_BAYER_BG BAYER@endlink£¬ @link #dvpImageFormat::FORMAT_BGR24 BGR24@endlink£© 
+*@param[in] hWnd ÓÃÓÚÏÔÊ¾Í¼ÏñµÄ´°¿Ú¾ä±ú
+*@param[in] sRect ÓÃÓÚÏÔÊ¾µÄÍ¼ÏñÇøÓò£¬¿ÕÖ¸Õë´ú±íÕû¸öÍ¼ÏñÇøÓò
+*@param[in] dRect ÓÃÓÚÏÔÊ¾µÄ´°¿ÚÇøÓò£¬¿ÕÖ¸Õë´ú±íÕû¸ö´°¿ÚÇøÓò
+*@note ½¨ÒéÔÚ@link #dvpStreamCallback ÊÓÆµÁ÷»Øµ÷º¯Êı@endlinkÖĞÊ¹ÓÃ´Ë¹¦ÄÜ
 */
 dvp2api dvpStatus dvpDrawPicture(const dvpFrame *pFrame, const void *pBuffer, HWND hWnd, LPRECT sRect, LPRECT dRect);
 
 
 /**
-*@brief ¼??????
-*@param[in] filePath ??·????????????wmv, avi
-*@param[in] width ????
-*@param[in] height ????
-*@param[in] quality ???avi?????[1,100]
-*@param[out] pHandle ?
+*@brief Æô¶¯Â¼Ïñ£¬´´½¨ÊÓÆµÎÄ¼ş£¬²¢»ñµÃÊÓÆµ±àÂëÆ÷µÄ¾ä±ú
+*@param[in] filePath ÊÓÆµÎÄ¼şÃû»òÍêÕûÂ·¾¶£¨ÊÓÆµÎÄ¼şµÄ¸ñÊ½ÓÉÎÄ¼şµÄÀ©Õ¹ÃûÀ´¾ö¶¨£¬Ä¿Ç°Ö§³ÖµÄÊÓÆµ¸ñÊ½°üÀ¨£ºwmv, avi£©
+*@param[in] width ´Ë²ÎÊıÒÑ¾­·ÏÆú£¬¿ÉÎªÈÎÒâÖµ
+*@param[in] height ´Ë²ÎÊıÒÑ¾­·ÏÆú£¬¿ÉÎªÈÎÒâÖµ
+*@param[in] quality ÊÓÆµ»­ÃæÆ·ÖÊ£¬½ö¶Ôavi¸ñÊ½ÓĞĞ§£¬²¢ÇÒÈ¡Öµ·¶Î§ÊÇ[1,100]
+*@param[out] pHandle ÊÓÆµ±àÂëÆ÷¾ä±ú
 *@see dvpSetTargetFormat
 *@see dvpVideoRecordWrite
 *@see dvpStopVideoRecord
-*@warning ?????WINDOWS??ûWMV????? <a href="https://www.codecguide.com/windows_media_codecs.htm">???</a>?????
+*@warning Å·ÖŞºÍº«¹úµÈµØÇøËù·¢ĞĞµÄWINDOWS²Ù×÷ÏµÍ³Ã»ÓĞÄÚÖÃWMV¸ñÊ½Ö§³Ö£¬¿ÉÄÜĞèÒª×ÔĞĞµ½ <a href="https://www.codecguide.com/windows_media_codecs.htm">Î¢Èí¹«Ë¾ÍøÕ¾</a>ÏÂÔØ²¢°²×°ÏàÓ¦°æ±¾µÄ¸üĞÂ
 */
 dvp2api dvpStatus dvpStartVideoRecord(dvpStr filePath, dvpUint32 width, dvpUint32 height, dvpInt32 quality, dvpRecordHandle *pHandle);
 
 
 /**
-*@brief ????
-*@param[in] handle ?
-*@param[out] pValid ???
-*@note @link #dvpStartVideoRecord ¼@endlink??@link #dvpStopVideoRecord ??¼@endlink???
+*@brief ¼ì²éÊÓÆµ±àÂëÆ÷µÄ¾ä±úÊÇ·ñÓĞĞ§
+*@param[in] handle ÊÓÆµ±àÂëÆ÷¾ä±ú
+*@param[out] pValid ÓĞĞ§×´Ì¬
+*@note @link #dvpStartVideoRecord Æô¶¯Â¼Ïñ@endlink³É¹¦Ôò¾ä±úÓĞĞ§£¬@link #dvpStopVideoRecord Í£Ö¹Â¼Ïñ@endlink³É¹¦Ôò¾ä±úÊ§Ğ§
 */
 dvp2api dvpStatus dvpIsVideoRecorderValid(dvpRecordHandle handle, bool *pValid);
 
 
 /**
-*@brief ????
-*@param[in] handle ?
-*@param[in] pFrame ??
-*@param[in] pBuffer ???????????@link #dvpImageFormat::FORMAT_BGR24 BGR24@endlink
+*@brief °ÑÊÓÆµÁ÷Êı¾İĞ´ÈëÊÓÆµÎÄ¼ş
+*@param[in] handle ÊÓÆµ±àÂëÆ÷¾ä±ú
+*@param[in] pFrame Ö¡ĞÅÏ¢
+*@param[in] pBuffer Í¼ÏñÊı¾İµÄÄÚ´æÊ×µØÖ·£¨Ä¿Ç°Ö§³ÖµÄÊı¾İ¸ñÊ½°üÀ¨£º@link #dvpImageFormat::FORMAT_BGR24 BGR24@endlink£©
 *@see dvpGetFrame
 *@see dvpStartVideoRecord
 *@see dvpStopVideoRecord
-*@note @link #dvpStartVideoRecord ¼@endlink???@link #dvpSetTargetFormat ????@endlink
+*@note @link #dvpStartVideoRecord Æô¶¯Â¼Ïñ@endlinkÖ®Ç°£¬ÇëÕıÈ·@link #dvpSetTargetFormat Éè¶¨Ä¿±êÍ¼Ïñ¸ñÊ½@endlink
 */
 dvp2api dvpStatus dvpVideoRecordWrite(dvpRecordHandle handle, const dvpFrame *pFrame, const void *pBuffer);
 
 
 /**
-*@brief ??¼????????
-*@param[in] handle ?
+*@brief Í£Ö¹Â¼Ïñ£¬¹Ø±ÕÊÓÆµÎÄ¼ş£¬²¢ÊÍ·ÅÊÓÆµ±àÂëÆ÷µÄ¾ä±ú
+*@param[in] handle ÊÓÆµ±àÂëÆ÷¾ä±ú
 *@see dvpVideoRecordWrite
 *@see dvpStartVideoRecord
 */
@@ -5604,47 +5604,47 @@ dvp2api dvpStatus dvpStopVideoRecord(dvpRecordHandle handle);
 
 
 /**
-*@brief ????
-*@param[in] handle 
-*@param[in] hParent ???
+*@brief ÏÔÊ¾Ïà»úÊôĞÔÄ£Ì¬¶Ô»°¿ò
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] hParent ¸¸´°¿ÚµÄ´°¿Ú¾ä±ú
 */
 dvp2api dvpStatus dvpShowPropertyModalDialog(dvpHandle handle, HWND hParent);
 
 
 #endif
 /**
-*@brief ???û?
-*@param[in] handle 
-*@param[in] addr ???
-*@param[in, out] pBuffer ????
-*@param[in] size ?
+*@brief ´ÓÏà»ú´æ´¢Æ÷ÖĞ¶ÁÈ¡ÓÃ»§×Ô¶¨ÒåÊı¾İ
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] addr Ïà»úµÄ¶ÁÈ¡µØÖ·
+*@param[in, out] pBuffer Êı¾İµÄÄÚ´æÊ×µØÖ·
+*@param[in] size Êı¾İ³¤¶È
 *@see dvpWriteUserData
-*@note ????????4k??
-*@note @link #dvpOpen @endlink?ô?
-*@warning ??????
+*@note ¶ÁÈ¡Á¿£¬²»ÄÜ´óÓÚ´æ´¢Æ÷µÄ×î´ó´æ´¢¿Õ¼ä£¨Í¨³£²»´óÓÚ4k×Ö½Ú£©
+*@note ĞëÏÈ@link #dvpOpen ´ò¿ª@endlinkÏà»ú£¬²ÅÄÜÊ¹ÓÃ´Ë¹¦ÄÜ
+*@warning ¿ÉÄÜ»áÏûºÄ½Ï³¤µÄµÈ´ıÊ±¼ä
 */
 dvp2api dvpStatus dvpReadUserData(dvpHandle handle, dvpUint32 addr, void *pBuffer, dvpUint32 size);
 
 
 /**
-*@brief û???
-*@param[in] handle 
-*@param[in] addr ??
-*@param[in] pBuffer ????
-*@param[in] size ?
+*@brief ½«ÓÃ»§×Ô¶¨ÒåÊı¾İĞ´ÈëÖÁÏà»ú´æ´¢Æ÷
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] addr Ïà»úµÄĞ´ÈëµØÖ·
+*@param[in] pBuffer Êı¾İµÄÄÚ´æÊ×µØÖ·
+*@param[in] size Êı¾İ³¤¶È
 *@see dvpReadUserData
-*@note ????????4k??
-*@note @link #dvpOpen @endlink?ô?
-*@warning ??????
+*@note Ğ´ÈëÁ¿£¬²»ÄÜ´óÓÚ´æ´¢Æ÷µÄ×î´ó´æ´¢¿Õ¼ä£¨Í¨³£²»´óÓÚ4k×Ö½Ú£©
+*@note ĞëÏÈ@link #dvpOpen ´ò¿ª@endlinkÏà»ú£¬²ÅÄÜÊ¹ÓÃ´Ë¹¦ÄÜ
+*@warning ¿ÉÄÜ»áÏûºÄ½Ï³¤µÄµÈ´ıÊ±¼ä
 */
 dvp2api dvpStatus dvpWriteUserData(dvpHandle handle, dvpUint32 addr, const void *pBuffer, dvpUint32 size);
 
 
 /**
-*@brief ???@link #dvpCameraInfo::UserID (User Defined Name) @endlink
-*@param[in] handle 
-*@param[in] UserId û
-*@param[in, out] pLength ?????õ?
+*@brief ÎªÏà»úÉè¶¨Ò»¸ö@link #dvpCameraInfo::UserID (User Defined Name) @endlink
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] UserId ÓÃ»§ÃüÃû
+*@param[in, out] pLength ÊäÈëÌá¹©µÄ×Ö·û´®³¤¶È£¬Êä³öÊµ¼ÊÊ¹ÓÃµÄ×Ö·û´®³¤¶È
 *@see dvpGetCameraInfo
 */
 dvp2api dvpStatus dvpSetUserId(dvpHandle handle, dvpStr UserId, dvpUint32 *pLength);
@@ -5652,68 +5652,68 @@ dvp2api dvpStatus dvpSetUserId(dvpHandle handle, dvpStr UserId, dvpUint32 *pLeng
 
 /** @} end of DVP2_API_EXTEND */
 
-/** @defgroup DVP2_API_INTERNAL ?
+/** @defgroup DVP2_API_INTERNAL ÄÚ²¿¹¦ÄÜ
 *@{
 */
 /**
-*@brief ??
-*@param[in] handle 
-*@param[in] command 
-*@param[in, out] pParam ?
-*@param[in, out] pSize ??????
-*@warning ????õ????
+*@brief »ñÈ¡Ïà»úµÄÈÎÒâ²ÎÊı»òĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] command ÃüÁîÂë
+*@param[in, out] pParam ²ÎÊıÖ¸Õë
+*@param[in, out] pSize ÊäÈë²ÎÊıµÄ×Ö½Ú´óĞ¡£¬Êä³öÊµ¼Ê´óĞ¡
+*@warning ´Ëº¯ÊıÎªÄÚ²¿Ê¹ÓÃµÄº¯Êı£¬²ÎÊıÏ¸½ÚÔİÎ´¹«¿ª£¬²»½¨ÒéÊ¹ÓÃ
 */
 dvp2api dvpStatus dvpGet(dvpHandle handle, dvpUint32 command, void *pParam, dvpUint32 *pSize);
 
 
 /**
-*@brief ?
-*@param[in] handle 
-*@param[in] command 
-*@param[in, out] pParam ?
-*@param[in, out] pSize ??????
-*@warning ????õ????
+*@brief ÉèÖÃÏà»úµÄÈÎÒâ²ÎÊı»òĞÅÏ¢
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] command ÃüÁîÂë
+*@param[in, out] pParam ²ÎÊıÖ¸Õë
+*@param[in, out] pSize ÊäÈë²ÎÊıµÄ×Ö½Ú´óĞ¡£¬Êä³öÊµ¼Ê´óĞ¡
+*@warning ´Ëº¯ÊıÎªÄÚ²¿Ê¹ÓÃµÄº¯Êı£¬²ÎÊıÏ¸½ÚÔİÎ´¹«¿ª£¬²»½¨ÒéÊ¹ÓÃ
 */
 dvp2api dvpStatus dvpSet(dvpHandle handle, dvpUint32 command, const void *pParam, dvpUint32 *pSize);
 
 
 /**
-*@brief dvp
-*@param[in] command 
-*@param[in] param 
-*@param[in] pData 
-*@warning ????õ????
+*@brief ÅäÖÃdvp
+*@param[in] command ÃüÁîÂë
+*@param[in] param ²ÎÊı
+*@param[in] pData Êı¾İ
+*@warning ´Ëº¯ÊıÎªÄÚ²¿Ê¹ÓÃµÄº¯Êı£¬²ÎÊıÏ¸½ÚÔİÎ´¹«¿ª£¬²»½¨ÒéÊ¹ÓÃ
 */
 dvp2api dvpStatus dvpConfig(dvpUint32 command, dvpUint32 param, const void* pData);
 
 
 /**
-*@brief ??
-*@param[in] index 
-*@param[in] command 
-*@param[in] param 
-*@param[in] pData 
+*@brief ÅäÖÃÖ¸¶¨Ïà»úµÄ²ÎÊı
+*@param[in] index Ïà»úË÷Òı
+*@param[in] command ÃüÁîÂë
+*@param[in] param ²ÎÊı
+*@param[in] pData Êı¾İ
 *@see dvpEnum
-*@warning ????õ????
+*@warning ´Ëº¯ÊıÎªÄÚ²¿Ê¹ÓÃµÄº¯Êı£¬²ÎÊıÏ¸½ÚÔİÎ´¹«¿ª£¬²»½¨ÒéÊ¹ÓÃ
 */
 dvp2api dvpStatus dvpConfigEx(dvpUint32 index, dvpUint32 command, dvpUint32 param, const void* pData);
 
 
 /**
-*@brief ??
-*@param[in] handle 
-*@param[in] szName 
-*@param[in] szValue ?
-*@note ?şdemo?
+*@brief ÅäÖÃÏà»úµÄ²ÎÊı×Ö·û´®
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] szName ²ÎÊıÃû
+*@param[in] szValue ²ÎÊıÖµ
+*@note Ê¹ÓÃ¾ßÌå²ÎÕÕdemoÊ¾Àı
 */
 dvp2api dvpStatus dvpSetConfigString(dvpHandle h, char const* szName, char const* szValue);
 
 /**
-*@brief ???
-*@param[in] handle 
-*@param[in] szName 
-*@param[out] szValue ?
-*@note ?şdemo?
+*@brief »ñÈ¡Ïà»úµÄ²ÎÊı×Ö·û´®
+*@param[in] handle Ïà»ú¾ä±ú
+*@param[in] szName ²ÎÊıÃû
+*@param[out] szValue ²ÎÊıÖµ
+*@note Ê¹ÓÃ¾ßÌå²ÎÕÕdemoÊ¾Àı
 */
 dvp2api dvpStatus dvpGetConfigString(dvpHandle h, char const* szName, char const** szValue);
 
@@ -5723,62 +5723,62 @@ dvp2api dvpStatus dvpGetSelectionDescr(dvpHandle h, char const* szName, dvpSelec
 dvp2api dvpStatus dvpGetSelectionDetail(dvpHandle h, char const* szName, int iIndex, dvpSelection* pSelection);
 /** @} end of DVP2_API_INTERNAL */
 
-/** @defgroup DVP_EXPOSURE ??
+/** @defgroup DVP_EXPOSURE ÆØ¹â¹¦ÄÜ
 *@{
 */
 /** @} end of DVP_EXPOSURE */
 
-/** @defgroup DVP_COLOR ??
+/** @defgroup DVP_COLOR É«²Êµ÷½Ú
 *@{
 */
 /** @} end of DVP_COLOR */
 
-/** @defgroup DVP_ENHANCE ??
+/** @defgroup DVP_ENHANCE ÔöÇ¿Ğ§¹û
 *@{
 */
 /** @} end of DVP_ENHANCE */
 
-/** @defgroup DVP_SIZE ??
+/** @defgroup DVP_SIZE Í¼Ïñ³ß´ç
 *@{
 */
 /** @} end of DVP_SIZE */
 
-/** @defgroup DVP_FORMAT ??
+/** @defgroup DVP_FORMAT Í¼Ïñ¸ñÊ½
 *@{
 */
 /** @} end of DVP_FORMAT */
 
-/** @defgroup DVP_TRIGGER 
+/** @defgroup DVP_TRIGGER ´¥·¢¹¦ÄÜ
 *@{
 */
 /** @} end of DVP_TRIGGER */
 
-/** @defgroup DVP_LINE ?
+/** @defgroup DVP_LINE Òı½Å¹¦ÄÜ
 *@{
 */
 /** @} end of DVP_LINE */
 
-/** @defgroup DVP_CORRECTION ??
+/** @defgroup DVP_CORRECTION Í¼ÏñĞ£Õı
 *@{
 */
 /** @} end of DVP_CORRECTION */
 
-/** @defgroup DVP_PERFORMANCE ?
+/** @defgroup DVP_PERFORMANCE ĞÔÄÜµ÷½Ú
 *@{
 */
 /** @} end of DVP_PERFORMANCE */
 
-/** @defgroup DVP_INFORMATION ?
+/** @defgroup DVP_INFORMATION »ù±¾ĞÅÏ¢
 *@{
 */
 /** @} end of DVP_INFORMATION */
 
-/** @defgroup DVP_ADVANCED ?
+/** @defgroup DVP_ADVANCED ¸ß¼¶ÉèÖÃ
 *@{
 */
 /** @} end of DVP_ADVANCED */
 
-/** @defgroup DVP_LINESCAN ?
+/** @defgroup DVP_LINESCAN ÏßÉ¨Ïà»ú
 *@{
 */
 /** @} end of DVP_LINESCAN */

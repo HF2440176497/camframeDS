@@ -21,15 +21,14 @@ message(STATUS "Python Include Dirs: ${Python_INCLUDE_DIRS}")
 message(STATUS "Python Libraries: ${Python_LIBRARIES}")
 message(STATUS "GLOG Libraries: ${GLOG_LIBRARIES}")
 
-include_directories(${PROJECT_SOURCE_DIR}/thirdParty/threadPool)
+
 include_directories(/usr/local/include/glog)
 
 include_directories(${Python_INCLUDE_DIRS})
 include_directories(${pybind11_INCLUDE_DIRS}
 		    /usr/local/lib/python3.9/site-packages/numpy/core/include
                     ./include
-                    ./thirdParty
-                    ./thirdParty/log
+                    ./3rdparty
                     /usr/local/include
                     /usr/local/include/opencv4
                     ${GFLAGS_INCLUDE_DIRS}
@@ -44,7 +43,7 @@ add_library(multicamframeDS MODULE
             src/camFrameDS.cpp
             src/multiCamFrameDS.cpp
             src/pyMultiCamFrameDS.cpp
-            thirdParty/ndarray_converter/src/ndarray_converter.cpp
+            3rdparty/ndarray_converter/src/ndarray_converter.cpp
 )
 target_link_libraries(multicamframeDS
             pybind11::module
