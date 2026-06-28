@@ -28,7 +28,7 @@ public:
     // 获取帧
     FRAME_DS Read_t(int time_wait = 50);
     // 设置模式,如果为1 返回的是 已经拼接的 图 , 如果为 2 返回的是 多个未拼接的图像。
-    int SetMode(int mode);
+    void SetMode(int mode);
     // 获取多帧
     std::vector<FRAME_DS> ReadBatch_t(int time_wait = 50);
     // 释放
@@ -38,7 +38,7 @@ private:
     void GetFrameCpu();
     void GetFrameCpuBatch();
     // 合并图片
-    cv::Mat combineImg(std::vector<cv::Mat>& imageMats);
+    cv::Mat combineImg(std::vector<cv::Mat>& imageMats, int direction = 1);
     // 获取时间戳
     int get_timestamp();
 private:

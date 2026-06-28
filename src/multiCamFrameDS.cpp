@@ -23,7 +23,7 @@ MultiCamFrameDS::~MultiCamFrameDS()
     LOG(INFO) << "~MultiCamFrameDS end";
 }
 
-// 查找相机
+
 std::tuple<int, std::vector<std::string>> MultiCamFrameDS::ScanCamers()
 {
     int number = -1;
@@ -97,6 +97,11 @@ int MultiCamFrameDS::CreateCamere(std::string ip, std::string filePath)
 {
     CamFrameDS *cam = new CamFrameDS();
 
+    if (m_ip2friendlyName.find(ip) == m_ip2friendlyName.end())
+    {
+        LOG(ERROR) << "IP address not found";
+        return -1;
+    }
     std::string friendlyName = m_ip2friendlyName.at(ip);
     LOG(INFO) << " CreateCamere [ " << ip << "   " << friendlyName << " ]" << std::endl;
 
@@ -110,15 +115,13 @@ int MultiCamFrameDS::Init()
 {
     if (m_mode == 1)
     {
-        // 开启子线程
         m_frameThread = std::thread(&MultiCamFrameDS::GetFrameCpu, this);
     }
     else if (m_mode == 2)
     {
         m_frameThread = std::thread(&MultiCamFrameDS::GetFrameCpuBatch, this);
     }
-
-    return 0; // 0 表示成功
+    return 0;
 }
 
 FRAME_DS MultiCamFrameDS::Read()
@@ -135,7 +138,7 @@ FRAME_DS MultiCamFrameDS::Read_t(int time_wait)
     return res;
 }
 
-int MultiCamFrameDS::SetMode(int mode)
+void MultiCamFrameDS::SetMode(int mode)
 {
     m_mode = mode;
 }
@@ -173,7 +176,6 @@ void MultiCamFrameDS::GetFrameCpu()
         m_backupTimes.resize(m_camNum, 0);
         for (int i = 0; i < m_camNum; i++) 
         {
-            // 创建默认黑色图像作为初始备份
             m_backupImages[i] = cv::Mat::zeros(640, 640, CV_8UC1);
             m_backupTimes[i] = get_timestamp();
         }
@@ -187,14 +189,14 @@ void MultiCamFrameDS::GetFrameCpu()
         // 1. 获取图像
         for (int i = 0; i < m_camNum; i++)
         {
-            cv::Mat tmpImage;
-            int ret = m_cameras[i]->getImageBuffer(tmpImage);
-            if (ret == 0 && !tmpImage.empty())
+            cv::Mat currentImg;
+            int ret = m_cameras[i]->getImageBuffer(currentImg);
+            if (ret == 0 && !currentImg.empty())
             {
                 int relativeTimestamp = get_timestamp();
-                images.push_back(tmpImage);
+                images.push_back(currentImg);
                 times.push_back(relativeTimestamp);
-                m_backupImages[i] = tmpImage.clone(); // 更新备份帧
+                m_backupImages[i] = currentImg.clone(); // 更新备份帧
                 m_backupTimes[i] = relativeTimestamp; // 更新备份时间
             }
             else
@@ -225,28 +227,39 @@ void MultiCamFrameDS::GetFrameCpu()
 
         // 2.图像转换
         // 3.图像合并成一张图片
-        cv::Mat bigImg = combineImg(images);
+        cv::Mat combinedImg = combineImg(images);
 
-        DLOG(INFO) << "combineImg: " << bigImg.cols << " x " << bigImg.rows << " x " << bigImg.channels();
+        DLOG(INFO) << "combineImg: " << combinedImg.cols << " x " << combinedImg.rows << " x " << combinedImg.channels();
         // 4、图像缩放
         // 5、推进队列
         FRAME_DS res;
         res.result = SUCCESS;
         res.relativeTimestamp = get_timestamp();
-        res.frame = bigImg;
+        res.frame = combinedImg;
         que.setData(res);
 
         images.clear();
         times.clear();
 
-        DLOG(INFO) << "MultiCameraHK GetImage  success" << que.size();
+        DLOG(INFO) << "MultiCamera GetImage  success" << que.size();
     }
 
-    LOG(WARNING) << "GetFrameCpu quit !!";
+    LOG(WARNING) << "GetFrameCpu quit";
 }
 
 void MultiCamFrameDS::GetFrameCpuBatch()
 {
+    if (m_backupImages.empty()) 
+    {
+        m_backupImages.resize(m_camNum);
+        m_backupTimes.resize(m_camNum, 0);
+        for (int i = 0; i < m_camNum; i++) 
+        {
+            m_backupImages[i] = cv::Mat::zeros(640, 640, CV_8UC1);
+            m_backupTimes[i] = get_timestamp();
+        }
+    }
+
     while (m_runFlag == RUN)
     {
         std::vector<FRAME_DS> dsImages;
@@ -254,14 +267,14 @@ void MultiCamFrameDS::GetFrameCpuBatch()
         // 1. 获取图像
         for (int i = 0; i < m_camNum; i++)
         {
-            cv::Mat tmpImage;
-            int ret = m_cameras[i]->getImageBuffer(tmpImage);
-            if (ret == 0)
+            cv::Mat currentImg;
+            int ret = m_cameras[i]->getImageBuffer(currentImg);
+            if (ret == 0 && !currentImg.empty())
             {
                 FRAME_DS res;
                 res.result = SUCCESS;
                 res.relativeTimestamp = get_timestamp();
-                res.frame = tmpImage;
+                res.frame = currentImg;
 
                 dsImages.push_back(res);
                 m_backupDsFrame[i] = res; // 更新备份帧
@@ -289,65 +302,64 @@ void MultiCamFrameDS::GetFrameCpuBatch()
 
         dsImages.clear();
 
-        DLOG(INFO) << "MultiCameraHK GetImage  success" << queBatch.size();
+        DLOG(INFO) << "MultiCamera GetImage  success" << queBatch.size();
     }
 
-    LOG(WARNING) << "GetFrameCpuBatch quit !!";
+    LOG(WARNING) << "GetFrameCpuBatch quit";
 }
 
-cv::Mat MultiCamFrameDS::combineImg(std::vector<cv::Mat> &imageMats)
+cv::Mat MultiCamFrameDS::combineImg(std::vector<cv::Mat> &imageMats, int direction)
 {
-#if 0 /*纵向合并*/ 
-    int combinedWidth = 0;
-	int combinedHeight = 0;
-	for (size_t i = 0; i < imageMats.size(); i++)
-	{
-		cv::Mat img = imageMats[i];
-		combinedHeight += img.rows;
-		if (img.cols > combinedWidth)
-		{
-			combinedWidth = img.cols;
-		}
-	}
-
-	cv::Mat combinedImg = cv::Mat(combinedHeight, combinedWidth, imageMats[0].type(), cv::Scalar(0, 0, 0));
-
-	int startX = 0;
-	int startY = 0;
-	for (size_t i = 0; i < imageMats.size(); i++) 
-	{
-		cv::Mat img = imageMats[i];
-		cv::Mat roi = combinedImg(cv::Rect(startX, startY, img.cols, img.rows));
-		imageMats[i].copyTo(roi);
-		startY += img.rows;
-	}
-    
-    return combinedImg;
-
-#else /*横向合并*/
-    int combinedWidth = 0;
-    int combinedHeight = 0;
-    for (size_t i = 0; i < imageMats.size(); i++)
-    {
-        cv::Mat img = imageMats[i];
-        combinedWidth += img.cols;
-        if (img.rows > combinedHeight)
+    cv::Mat combinedImg;
+    if (direction == 0) {  // 纵向合并
+        int combinedWidth = 0;
+        int combinedHeight = 0;
+        for (size_t i = 0; i < imageMats.size(); i++)
         {
-            combinedHeight = img.rows;
+            cv::Mat img = imageMats[i];
+            combinedHeight += img.rows;
+            if (img.cols > combinedWidth)
+            {
+                combinedWidth = img.cols;
+            }
+        }
+
+        combinedImg = cv::Mat(combinedHeight, combinedWidth, imageMats[0].type(), cv::Scalar(0, 0, 0));
+
+        int startX = 0;
+        int startY = 0;
+        for (size_t i = 0; i < imageMats.size(); i++) 
+        {
+            cv::Mat img = imageMats[i];
+            cv::Mat roi = combinedImg(cv::Rect(startX, startY, img.cols, img.rows));
+            imageMats[i].copyTo(roi);
+            startY += img.rows;
+        }
+
+    } elseif (direction == 1) {  // 横向合并
+        int combinedWidth = 0;
+        int combinedHeight = 0;
+        for (size_t i = 0; i < imageMats.size(); i++)
+        {
+            cv::Mat img = imageMats[i];
+            combinedWidth += img.cols;
+            if (img.rows > combinedHeight)
+            {
+                combinedHeight = img.rows;
+            }
+        }
+        combinedImg = cv::Mat(combinedHeight, combinedWidth, imageMats[0].type(), cv::Scalar(0, 0, 0));
+        int startX = 0;
+        int startY = 0;
+        for (size_t i = 0; i < imageMats.size(); i++)
+        {
+            cv::Mat img = imageMats[i];
+            cv::Mat roi = combinedImg(cv::Rect(startX, startY, img.cols, img.rows));
+            imageMats[i].copyTo(roi);
+            startX += img.cols;
         }
     }
-    cv::Mat combinedImg = cv::Mat(combinedHeight, combinedWidth, imageMats[0].type(), cv::Scalar(0, 0, 0));
-    int startX = 0;
-    int startY = 0;
-    for (size_t i = 0; i < imageMats.size(); i++)
-    {
-        cv::Mat img = imageMats[i];
-        cv::Mat roi = combinedImg(cv::Rect(startX, startY, img.cols, img.rows));
-        imageMats[i].copyTo(roi);
-        startX += img.cols;
-    }
     return combinedImg;
-#endif
 }
 
 int MultiCamFrameDS::get_timestamp()

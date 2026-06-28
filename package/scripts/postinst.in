@@ -1,0 +1,110 @@
+#!/bin/bash
+
+echo_red() {
+	echo -e "\033[31;49;1m $* \033[39;49;0m"
+}
+
+echo_blue() {
+	echo -e "\033[34;49;1m $* \033[39;49;0m"
+}
+
+echo_green() {
+	echo -e "\033[32;49;1m $* \033[39;49;0m"
+}
+
+echo_blue "configure DS_INSPUR environment please wait ......"
+
+# declare -a sysLibList
+# read_dir() {
+#     for file in `ls -a $1`
+#     do
+#         if [ -d $1"/"$file ]
+#         then
+#             if [[ $file != '.' && $file != '..' ]]
+#             then
+#                 read_dir $1"/"$file
+#             fi
+#         else
+#             echo $1"/"$file
+#             libName=$1"/"$file
+#             sysLibList[${#sysLibList[*]}]=$libName
+#         fi
+#     done
+# }
+
+# read_dir /lib64
+
+#echo ${sysLibList[@]}
+#echo ${#sysLibList[*]}
+
+
+declare -a sysLibList
+for lib in `ls /lib64 | sort`;do
+  sysLibList[${#sysLibList[*]}]=$lib
+done
+
+for lib in `ls /lib | sort`;do
+  sysLibList[${#sysLibList[*]}]=$lib
+done
+
+for lib in `ls /usr/lib | sort`;do
+  sysLibList[${#sysLibList[*]}]=$lib
+done
+
+for lib in `ls /usr/lib64 | sort`;do
+  sysLibList[${#sysLibList[*]}]=$lib
+done
+
+for lib in `ls /usr/local/lib | sort`;do
+  sysLibList[${#sysLibList[*]}]=$lib
+done
+
+for lib in `ls /usr/local/lib64 | sort`;do
+  sysLibList[${#sysLibList[*]}]=$lib
+done
+
+#echo ${sysLibList[@]}
+#echo ${sysLibList[*]}
+
+#echo ${#sysLibList[*]}
+if [[ -n $(docker ps -q ) ]];then
+    echo_red "Please install in the container"
+else
+    echo_green "Inside the container"
+    declare -a rmLibList
+    declare -i findFlag
+    for devlib in `ls @CMAKE_INSTALL_PREFIX@/dev | sort`
+    do
+      #echo $lib
+      #如果系统库中存在该库,删除安装的库.
+      findFlag=1
+      for syslib in ${sysLibList[*]}
+      do
+        strLibTemp=${devlib%%.so*}
+        #进行字符的比较!!
+        if [[ $syslib == *$strLibTemp* ]];then
+          findFlag=2
+          break
+        fi
+      done
+
+      if [ $findFlag -eq 2 ];then
+        rmLibList[${#rmLibList[*]}]=$devlib
+      fi
+    done
+
+    #echo_red ${#rmLibList[*]}
+
+    for rmlib in ${rmLibList[*]};
+    do
+      echo_red $rmlib
+      rm "@CMAKE_INSTALL_PREFIX@/dev/"$rmlib
+    done
+
+    echo "@CMAKE_INSTALL_PREFIX@/lib" > /etc/ld.so.conf.d/DS_INSPUR.conf
+    echo "@CMAKE_INSTALL_PREFIX@/dev" >> /etc/ld.so.conf.d/DS_INSPUR.conf
+    ldconfig
+
+    echo_green "configure complete please enjoy."
+    echo_green "DS_INSPUR is installed in  @CMAKE_INSTALL_PREFIX@"
+fi

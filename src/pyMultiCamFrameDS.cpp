@@ -1,16 +1,14 @@
-#include <pybind11/pybind11.h>
-#include <pybind11/stl.h>
+
 #include <string>
 #include <dlfcn.h>
 
+#include "utils/common_wrapper.hpp"
 #include "mutiCamFrameDS.h"
-#include "ndarray_converter/include/ndarray_converter.h"
 
 #include <libgen.h>   // 用于 dirname()
 #include <limits.h>   // 用于 PATH_MAX
 
 
-// ================== 全局资源管理 ==================
 static void* g_xml_parser_handle = nullptr; // 动态库句柄
 
 PYBIND11_MODULE(libmulticamframeDS, m)
@@ -48,12 +46,16 @@ PYBIND11_MODULE(libmulticamframeDS, m)
         printf("dlopen success\n");
     }
 
-    NDArrayConverter::init_numpy();
-
     pybind11::class_<Struct_FRAME>(m, "Frame")
         .def(pybind11::init<>())
         .def_readwrite("result", &Struct_FRAME::result)
-        .def_readwrite("frame", &Struct_FRAME::frame)
+        .def_property("frame",
+            [](const Struct_FRAME& self) {
+                return utils::MatToArray(self.frame);
+            },
+            [](Struct_FRAME& self, pybind11::array_t<uint8_t>& array) {
+                self.frame = utils::ArrayToMat(array);
+            })
         .def_readwrite("relativeTimestamp", &Struct_FRAME::relativeTimestamp);
 
     pybind11::class_<MultiCamFrameDS>(m, "MultiCamFrameDS")

@@ -41,18 +41,16 @@ int CamFrameDS::Init(std::string friendlyName, std::string filePath)
         return ret;
     }
 
-#if 0
     // 初始化曝光模式，曝光时间，模拟增益，消频闪，分辨率
-    IsMonoCamera(m_handle);
-    InitTrigger();
-    InitAEMode();
-    InitAETarget();
-    InitSpinExpoTime();
-    InitSpinGain();
-    InitROIMode();
-    InitTargetFormat();
-    InitColorSolution();
-#endif
+    // IsMonoCamera(m_handle);
+    // InitTrigger();
+    // InitAEMode();
+    // InitAETarget();
+    // InitSpinExpoTime();
+    // InitSpinGain();
+    // InitROIMode();
+    // InitTargetFormat();
+    // InitColorSolution();
 
     ret = _startGrabbing();
     if (ret != 0)
@@ -98,7 +96,6 @@ void CamFrameDS::Release()
     if (state == STATE_STARTED)
     {
         dvpStop(m_handle);
-        // 等待流真正停止
         int retry = 0;
         do
         {
@@ -140,18 +137,17 @@ int CamFrameDS::_openDev(std::string friendlyName, std::string filePath)
             return -1;
         }
 
-#if 0
         // 初始化曝光模式，曝光时间，模拟增益，消频闪，分辨率
-        IsMonoCamera(m_handle);
-        InitTrigger();
-        InitAEMode();
-        InitAETarget();
-        InitSpinExpoTime();
-        InitSpinGain();
-        InitROIMode();
-        InitTargetFormat();
-        InitColorSolution();
-#endif
+        // IsMonoCamera(m_handle);
+        // InitTrigger();
+        // InitAEMode();
+        // InitAETarget();
+        // InitSpinExpoTime();
+        // InitSpinGain();
+        // InitROIMode();
+        // InitTargetFormat();
+        // InitColorSolution();
+
         // 2.获取流的状态
         status = dvpGetStreamState(m_handle, &state);
         if (status != DVP_STATUS_OK)
@@ -321,7 +317,7 @@ std::string CamFrameDS::get_save_name(std::string path, int timestamp, std::stri
     std::time_t now_time = std::chrono::system_clock::to_time_t(now);
     // 转换为tm结构
     std::tm *now_tm = std::localtime(&now_time);
-    //一级目录  年月日
+    // 一级目录  年月日
     std::string path1 = std::to_string(1900 + now_tm->tm_year) + "-" + std::to_string(1 + now_tm->tm_mon) + "-" + std::to_string(now_tm->tm_mday);
     path = path + "/" + path1;
     std::error_code ec;
@@ -334,7 +330,7 @@ std::string CamFrameDS::get_save_name(std::string path, int timestamp, std::stri
         LOG(ERROR) << "Error: " << ec.message() << std::endl;
     }
 
-    //二级目录  小时
+    // 二级目录  小时
     std::string path2 = std::to_string(now_tm->tm_hour);
     path = path + "/" + path2;
     if (create_directory(path, ec))

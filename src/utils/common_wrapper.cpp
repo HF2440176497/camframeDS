@@ -1,14 +1,10 @@
 
 
-#include <pybind11/numpy.h>
-#include <pybind11/pybind11.h>
-#include <opencv2/opencv.hpp>
-
 #include "common_wrapper.hpp"
 
 namespace py = pybind11;
 
-namespace cnstream {
+namespace utils {
 
 py::dtype GetNpDType(int depth) {
   switch (depth) {

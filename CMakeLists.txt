@@ -72,15 +72,21 @@ endif()
 message(STATUS "GFLAGS Libraries: ${GFLAGS_LIBRARIES}")
 message(STATUS "GLOG Libraries: ${GLOG_LIBRARIES}")
 
-link_directories(/usr/local/lib
-	               ./lib
-)
+# 显式查找项目依赖的非 CMake 第三方库，避免全局 link_directories
+find_library(DVP_LIBRARY NAMES dvp PATHS /usr/local/lib ${CMAKE_CURRENT_SOURCE_DIR}/lib)
+find_library(HZD_LIBRARY NAMES hzd PATHS /usr/local/lib ${CMAKE_CURRENT_SOURCE_DIR}/lib)
+if(NOT DVP_LIBRARY)
+    message(FATAL_ERROR "dvp library not found")
+endif()
+if(NOT HZD_LIBRARY)
+    message(FATAL_ERROR "hzd library not found")
+endif()
 
 pybind11_add_module(multicamframeDS
             src/camFrameDS.cpp
             src/multiCamFrameDS.cpp
             src/pyMultiCamFrameDS.cpp
-            3rdparty/ndarray_converter/src/ndarray_converter.cpp
+            src/utils/common_wrapper.cpp
 )
 
 target_include_directories(multicamframeDS
@@ -94,8 +100,8 @@ target_include_directories(multicamframeDS
 
 target_link_libraries(multicamframeDS
   PRIVATE
-    dvp
-    hzd
+    ${DVP_LIBRARY}
+    ${HZD_LIBRARY}
     ${OpenCV_LIBS}
     ${GFLAGS_LIBRARIES}
     ${GLOG_LIBRARIES}
@@ -104,8 +110,8 @@ target_link_libraries(multicamframeDS
 add_executable(main src/main.cpp src/camFrameDS.cpp src/multiCamFrameDS.cpp)
 
 target_link_libraries(main
-    dvp
-    hzd
+    ${DVP_LIBRARY}
+    ${HZD_LIBRARY}
     ${OpenCV_LIBS}
     ${GFLAGS_LIBRARIES}
     ${GLOG_LIBRARIES}

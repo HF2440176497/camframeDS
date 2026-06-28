@@ -102,6 +102,7 @@ else
     done
 
     echo "/opt/software/DS_INSPUR/lib" > /etc/ld.so.conf.d/DS_INSPUR.conf
+    echo "/opt/software/DS_INSPUR/dev" >> /etc/ld.so.conf.d/DS_INSPUR.conf
     ldconfig
 
     echo_green "configure complete please enjoy."

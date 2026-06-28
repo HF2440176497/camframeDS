@@ -1,4 +1,3 @@
-##---------------- 以下为用CPack打包成deb包的内容 ----------------##
 
 # ----------------------------------------------------------------------------
 #  CMake file for package
@@ -12,16 +11,11 @@ if(POLICY CMP0054)
   cmake_policy(SET CMP0054 NEW)
 endif()
 
-set(MODELSTREAM_ROOT_DIR ${CMAKE_CURRENT_SOURCE_DIR}/..)
 # 指定deb包的版本号
 set(MAJOR_VERSION 2025)
 set(MINOR_VERSION 07)
 set(PATCH_VERSION 22)
 
-set(MODELSTREAM_TARGET_VERSION "${MAJOR_VERSION}.${MINOR_VERSION}.${PATCH_VERSION}")
-
-# set postinst
-set(CPACK_DEBIAN_PACKAGE_CONTROL_EXTRA "${CMAKE_CURRENT_SOURCE_DIR}/scripts/postinst")
 
 # search for dependenlibs
 set(APPLICATION_NAME "")
@@ -59,9 +53,6 @@ endif (${INSTALL_FILES_ERROR})
 message(STATUS "RESULT_VARIABLE is: ${RETRUNSTATUS}")
 message(STATUS "OUTPUT_VARIABLE is: ${DEPENDENLIBS}")
 string(REGEX REPLACE "\n" ";" DEPENDENLIBS "${DEPENDENLIBS}")
-string(REGEX REPLACE "\n" ";" DEPENDENLIBS2 "${DEPENDENLIBS2}")
-#message(STATUS "OUTPUT_VARIABLE is: ${DEPENDENLIBS}")
-
 
 # LEGAL_SO_FILES 是依赖的库文件
 
@@ -72,21 +63,11 @@ foreach (_file ${DEPENDENLIBS}) # Resolve illega so files
   ENDIF(${_file} MATCHES ".*so.*")
 endforeach()
 message(STATUS "OUTPUT_VARIABLE is: ${DEPENDENLIBS}")
-message(STATUS "OUTPUT_VARIABLE2 is: ${DEPENDENLIBS2}")
-foreach (_file2 ${DEPENDENLIBS2}) # Resolve illega so files
-  #message(STATUS "_file2 is: ${_file2}")
-  IF(${_file2} MATCHES ".*so.*")
-    list(APPEND LEGAL_SO_FILES ${_file2})
 
-  ENDIF(${_file2} MATCHES ".*so.*")
-endforeach()
-#message(STATUS "LEGAL_SO_FILES is: ${LEGAL_SO_FILES}")
+# message(STATUS "LEGAL_SO_FILES is: ${LEGAL_SO_FILES}")
 # filter some libs
 # TODO
 set(SYSTEMLIBS ".*libc.so;.*librt.so;.*libm.so;.*libgcc;.*libpthread.*;.*libdl.*;.*FormatConversion.*;.*MediaProcess.*;.*MvCameraControl.*;.*MvCameraControl.*;.*MVGigEVisionSDK.*;.*MVRender.*;.*libMVRender.*")
-list(APPEND SYSTEMLIBS ".*libcnstream")
-list(APPEND SYSTEMLIBS ".*libmodelstream")
-list(APPEND SYSTEMLIBS ".*libeventClient")
 
 set(REMOVELIBS "")
 foreach (_file ${LEGAL_SO_FILES})
@@ -123,7 +104,7 @@ file(GLOB_RECURSE SO_FILES
 )
 
 install(FILES ${SO_FILES} DESTINATION ${INSTALL_LIBDIR})
-install(FILES ${PROJECT_SOURCE_DIR}/example/example2.py DESTINATION ${INSTALL_LIBDIR})
+install(FILES ${PROJECT_SOURCE_DIR}/example/example.py DESTINATION ${INSTALL_LIBDIR})
 
 # [--  package
 
@@ -132,7 +113,7 @@ include(InstallRequiredSystemLibraries)
 set(CPACK_PACKAGE_NAME "${PROJECT_NAME}")
 set(CPACK_PACKAGE_VENDOR "Inspur")
 set(CPACK_PACKAGE_DESCRIPTION_FILE "${CMAKE_CURRENT_SOURCE_DIR}/INSTALL.md")
-set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "model-stream")
+set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "multi-camera frame DS")
 set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/LICENSE")
 
 set(CPACK_DEBIAN_PACKAGE_NAME "${PROJECT_NAME}")
@@ -140,13 +121,20 @@ set(CPACK_PACKAGE_DESCRIPTION "${PROJECT_NAME}")
 set(CPACK_PACKAGE_CONTACT "support@inspur.com")
 set(CPACK_DEBIAN_PACKAGE_MAINTAINER "inspur")
 
-set(CPACK_PACKAGING_INSTALL_PREFIX "/opt/software/${PROJECT_NAME}")
+set(CPACK_PACKAGING_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
+
+# 生成带安装前缀的 postinst 脚本（将 @CMAKE_INSTALL_PREFIX@ 替换为实际路径）
+configure_file(
+  "${CMAKE_CURRENT_SOURCE_DIR}/scripts/postinst.in"
+  "${CMAKE_CURRENT_BINARY_DIR}/scripts/postinst"
+  @ONLY
+)
+set(CPACK_DEBIAN_PACKAGE_CONTROL_EXTRA "${CMAKE_CURRENT_BINARY_DIR}/scripts/postinst")
 
 set(CPACK_PACKAGE_VERSION_MAJOR "${MAJOR_VERSION}")
 set(CPACK_PACKAGE_VERSION_MINOR "${MINOR_VERSION}")
 set(CPACK_PACKAGE_VERSION_PATCH "${PATCH_VERSION}")
 
-#set(CPACK_GENERATOR "ZIP;TGZ")
 
 if(UNIX)
   if(CMAKE_SYSTEM_NAME MATCHES Linux)
