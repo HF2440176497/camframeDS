@@ -88,3 +88,25 @@ else()
     message(FATAL_ERROR "Pybind11 not found. Install it or enable VSTREAM_BUILD_PYBIND11")
   endif()
 endif()
+
+
+pybind11_add_module(vstream_python
+  ${vstream_pybind_srcs}
+)
+
+target_include_directories(vstream_python
+ PRIVATE
+  ${CMAKE_CURRENT_SOURCE_DIR}/include  # vstream_python is final object
+  ${VSTREAM_PYTHON_3RDPARTY_INCLUDE}
+)
+
+target_link_libraries(vstream_python 
+ PRIVATE
+  ${VSTREAM_PYTHON_DEPENDENCIES}
+  ${VSTREAM_PYTHON_3RDPARTY_LIBS}
+)
+
+set_target_properties(vstream_python PROPERTIES
+  OUTPUT_NAME "vstream"
+  LIBRARY_OUTPUT_DIRECTORY ${VSTREAM_ROOT_PATH}/lib
+)

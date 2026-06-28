@@ -4,70 +4,111 @@ if(" ${CMAKE_SOURCE_DIR}" STREQUAL " ${CMAKE_BINARY_DIR}")
   message(FATAL_ERROR "Please create a separate directory for build files.")
 endif()
 
-add_compile_options(-std=c++11)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# 自定义 Python 路径配置
+set(DS_PYTHON_ROOT_DIR "" CACHE PATH "Custom Python root directory (e.g. /usr/local/python3.12). If not set, use system default.")
+set(DS_PYTHON_EXECUTABLE "" CACHE FILEPATH "Custom Python executable (e.g. /usr/local/bin/python3.12). If not set, use system default.")
+
 set(CMAKE_BUILD_TYPE "Debug")
-set(PYBIND11_CPP_STANDARD -std=c++11)
+set(PYBIND11_CPP_STANDARD -std=c++17)
 
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,-Bdynamic")
 set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -g3 -Wl,-Bdynamic")
 
-find_package(pybind11 REQUIRED)
-find_package(OpenCV REQUIRED)
-find_package(GFLAGS REQUIRED)
-find_package(GLOG REQUIRED)
-find_package(Python 3.9 REQUIRED COMPONENTS Development)
-message(STATUS "Python Include Dirs: ${Python_INCLUDE_DIRS}")
-message(STATUS "Python Libraries: ${Python_LIBRARIES}")
+# 如果指定了自定义 Python 路径，强制 pybind11 与 find_package(Python3) 使用它
+if(DS_PYTHON_ROOT_DIR)
+    set(Python_ROOT_DIR "${DS_PYTHON_ROOT_DIR}" CACHE PATH "Python root directory" FORCE)
+    set(Python3_ROOT_DIR "${DS_PYTHON_ROOT_DIR}" CACHE PATH "Python3 root directory" FORCE)
+    message(STATUS "Using custom Python_ROOT_DIR: ${DS_PYTHON_ROOT_DIR}")
+endif()
+if(DS_PYTHON_EXECUTABLE)
+    set(Python_EXECUTABLE "${DS_PYTHON_EXECUTABLE}" CACHE FILEPATH "Python executable" FORCE)
+    set(Python3_EXECUTABLE "${DS_PYTHON_EXECUTABLE}" CACHE FILEPATH "Python3 executable" FORCE)
+    set(PYTHON_EXECUTABLE "${DS_PYTHON_EXECUTABLE}" CACHE FILEPATH "Python executable" FORCE)
+    message(STATUS "Using custom Python_EXECUTABLE: ${DS_PYTHON_EXECUTABLE}")
+endif()
+
+# 使用本地 pybind11 源码编译
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/3rdparty/pybind11)
+find_package(Python3 REQUIRED COMPONENTS Interpreter Development.Module Development.Embed)
+message(STATUS "Using Python3")
+message(STATUS "  Interpreter  : ${Python3_EXECUTABLE}")
+message(STATUS "  Version      : ${Python3_VERSION}")
+message(STATUS "  Include dir  : ${Python3_INCLUDE_DIRS}")
+message(STATUS "  Library      : ${Python3_LIBRARIES}")
+
+# 动态获取 numpy include 目录
+if(Python3_EXECUTABLE)
+    execute_process(
+        COMMAND ${Python3_EXECUTABLE} -c "import numpy; print(numpy.get_include())"
+        OUTPUT_VARIABLE Python3_NUMPY_INCLUDE_DIR
+        OUTPUT_STRIP_TRAILING_WHITESPACE
+        ERROR_QUIET
+    )
+endif()
+
+# 使用项目自定义的查找模块
+list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
+
+# ---[ gflags
+include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/FindGFlags.cmake)
+if(NOT GFLAGS_FOUND)
+    message(FATAL_ERROR "GFlags not found! Please ensure GFlags is installed and set GFLAGS_ROOT_DIR or CMAKE_PREFIX_PATH")
+
+# ---[ glog
+include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/FindGlog.cmake)
+if(NOT GLOG_FOUND)
+    message(FATAL_ERROR "GLog not found! Please ensure GLog is installed and set GLOG_ROOT_DIR or CMAKE_PREFIX_PATH")
+endif()
+
+# ---[ opencv
+include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/FindOpenCV.cmake)
+if(NOT OpenCV_FOUND)
+    message(FATAL_ERROR "OpenCV not found. Please ensure OpenCV is installed")
+endif()
+
+message(STATUS "GFLAGS Libraries: ${GFLAGS_LIBRARIES}")
 message(STATUS "GLOG Libraries: ${GLOG_LIBRARIES}")
 
-
-include_directories(/usr/local/include/glog)
-
-include_directories(${Python_INCLUDE_DIRS})
-include_directories(${pybind11_INCLUDE_DIRS}
-		    /usr/local/lib/python3.9/site-packages/numpy/core/include
-                    ./include
-                    ./3rdparty
-                    /usr/local/include
-                    /usr/local/include/opencv4
-                    ${GFLAGS_INCLUDE_DIRS}
-)
-
-link_directories(${Python_LIBRARIES})
 link_directories(/usr/local/lib
 	               ./lib
 )
 
-add_library(multicamframeDS MODULE
+pybind11_add_module(multicamframeDS
             src/camFrameDS.cpp
             src/multiCamFrameDS.cpp
             src/pyMultiCamFrameDS.cpp
             3rdparty/ndarray_converter/src/ndarray_converter.cpp
 )
+
+target_include_directories(multicamframeDS
+  PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/include
+    ${OpenCV_INCLUDE_DIRS}
+    ${Python3_INCLUDE_DIRS}
+    ${GFLAGS_INCLUDE_DIRS}
+    ${GLOG_INCLUDE_DIRS}
+)
+
 target_link_libraries(multicamframeDS
-            pybind11::module
-            opencv_core
-            opencv_highgui
-            opencv_imgproc
-            dvp
-            hzd
-            ${OpenCV_LIBS}
-            ${GFLAGS_LIBRARIES}
-            glog
+  PRIVATE
+    dvp
+    hzd
+    ${OpenCV_LIBS}
+    ${GFLAGS_LIBRARIES}
+    ${GLOG_LIBRARIES}
 )
 
 add_executable(main src/main.cpp src/camFrameDS.cpp src/multiCamFrameDS.cpp)
 
 target_link_libraries(main
-            opencv_core
-            opencv_highgui
-            opencv_imgproc
-            dvp
-            hzd
-            ${OpenCV_LIBS}
-            ${GFLAGS_LIBRARIES}
-            glog
+    dvp
+    hzd
+    ${OpenCV_LIBS}
+    ${GFLAGS_LIBRARIES}
+    ${GLOG_LIBRARIES}
 )
 
 set(INSTALL_LIBDIR ${CMAKE_INSTALL_LIBDIR} CACHE PATH "Installation directory for libraries")
