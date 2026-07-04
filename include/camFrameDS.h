@@ -11,8 +11,8 @@
 #include <opencv2/opencv.hpp>
 #include <opencv2/highgui/highgui_c.h>
 
-#include "logging.h"
-#include "log_severity.h"
+#include "glog/logging.h"
+#include "glog/log_severity.h"
 
 #include "dataqueue.h"
 #include "DVPCamera.h"

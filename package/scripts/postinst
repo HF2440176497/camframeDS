@@ -73,7 +73,7 @@ else
     echo_green "Inside the container"
     declare -a rmLibList
     declare -i findFlag
-    for devlib in `ls /opt/software/DS_INSPUR/dev | sort`
+    for devlib in `ls @CMAKE_INSTALL_PREFIX@/dev | sort`
     do
       #echo $lib
       #如果系统库中存在该库,删除安装的库.
@@ -98,13 +98,13 @@ else
     for rmlib in ${rmLibList[*]};
     do
       echo_red $rmlib
-      rm "/opt/software/DS_INSPUR/dev/"$rmlib
+      rm "@CMAKE_INSTALL_PREFIX@/dev/"$rmlib
     done
 
-    echo "/opt/software/DS_INSPUR/lib" > /etc/ld.so.conf.d/DS_INSPUR.conf
-    echo "/opt/software/DS_INSPUR/dev" >> /etc/ld.so.conf.d/DS_INSPUR.conf
+    echo "@CMAKE_INSTALL_PREFIX@/lib" > /etc/ld.so.conf.d/DS_INSPUR.conf
+    echo "@CMAKE_INSTALL_PREFIX@/dev" >> /etc/ld.so.conf.d/DS_INSPUR.conf
     ldconfig
 
     echo_green "configure complete please enjoy."
-    echo_green "DS_INSPUR is installed in  /opt/software/DS_INSPUR"
+    echo_green "DS_INSPUR is installed in  @CMAKE_INSTALL_PREFIX@"
 fi

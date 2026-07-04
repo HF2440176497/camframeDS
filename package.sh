@@ -9,10 +9,13 @@
 # 使用说明：
 #	./package -debug 或者 ./package -release
 
+# 统一安装前缀（与 CMakeLists.txt 中的 DS_INSTALL_PREFIX 保持一致）
+INSTALL_PREFIX="/usr/local/DS_INSPUR"
+
 package_debug() {
   chmod 755 ./package/scripts/*
   cd build_debug
-  cmake .. -G"Unix Makefiles" -DRELEASE=OFF -DCMAKE_INSTALL_PREFIX=/opt/software/DS_INSPUR
+  cmake .. -G"Unix Makefiles" -DRELEASE=OFF -DCMAKE_INSTALL_PREFIX="${INSTALL_PREFIX}"
   cmake --build . --target package
   echo "package debug complete!"
 }
@@ -20,7 +23,7 @@ package_debug() {
 package_release() {
   chmod 755 ./package/scripts/*
   cd build_release
-  cmake .. -G"Unix Makefiles" -DRELEASE=ON -DCMAKE_INSTALL_PREFIX=/opt/software/DS_INSPUR
+  cmake .. -G"Unix Makefiles" -DRELEASE=ON -DCMAKE_INSTALL_PREFIX="${INSTALL_PREFIX}"
   cmake --build . --target package
   echo "package release complete!"
 }

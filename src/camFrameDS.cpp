@@ -240,7 +240,7 @@ int CamFrameDS::getImageBuffer(cv::Mat &image)
     if (status == DVP_STATUS_OK)
     {
 	    DLOG(INFO) << "dvpGetFrame success";
-        //图像格式转换，并写入同步队列
+        // 图像格式转换，并写入同步队列
         cv::Mat bgr24;
         convert2mat(&stOutFrame, (unsigned char *)pBuffer, bgr24);
         bgr24.copyTo(image);
@@ -308,7 +308,7 @@ bool CamFrameDS::create_directory(const std::string &path, std::error_code &ec)
 #endif
 }
 
-//获取图片路径，建立目录
+// 获取图片路径，建立目录
 std::string CamFrameDS::get_save_name(std::string path, int timestamp, std::string img_type)
 {
     // 获取当前时间点

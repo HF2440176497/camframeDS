@@ -1,6 +1,12 @@
+
+if(DEFINED __DS_INSPUR_FIND_OPENCV_GUARD)
+    return()
+endif()
+set(__DS_INSPUR_FIND_OPENCV_GUARD ON)
+
 include(FindPackageHandleStandardArgs)
 
-set(OpenCV_ROOT_DIR "" CACHE PATH "Folder contains OpenCV (set if manually compiled)")
+set(OpenCV_ROOT_DIR "/usr/local" CACHE PATH "Folder contains OpenCV")
 
 if(OpenCV_ROOT_DIR AND NOT OpenCV_DIR)
     find_file(OpenCV_CONFIG_FILE OpenCVConfig.cmake

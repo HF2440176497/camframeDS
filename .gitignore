@@ -2,4 +2,5 @@ build*/
 .vs*/
 *.sublime-workspace
 *.deb
-*.json
+./*.json
+./*.md

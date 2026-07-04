@@ -4,12 +4,19 @@ if(" ${CMAKE_SOURCE_DIR}" STREQUAL " ${CMAKE_BINARY_DIR}")
   message(FATAL_ERROR "Please create a separate directory for build files.")
 endif()
 
+set(DS_INSTALL_PREFIX "/usr/local/DS_INSPUR" CACHE PATH "Unified installation prefix for DS_INSPUR")
+if(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
+  set(CMAKE_INSTALL_PREFIX "${DS_INSTALL_PREFIX}" CACHE PATH "Install path prefix" FORCE)
+endif()
+message(STATUS "DS_INSTALL_PREFIX: ${DS_INSTALL_PREFIX}")
+message(STATUS "CMAKE_INSTALL_PREFIX: ${CMAKE_INSTALL_PREFIX}")
+
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # 自定义 Python 路径配置
-set(DS_PYTHON_ROOT_DIR "" CACHE PATH "Custom Python root directory (e.g. /usr/local/python3.12). If not set, use system default.")
-set(DS_PYTHON_EXECUTABLE "" CACHE FILEPATH "Custom Python executable (e.g. /usr/local/bin/python3.12). If not set, use system default.")
+set(DS_PYTHON_ROOT_DIR "/usr/local/python3.13" CACHE PATH "Custom Python root directory.")
+set(DS_PYTHON_EXECUTABLE "/usr/local/bin/python3.13" CACHE FILEPATH "Custom Python executable.")
 
 set(CMAKE_BUILD_TYPE "Debug")
 set(PYBIND11_CPP_STANDARD -std=c++17)
@@ -52,18 +59,20 @@ endif()
 # 使用项目自定义的查找模块
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 
-# ---[ gflags
+set(GFLAGS_FOUND FALSE)
+set(GLOG_FOUND FALSE)
+set(OpenCV_FOUND FALSE)
+
 include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/FindGFlags.cmake)
 if(NOT GFLAGS_FOUND)
-    message(FATAL_ERROR "GFlags not found! Please ensure GFlags is installed and set GFLAGS_ROOT_DIR or CMAKE_PREFIX_PATH")
-
-# ---[ glog
-include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/FindGlog.cmake)
-if(NOT GLOG_FOUND)
-    message(FATAL_ERROR "GLog not found! Please ensure GLog is installed and set GLOG_ROOT_DIR or CMAKE_PREFIX_PATH")
+    message(FATAL_ERROR "GFlags not found! Please ensure GFlags is installed")
 endif()
 
-# ---[ opencv
+include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/FindGlog.cmake)
+if(NOT GLOG_FOUND)
+    message(FATAL_ERROR "GLog not found! Please ensure GLog is installed")
+endif()
+
 include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/FindOpenCV.cmake)
 if(NOT OpenCV_FOUND)
     message(FATAL_ERROR "OpenCV not found. Please ensure OpenCV is installed")
@@ -83,10 +92,10 @@ if(NOT HZD_LIBRARY)
 endif()
 
 pybind11_add_module(multicamframeDS
-            src/camFrameDS.cpp
-            src/multiCamFrameDS.cpp
-            src/pyMultiCamFrameDS.cpp
-            src/utils/common_wrapper.cpp
+  src/camFrameDS.cpp
+  src/multiCamFrameDS.cpp
+  src/pyMultiCamFrameDS.cpp
+  src/utils/common_wrapper.cpp
 )
 
 target_include_directories(multicamframeDS
@@ -107,7 +116,20 @@ target_link_libraries(multicamframeDS
     ${GLOG_LIBRARIES}
 )
 
-add_executable(main src/main.cpp src/camFrameDS.cpp src/multiCamFrameDS.cpp)
+add_executable(main 
+  src/main.cpp 
+  src/camFrameDS.cpp 
+  src/multiCamFrameDS.cpp
+)
+
+target_include_directories(main
+  PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/include
+    ${OpenCV_INCLUDE_DIRS}
+    ${Python3_INCLUDE_DIRS}
+    ${GFLAGS_INCLUDE_DIRS}
+    ${GLOG_INCLUDE_DIRS}
+)
 
 target_link_libraries(main
     ${DVP_LIBRARY}

@@ -9,11 +9,14 @@
 # 使用说明：
 #	./build -debug 或者 ./build -release
 
+# 统一安装前缀（与 CMakeLists.txt 中的 DS_INSTALL_PREFIX 保持一致）
+INSTALL_PREFIX="/usr/local/DS_INSPUR"
+
 build_debug() {
   mkdir -p build_debug
   cd build_debug
-  cmake ..  -DRELEASE=OFF -DCMAKE_INSTALL_PREFIX=/opt/software/DS_INSPUR
-  make -j16
+  cmake ..  -DRELEASE=OFF -DCMAKE_INSTALL_PREFIX="${INSTALL_PREFIX}"
+  make -j4
   make install
   echo "build debug complete!"
 }
@@ -21,8 +24,8 @@ build_debug() {
 build_release() {
   mkdir -p build_release
   cd build_release
-  cmake ..  -DRELEASE=ON -DCMAKE_INSTALL_PREFIX=/opt/software/DS_INSPUR
-  make -j16
+  cmake ..  -DRELEASE=ON -DCMAKE_INSTALL_PREFIX="${INSTALL_PREFIX}"
+  make -j4
   make install
   echo "build release complete!"
 }

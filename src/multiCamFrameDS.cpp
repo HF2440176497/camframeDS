@@ -336,7 +336,7 @@ cv::Mat MultiCamFrameDS::combineImg(std::vector<cv::Mat> &imageMats, int directi
             startY += img.rows;
         }
 
-    } elseif (direction == 1) {  // 横向合并
+    } else if (direction == 1) {  // 横向合并
         int combinedWidth = 0;
         int combinedHeight = 0;
         for (size_t i = 0; i < imageMats.size(); i++)
@@ -358,6 +358,8 @@ cv::Mat MultiCamFrameDS::combineImg(std::vector<cv::Mat> &imageMats, int directi
             imageMats[i].copyTo(roi);
             startX += img.cols;
         }
+    } else {
+        LOG(ERROR) << "direction unknown, direction = " << direction;
     }
     return combinedImg;
 }

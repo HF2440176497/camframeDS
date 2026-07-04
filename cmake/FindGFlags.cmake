@@ -55,6 +55,11 @@
 #  GFLAGS_LIBRARIES
 #  GFLAGS_LIBRARYRARY_DIRS
 
+if(DEFINED __DS_INSPUR_FIND_GFLAGS_GUARD)
+    return()
+endif()
+set(__DS_INSPUR_FIND_GFLAGS_GUARD ON)
+
 include(FindPackageHandleStandardArgs)
 
 set(GFLAGS_ROOT_DIR "" CACHE PATH "Folder contains Gflags")

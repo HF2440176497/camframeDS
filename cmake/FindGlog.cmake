@@ -55,6 +55,11 @@
 #  GLOG_LIBRARIES
 #  GLOG_LIBRARYRARY_DIRS
 
+if(DEFINED __DS_INSPUR_FIND_OPENCV_GUARD)
+    return()
+endif()
+set(__DS_INSPUR_FIND_GLOG_GUARD ON)
+
 include(FindPackageHandleStandardArgs)
 
 set(GLOG_ROOT_DIR "" CACHE PATH "Folder contains Google glog")
