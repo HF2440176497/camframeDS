@@ -8,7 +8,6 @@
 #include <vector>
 #include <system_error>
 #include <opencv2/opencv.hpp>
-#include <opencv2/highgui/highgui_c.h>
 
 #include "camFrameDS.h"
 
@@ -51,7 +50,6 @@ private:
 
     dataQueue<FRAME_DS> que;
     dataQueue<std::vector<FRAME_DS>> queBatch;
-    std::vector<FRAME_DS> m_backupDsFrame;      // 用于存储成功帧的备份
     
     std::thread m_frameThread;
     std::atomic<int> m_runFlag;

@@ -9,7 +9,6 @@
 #include <atomic>
 #include <system_error>
 #include <opencv2/opencv.hpp>
-#include <opencv2/highgui/highgui_c.h>
 
 #include "glog/logging.h"
 #include "glog/log_severity.h"
@@ -22,12 +21,11 @@
 #define END         1
 #define SUCCESS     0
 #define NONE        -1
-//#define ERROR     -2
 
 #define RUN  1
 #define STOP 0
 
-#define GRABTIMEOUT   3000                  // 图像获取的超时时间 ms
+#define GRABTIMEOUT   5000                  // 图像获取的超时时间 ms
 
 typedef struct Struct_FRAME 
 {

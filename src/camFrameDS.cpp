@@ -248,14 +248,15 @@ int CamFrameDS::getImageBuffer(cv::Mat &image)
         return 0;
     }
     
-    LOG(WARNING) << "dvpGetFrame failed!! " << m_friendlyName << " " << m_iniPath;
+    LOG(WARNING) << "dvpGetFrame failed: " << m_friendlyName;
+    LOG(WARNING) << "  status: " << status << "; path: " << m_iniPath;
 
     return -1;
 }
 
 std::string CamFrameDS::getCameraInfo()
 {
-    return m_friendlyName + " " + m_iniPath;
+    return "Camera: " + m_friendlyName + "; Path: " + m_iniPath;
 }
 
 bool CamFrameDS::create_directory(const std::string &path, std::error_code &ec)
@@ -350,12 +351,12 @@ bool CamFrameDS::convert2mat(dvpFrame *pFrameInfo, unsigned char *pData, cv::Mat
     if (pFrameInfo->format == FORMAT_MONO)
     {
         srcImage = cv::Mat(pFrameInfo->iHeight, pFrameInfo->iWidth, CV_8UC1, pData);
-        LOG(INFO) << "MONO convert to cv::Mat OK.";
+        LOG(INFO) << "MONO convert to cv::Mat complete.";
     }
     else if (pFrameInfo->format == FORMAT_BGR24)
     {
         srcImage = cv::Mat(pFrameInfo->iHeight, pFrameInfo->iWidth, CV_8UC3, pData);
-        LOG(INFO) << "BGR24 convert to cv::Mat OK.";
+        LOG(INFO) << "BGR24 convert to cv::Mat complete.";
     }
     else
     {

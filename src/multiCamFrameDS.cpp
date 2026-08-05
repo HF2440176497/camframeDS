@@ -154,17 +154,18 @@ void MultiCamFrameDS::Release()
 {
     m_runFlag = STOP;
 
-    // 1. 先停止数据流
-    for (auto cam = m_cameras.begin(); cam != m_cameras.end(); cam++)
-    {
-        delete (*cam);
-    }
-
-    // 2. 等待采集线程退出
+    // 1. 先等待采集线程退出，避免线程在 m_cameras 被释放后继续访问
     if (m_frameThread.joinable())
     {
         m_frameThread.join();
     }
+
+    // 2. 线程已退出，安全释放相机，并清空 vector 防止悬空指针被重复 delete
+    for (auto cam = m_cameras.begin(); cam != m_cameras.end(); cam++)
+    {
+        delete (*cam);
+    }
+    m_cameras.clear();
 }
 
 void MultiCamFrameDS::GetFrameCpu()
@@ -174,11 +175,6 @@ void MultiCamFrameDS::GetFrameCpu()
     {
         m_backupImages.resize(m_camNum);
         m_backupTimes.resize(m_camNum, 0);
-        for (int i = 0; i < m_camNum; i++) 
-        {
-            m_backupImages[i] = cv::Mat::zeros(640, 640, CV_8UC1);
-            m_backupTimes[i] = get_timestamp();
-        }
     }
 
     while (m_runFlag == RUN)
@@ -189,29 +185,28 @@ void MultiCamFrameDS::GetFrameCpu()
         // 1. 获取图像
         for (int i = 0; i < m_camNum; i++)
         {
-            cv::Mat currentImg;
-            int ret = m_cameras[i]->getImageBuffer(currentImg);
-            if (ret == 0 && !currentImg.empty())
+            cv::Mat cur_image;
+            int ret = m_cameras[i]->getImageBuffer(cur_image);
+            if (ret == 0 && !cur_image.empty())
             {
-                int relativeTimestamp = get_timestamp();
-                images.push_back(currentImg);
-                times.push_back(relativeTimestamp);
-                m_backupImages[i] = currentImg.clone(); // 更新备份帧
-                m_backupTimes[i] = relativeTimestamp; // 更新备份时间
+                int ts = get_timestamp();
+                images.push_back(cur_image);
+                times.push_back(ts);
+                m_backupImages[i] = cur_image.clone();
+                m_backupTimes[i] = ts;
             }
             else
             {
-                // 首次，使用初始化的备份
-                if (m_backupImages[i].empty()) {
+                if (m_backupImages[i].empty()) 
+                {
                     m_backupImages[i] = cv::Mat::zeros(640, 640, CV_8UC1);
                     m_backupTimes[i] = get_timestamp();
                 }
-
-                // 使用上次成功帧
                 images.push_back(m_backupImages[i].clone());
                 times.push_back(m_backupTimes[i]);
 
-                LOG(WARNING) << "use backup image " << m_cameras[i]->getCameraInfo();
+                LOG(WARNING) << "use backup image [" << i << "]";
+                LOG(WARNING) << "  info: " << m_cameras[i]->getCameraInfo();
             }
         }
 
@@ -223,6 +218,18 @@ void MultiCamFrameDS::GetFrameCpu()
         {
             LOG(ERROR) << "camere number = " << m_camNum << " images.size()= " << images.size();
             continue;
+        }
+
+        int i = 0;
+        for (const auto &img : images)
+        {
+            if (img.empty())
+            {
+                LOG(ERROR) << "frame [" << i << "] is empty";
+                continue;
+            }
+            LOG(INFO) << "frame [" << i << "] size: " << img.cols << " x " << img.rows << " x " << img.channels();
+            i++;
         }
 
         // 2.图像转换
@@ -253,11 +260,6 @@ void MultiCamFrameDS::GetFrameCpuBatch()
     {
         m_backupImages.resize(m_camNum);
         m_backupTimes.resize(m_camNum, 0);
-        for (int i = 0; i < m_camNum; i++) 
-        {
-            m_backupImages[i] = cv::Mat::zeros(640, 640, CV_8UC1);
-            m_backupTimes[i] = get_timestamp();
-        }
     }
 
     while (m_runFlag == RUN)
@@ -267,24 +269,36 @@ void MultiCamFrameDS::GetFrameCpuBatch()
         // 1. 获取图像
         for (int i = 0; i < m_camNum; i++)
         {
-            cv::Mat currentImg;
-            int ret = m_cameras[i]->getImageBuffer(currentImg);
-            if (ret == 0 && !currentImg.empty())
+            cv::Mat cur_image;
+            int ret = m_cameras[i]->getImageBuffer(cur_image);
+            if (ret == 0 && !cur_image.empty())
             {
+                int ts = get_timestamp();
                 FRAME_DS res;
                 res.result = SUCCESS;
-                res.relativeTimestamp = get_timestamp();
-                res.frame = currentImg;
+                res.relativeTimestamp = ts;
+                res.frame = cur_image;
 
                 dsImages.push_back(res);
-                m_backupDsFrame[i] = res; // 更新备份帧
+                m_backupImages[i] = cur_image.clone();
+                m_backupTimes[i] = ts;
             }
             else
             {
-                // 使用上次成功帧
-                dsImages.push_back(m_backupDsFrame[i]);
+                if (m_backupImages[i].empty()) 
+                {
+                    m_backupImages[i] = cv::Mat::zeros(640, 640, CV_8UC1);
+                    m_backupTimes[i] = get_timestamp();
+                }
+                FRAME_DS res;
+                res.result = SUCCESS;
+                res.relativeTimestamp = m_backupTimes[i];
+                res.frame = m_backupImages[i].clone();
 
-                LOG(WARNING) << "read Frame ERROR" << m_cameras[i]->getCameraInfo();
+                dsImages.push_back(res);
+
+                LOG(WARNING) << "use backup image [" << i << "]";
+                LOG(WARNING) << "  info: " << m_cameras[i]->getCameraInfo();
             }
         }
 

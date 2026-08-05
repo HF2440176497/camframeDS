@@ -11,7 +11,7 @@
 
 static void* g_xml_parser_handle = nullptr; // 动态库句柄
 
-PYBIND11_MODULE(libmulticamframeDS, m)
+PYBIND11_MODULE(multicamframeDS, m)
 {
     m.doc() = "pybind11 get frame from DS camera by ip";
 

@@ -23,7 +23,7 @@ set(APPLICATION_NAME "")
 execute_process(
     WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/
     COMMAND ls
-    COMMAND egrep "libcamframeDS"
+    COMMAND egrep "multicamframeDS"
     RESULT_VARIABLE RETRUNSTATUS
     OUTPUT_VARIABLE APPLICATION_NAME
     ERROR_VARIABLE DEPENDEN_FILES_ERROR
@@ -99,6 +99,7 @@ install(
 )
 
 file(GLOB_RECURSE SO_FILES 
+    "${CMAKE_SOURCE_DIR}/depends/*.so"
     "${CMAKE_SOURCE_DIR}/lib/*.so" 
     "${CMAKE_SOURCE_DIR}/lib/*.so.*"  # 包含带版本号的库
 )
