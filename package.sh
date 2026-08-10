@@ -17,7 +17,7 @@ package_debug() {
   cd build_debug
   cmake .. -G"Unix Makefiles" -DRELEASE=OFF -DCMAKE_INSTALL_PREFIX="${INSTALL_PREFIX}"
   cmake --build . --target package
-  echo "package debug complete!"
+  echo "package debug complete"
 }
 
 package_release() {
@@ -25,7 +25,7 @@ package_release() {
   cd build_release
   cmake .. -G"Unix Makefiles" -DRELEASE=ON -DCMAKE_INSTALL_PREFIX="${INSTALL_PREFIX}"
   cmake --build . --target package
-  echo "package release complete!"
+  echo "package release complete"
 }
 if [[ $1 = '-debug' ]]; then
 	package_debug

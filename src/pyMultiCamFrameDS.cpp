@@ -1,6 +1,7 @@
 
 #include <string>
 #include <dlfcn.h>
+#include <cstdlib>      // getenv / _dupenv_s
 
 #include "utils/common_wrapper.hpp"
 #include "mutiCamFrameDS.h"
@@ -18,9 +19,21 @@ PYBIND11_MODULE(multicamframeDS, m)
     char path[PATH_MAX] = {0}; // 使用 PATH_MAX 确保足够长度
 
     // 优先检查环境变量中的路径
-    const char* env_path = getenv("CAM_DS_LIB_PATH");
-    if (env_path != nullptr) {
-        snprintf(path, sizeof(path), "%s/libXmlParser_gcc42_v3_1.so", env_path);
+    char* env_value = nullptr;
+#if defined(_WIN32)
+    size_t env_size = 0;
+    if (_dupenv_s(&env_value, &env_size, "CAM_DS_LIB_PATH") != 0) {
+        env_value = nullptr;
+    }
+#else
+    env_value = getenv("CAM_DS_LIB_PATH");
+#endif
+
+    if (env_value != nullptr) {
+        snprintf(path, sizeof(path), "%s/libXmlParser_gcc42_v3_1.so", env_value);
+#if defined(_WIN32)
+        free(env_value);
+#endif
     } else {
         // 获取当前模块的路径
         pybind11::module_ sys_modules = pybind11::module_::import("sys");
@@ -60,16 +73,27 @@ PYBIND11_MODULE(multicamframeDS, m)
 
     pybind11::class_<MultiCamFrameDS>(m, "MultiCamFrameDS")
         .def(pybind11::init<int>())
-        .def("scan_cameras", &MultiCamFrameDS::ScanCamers)
+        .def("scan_cameras", &MultiCamFrameDS::ScanCamers,
+            pybind11::call_guard<pybind11::gil_scoped_release>())
         .def("create_camera", &MultiCamFrameDS::CreateCamere,
-            pybind11::arg("ip"), 
+            pybind11::call_guard<pybind11::gil_scoped_release>(),
+            pybind11::arg("ip"),
             pybind11::arg("file_path"))
-        .def("init", &MultiCamFrameDS::Init)
-        .def("setMode",&MultiCamFrameDS::SetMode)
-        .def("read", &MultiCamFrameDS::Read)
+        .def("init", &MultiCamFrameDS::Init,
+            pybind11::call_guard<pybind11::gil_scoped_release>())
+        .def("set_mode", &MultiCamFrameDS::SetMode)
+        .def("set_rotate", &MultiCamFrameDS::SetRotate,
+            pybind11::arg("rotate_code"))
+        .def("set_resize", &MultiCamFrameDS::SetResize,
+            pybind11::arg("width"), pybind11::arg("height"))
+        .def("read", &MultiCamFrameDS::Read,
+            pybind11::call_guard<pybind11::gil_scoped_release>())
         .def("read_t", &MultiCamFrameDS::Read_t,
+            pybind11::call_guard<pybind11::gil_scoped_release>(),
             pybind11::arg("time_wait") = 50)
         .def("read_batch_t", &MultiCamFrameDS::ReadBatch_t,
+            pybind11::call_guard<pybind11::gil_scoped_release>(),
             pybind11::arg("time_wait") = 50)
-        .def("release", &MultiCamFrameDS::Release);
+        .def("release", &MultiCamFrameDS::Release,
+            pybind11::call_guard<pybind11::gil_scoped_release>());
 }

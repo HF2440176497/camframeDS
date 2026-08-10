@@ -18,7 +18,7 @@ build_debug() {
   cmake ..  -DRELEASE=OFF -DCMAKE_INSTALL_PREFIX="${INSTALL_PREFIX}"
   make -j4
   make install
-  echo "build debug complete!"
+  echo "build debug complete"
 }
 
 build_release() {
@@ -27,7 +27,7 @@ build_release() {
   cmake ..  -DRELEASE=ON -DCMAKE_INSTALL_PREFIX="${INSTALL_PREFIX}"
   make -j4
   make install
-  echo "build release complete!"
+  echo "build release complete"
 }
 
 if [[ $1 = '-debug' ]]; then

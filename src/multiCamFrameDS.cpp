@@ -10,6 +10,9 @@ MultiCamFrameDS::MultiCamFrameDS(int camNum)
 {
     m_camNum = camNum;
     m_runFlag = RUN;
+    m_rotateCode = -1;
+    m_resizeW = 0;
+    m_resizeH = 0;
 }
 
 MultiCamFrameDS::~MultiCamFrameDS()
@@ -74,7 +77,7 @@ std::tuple<int, std::vector<std::string>> MultiCamFrameDS::ScanCamers()
                 }
                 else
                 {
-                    LOG(ERROR) << "IP address segment not found!";
+                    LOG(ERROR) << "IP address segment not found";
                 }
                 m_ip2friendlyName.insert(std::pair<std::string, std::string>(ipAddress, friendlyName));
 
@@ -141,6 +144,42 @@ FRAME_DS MultiCamFrameDS::Read_t(int time_wait)
 void MultiCamFrameDS::SetMode(int mode)
 {
     m_mode = mode;
+}
+
+void MultiCamFrameDS::SetRotate(int rotateCode)
+{
+    m_rotateCode = rotateCode;
+}
+
+void MultiCamFrameDS::SetResize(int width, int height)
+{
+    m_resizeW = width;
+    m_resizeH = height;
+}
+
+cv::Mat MultiCamFrameDS::applyTransform(const cv::Mat& img)
+{
+    if (img.empty())
+        return img;
+
+    cv::Mat result = img;
+
+    // 1. 先缩放
+    int w = m_resizeW.load();
+    int h = m_resizeH.load();
+    if (w > 0 && h > 0 && (w != result.cols || h != result.rows))
+    {
+        cv::resize(result, result, cv::Size(w, h));
+    }
+
+    // 2. 再旋转 (语义与 cv::rotate 一致)
+    int code = m_rotateCode.load();
+    if (code >= 0)
+    {
+        cv::rotate(result, result, code);
+    }
+
+    return result;
 }
 
 std::vector<FRAME_DS> MultiCamFrameDS::ReadBatch_t(int time_wait)
@@ -237,7 +276,8 @@ void MultiCamFrameDS::GetFrameCpu()
         cv::Mat combinedImg = combineImg(images);
 
         DLOG(INFO) << "combineImg: " << combinedImg.cols << " x " << combinedImg.rows << " x " << combinedImg.channels();
-        // 4、图像缩放
+        // 4、旋转 + 缩放
+        combinedImg = applyTransform(combinedImg);
         // 5、推进队列
         FRAME_DS res;
         res.result = SUCCESS;
@@ -310,6 +350,12 @@ void MultiCamFrameDS::GetFrameCpuBatch()
         {
             LOG(ERROR) << "camere number = " << m_camNum << " images.size()= " << dsImages.size();
             continue;
+        }
+
+        // 对每帧进行旋转 + 缩放
+        for (auto& ds : dsImages)
+        {
+            ds.frame = applyTransform(ds.frame);
         }
 
         queBatch.setData(dsImages);

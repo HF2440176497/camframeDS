@@ -28,6 +28,10 @@ public:
     FRAME_DS Read_t(int time_wait = 50);
     // 设置模式,如果为1 返回的是 已经拼接的 图 , 如果为 2 返回的是 多个未拼接的图像。
     void SetMode(int mode);
+    // 设置旋转, 语义与 cv::rotate 一致: 0=顺时针90°, 1=180°, 2=逆时针90°, -1=不旋转
+    void SetRotate(int rotateCode);
+    // 设置缩放, width/height 为目标尺寸, 0 表示不缩放
+    void SetResize(int width, int height);
     // 获取多帧
     std::vector<FRAME_DS> ReadBatch_t(int time_wait = 50);
     // 释放
@@ -38,6 +42,8 @@ private:
     void GetFrameCpuBatch();
     // 合并图片
     cv::Mat combineImg(std::vector<cv::Mat>& imageMats, int direction = 1);
+    // 对图像先缩放再旋转
+    cv::Mat applyTransform(const cv::Mat& img);
     // 获取时间戳
     int get_timestamp();
 private:
@@ -53,6 +59,10 @@ private:
     
     std::thread m_frameThread;
     std::atomic<int> m_runFlag;
+
+    std::atomic<int> m_rotateCode;              // 旋转码, -1=不旋转
+    std::atomic<int> m_resizeW;                 // 缩放目标宽, 0=不缩放
+    std::atomic<int> m_resizeH;                 // 缩放目标高, 0=不缩放
 
     std::string m_ipAddr;
     std::string m_iniPath;
