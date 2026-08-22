@@ -116,29 +116,6 @@ target_link_libraries(multicamframeDS
     ${GLOG_LIBRARIES}
 )
 
-add_executable(main 
-  src/main.cpp 
-  src/camFrameDS.cpp 
-  src/multiCamFrameDS.cpp
-)
-
-target_include_directories(main
-  PRIVATE
-    ${CMAKE_CURRENT_SOURCE_DIR}/include
-    ${OpenCV_INCLUDE_DIRS}
-    ${Python3_INCLUDE_DIRS}
-    ${GFLAGS_INCLUDE_DIRS}
-    ${GLOG_INCLUDE_DIRS}
-)
-
-target_link_libraries(main
-    ${DVP_LIBRARY}
-    ${HZD_LIBRARY}
-    ${OpenCV_LIBS}
-    ${GFLAGS_LIBRARIES}
-    ${GLOG_LIBRARIES}
-)
-
 set(INSTALL_LIBDIR ${CMAKE_INSTALL_LIBDIR} CACHE PATH "Installation directory for libraries")
 set(INSTALL_BINDIR ${CMAKE_INSTALL_BINDIR} CACHE PATH "Installation directory for executables")
 
