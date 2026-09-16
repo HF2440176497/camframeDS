@@ -19,7 +19,7 @@ public:
     // 查找相机
     std::tuple<int, std::vector<std::string>> ScanCamers();
     // 创建单个相机
-    int CreateCamere(std::string ip, std::string filePath);
+    int CreateCamera(std::string ip, std::string filePath);
     // 初始化相机
     int Init();
     // 获取帧
@@ -32,6 +32,10 @@ public:
     void SetRotate(int rotateCode);
     // 设置缩放, width/height 为目标尺寸, 0 表示不缩放
     void SetResize(int width, int height);
+    // 设置相机初始化失败时的最大重连次数, 0 表示不重连
+    void SetMaxReconnect(int count);
+    // 设置相机连续使用备份图的最大次数, 达到后停止拼接输出, 直到所有相机恢复正常拉流
+    void SetMaxBackupCount(int count);
     // 获取多帧
     std::vector<FRAME_DS> ReadBatch_t(int time_wait = 50);
     // 释放
@@ -53,6 +57,10 @@ private:
     dvpCameraInfo   m_cameraInfo[16];
     std::vector<cv::Mat> m_backupImages;        // 用于存储成功帧的备份
     std::vector<long int> m_backupTimes;
+    std::vector<int> m_backupFailCounts;        // 每个相机连续使用备份图的次数
+
+    int m_maxReconnect;                         // 相机初始化失败时的最大重连次数
+    int m_maxBackupCount;                       // 相机连续使用备份图的最大次数, 达到后停止拼接输出
 
     dataQueue<FRAME_DS> que;
     dataQueue<std::vector<FRAME_DS>> queBatch;

@@ -6,6 +6,8 @@
 #include <sys/stat.h>
 #endif
 
+#define RECONNECT_INTERVAL_MS  1000              // 相机初始化失败重连的间隔 ms
+
 MultiCamFrameDS::MultiCamFrameDS(int camNum)
 {
     m_camNum = camNum;
@@ -13,6 +15,8 @@ MultiCamFrameDS::MultiCamFrameDS(int camNum)
     m_rotateCode = -1;
     m_resizeW = 0;
     m_resizeH = 0;
+    m_maxReconnect = 3;
+    m_maxBackupCount = 3;
 }
 
 MultiCamFrameDS::~MultiCamFrameDS()
@@ -38,7 +42,7 @@ std::tuple<int, std::vector<std::string>> MultiCamFrameDS::ScanCamers()
     status = dvpRefresh(&n);
     if (status != DVP_STATUS_OK)
     {
-        LOG(ERROR) << "Refresh fail!";
+        LOG(ERROR) << "Refresh fail";
         return std::make_tuple(0, std::vector<std::string>{});
     }
 
@@ -58,13 +62,13 @@ std::tuple<int, std::vector<std::string>> MultiCamFrameDS::ScanCamers()
             status = dvpEnum(i, &m_cameraInfo[i]);
             if (status != DVP_STATUS_OK)
             {
-                LOG(ERROR) << "Enumerate fail!";
+                LOG(ERROR) << "Enumerate fail";
                 return std::make_tuple(0, std::vector<std::string>{});
             }
             else
             {
                 // 打印设备名称,可能包含 ip 地址
-                LOG(INFO) << "Camera" << i << "LinkName is : " << m_cameraInfo[i].LinkName;
+                LOG(INFO) << "Camera [" << i << "] LinkName is : " << m_cameraInfo[i].LinkName;
                 std::string friendlyName = m_cameraInfo[i].FriendlyName;
                 std::string LinkName = m_cameraInfo[i].LinkName;
                 std::string ipAddress;
@@ -81,14 +85,14 @@ std::tuple<int, std::vector<std::string>> MultiCamFrameDS::ScanCamers()
                 }
                 m_ip2friendlyName.insert(std::pair<std::string, std::string>(ipAddress, friendlyName));
 
-                LOG(INFO) << "Camera" << i << "ipAddress is : " << ipAddress << " friendlyName is : " << friendlyName;
+                LOG(INFO) << "Camera [" << i << "] ip: " << ipAddress << "; friendlyName: " << friendlyName;
                 ipList.push_back(ipAddress);
             }
         }
     }
     else
     {
-        LOG(ERROR) << "Find No Devices!";
+        LOG(ERROR) << "Find No Devices";
         return std::make_tuple(0, std::vector<std::string>{});
     }
 
@@ -96,19 +100,54 @@ std::tuple<int, std::vector<std::string>> MultiCamFrameDS::ScanCamers()
 }
 
 // 根据IP和配置文件创建相机
-int MultiCamFrameDS::CreateCamere(std::string ip, std::string filePath)
+int MultiCamFrameDS::CreateCamera(std::string ip, std::string filePath)
 {
-    CamFrameDS *cam = new CamFrameDS();
+    // ip 未找到时重新扫描: 网络抖动可能导致 ScanCamers 漏掉相机
+    // 重复 ScanCamers 是安全的, insert 不会覆盖已有条目, 结果为多次扫描的并集
+    if (m_ip2friendlyName.find(ip) == m_ip2friendlyName.end())
+    {
+        for (int retry = 1; retry <= m_maxReconnect; retry++)
+        {
+            LOG(WARNING) << "IP [" << ip << "] not found, rescan " << retry << "/" << m_maxReconnect;
+            std::this_thread::sleep_for(std::chrono::milliseconds(RECONNECT_INTERVAL_MS));
+            ScanCamers();
+            if (m_ip2friendlyName.find(ip) != m_ip2friendlyName.end())
+            {
+                break;
+            }
+        }
+    }
 
     if (m_ip2friendlyName.find(ip) == m_ip2friendlyName.end())
     {
-        LOG(ERROR) << "IP address not found";
+        LOG(ERROR) << "IP address not found after rescan";
         return -1;
     }
-    std::string friendlyName = m_ip2friendlyName.at(ip);
-    LOG(INFO) << " CreateCamere [ " << ip << "   " << friendlyName << " ]" << std::endl;
 
-    cam->Init(friendlyName, filePath);
+    CamFrameDS *cam = new CamFrameDS();
+    std::string friendlyName = m_ip2friendlyName.at(ip);
+    LOG(INFO) << " CreateCamera [ " << ip << "   " << friendlyName << " ]" << std::endl;
+
+    // 初始化相机, 失败时重连, 最多重连 m_maxReconnect 次
+    int ret = cam->Init(friendlyName, filePath);
+    for (int retry = 1; ret != 0 && retry <= m_maxReconnect; retry++)
+    {
+        LOG(WARNING) << "Init fail, reconnect [" << ip << " " << friendlyName
+                     << "] " << retry << "/" << m_maxReconnect;
+        cam->Release();
+        std::this_thread::sleep_for(std::chrono::milliseconds(RECONNECT_INTERVAL_MS));
+        ret = cam->Init(friendlyName, filePath);
+    }
+
+    if (ret != 0)
+    {
+        LOG(ERROR) << "Init fail after " << m_maxReconnect << " reconnects [ "
+                   << ip << " " << friendlyName << " ]";
+        // 仍保留相机对象以维持相机索引一致, 拉流时走备份图逻辑
+        m_cameras.push_back(cam);
+        return -1;
+    }
+
     m_cameras.push_back(cam);
 
     return 0;
@@ -155,6 +194,24 @@ void MultiCamFrameDS::SetResize(int width, int height)
 {
     m_resizeW = width;
     m_resizeH = height;
+}
+
+void MultiCamFrameDS::SetMaxReconnect(int count)
+{
+    if (count < 0)
+    {
+        count = 0;
+    }
+    m_maxReconnect = count;
+}
+
+void MultiCamFrameDS::SetMaxBackupCount(int count)
+{
+    if (count < 1)
+    {
+        count = 1;
+    }
+    m_maxBackupCount = count;
 }
 
 cv::Mat MultiCamFrameDS::applyTransform(const cv::Mat& img)
@@ -214,7 +271,11 @@ void MultiCamFrameDS::GetFrameCpu()
     {
         m_backupImages.resize(m_camNum);
         m_backupTimes.resize(m_camNum, 0);
+        m_backupFailCounts.resize(m_camNum, 0);
     }
+
+    // 停止拼接输出的标志位
+    bool outputSuspended = false;
 
     while (m_runFlag == RUN)
     {
@@ -233,6 +294,7 @@ void MultiCamFrameDS::GetFrameCpu()
                 times.push_back(ts);
                 m_backupImages[i] = cur_image.clone();
                 m_backupTimes[i] = ts;
+                m_backupFailCounts[i] = 0;
             }
             else
             {
@@ -243,8 +305,9 @@ void MultiCamFrameDS::GetFrameCpu()
                 }
                 images.push_back(m_backupImages[i].clone());
                 times.push_back(m_backupTimes[i]);
+                m_backupFailCounts[i]++;
 
-                LOG(WARNING) << "use backup image [" << i << "]";
+                LOG(WARNING) << "use backup image [" << i << "], consecutive count: " << m_backupFailCounts[i];
                 LOG(WARNING) << "  info: " << m_cameras[i]->getCameraInfo();
             }
         }
@@ -257,6 +320,44 @@ void MultiCamFrameDS::GetFrameCpu()
         {
             LOG(ERROR) << "camere number = " << m_camNum << " images.size()= " << images.size();
             continue;
+        }
+
+        // 1.2 判断本轮是否所有相机都正常拉流
+        bool allNormal = true;
+        for (int i = 0; i < m_camNum; i++)
+        {
+            // 连续使用备份图的次数, >0 说明当前一定异常
+            if (m_backupFailCounts[i] > 0)
+            {
+                allNormal = false;
+                break;
+            }
+        }
+
+        // 1.3 恢复正常输出后，检查当前是否已经连续 max 次使用备份图
+        if (!outputSuspended)
+        {
+            for (int i = 0; i < m_camNum; i++)
+            {
+                if (m_backupFailCounts[i] >= m_maxBackupCount)
+                {
+                    outputSuspended = true;
+                    LOG(WARNING) << "camera [" << i << "] used backup image " << m_backupFailCounts[i]
+                                 << " times consecutively (max " << m_maxBackupCount
+                                 << "), suspend output until all cameras recover";
+                    break;
+                }
+            }
+        } else {
+            // 停止输出期间，检查当前次所有相机能否正常拉流 
+            if (!allNormal)
+            {
+                images.clear();
+                times.clear();
+                continue;
+            }
+            outputSuspended = false;
+            LOG(WARNING) << "all cameras recovered, resume output";
         }
 
         int i = 0;

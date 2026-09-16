@@ -9,6 +9,7 @@
 CamFrameDS::CamFrameDS()
 {
     SoftTriggerFlag = false;
+    m_handle = 0;  // 初始化为无效句柄
 }
 
 CamFrameDS::~CamFrameDS()
@@ -30,14 +31,14 @@ int CamFrameDS::Init(std::string friendlyName, std::string filePath)
     int ret = _openDev(m_friendlyName, filePath);
     if (ret != 0)
     {
-        LOG(ERROR) << "_openDev failed!!  " << m_friendlyName;
+        LOG(ERROR) << "_openDev failed: " << m_friendlyName;
         return ret;
     }
 
     ret = loadParamsFile(filePath);
     if (ret != 0)
     {
-        LOG(ERROR) << "loadParamsFile failed!!  " << filePath;
+        LOG(ERROR) << "loadParamsFile failed: " << filePath;
         return ret;
     }
 
@@ -55,7 +56,7 @@ int CamFrameDS::Init(std::string friendlyName, std::string filePath)
     ret = _startGrabbing();
     if (ret != 0)
     {
-        LOG(ERROR) << "_startGrabbing failed!! " << m_friendlyName;
+        LOG(ERROR) << "_startGrabbing failed: " << m_friendlyName;
         return ret;
     }
 
@@ -90,26 +91,30 @@ int CamFrameDS::saveParamsFile(std::string filePath)
 
 void CamFrameDS::Release()
 {
+    // 0. 句柄无效(从未打开成功或已关闭), 不携带无效句柄调用 SDK
+    if (!IsValidHandle(m_handle))
+    {
+        m_handle = 0;
+        return;
+    }
+
     // 1. 先停止数据流
-    dvpStreamState state;
-    dvpGetStreamState(m_handle, &state);
-    if (state == STATE_STARTED)
+    dvpStreamState state = STATE_STOPED;
+    dvpStatus status = dvpGetStreamState(m_handle, &state);
+    if (status == DVP_STATUS_OK && state == STATE_STARTED)
     {
         dvpStop(m_handle);
         int retry = 0;
         do
         {
             std::this_thread::sleep_for(std::chrono::milliseconds(50));
-            dvpGetStreamState(m_handle, &state);
-        } while (state != STATE_STOPED && retry++ < 100);
+            status = dvpGetStreamState(m_handle, &state);
+        } while (status == DVP_STATUS_OK && state != STATE_STOPED && retry++ < 100);
     }
 
     // 2. 关闭设备句柄
-    if (IsValidHandle(m_handle))
-    {
-        dvpClose(m_handle);
-        m_handle = 0;
-    }
+    dvpClose(m_handle);
+    m_handle = 0;
 }
 
 bool CamFrameDS::IsValidHandle(dvpHandle handle)
@@ -190,7 +195,7 @@ int CamFrameDS::_startGrabbing()
         status = dvpGetStreamState(m_handle, &state);
         if (status != DVP_STATUS_OK)
         {
-            LOG(ERROR) << "Get the stream state fail!";
+            LOG(ERROR) << "Get the stream state fail: " << status;
             return -1;
         }
 
@@ -203,7 +208,7 @@ int CamFrameDS::_startGrabbing()
                 status = dvpSetTriggerState(m_handle, SoftTriggerFlag ? true : false);
                 if (status != DVP_STATUS_OK)
                 {
-                    LOG(ERROR) << "Set status of trigger fail!";
+                    LOG(ERROR) << "Set status of trigger fail: " << status;
                     return -1;
                 }
             }
@@ -211,7 +216,7 @@ int CamFrameDS::_startGrabbing()
             status = dvpStart(m_handle);
             if (status != DVP_STATUS_OK)
             {
-                LOG(ERROR) << "Start the video stream fail!";
+                LOG(ERROR) << "Start the video stream fail: " << status;
                 return -1;
             }
             else

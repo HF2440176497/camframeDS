@@ -75,7 +75,7 @@ PYBIND11_MODULE(multicamframeDS, m)
         .def(pybind11::init<int>())
         .def("scan_cameras", &MultiCamFrameDS::ScanCamers,
             pybind11::call_guard<pybind11::gil_scoped_release>())
-        .def("create_camera", &MultiCamFrameDS::CreateCamere,
+        .def("create_camera", &MultiCamFrameDS::CreateCamera,
             pybind11::call_guard<pybind11::gil_scoped_release>(),
             pybind11::arg("ip"),
             pybind11::arg("file_path"))
@@ -86,6 +86,10 @@ PYBIND11_MODULE(multicamframeDS, m)
             pybind11::arg("rotate_code"))
         .def("set_resize", &MultiCamFrameDS::SetResize,
             pybind11::arg("width"), pybind11::arg("height"))
+        .def("set_max_reconnect", &MultiCamFrameDS::SetMaxReconnect,
+            pybind11::arg("count"))
+        .def("set_max_backup_count", &MultiCamFrameDS::SetMaxBackupCount,
+            pybind11::arg("count"))
         .def("read", &MultiCamFrameDS::Read,
             pybind11::call_guard<pybind11::gil_scoped_release>())
         .def("read_t", &MultiCamFrameDS::Read_t,
