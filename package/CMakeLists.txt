@@ -66,10 +66,8 @@ message(STATUS "OUTPUT_VARIABLE is: ${DEPENDENLIBS}")
 
 # message(STATUS "LEGAL_SO_FILES is: ${LEGAL_SO_FILES}")
 # filter some libs
-# TODO
-# 系统级库一律不随包分发：由目标机 OS 提供，避免同名库遮蔽系统版本。
-# 尤其 libz.so.1 —— 多份同名库会进入全局 ld.so.cache，谁排前面谁生效，
-# 可能让其它程序的 libpng 加载到缺 ZLIB_1.2.9 标签的私有 zlib。
+# 
+# 黑名单：名单上的库一律不随包分发：由目标机 OS 提供，避免同名库遮蔽系统版本。
 # 按"库名"排除，不按路径排除（构建机路径不可靠）；[.] / [+] 表示字面字符。
 set(SYSTEMLIBS
     ".*libc.so"
@@ -181,9 +179,12 @@ set(CPACK_PACKAGE_DESCRIPTION "${PROJECT_NAME}")
 set(CPACK_PACKAGE_CONTACT "support@inspur.com")
 set(CPACK_DEBIAN_PACKAGE_MAINTAINER "inspur")
 
-# 系统级库由目标机 OS 提供，dpkg 安装时检查（替代 postinst 里失效的"删除重复库"逻辑）
+# 系统级库由目标机 OS 提供，dpkg 安装时检查（替代 postinst 里失效的"删除重复库"逻辑）。
+# 清单按打包时 ldd 的真实结果推导（见 REMOVELIBS 输出）：
+#   libc.so.6 / libm.so.6 / libpthread.so.0 / librt.so.1 / libdl.so.2 -> libc6
+#   libstdc++.so.6 -> libstdc++6,  libgcc_s.so.1 -> libgcc-s1,  libz.so.1 -> zlib1g
 set(CPACK_DEBIAN_PACKAGE_DEPENDS
-    "zlib1g, libpng16-16, libjpeg-turbo8, libstdc++6, libc6")
+    "libc6, libstdc++6, libgcc-s1, zlib1g")
 
 set(CPACK_PACKAGING_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

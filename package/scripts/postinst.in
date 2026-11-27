@@ -19,8 +19,10 @@ echo_blue "configure DS_INSPUR environment please wait ......"
 #      进而影响机器上其它程序（例如 libz.so.1 被加载成缺 ZLIB_1.2.9 标签的版本）；
 #   2) 不再做"扫描系统目录、删除 dev/ 下重复库"的尝试 —— 该逻辑只扫目录第一层、
 #      只扫 dev/，在 Ubuntu 多架构布局下基本失效，且系统库本就不该随包分发；
-#   3) 系统级库（libz/libpng/libstdc++/glog/gflags）由目标机 OS 提供，
-#      已在 deb 的 Depends 中声明。
+#   3) 系统级库（libc/libm/libpthread/librt/libdl, libstdc++, libgcc_s, libz）
+#      由目标机 OS 提供，已在 deb 的 Depends 中声明；
+#      glog/gflags/OpenCV/libdvp 等随包装在 dev/ 与 lib/ 内，不需要系统提供，
+#      也不应在这里检查（ldconfig -p 查不到包内目录，会误报）。
 #
 # 升级安装时清理旧版本遗留的全局配置（否则旧 conf 会继续污染 ld.so.cache）。
 if [ -f /etc/ld.so.conf.d/DS_INSPUR.conf ]; then
@@ -29,8 +31,8 @@ if [ -f /etc/ld.so.conf.d/DS_INSPUR.conf ]; then
     echo_green "Removed legacy /etc/ld.so.conf.d/DS_INSPUR.conf"
 fi
 
-# 部署前置检查：缺失只告警，不阻断安装
-for dep in libz.so.1 libpng16.so.16 libstdc++.so.6 libglog.so.2 libgflags.so.2.3; do
+# 部署前置检查：只检查"不随包分发、必须由 OS 提供"的库；缺失只告警，不阻断安装
+for dep in libz.so.1 libstdc++.so.6 libgcc_s.so.1 libc.so.6; do
     if ! ldconfig -p | grep -q "${dep}"; then
         echo_red "WARNING: 系统缺少 ${dep}，SDK 可能无法加载！请先安装对应运行库"
     fi
