@@ -18,7 +18,16 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(DS_PYTHON_ROOT_DIR "/usr/local/python3.13" CACHE PATH "Custom Python root directory.")
 set(DS_PYTHON_EXECUTABLE "/usr/local/bin/python3.13" CACHE FILEPATH "Custom Python executable.")
 
-set(CMAKE_BUILD_TYPE "Debug")
+# 构建类型由 build.sh / package.sh 的 -DRELEASE=ON|OFF 控制：
+#   -release -> Release, -debug -> Debug。
+# 若外部显式传入 -DCMAKE_BUILD_TYPE=...，则尊重外部指定值。
+if(NOT CMAKE_BUILD_TYPE)
+  if(RELEASE)
+    set(CMAKE_BUILD_TYPE "Release")
+  else()
+    set(CMAKE_BUILD_TYPE "Debug")
+  endif()
+endif()
 set(PYBIND11_CPP_STANDARD -std=c++17)
 
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,-Bdynamic")
