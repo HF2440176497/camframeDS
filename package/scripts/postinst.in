@@ -14,97 +14,27 @@ echo_green() {
 
 echo_blue "configure DS_INSPUR environment please wait ......"
 
-# declare -a sysLibList
-# read_dir() {
-#     for file in `ls -a $1`
-#     do
-#         if [ -d $1"/"$file ]
-#         then
-#             if [[ $file != '.' && $file != '..' ]]
-#             then
-#                 read_dir $1"/"$file
-#             fi
-#         else
-#             echo $1"/"$file
-#             libName=$1"/"$file
-#             sysLibList[${#sysLibList[*]}]=$libName
-#         fi
-#     done
-# }
-
-# read_dir /lib64
-
-#echo ${sysLibList[@]}
-#echo ${#sysLibList[*]}
-
-
-declare -a sysLibList
-for lib in `ls /lib64 | sort`;do
-  sysLibList[${#sysLibList[*]}]=$lib
-done
-
-for lib in `ls /lib | sort`;do
-  sysLibList[${#sysLibList[*]}]=$lib
-done
-
-for lib in `ls /usr/lib | sort`;do
-  sysLibList[${#sysLibList[*]}]=$lib
-done
-
-for lib in `ls /usr/lib64 | sort`;do
-  sysLibList[${#sysLibList[*]}]=$lib
-done
-
-for lib in `ls /usr/local/lib | sort`;do
-  sysLibList[${#sysLibList[*]}]=$lib
-done
-
-for lib in `ls /usr/local/lib64 | sort`;do
-  sysLibList[${#sysLibList[*]}]=$lib
-done
-
-#echo ${sysLibList[@]}
-#echo ${sysLibList[*]}
-
-#echo ${#sysLibList[*]}
-if [[ -n $(docker ps -q ) ]];then
-    echo_red "Please install in the container"
-else
-    echo_green "Inside the container"
-    declare -a rmLibList
-    declare -i findFlag
-    for devlib in `ls @CMAKE_INSTALL_PREFIX@/dev | sort`
-    do
-      #echo $lib
-      #如果系统库中存在该库,删除安装的库.
-      findFlag=1
-      for syslib in ${sysLibList[*]}
-      do
-        strLibTemp=${devlib%%.so*}
-        #进行字符的比较!!
-        if [[ $syslib == *$strLibTemp* ]];then
-          findFlag=2
-          break
-        fi
-      done
-
-      if [ $findFlag -eq 2 ];then
-        rmLibList[${#rmLibList[*]}]=$devlib
-      fi
-    done
-
-    #echo_red ${#rmLibList[*]}
-
-    for rmlib in ${rmLibList[*]};
-    do
-      echo_red $rmlib
-      rm "@CMAKE_INSTALL_PREFIX@/dev/"$rmlib
-    done
-
-    echo "@CMAKE_INSTALL_PREFIX@/lib" > /etc/ld.so.conf.d/DS_INSPUR.conf
-    echo "@CMAKE_INSTALL_PREFIX@/dev" >> /etc/ld.so.conf.d/DS_INSPUR.conf
+# 动态库查找已完全由 $ORIGIN RPATH（打包时由 patchelf 注入）接管：
+#   1) 不再把安装目录注册进 /etc/ld.so.conf.d，避免随包库遮蔽系统同名库，
+#      进而影响机器上其它程序（例如 libz.so.1 被加载成缺 ZLIB_1.2.9 标签的版本）；
+#   2) 不再做"扫描系统目录、删除 dev/ 下重复库"的尝试 —— 该逻辑只扫目录第一层、
+#      只扫 dev/，在 Ubuntu 多架构布局下基本失效，且系统库本就不该随包分发；
+#   3) 系统级库（libz/libpng/libstdc++/glog/gflags）由目标机 OS 提供，
+#      已在 deb 的 Depends 中声明。
+#
+# 升级安装时清理旧版本遗留的全局配置（否则旧 conf 会继续污染 ld.so.cache）。
+if [ -f /etc/ld.so.conf.d/DS_INSPUR.conf ]; then
+    rm -f /etc/ld.so.conf.d/DS_INSPUR.conf
     ldconfig
-
-    echo_green "configure complete please enjoy."
-    echo_green "DS_INSPUR is installed in  @CMAKE_INSTALL_PREFIX@"
+    echo_green "Removed legacy /etc/ld.so.conf.d/DS_INSPUR.conf"
 fi
+
+# 部署前置检查：缺失只告警，不阻断安装
+for dep in libz.so.1 libpng16.so.16 libstdc++.so.6 libglog.so.2 libgflags.so.2.3; do
+    if ! ldconfig -p | grep -q "${dep}"; then
+        echo_red "WARNING: 系统缺少 ${dep}，SDK 可能无法加载！请先安装对应运行库"
+    fi
+done
+
+echo_green "configure complete please enjoy."
+echo_green "DS_INSPUR is installed in  @CMAKE_INSTALL_PREFIX@"

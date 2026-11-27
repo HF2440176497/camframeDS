@@ -150,30 +150,41 @@ MVRender, libMVRender
 
 DEB 包安装完成后，`postinst` 脚本会自动执行，完成以下工作：
 
-#### 步骤 1：去重系统已存在的库
+#### 步骤 1：清理旧版本遗留的全局配置
 
-遍历 `/opt/software/DS_INSPUR/dev/` 目录下的所有库，与系统库路径（`/lib`、`/lib64`、`/usr/lib`、`/usr/lib64`、`/usr/local/lib`、`/usr/local/lib64`）对比。如果系统中已存在同名库，则删除 `dev/` 下的重复版本，避免冲突。
-
-#### 步骤 2：配置动态链接器路径
+旧版本会把安装目录写入 `/etc/ld.so.conf.d/DS_INSPUR.conf` 并执行 `ldconfig`。
+该配置是**全机器共用**的，会让机器上所有程序都去相机库目录里找库，
+容易把系统同名库（例如 `libz.so.1`）遮蔽掉。新版不再注册，
+并在升级安装时主动删除遗留的 conf、重建一次缓存：
 
 ```bash
-echo "/opt/software/DS_INSPUR/lib" > /etc/ld.so.conf.d/DS_INSPUR.conf
-echo "/opt/software/DS_INSPUR/dev" >> /etc/ld.so.conf.d/DS_INSPUR.conf
-ldconfig
+if [ -f /etc/ld.so.conf.d/DS_INSPUR.conf ]; then
+    rm -f /etc/ld.so.conf.d/DS_INSPUR.conf
+    ldconfig
+fi
 ```
 
-将 `lib/` 和 `dev/` 目录写入 `/etc/ld.so.conf.d/DS_INSPUR.conf`，然后执行 `ldconfig` 更新动态链接器缓存。这样系统就能找到这些库了。
+> 已移除旧版"扫描系统目录、删除 `dev/` 下重复库"的逻辑：它只扫目录第一层、
+> 只扫 `dev/`，在 Ubuntu 多架构布局下基本失效。系统级库改为**不随包分发**，
+> 由 deb 的 `Depends`（`zlib1g`、`libpng16-16`、`libjpeg-turbo8` 等）保证目标机已安装。
+
+#### 步骤 2：部署前置检查
+
+检查 `ldconfig -p` 里是否有 `libz.so.1`、`libpng16.so.16`、`libstdc++.so.6`、
+`libglog.so.2`、`libgflags.so.2.3`，缺失只告警，不阻断安装。
+**不做任何 `/etc/ld.so.conf.d` 注册，也不修改全局动态链接器缓存。**
 
 ### 4.2 程序运行时如何找到库
 
-当 Python 导入 `multicamframeDS` 模块或运行 `main` 可执行文件时：
+当 Python 导入 `multicamframeDS` 模块时：
 
-1. 操作系统的动态链接器（`ld-linux-x86-64.so`）按以下顺序查找依赖 .so：
-   - `LD_LIBRARY_PATH` 环境变量指定的路径
-   - `/etc/ld.so.cache` 缓存中的路径（由 `ldconfig` 更新）
-   - 系统默认路径（`/lib`、`/usr/lib` 等）
+1. 打包阶段已通过 `patchelf` 给模块和随包私有库写入 `$ORIGIN` / `$ORIGIN/../dev`
+   优先目录（模块装在 `lib/`，自动收集的第三方库装在 `dev/`）。
+   `$ORIGIN` 在运行时被替换为"该 `.so` 文件所在目录"，所以私有库只在
+   本包目录内互相查找，**不会进入全机器清单、不影响其它程序**。
 
-2. 因为 `postinst` 已将 `/opt/software/DS_INSPUR/lib` 和 `/opt/software/DS_INSPUR/dev` 写入 `ld.so.conf.d/` 并执行了 `ldconfig`，所以系统能自动找到所有依赖库。
+2. 系统级库（`libz.so.1`、`libpng16.so.16`、`libstdc++.so.6` 等）由操作系统提供，
+   按加载器默认规则从系统路径解析；包内不再携带这些库的副本。
 
 ---
 

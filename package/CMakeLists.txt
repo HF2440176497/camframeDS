@@ -36,7 +36,7 @@ execute_process(
     COMMAND ldd ${APPLICATION_NAME}
     COMMAND awk "{print $3}"
     COMMAND sort -u
-    COMMAND egrep "crypto|z|avcodec|avformat|avutil|glog|gflag|event|opencv|swscale|swresample|x264|x265|gtk|cairo|gobject|glib|jpeg|png16|vpx|webpmux|webp|snappy|mp3lame|openjp2|opus|shine|speex|
+    COMMAND egrep "crypto|libz\\.so|avcodec|avformat|avutil|glog|gflag|event|opencv|swscale|swresample|x264|x265|gtk|cairo|gobject|glib|jpeg|png16|vpx|webpmux|webp|snappy|mp3lame|openjp2|opus|shine|speex|
     theoraenc|theoradec|twolame|vorbis|vorbisenc|wavpack|xvidcore|modplug|bluray|rtmp|ssh|soxr|opencv"
     # Only libs I want to copy
     RESULT_VARIABLE RETRUNSTATUS
@@ -67,7 +67,39 @@ message(STATUS "OUTPUT_VARIABLE is: ${DEPENDENLIBS}")
 # message(STATUS "LEGAL_SO_FILES is: ${LEGAL_SO_FILES}")
 # filter some libs
 # TODO
-set(SYSTEMLIBS ".*libc.so;.*librt.so;.*libm.so;.*libgcc;.*libpthread.*;.*libdl.*;.*FormatConversion.*;.*MediaProcess.*;.*MvCameraControl.*;.*MvCameraControl.*;.*MVGigEVisionSDK.*;.*MVRender.*;.*libMVRender.*")
+# 系统级库一律不随包分发：由目标机 OS 提供，避免同名库遮蔽系统版本。
+# 尤其 libz.so.1 —— 多份同名库会进入全局 ld.so.cache，谁排前面谁生效，
+# 可能让其它程序的 libpng 加载到缺 ZLIB_1.2.9 标签的私有 zlib。
+# 按"库名"排除，不按路径排除（构建机路径不可靠）；[.] / [+] 表示字面字符。
+set(SYSTEMLIBS
+    ".*libc.so"
+    ".*librt.so"
+    ".*libm.so"
+    ".*libgcc.*"
+    ".*libpthread.*"
+    ".*libdl.*"
+    ".*libz[.]so.*"
+    ".*libpng16.*"
+    ".*libjpeg.*"
+    ".*libtiff.*"
+    ".*libcrypto[.]so.*"
+    ".*libssl[.]so.*"
+    ".*libstdc[+][+].*"
+    ".*libgomp.*"
+    ".*libglib-2[.]0.*"
+    ".*libgobject-2[.]0.*"
+    ".*libcairo.*"
+    ".*libgtk.*"
+    ".*libX11.*"
+    ".*libxcb.*"
+    ".*libudev.*"
+    ".*FormatConversion.*"
+    ".*MediaProcess.*"
+    ".*MvCameraControl.*"
+    ".*MVGigEVisionSDK.*"
+    ".*MVRender.*"
+    ".*libMVRender.*"
+)
 
 set(REMOVELIBS "")
 foreach (_file ${LEGAL_SO_FILES})
@@ -107,6 +139,33 @@ file(GLOB_RECURSE SO_FILES
 install(FILES ${SO_FILES} DESTINATION ${INSTALL_LIBDIR})
 install(FILES ${PROJECT_SOURCE_DIR}/example/example.py DESTINATION ${INSTALL_LIBDIR})
 
+# 随包私有库只在本包目录内互相解析：不再依赖 /etc/ld.so.conf.d 全局注册。
+# install(CODE ...) 里的代码在"安装/打包时"才执行；\${} / \$ORIGIN 前的反斜杠
+# 是为了把它们留到安装阶段再展开（配置阶段展开会拿到错误的值）。
+# 这里给 lib/ 与 dev/ 下的私有库统一写入 $ORIGIN:$ORIGIN/../dev；
+# 模块本身由 install(TARGETS) 写入同样的 INSTALL_RPATH，二者等价，不会冲突。
+install(CODE "
+    find_program(PATCHELF_EXECUTABLE patchelf QUIET)
+    if(PATCHELF_EXECUTABLE)
+        message(STATUS \"Found patchelf: \${PATCHELF_EXECUTABLE}\")
+        file(GLOB PREBUILT_LIBS
+            \"\${CMAKE_INSTALL_PREFIX}/${INSTALL_LIBDIR}/*.so*\"
+            \"\${CMAKE_INSTALL_PREFIX}/${INSTALL_LIBDIR}/../dev/*.so*\")
+        foreach(LIB \${PREBUILT_LIBS})
+            execute_process(
+                COMMAND \${PATCHELF_EXECUTABLE} --set-rpath \"\$ORIGIN:\$ORIGIN/../dev\" \"\${LIB}\"
+                RESULT_VARIABLE PATCH_RESULT
+                OUTPUT_QUIET ERROR_QUIET
+            )
+            if(NOT PATCH_RESULT EQUAL 0)
+                message(WARNING \"  Failed to patch RPATH: \${LIB}\")
+            endif()
+        endforeach()
+    else()
+        message(FATAL_ERROR \"patchelf not found - install patchelf and rebuild the package; bundled libs cannot resolve each other without it\")
+    endif()
+")
+
 # [--  package
 
 include(InstallRequiredSystemLibraries)
@@ -121,6 +180,10 @@ set(CPACK_DEBIAN_PACKAGE_NAME "${PROJECT_NAME}")
 set(CPACK_PACKAGE_DESCRIPTION "${PROJECT_NAME}")
 set(CPACK_PACKAGE_CONTACT "support@inspur.com")
 set(CPACK_DEBIAN_PACKAGE_MAINTAINER "inspur")
+
+# 系统级库由目标机 OS 提供，dpkg 安装时检查（替代 postinst 里失效的"删除重复库"逻辑）
+set(CPACK_DEBIAN_PACKAGE_DEPENDS
+    "zlib1g, libpng16-16, libjpeg-turbo8, libstdc++6, libc6")
 
 set(CPACK_PACKAGING_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

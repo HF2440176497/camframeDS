@@ -91,6 +91,9 @@ if(NOT HZD_LIBRARY)
     message(FATAL_ERROR "hzd library not found")
 endif()
 
+# 不要把构建机上链接到的库目录写进 ELF 的优先目录（那些是构建机绝对路径）
+set(CMAKE_INSTALL_RPATH_USE_LINK_PATH OFF)
+
 pybind11_add_module(multicamframeDS
   src/camFrameDS.cpp
   src/multiCamFrameDS.cpp
@@ -114,6 +117,13 @@ target_link_libraries(multicamframeDS
     ${OpenCV_LIBS}
     ${GFLAGS_LIBRARIES}
     ${GLOG_LIBRARIES}
+)
+
+# 安装后只在本模块所在目录及 <prefix>/dev 查找随包私有库。
+# $ORIGIN 运行时会被替换为本 .so 所在目录；分号是 CMake 列表分隔符，写进 ELF 时变成 ':'。
+# 该设置是 RUNPATH，只作用于本模块，不进入全局 ld.so.cache，不影响其它进程。
+set_target_properties(multicamframeDS PROPERTIES
+    INSTALL_RPATH "$ORIGIN;$ORIGIN/../dev"
 )
 
 set(INSTALL_LIBDIR ${CMAKE_INSTALL_LIBDIR} CACHE PATH "Installation directory for libraries")
